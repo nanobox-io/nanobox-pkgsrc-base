@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- src/Makefile.orig	2013-12-11 14:31:57.000000000 +0000
++++ src/Makefile
+@@ -23,8 +23,8 @@ WARN=-Wall
+ OPT=$(OPTIMIZATION)
+ 
+ PREFIX?=/usr/local
+-INSTALL_BIN=$(PREFIX)/bin
+-INSTALL=install
++INSTALL_BIN=$(DESTDIR)$(PREFIX)/bin
++INSTALL=$(BSD_INSTALL_PROGRAM)
+ 
+ # Default allocator
+ ifeq ($(uname_S),Linux)

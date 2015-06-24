@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (mongodb-src-r2.4.14.tar.gz) = a43306f5548d36b23a9f71154bee4cda173b3985
+RMD160 (mongodb-src-r2.4.14.tar.gz) = 4408033d5917fc9dedde4634f0436aa7d4c3f7fb
+Size (mongodb-src-r2.4.14.tar.gz) = 15120808 bytes
+SHA1 (patch-src_mongo_util_time__support.h) = d3c8141092cef4af94b3b5c6dd130381e54d82d9
+SHA1 (patch-src_third__party_s2_s2.cc) = d9b339cae139b79f60a9aaefeb83f5170207fb3b
+SHA1 (patch-src_third__party_s2_s2polygonbuilder.cc) = 59c37ac739788ef07fd0e46f9a00b94d29ca9cf4

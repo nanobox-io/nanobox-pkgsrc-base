@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/06 22:44:56 fhajny Exp $
+
+SHA1 (php-gnupg/gnupg-1.3.6.tgz) = fa2a069fc0ac04aac41f670f5786ea4dd47af1a7
+RMD160 (php-gnupg/gnupg-1.3.6.tgz) = 9eca60f9103d07ff354da26f0077fcef5da95fc9
+Size (php-gnupg/gnupg-1.3.6.tgz) = 19273 bytes
+SHA1 (patch-config.m4) = 57eb04923be8f8a96c680d54b52f39cab15381ab

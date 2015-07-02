@@ -1,0 +1,4 @@
+Monitoring extension for PHP, collects error events and send them to one of 
+the drivers.
+SQLite and MySQL drivers are storing those in a database.
+More drivers to come (SNMP, e-mail, Hadoop,...).

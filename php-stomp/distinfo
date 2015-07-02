@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-stomp/stomp-1.0.8.tgz) = 4f0d2bcb636c0675a64b72576d4921c45744baba
+RMD160 (php-stomp/stomp-1.0.8.tgz) = bb8104c2406d6cc89aac659318ea5e98ca04ae43
+Size (php-stomp/stomp-1.0.8.tgz) = 21837 bytes

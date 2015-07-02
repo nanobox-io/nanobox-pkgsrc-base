@@ -5,7 +5,6 @@ RMD160 (ruby-1.9.3-p551.tar.bz2) = 59cfcaf4e02957f53bf83557962b0d428156bc01
 Size (ruby-1.9.3-p551.tar.bz2) = 10049332 bytes
 SHA1 (patch-configure) = 1ee484ad481734a49824a1a1f8bb5f8f96f6606a
 SHA1 (patch-configure.in) = 09dfe819b6a9bd7c9af704eeaef659857d33d0c3
-SHA1 (patch-defs_default__gems) = fb24111736f1a76a05e853aa068024dbdd24e5a5
 SHA1 (patch-ext_dbm_extconf.rb) = cc16af8f4999ef6c54c9652e2748504c31e5ef4e
 SHA1 (patch-ext_dl_extconf.rb) = aed210606893d2b9c463d794df039f06003848e4
 SHA1 (patch-ext_tk_extconf.rb) = 7cda490107ce8d23644152feeade8a8cf21d9898

@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (newt-0.52.18.tar.gz) = 2992c926bd3699ff0d6fd7549d4a8a018e3ac8fd
+RMD160 (newt-0.52.18.tar.gz) = 8b1fd7e7201ca337dd7df99a39947f14a97b3d6f
+Size (newt-0.52.18.tar.gz) = 180425 bytes
+SHA1 (patch-Makefile.in) = 3e7efb6fa7bb6908f3f9e05d3f103c232208b75e
+SHA1 (patch-configure) = 54d685ef1acd1bea6fec03cc2101807cdfa2f94a
+SHA1 (patch-po__Makefile) = 8efb93ab7bf70fa25d2219815593efc345f8f2b4

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-yaml/yaml-1.2.0.tgz) = 91bf0a9755796b62634cbad7b256b2b2accf70cb
+RMD160 (php-yaml/yaml-1.2.0.tgz) = 0ade207a0d1fcaf3b342b461219bb91b71512f10
+Size (php-yaml/yaml-1.2.0.tgz) = 38606 bytes

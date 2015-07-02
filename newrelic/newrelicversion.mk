@@ -1,0 +1,3 @@
+.if !defined(NEWRELIC_VERSION)
+NEWRELIC_VERSION:=  4.22.0.99
+.endif

@@ -1,0 +1,24 @@
+$NetBSD$
+
+Fix problem with 'ar' and pass RPATH properly.
+
+--- SConstruct.orig	2014-03-27 15:49:30.000000000 +0000
++++ SConstruct
+@@ -154,6 +154,7 @@ if link != 'default':
+ # Initialize CPPFLAGS and LIBPATH from environment to get user preferences
+ env.Replace(CPPFLAGS = os.getenv('CPPFLAGS', ''))
+ env.Replace(LIBPATH = [os.getenv('LIBPATH', '')])
++env.Replace(RPATH = [os.getenv('RPATH', '')])
+ 
+ # Set -pthread flag explicitly to make sure that pthreads are
+ # enabled on all platforms.
+@@ -165,6 +166,9 @@ if sysname == 'freebsd' or sysname == 's
+     env.Append(CPPFLAGS = ' -I/usr/local/include ')
+ if sysname == 'sunos':
+    env.Replace(SHLINKFLAGS = '-shared ')
++   env.Replace(AR = 'ar')
++   env.Replace(ARFLAGS= 'r')
++   env.Replace(ARCOM = '$AR $ARFLAGS $TARGET $SOURCES')
+ 
+ # Add paths is extra_sysroot argument was specified
+ extra_sysroot = ARGUMENTS.get('extra_sysroot', '')

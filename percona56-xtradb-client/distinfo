@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.13.2.1 2014/04/14 17:14:13 tron Exp $
+
+SHA1 (Percona-XtraDB-Cluster-5.6.24-72.2.tar.gz) = 4be4b7ecfefbaf021aa077b624f84e00fc5962cb
+RMD160 (Percona-XtraDB-Cluster-5.6.24-72.2.tar.gz) = 4f6f437084c19b6e65bad2a81e58d84c36a4796b
+Size (Percona-XtraDB-Cluster-5.6.24-72.2.tar.gz) = 36352284 bytes
+SHA1 (sphinx-2.2.9-release.tar.gz) = 7ddde51bb1d428406acb278c615a2c2fda819daf
+RMD160 (sphinx-2.2.9-release.tar.gz) = e600bb0fcbb3fe9838dc60bd8b00ca2bedd0ce05
+Size (sphinx-2.2.9-release.tar.gz) = 2992905 bytes
+SHA1 (patch-mysys__CMakeLists.txt) = 6a5f38ec80ddcd995b981c20c819229a1b0bc809
+SHA1 (patch-plugin_HandlerSocket-Plugin-for-MySQL_libhsclient_allocator.hpp) = 1c71757b579efcc2d68c340acd64f4d34994d551
+SHA1 (patch-scripts__wsrep_sst_rsync.sh) = 4031f9b06c35cab12506ee29a791116d21474a34

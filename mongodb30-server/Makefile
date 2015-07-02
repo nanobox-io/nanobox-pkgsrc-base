@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=	mongodb-src-r3.0.3
+DISTNAME=	mongodb-src-r3.0.4
 PKGNAME=	${DISTNAME:S/src-r/server-/:S/-rc/rc/}
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
@@ -27,6 +27,7 @@ SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
 SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
 SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
 SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
+SCONS_ARGS+=	--variant-dir=build
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -129,6 +130,7 @@ post-install:
 .if exists(../../devel/libexecinfo/buildlink3.mk)
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+.include "../../base/gperftools/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

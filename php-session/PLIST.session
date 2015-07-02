@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.3 2012/05/19 09:51:34 marino Exp $
+include/php/ext/session/mod_files.h
+include/php/ext/session/mod_user.h
+include/php/ext/session/php_session.h

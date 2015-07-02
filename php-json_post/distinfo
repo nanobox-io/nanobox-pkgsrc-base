@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-json_post/json_post-1.0.0.tgz) = cb1570bc5bc38148ade6ad9e13dc750f64cd5d09
+RMD160 (php-json_post/json_post-1.0.0.tgz) = f9d8cd906eba291d9d881d628f84873f06ec1eae
+Size (php-json_post/json_post-1.0.0.tgz) = 4637 bytes

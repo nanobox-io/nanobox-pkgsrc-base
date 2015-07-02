@@ -1,6 +1,7 @@
 $NetBSD$
 
---- SConstruct.orig	2014-06-15 14:23:35.000000000 +0000
+Add support for NetBSD/Dragonfly, fix locations.
+--- SConstruct.orig	2014-06-19 20:19:09.000000000 +0000
 +++ SConstruct
 @@ -59,7 +59,9 @@ nix = False
  linux = False

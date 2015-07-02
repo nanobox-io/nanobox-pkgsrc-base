@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-stats/stats-1.0.3.tgz) = eb0c805ee51bf363d4376ed5281bbefeea408574
+RMD160 (php-stats/stats-1.0.3.tgz) = ca223fc9b33584fae491dbe8a179a6d0a2f3eec3
+Size (php-stats/stats-1.0.3.tgz) = 99144 bytes

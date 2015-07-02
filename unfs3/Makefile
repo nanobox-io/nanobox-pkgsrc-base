@@ -1,0 +1,52 @@
+# $NetBSD$
+# -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
+# vim: ts=8 sw=8 ft=make noet
+
+DISTNAME=		unfs3-0.9.22
+PKGREVISION=		2
+CATEGORIES=		net
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=unfs3/}
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://unfs3.sourceforge.net/
+COMMENT=		Userspace NFSv3 server
+LICENSE=		modified-bsd
+
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		flex bison aclocal autoconf automake
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == SunOS
+CFLAGS+= 		-L/usr/ucblib/amd64 -R/usr/ucblib/amd64
+LIBS+=			-lfl
+.endif
+
+
+CONF_FILES+=		${PREFIX}/share/examples/unfs3/exports \
+			    ${PKG_SYSCONFDIR}/exports
+RCD_SCRIPTS=		unfsd
+
+INSTALLATION_DIRS+=	share/examples/unfs3
+
+SUBST_CLASSES+=		exports
+SUBST_STAGE.exports=	pre-configure
+SUBST_MESSAGE.exports=	Fixing path to exports(5)
+SUBST_FILES.exports=	daemon.c unfsd.8
+SUBST_SED.exports=	-e 's,/etc/exports,${PKG_SYSCONFDIR}/exports,g'
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vfi
+
+pre-build:
+	cd ${WRKSRC}/Config && ${MAKE_PROGRAM} clean
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/exports \
+	    ${DESTDIR}${PREFIX}/share/examples/unfs3
+
+.if ${OPSYS} == SunOS
+.include "../../base/librpcsoc/buildlink3.mk"
+.endif
+.include "../../devel/flex/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

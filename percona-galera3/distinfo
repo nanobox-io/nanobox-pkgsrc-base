@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (percona-xtradb-cluster-galera-3-3.9-3494.tar.gz) = d50566e8da7896a125150e5b0500a40fe2eeef86
+RMD160 (percona-xtradb-cluster-galera-3-3.9-3494.tar.gz) = 066eac7167fe67eeb86863a3d6dbe35b552c191a
+Size (percona-xtradb-cluster-galera-3-3.9-3494.tar.gz) = 2955018 bytes
+SHA1 (patch-SConstruct) = 46ac41715de427925c7105f7b067091541dd7b2a
+SHA1 (patch-garb_files_freebsd_garb.sh) = a6228e4df6862256a363420eb7015a110293e038

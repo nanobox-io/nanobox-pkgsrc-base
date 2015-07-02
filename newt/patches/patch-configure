@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- configure.orig	2014-02-19 16:57:06.000000000 +0000
++++ configure
+@@ -745,7 +745,7 @@ dvidir='${docdir}'
+ pdfdir='${docdir}'
+ psdir='${docdir}'
+ libdir='${exec_prefix}/lib'
+-localedir='${datarootdir}/locale'
++localedir='${libdir}/locale'
+ mandir='${datarootdir}/man'
+ 
+ ac_prev=
+@@ -3705,6 +3705,7 @@ $as_echo_n "checking for tcl configurati
+       `ls -d /usr/lib/tcl8.5 2>/dev/null` \
+       `ls -d /usr/lib/tcl8.4 2>/dev/null` \
+       `ls -d /opt/local/lib 2>/dev/null` \
++      `ls -d @PREFIX@/lib 2>/dev/null` \
+       ; do
+       if test -f "$i/tclConfig.sh" ; then
+         ac_cv_c_tclconfig=`(cd $i; pwd)`

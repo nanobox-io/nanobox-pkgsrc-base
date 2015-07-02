@@ -1,0 +1,6 @@
+Makes reverse-proxing (web accelerator) totally invisible for php applications. Doesn't require php code modifications to handle X-Forwarded-For IP.
+* Stills allows proxy-aware applications to work with X-Forwarded headers and proxy IP address.
+* Should work with any web server
+* Should work with any proxy server
+
+Using this extension with on a non reverse proxied system will result in a security issue.

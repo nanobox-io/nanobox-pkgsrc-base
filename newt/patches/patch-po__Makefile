@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- po/Makefile.orig	2013-03-25 14:16:36.000000000 +0000
++++ po/Makefile
+@@ -1,4 +1,4 @@
+-INSTALL= /usr/bin/install -c
++INSTALL= @PREFIX@/bin/ginstall -c
+ INSTALL_PROGRAM= ${INSTALL}
+ INSTALL_DATA= ${INSTALL} -m 644
+ INSTALLNLSDIR=$(datadir)/locale

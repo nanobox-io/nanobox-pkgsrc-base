@@ -1,0 +1,2 @@
+Bindings for the Subversion revision control system, providing a method for manipulating
+a working copy or repository with PHP.

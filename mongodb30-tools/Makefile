@@ -16,7 +16,7 @@ HOMEPAGE=		github.com/mongodb/mongo-tools
 COMMENT=		Tools for managing mongodb
 #LICENSE=       	# TODO: (see mk/license.mk)
 
-WRKSRC=			${WRKDIR}/mongo-tools
+WRKSRC=			${WRKDIR}/mongo-tools-r${VERSION}
 
 USE_LANGUAGES=		# none
 
@@ -31,7 +31,7 @@ do-install:
 	@mkdir -p ${DESTDIR}${PREFIX}
 	@cp -r ${WRKSRC}/bin ${DESTDIR}${PREFIX}
 
-.include "../../admin/mk/git-package.mk"
-.include "../../admin/mk/go.mk"
+# .include "../../base/git/git-package.mk"
+.include "../../base/go/go-app.mk"
 .include "../../mk/bsd.pkg.mk"
 

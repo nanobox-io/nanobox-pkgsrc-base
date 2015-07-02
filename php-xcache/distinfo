@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (php-xcache/xcache-3.2.0.tar.gz) = 99a381388350fda20fbc8ef03362b2247263eecd
+RMD160 (php-xcache/xcache-3.2.0.tar.gz) = aed8225bcf6b9eed6f1a259ca0b16ac0e3cd0684
+Size (php-xcache/xcache-3.2.0.tar.gz) = 173368 bytes
+SHA1 (patch-config.m4) = c86a015bbeeace962acc2a171b6867819a4ae814

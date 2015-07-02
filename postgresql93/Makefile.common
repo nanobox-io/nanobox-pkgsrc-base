@@ -42,9 +42,9 @@ CONFLICTS+=	postgresql[0-8][0-9]-${module}-[0-9]*
 CONFLICTS+=	postgresql9[0124-9]-${module}-[0-9]*
 .endif
 
-DISTINFO_FILE?=		${.CURDIR}/../../postgresql/postgresql93/distinfo
-COMMON_FILESDIR?=	${.CURDIR}/../../postgresql/postgresql93/files
-PATCHDIR?=		${.CURDIR}/../../postgresql/postgresql93/patches
+DISTINFO_FILE?=		${.CURDIR}/../../base/postgresql93/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../../base/postgresql93/files
+PATCHDIR?=		${.CURDIR}/../../base/postgresql93/patches
 
 USE_MULTIARCH=		bin lib
 USE_PKGLOCALEDIR=	yes

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.pdo,v 1.2 2009/06/14 17:43:20 joerg Exp $
+include/php/ext/hash/php_hash.h
+include/php/ext/hash/php_hash_adler32.h
+include/php/ext/hash/php_hash_crc32.h
+include/php/ext/hash/php_hash_gost.h
+include/php/ext/hash/php_hash_haval.h
+include/php/ext/hash/php_hash_md.h
+include/php/ext/hash/php_hash_ripemd.h
+include/php/ext/hash/php_hash_salsa.h
+include/php/ext/hash/php_hash_sha.h
+include/php/ext/hash/php_hash_snefru.h
+include/php/ext/hash/php_hash_tiger.h
+include/php/ext/hash/php_hash_types.h
+include/php/ext/hash/php_hash_whirlpool.h

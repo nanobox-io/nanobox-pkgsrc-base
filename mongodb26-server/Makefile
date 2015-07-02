@@ -26,6 +26,7 @@ SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
 SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
 SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
 SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
+SCONS_ARGS+=	--variant-dir=build
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -126,6 +127,7 @@ post-install:
 .if exists(../../devel/libexecinfo/buildlink3.mk)
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
+.include "../../base/gperftools/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

@@ -376,8 +376,8 @@ RUBY_SUFFIX=
 RUBY_NAME=		ruby
 .endif
 
-RUBY_BUILD_RDOC?=	Yes
-RUBY_BUILD_RI?=		Yes
+RUBY_BUILD_RDOC?=	No
+RUBY_BUILD_RI?=		No
 
 RUBY?=			${PREFIX}/bin/${RUBY_NAME}
 RDOC?=			${PREFIX}/bin/rdoc
@@ -456,7 +456,7 @@ RUBY_USE_PTHREAD?=	yes
 
 RUBY_DYNAMIC_DIRS?=	# empty
 
-RUBY_SRCDIR?=	../../ruby/ruby${RUBY_VER}
+RUBY_SRCDIR?=	../../base/ruby${RUBY_VER}
 
 #
 # common paths

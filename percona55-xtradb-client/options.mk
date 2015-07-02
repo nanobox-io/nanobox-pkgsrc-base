@@ -19,4 +19,6 @@ CMAKE_ARGS+=		-DWITH_SSL=no
 # Enable DTrace support
 .if !empty(PKG_OPTIONS:Mdtrace)
 CMAKE_ARGS+=		-DENABLE_DTRACE=ON
+.else
+CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
 .endif

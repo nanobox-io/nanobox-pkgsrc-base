@@ -14,6 +14,9 @@ UNWRAP_FILES+=		scripts/mysql_config
 INFO_FILES=		yes
 INSTALL_DIRS+=		client include libmysql man scripts tests
 
+CMAKE_ARGS+=		-DWITH_WSREP=1
+CMAKE_ARGS+=		-DWITH_INNODB_DISALLOW_WRITES=1
+
 REPLACE_PERL=		scripts/mysql_convert_table_format.sh
 REPLACE_PERL+=		scripts/mysql_find_rows.sh
 REPLACE_PERL+=		scripts/mysql_fix_extensions.sh

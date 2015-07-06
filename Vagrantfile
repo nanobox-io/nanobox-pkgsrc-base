@@ -79,13 +79,62 @@ Vagrant.configure('2') do |config|
   # package definitions
   config.vm.synced_folder ".", "/content/pkgsrc/base", type: "nfs"
 
+  # utility scripts
+  config.vm.synced_folder "./.scripts", "/opt/util"
+
   config.vm.provision "shell", inline: <<-SCRIPT
+    echo "Preparing Environment..."
     echo # Vagrant environment variables > /etc/profile.d/vagrant.sh
+    echo export PATH=/data/sbin:/data/bin:/data/gcc49/bin:/data/gnu/bin:$PATH >> /etc/profile.d/vagrant.sh
     echo export NANOBOX_USER=#{nanobox_user} >> /etc/profile.d/vagrant.sh
     echo export NANOBOX_PROJECT=#{nanobox_project} >> /etc/profile.d/vagrant.sh
     echo export NANOBOX_SECRET=#{nanobox_secret} >> /etc/profile.d/vagrant.sh
     echo umask 022 >> /etc/profile.d/vagrant.sh
     chmod +x /etc/profile.d/vagrant.sh
+  SCRIPT
+
+  config.vm.provision 'shell', inline: <<-SCRIPT
+    echo "Downloading and Extracting Bootstrap..."
+
+    # detect platform
+    if [ $(uname | grep 'SunOS') ]; then
+      platform="SmartOS"
+    elif [ $(uname | grep 'Linux') ]; then
+      platform="Linux"
+    fi 
+
+    # download and extract the bootstrap
+    if [ ! -d /data ]; then
+      curl \
+        -s \
+        http://pkgsrc.nanobox.io/nanobox/base/${platform}/bootstrap.tar.gz \
+          | tar \
+              -xz \
+              -f - \
+              -C /
+    fi
+
+    # ensure /data/var/db exists
+    if [ ! -d /data/var/db ]; then
+      mkdir -p /data/var/db
+    fi
+  SCRIPT
+
+  config.vm.provision 'shell', inline: <<-SCRIPT
+    echo "Install mksandbox utility..."
+    if [ ! -f /data/sbin/mksandbox ]; then
+      /data/bin/pkgin -y in mksandbox
+    fi
+  SCRIPT
+
+  config.vm.provision 'shell', inline: <<-SCRIPT
+    echo "Installing custom utilities..."
+    for i in /opt/util/*; do
+      cmd=$(basename ${i/.sh/})
+      if [ ! -L /usr/bin/${cmd} ]; then
+        ln -s ${i} /usr/bin/${cmd}
+      fi
+    done
   SCRIPT
 
 end

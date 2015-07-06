@@ -37,7 +37,7 @@ create_chroot() {
   sudo \
     /data/sbin/mksandbox \
       --without-pkgsrc \
-      --rwdirs=/content,/home,/content/pkgsrc,/content/pkgsrc/base,/content/packages,/content/distfiles \
+      --rwdirs=/run,/content,/home,/content/pkgsrc,/content/pkgsrc/base,/content/packages,/content/distfiles \
       /chroot/${chroot}
 
   # create the pkgsrc file cache
@@ -58,6 +58,17 @@ create_chroot() {
       -xz \
       -f /content/packages/pkgsrc/${project}/${platform}/bootstrap.tar.gz \
       -C /chroot/${chroot}
+
+  # ensure /data/var/db exists
+  if [ ! -d /chroot/${chroot}/data/var/db ]; then
+    mkdir -p /chroot/${chroot}/data/var/db
+  fi
+
+  # install gcc
+  echo "Installing GNU compiler collection"
+  sudo \
+    /chroot/${chroot}/sandbox \
+      /data/bin/pkgin -y in gcc49
 }
 
 enter_chroot() {

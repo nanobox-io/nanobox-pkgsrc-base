@@ -20,7 +20,9 @@ COMMENT=		"meta-package" for the PHP 5.x HTML-embedded scripting language
 DEPENDS+=	php>=${PHP_BASE_VERS}<${PHP_NEXT_VERS}:${PHPPKGSRCDIR}
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=${PHP_BASE_VERS}:../../base/ap-php
 DEPENDS+=	${APACHE_PKG_PREFIX}-cloudflare>=0.0.1:../../base/ap-cloudflare
+.if ${OPSYS} != Linux
 DEPENDS+=	${APACHE_PKG_PREFIX}-usdt>=20130730:../../base/ap2-usdt
+.endif
 DEPENDS+=	${APACHE_PKG_PREFIX}-xsendfile>=0.12:../../base/ap2-xsendfile
 
 .include "../../base/${PHP_PKG_PREFIX}/extensions.mk"

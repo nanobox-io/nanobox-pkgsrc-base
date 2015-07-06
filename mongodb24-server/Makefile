@@ -33,7 +33,6 @@ SCONS_ARGS+=        	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
 SCONS_ARGS+=        	--use-system-pcre=USE-SYSTEM-PCRE
 SCONS_ARGS+=        	--use-system-boost=USE-SYSTEM-BOOST
 SCONS_ARGS+=        	--use-system-snappy=USE-SYSTEM-SNAPPY
-SCONS_ARGS+=		--variant-dir=build
 
 SCONS_ARGS+=        	--cc=${WRAPPER_BINDIR}/${CC}
 SCONS_ARGS+=        	--cxx=${WRAPPER_BINDIR}/${CXX}

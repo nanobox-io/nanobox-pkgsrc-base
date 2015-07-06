@@ -89,6 +89,7 @@ CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 
 BUILDLINK_AUTO_DIRS.mysql-client=	no
 # .include "../../base/mariadb100-galera-client/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/boost-build/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

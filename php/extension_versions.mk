@@ -39,7 +39,11 @@ PHP_EXTENSION_VERSION.igbinary=		1.2.1			# https://pecl.php.net/package/igbinary
 PHP_EXTENSION_VERSION.imagick=		3.1.2			# https://pecl.php.net/package/imagick
 PHP_EXTENSION_VERSION.imap=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.intl=		${PHP_BASE_VERS}
+.if ${OPSYS} == SunOS
 PHP_EXTENSION_VERSION.ioncube_loader=	4.6.0			# file from Scott
+.else
+PHP_EXTENSION_VERSION.ioncube_loader=	5.0.11			# http://www.ioncube.com/loaders.php
+.endif
 PHP_EXTENSION_VERSION.json=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.json_post=	1.0.0			# https://pecl.php.net/package/json_post
 PHP_EXTENSION_VERSION.ldap=		${PHP_BASE_VERS}

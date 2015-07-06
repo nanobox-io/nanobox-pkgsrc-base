@@ -2,8 +2,8 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 PKGNAME=		${PHP_PKG_PREFIX}-newrelic-${NEWRELIC_VERSION}
-DISTNAME=		newrelic-php5-${NEWRELIC_VERSION}-solaris
-PB_PKGBASE=		${PHP_PKG_PREFIX}-newrelic
+DISTNAME=		newrelic-php5-${NEWRELIC_VERSION}-${OS}
+PKGBASE=		${PHP_PKG_PREFIX}-newrelic
 VERSION=		${NEWRELIC_VERSION}
 CATEGORIES=		pagoda
 MASTER_SITES=		https://download.newrelic.com/php_agent/release/
@@ -18,6 +18,15 @@ USE_LANGUAGES=		# none
 .include "../../mk/bsd.prefs.mk"
 .include "../../base/php/phpversion.mk"
 .include "../../base/newrelic/newrelicversion.mk"
+
+
+.if ${OPSYS} == Linux
+OS=			linux
+.elif ${OPSYS} == SunOS	
+OS=			solaris
+.else
+PKG_SKIP_REASON+=	"Operating system not supported"
+.endif
 
 .if ${ABI} == 64
   SYSARCH= x64

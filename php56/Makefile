@@ -38,6 +38,8 @@ SUBST_FILES.path+=	sapi/cgi/Makefile.frag
 SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
+CONFIGURE_ARGS+=	--enable-fpm
+
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 
 # Make sure modules can link correctly

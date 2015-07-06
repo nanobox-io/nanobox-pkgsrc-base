@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2011/12/04 14:41:01 shattered Exp $
+$NetBSD$
 
-This patch provides config file adapted to pkgsrc settings.
-
---- conf/nginx.conf.orig	2011-06-27 15:47:51.000000000 +0000
+--- conf/nginx.conf.orig	2015-04-21 14:11:59.000000000 +0000
 +++ conf/nginx.conf
 @@ -1,28 +1,29 @@
  
@@ -64,7 +62,12 @@ This patch provides config file adapted to pkgsrc settings.
          }
  
          # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-@@ -67,7 +68,7 @@ http {
+@@ -63,11 +64,11 @@ http {
+         # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+         #
+         #location ~ \.php$ {
+-        #    root           html;
++        #    root           share/examples/nginx/html;
          #    fastcgi_pass   127.0.0.1:9000;
          #    fastcgi_index  index.php;
          #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
@@ -82,8 +85,8 @@ This patch provides config file adapted to pkgsrc settings.
      #        index  index.html index.htm;
      #    }
      #}
-@@ -110,7 +111,7 @@ http {
-     #    ssl_prefer_server_ciphers   on;
+@@ -109,7 +110,7 @@ http {
+     #    ssl_prefer_server_ciphers  on;
  
      #    location / {
 -    #        root   html;

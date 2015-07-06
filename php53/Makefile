@@ -40,6 +40,8 @@ SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
 INSTALLATION_DIRS+=	${CGIDIR} ${EGDIR} share/php ${PHP_EXTENSION_DIR}
 
+CONFIGURE_ARGS+=	--enable-fpm
+
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes

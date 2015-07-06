@@ -4,7 +4,7 @@
 
 PKGNAME= 		newrelic-${NEWRELIC_VERSION}
 VERSION=		${NEWRELIC_VERSION}
-DISTNAME=		newrelic-php5-${NEWRELIC_VERSION}-solaris
+DISTNAME=		newrelic-php5-${NEWRELIC_VERSION}-${OS}
 CATEGORIES=		pagoda
 MASTER_SITES=		https://download.newrelic.com/php_agent/release/
 
@@ -17,6 +17,14 @@ USE_LANGUAGES=		# none
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../base/newrelic/newrelicversion.mk"
+
+.if ${OPSYS} == Linux
+OS=			linux
+.elif ${OPSYS} == SunOS	
+OS=			solaris
+.else
+PKG_SKIP_REASON+=	"Operating system not supported"
+.endif
 
 .if ${ABI} == 64
   SYSARCH= 		x64

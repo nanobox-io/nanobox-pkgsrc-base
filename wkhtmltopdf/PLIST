@@ -1,0 +1,13 @@
+@comment $NetBSD$
+bin/wkhtmltoimage
+bin/wkhtmltopdf
+include/wkhtmltox/dllbegin.inc
+include/wkhtmltox/dllend.inc
+include/wkhtmltox/image.h
+include/wkhtmltox/pdf.h
+lib/libwkhtmltox.so
+lib/libwkhtmltox.so.0
+lib/libwkhtmltox.so.0.12
+lib/libwkhtmltox.so.${PKGVERSION}
+man/man1/wkhtmltoimage.1
+man/man1/wkhtmltopdf.1

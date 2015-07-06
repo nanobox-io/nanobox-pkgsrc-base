@@ -27,7 +27,7 @@ BUILDLINK_TREE+=  wkhtmltopdf
 
 BUILDLINK_API_DEPENDS.wkhtmltopdf+= wkhtmltopdf-0.12.*
 BUILDLINK_ABI_DEPENDS.wkhtmltopdf+= wkhtmltopdf>=0.12.1
-BUILDLINK_PKGSRCDIR.wkhtmltopdf?= ../../wip/wkhtmltopdf
+BUILDLINK_PKGSRCDIR.wkhtmltopdf?= ../../base/wkhtmltopdf
 
 BUILDLINK_TREE+=  -wkhtmltopdf
 

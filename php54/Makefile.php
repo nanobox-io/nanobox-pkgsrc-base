@@ -51,7 +51,6 @@ CONFIGURE_ARGS+=	--disable-xml
 CONFIGURE_ARGS+=	--disable-xmlreader   
 CONFIGURE_ARGS+=	--disable-xmlwriter
 CONFIGURE_ARGS+=	--enable-mysqlnd
-CONFIGURE_ARGS+=	--enable-fpm
 
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.

@@ -3,12 +3,27 @@
 # vim: ts=8 sw=8 ft=make noet
 
 PKGNAME=		${PHP_PKG_PREFIX}-ioncube-${PHP_EXTENSION_VERSION.${MODNAME}}
-DISTNAME=		phpd-4.6-libs-smartos-20140806
+DISTNAME=		ioncube_loaders_${OS}_${SYSARCH}.tar.gz
 MODNAME=		ioncube_loader
 VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
 CATEGORIES+=		devel
 MASTER_SITES=		http://downloads3.ioncube.com/loader_downloads/
-EXTRACT_SUFX=		.tgz
+EXTRACT_SUFX=		.tar.gz
+
+.include "../../mk/bsd.prefs.mk"
+.if ${ABI} == 64
+	SYSARCH=	x86-64
+.else
+	SYSARCH=	x86
+.endif
+.if ${OPSYS} == Linux
+	OS=		lin
+.elif ${OPSYS} == SunOS
+	OS=		sun
+.else
+PKG_SKIP_REASON+=	"Operating system not supported"
+.endif
+
 
 MAINTAINER=		filip@joyent.com
 COMMENT=		PHP ionCube Encoder

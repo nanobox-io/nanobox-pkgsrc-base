@@ -1,2 +1,4 @@
 .vagrant
 .pkgsrc-lite
+.distfiles
+.packages

@@ -75,7 +75,7 @@ create_chroot() {
   echo "Installing GNU compiler collection"
   sudo \
     /chroot/${chroot}/sandbox \
-      /data/bin/pkgin -y in gcc49
+      /data/bin/pkgin -y in gcc49 pkgdiff
 }
 
 enter_chroot() {

@@ -1,4 +1,6 @@
 #!/bin/bash
+# -*- mode: bash; tab-width: 2; -*-
+# vim: ts=2 sw=8 ft=bash noet
 
 # A utility to create isolated pkgsrc bootstrap environments to ensure
 # package creation is isolated
@@ -62,6 +64,11 @@ create_chroot() {
   # ensure /data/var/db exists
   if [ ! -d /chroot/${chroot}/data/var/db ]; then
     mkdir -p /chroot/${chroot}/data/var/db
+  fi
+
+  # link /data/var/db/pkgin/cache to package dir
+  if [ ! -L /chroot/${chroot}/data/var/db/pkgin/cache ]; then
+    ln -s /content/packages/pkgsrc/${project}/${platform}/All /chroot/${chroot}/data/var/db/pkgin/cache
   fi
 
   # install gcc

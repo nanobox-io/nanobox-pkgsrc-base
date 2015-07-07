@@ -15,7 +15,7 @@ to build pkgsrc packages without leaking dependencies.
 
 Usage: sandbox <command> [NAME]
 
-where <command> is one of: up, enter, rm, list
+where <command> is one of: up, enter, resume, rm, list
 END
 }
 

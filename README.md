@@ -74,82 +74,170 @@ Your editor MUST understand and obey the modelines declared at the top. Adjust y
 
 All variables MUST be aligned vertically. Consider [this](https://github.com/pagodabox/nanobox-pkgsrc-base/blob/master/erlang18/Makefile) example and follow exactly.
 
-### create a sandbox
-```bash
-$ sandbox up [name]
-```
+### build
 
-### build and iteration
+1. create a sandbox
+	
+	```bash
+	$ sandbox up [name]
+	```
 
-1. Enter the sandbox
+2. Enter the sandbox
+
   ```bash
   $ sandbox enter [name]
   ```
 
-2. Navigate to the package directory
+3. Navigate to the package directory
 
   ```bash
-  $ cd /content/pkgsrc/[package_category]/[package_name]
+  $ cd /content/pkgsrc/base/[package_name]
   ```
-Run bmake commands
-```bash
-$ bmake package
-```
-If this is a new package, extra commands will need to run.
-Build the distinfo file
-```bash
-$ bmake distinfo
-```
-If there are patches, those need to be checksummed in the distinfo file.
-```bash
-$ bmake mps
-```
-Create a PLIST file.
-```bash
-$ bmake stage-install
-$ bmake print-PLIST > PLIST
-$ bmake install-clean
-```
-If the build fails, then creating a patch might be necessary.
-The culprit source file might be found by looking at the source.
-There should be some tools installed to help with the creation of patches.
-To create a patch:
-1. Navigate to the build folder
-```bash
-$ cd /var/tmp/pkgsrc-build-data/[package_category]/[package_name]/work/[package_source_dir]
-```
-2. Now you can use pkgvi to edit the source
-```bash
-$ pkgvi [path/to/src/file]
-```
-3. And create a patch
-```bash
-$ mkdir /content/pkgsrc/[package_category]/[package_name]/patches
-$ pkgdiff [path/to/src/file] > /content/pkgsrc/[package_category]/[package_name]/patches/patch-path_to_src_file
-```
-4. Return to the pkgsrc folder and add patch into the distinfo file
-```bash
-$ cd /content/pkgsrc/[package_category]/[package_name]
-$ bmake mps
-```
-5. Clean and build again
-```bash
-$ bmake clean
-$ bmake
-```
 
-todo: cleaning, patching, packaging, PLISTing
+4. Build distinfo file
 
-### remove a sandbox
-When the sandbox is no longer needed, it can be removed by running
-```bash
-$ sandbox rm [name]
-```
-When packages are ready to be uploaded to the repository, run:
-### publish
-```bash
-$ publish
-```
+	Note: This step generates a checksum of the downloaded source. This step is required on a new package and when the source changes, perhaps on a new version.
+	
+	```bash
+	$ bmake distinfo
+	```
+
+5. Pre-fetch dependencies that already exist on the remote server 
+
+	Warning: omitting this step may lead to unecessarily long build times
+	
+	```bash
+	$ bmake fetch-depends
+	```
+
+6. Attempt compilation
+
+	```bash
+	$ bmake
+	```
+	
+7. Generate patches if necessary
+	
+	1. Navigate to the build folder
+		```bash
+		$ cd /var/tmp/pkgsrc-build-data/base/[package_name]/work/[package_source_dir]
+		```
+		
+	2. Use pkgvi to edit the source
+		```bash
+		$ pkgvi [path/to/src/file]
+		```
+		
+	3. Create a patch
+		```bash
+		$ mkdir /content/pkgsrc/base/[package_name]/patches
+		$ pkgdiff [path/to/src/file] > /content/pkgsrc/base/[package_name]/patches/patch-path_to_src_file
+		```
+		
+	4. Return to the pkgsrc folder and add patch into the distinfo file
+		```bash
+		$ cd /content/pkgsrc/base/[package_name]
+		$ bmake mps
+		```
+
+8. Clean and build again
+	```bash
+	$ bmake clean
+	$ bmake
+	```
+
+9. Generate a PLIST file
+	```bash
+	$ bmake stage-install
+	$ bmake print-PLIST > PLIST
+	```
+
+10. Create the final package
+	```bash
+	$ bmake install-clean
+	$ bmake package
+	```
+
+11. Publish the package
+
+	```bash
+	$ bmake publish
+	```
+
+12. Exit and remove the sandbox
+
+	```bash
+	$ exit
+	$ sandbox rm [name]
+	```
+
+## Package modification
+
+### Versioning
+
+When a new version of the software is available, the VERSION variable in the Makefile should be updated to match the software version.
+
+If the software version has not changed, but a new patchset has been applied, then PKGREVISION variable should be incremented.
+
+### Iteration
+
+1. Create a sandbox
+	
+	```bash
+	$ sandbox create [name]
+	```
+	
+2. Enter the sandbox
+
+	``` bash
+	$ sandbox enter [name]
+	```
+	
+3. Navigate to the package directory
+
+  ```bash
+  $ cd /content/pkgsrc/base/[package_name]
+  ```
+
+4. Re-generate the distinfo file
+
+	```bash
+	$ bmake distinfo
+	```
+	
+5. Build
+
+	```bash
+	$ bmake
+	```
+	
+6. Create patches as necessary (see above)
+
+7. Update the PLIST
+
+	```bash
+	$ bmake stage-install
+	$ bmake print-PLIST > PLIST
+	```
+
+8. Create the final package
+	```bash
+	$ bmake install-clean
+	$ bmake package
+	```
+
+9. Publish the package
+
+	```bash
+	$ bmake publish
+	```
+
+10. Exit and remove the sandbox
+
+	```bash
+	$ exit
+	$ sandbox rm [name]
+	```
 
 ## Contributing
 

@@ -261,4 +261,4 @@ If the software version has not changed, but a new patchset has been applied, th
 
 ## License
 
-TODO: Write license
+This project is released under the [MIT License](http://www.opensource.org/licenses/MIT).

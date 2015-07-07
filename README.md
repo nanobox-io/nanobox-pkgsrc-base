@@ -51,11 +51,12 @@ The following guide defined here will serve as a quick overview only.
 
 ### defining a package
 
-Important files for a package definition:
+Required files for a package definition:
 * Makefile - Contains instruction on how to fetch and build sources
 * DESCR - Contains long description of package
 * PLIST - List of files contained in package
 * distinfo - List of sources and checksums
+
 Optional files for a package definition:
 * MESSAGE - Contains a message that is shown when package is installed
 * INSTALL - Shell script segment that gets injected into the install process
@@ -104,7 +105,7 @@ All variables MUST be aligned vertically. Consider [this](https://github.com/pag
 
 5. Pre-fetch dependencies that already exist on the remote server 
 
-	Warning: omitting this step may lead to unecessarily long build times
+	WARNING: omitting this step may lead to unecessarily long build times
 	
 	```bash
 	$ bmake fetch-depends
@@ -147,6 +148,9 @@ All variables MUST be aligned vertically. Consider [this](https://github.com/pag
 	```
 
 9. Generate a PLIST file
+	
+	WARNING: A PLIST contains a list of files for the package. Omitting this step will generate an empty package.
+
 	```bash
 	$ bmake stage-install
 	$ bmake print-PLIST > PLIST
@@ -204,35 +208,43 @@ If the software version has not changed, but a new patchset has been applied, th
 	```bash
 	$ bmake distinfo
 	```
+
+5. Pre-fetch dependencies that already exist on the remote server 
+
+	WARNING: omitting this step may lead to unecessarily long build times
 	
-5. Build
+	```bash
+	$ bmake fetch-depends
+	```
+	
+6. Build
 
 	```bash
 	$ bmake
 	```
 	
-6. Create patches as necessary (see above)
+7. Create patches as necessary (see above)
 
-7. Update the PLIST
+8. Update the PLIST
 
 	```bash
 	$ bmake stage-install
 	$ bmake print-PLIST > PLIST
 	```
 
-8. Create the final package
+9. Create the final package
 	```bash
 	$ bmake install-clean
 	$ bmake package
 	```
 
-9. Publish the package
+10. Publish the package
 
 	```bash
 	$ bmake publish
 	```
 
-10. Exit and remove the sandbox
+11. Exit and remove the sandbox
 
 	```bash
 	$ exit

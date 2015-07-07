@@ -1,24 +1,53 @@
 # Nanobox pkgsrc-base
 
-TODO: Write a project description
+This repo contains the package definitions for build and runtime assets that a Nanobox engine may require and download during the build phase. 
+
+## Overview
+
+This project will create a re-usable build environment with [vagrant](https://www.vagrantup.com/) with the following assumptions and advantages:
+
+1. Package definition occurs directly on the developer's workstation, in the prefered native editor and environment.
+2. Package definitions are live-mounted into the vm.
+3. Package build occurs entirely within the vagrant vm, and within an isolated sandbox (chroot).
+4. Final package will be uploaded to the public server for consumption.
+5. All sensitive secrets will be sourced and available as environment variables when the vagrant environment is setup.
 
 ## Installation
 
 ### Workstation setup
 
-```bash
-$ vagrant up
-```
+1. Ensure that the following environment variables are exported in your bashrc, bash_profile, or zshrc:
+
+  ```bash
+  # Nanobox secrets
+  export NANOBOX_USER="nanobox"
+  export NANOBOX_BASE_PROJECT="base"
+  export NANOBOX_BASE_SECRET="INSERT_SECRET_HERE"
+  # optionally set the default vagrant plugin to vmware if the plugin is installed
+  # export NANOBOX_BUILD_VAGRANT_PROVIDER="vmware_fusion"
+  ```
+
+2. Initialize the vagrant environment
+
+  ```bash
+  $ vagrant up
+  ```
 
 ### Environment setup
 
-todo: sandbox etc
+Each package should be built inside a sandbox (chroot). This ensures that there is no dependency leaking and no overlap between packages. A 'sandbox' utility exists within the vagrant vm to facilitate such isolation.
+
+The following subcommands are available to manage sandboxes: create, enter, rm, list, resume.
 
 ## Package Creation
 
 ### pkgsrc
 
-todo: general rara we use pkgsrc point to official docs.
+Nanobox uses [pkgsrc](https://www.pkgsrc.org/) exclusively as the build system. pkgsrc is chosen primarily for it's correctness and portability.
+
+For an in-depth understanding of how pkgsrc works and a comprehensive guide on defining and building packages, please refer to [the pkgsrc developer's guide](http://www.netbsd.org/docs/pkgsrc/developers-guide.html)
+
+The following guide defined here will serve as a quick overview only.
 
 ### defining a package
 
@@ -32,7 +61,18 @@ Optional files for a package definition:
 * INSTALL - Shell script segment that gets injected into the install process
 * DEINSTALL - Shell script segment that gets injected into the uninstall process
 
-todo: where and styleguide!
+### Styleguide
+Each Makefile MUST contain the following modelines declaration at the top of the file:
+
+```vim
+# $NetBSD$
+# -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
+# vim: ts=8 sw=8 ft=make noet
+```
+
+Your editor MUST understand and obey the modelines declared at the top. Adjust your editor accordingly.
+
+All variables MUST be aligned vertically. Consider [this](https://github.com/pagodabox/nanobox-pkgsrc-base/blob/master/erlang18/Makefile) example and follow exactly.
 
 ### create a sandbox
 ```bash
@@ -40,14 +80,17 @@ $ sandbox up [name]
 ```
 
 ### build and iteration
-Enter the sandbox
-```bash
-$ sandbox enter [name]
-```
-Navigate to the package directory
-```bash
-$ cd /content/pkgsrc/[package_category]/[package_name]
-```
+
+1. Enter the sandbox
+  ```bash
+  $ sandbox enter [name]
+  ```
+
+2. Navigate to the package directory
+
+  ```bash
+  $ cd /content/pkgsrc/[package_category]/[package_name]
+  ```
 Run bmake commands
 ```bash
 $ bmake package

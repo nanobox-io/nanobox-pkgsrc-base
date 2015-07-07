@@ -1,6 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# determine vagrant provider
+ENV['VAGRANT_DEFAULT_PROVIDER'] = ENV['NANOBOX_BUILD_VAGRANT_PROVIDER'] || 'virtualbox'
+
 # determine pkgsrc-lite directory
 [
   '../../nanobox-pkgsrc-lite',
@@ -42,16 +45,24 @@ end
 end
 
 Vagrant.configure('2') do |config|
+  
+  config.vm.define "Ubuntu" do |ubuntu|
+    ubuntu.vm.box = 'ubuntu/trusty64'
+  end
+
   config.vm.provider 'virtualbox' do |v|
     v.memory = 4096
     v.cpus   = 4
   end
 
-  config.vm.network "private_network", type: "dhcp"
-
-  config.vm.define "Ubuntu" do |ubuntu|
-    ubuntu.vm.box = 'ubuntu/trusty64'
+  config.vm.provider "vmware_fusion" do |v, override|
+    v.vmx["memsize"] = "4096"
+    v.vmx["numvcpus"] = "4"
+    v.gui = false
+    override.vm.box = "lattice/ubuntu-trusty-64"
   end
+
+  # config.vm.network "private_network", type: "dhcp"
 
   # config.vm.define "SmartOS" do |smartos|
   #   smartos.vm.box = 'livinginthepast/smartos-base64'
@@ -71,13 +82,13 @@ Vagrant.configure('2') do |config|
   nanobox_secret = ENV["NANOBOX_BASE_SECRET"]
 
   # cache
-  config.vm.synced_folder "./.distfiles", "/content/distfiles", type: "nfs"
-  config.vm.synced_folder "./.packages", "/content/packages", type: "nfs"
+  config.vm.synced_folder "./.distfiles", "/content/distfiles"#, type: "nfs"
+  config.vm.synced_folder "./.packages", "/content/packages"#, type: "nfs"
 
   # pkgsrc framework
-  config.vm.synced_folder $pkgsrc, "/content/pkgsrc", type: "nfs"
+  config.vm.synced_folder $pkgsrc, "/content/pkgsrc"#, type: "nfs"
   # package definitions
-  config.vm.synced_folder ".", "/content/pkgsrc/base", type: "nfs"
+  config.vm.synced_folder ".", "/content/pkgsrc/base"#, type: "nfs"
 
   # utility scripts
   config.vm.synced_folder "./.scripts", "/opt/util"

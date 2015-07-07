@@ -1,19 +1,22 @@
 # $NetBSD$
-#
+# -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
+# vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=	build-essential-1.1
 CATEGORIES=	devel meta-pkgs
 MASTER_SITES=	# empty
+PKGREVISION=	1
 
 MAINTAINER=	jperkin@joyent.com
 HOMEPAGE=	http://www.joyent.com/
 COMMENT=	Meta-package for essential build utilities
 
+DEPENDS+= 	digest-[0-9]*:../../pkgtools/digest
 DEPENDS+=	autoconf-[0-9]*:../../devel/autoconf
 DEPENDS+=	automake-[0-9]*:../../devel/automake
 DEPENDS+=	binutils-[0-9]*:../../devel/binutils
 DEPENDS+=	bison-[0-9]*:../../devel/bison
-DEPENDS+=	gcc47-[0-9]*:../../lang/gcc47
+DEPENDS+=	gcc49-[0-9]*:../../lang/gcc49
 DEPENDS+=	gmake-[0-9]*:../../devel/gmake
 DEPENDS+=	libtool-[0-9]*:../../devel/libtool
 DEPENDS+=	m4-[0-9]*:../../devel/m4

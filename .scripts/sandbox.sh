@@ -61,9 +61,14 @@ create_chroot() {
       -f /content/packages/pkgsrc/${project}/${platform}/bootstrap.tar.gz \
       -C /chroot/${chroot}
 
-  # ensure /data/var/db exists
-  if [ ! -d /chroot/${chroot}/data/var/db ]; then
-    mkdir -p /chroot/${chroot}/data/var/db
+  # ensure /data/var/db/pkgin exists
+  if [ ! -d /chroot/${chroot}/data/var/db/pkgin ]; then
+    mkdir -p /chroot/${chroot}/data/var/db/pkgin
+  fi
+
+  # ensure the platform dir exists
+  if [ ! -d /content/packages/pkgsrc/${project}/${platform}/All ]; then
+    mkdir -p /content/packages/pkgsrc/${project}/${platform}/All
   fi
 
   # link /data/var/db/pkgin/cache to package dir
@@ -103,6 +108,11 @@ remove_chroot() {
   fi
 }
 
+resume_chroot() {
+  chroot=$1
+  sudo /chroot/${chroot}/sandbox mount
+}
+
 list_chroots() {
   echo "CHROOTS:"
   for chroot in $(ls /chroot/); do
@@ -120,7 +130,7 @@ cmd=$1
 name=$2
 
 case $cmd in
-  "up" )
+  "up"|"create" )
     create_chroot $name
     echo "$name created"
     ;;
@@ -130,6 +140,10 @@ case $cmd in
   "rm" )
     remove_chroot $name
     echo "$name destroyed"
+    ;;
+  "resume" )
+    resume_chroot $name
+    echo "$name resumed"
     ;;
   "list" )
     list_chroots

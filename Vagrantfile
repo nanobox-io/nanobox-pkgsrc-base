@@ -68,7 +68,7 @@ Vagrant.configure('2') do |config|
 
   nanobox_user = ENV["NANOBOX_USER"] || 'nanobox'
   nanobox_project = ENV["NANOBOX_BASE_PROJECT"] || 'base'
-  nanobox_secret = ENV["NANOBOX_#{nanobox_user.upcase}_#{nanobox_project.upcase}_SECRET"]
+  nanobox_secret = ENV["NANOBOX_BASE_SECRET"]
 
   # cache
   config.vm.synced_folder "./.distfiles", "/content/distfiles", type: "nfs"

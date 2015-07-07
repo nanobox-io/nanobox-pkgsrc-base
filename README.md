@@ -4,7 +4,7 @@ This repo contains the package definitions for build and runtime assets that a N
 
 ## Overview
 
-This project will create a re-usable build environment with [vagrant](https://www.vagrantup.com/) with the following assumptions and advantages:
+This project will create a re-usable build environment using [vagrant](https://www.vagrantup.com/) with the following assumptions and advantages:
 
 1. Package definition occurs directly on the developer's workstation, in the prefered native editor and environment.
 2. Package definitions are live-mounted into the vm.

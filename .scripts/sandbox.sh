@@ -29,6 +29,8 @@ detect_platform() {
 
 create_chroot() {
   chroot=$1
+  user=$(whoami)
+  group=$(id -g -n ${user})
   project="base"
   platform=$(detect_platform)
 
@@ -87,6 +89,10 @@ create_chroot() {
   sudo \
     /chroot/${chroot}/sandbox \
       /data/bin/pkgin -y in gcc49 pkgdiff
+
+  # chown /data directory
+  echo "chown-ing /data directory"
+  chown -R ${user}:${group} /data
 }
 
 enter_chroot() {

@@ -93,6 +93,9 @@ Vagrant.configure('2') do |config|
   # utility scripts
   config.vm.synced_folder "./.scripts", "/opt/util"
 
+  # ssh keys
+  config.vm.synced_folder "~/.ssh", "/var/.ssh"
+
   config.vm.provision "shell", inline: <<-SCRIPT
     echo "Preparing Environment..."
     echo # Vagrant environment variables > /etc/profile.d/vagrant.sh

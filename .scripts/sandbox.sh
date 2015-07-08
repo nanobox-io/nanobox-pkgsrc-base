@@ -42,6 +42,12 @@ create_chroot() {
       --rwdirs=/run,/content,/home,/content/pkgsrc,/content/pkgsrc/base,/content/packages,/content/distfiles \
       /chroot/${chroot}
 
+  # link ssh keys
+  sudo \
+    /chroot/${chroot}/sandbox \
+      ln -s /var/.ssh/id_rsa /home/${user}/.ssh/id_rsa; \
+      ln -s /var/.ssh/id_rsa.pub /home/${user}/.ssh/id_rsa.pub;
+
   # create the pkgsrc file cache
   if [ ! -d /content/packages/pkgsrc/${project}/${platform} ]; then
     mkdir -p /content/packages/pkgsrc/${project}/${platform}

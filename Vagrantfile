@@ -84,19 +84,19 @@ Vagrant.configure('2') do |config|
   nanobox_secret = ENV["NANOBOX_BASE_SECRET"]
 
   # cache
-  config.vm.synced_folder "./.distfiles", "/content/distfiles", type: "nfs"
-  config.vm.synced_folder "./.packages", "/content/packages", type: "nfs"
+  config.vm.synced_folder "./.distfiles", "/content/distfiles"#, type: "nfs"
+  config.vm.synced_folder "./.packages", "/content/packages"#, type: "nfs"
 
   # pkgsrc framework
-  config.vm.synced_folder $pkgsrc, "/content/pkgsrc", type: "nfs"
+  config.vm.synced_folder $pkgsrc, "/content/pkgsrc"#, type: "nfs"
   # package definitions
-  config.vm.synced_folder ".", "/content/pkgsrc/base", type: "nfs"
+  config.vm.synced_folder ".", "/content/pkgsrc/base"#, type: "nfs"
 
   # utility scripts
-  config.vm.synced_folder "./.scripts", "/opt/util", type: "nfs"
+  config.vm.synced_folder "./.scripts", "/opt/util"#, type: "nfs"
 
   # ssh keys
-  config.vm.synced_folder "~/.ssh", "/var/.ssh", type: "nfs"
+  config.vm.synced_folder "~/.ssh", "/var/.ssh"#, type: "nfs"
 
   config.vm.provision "shell", inline: <<-SCRIPT
     echo "Preparing Environment..."

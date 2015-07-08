@@ -19,7 +19,7 @@ LIBS.SunOS+=		-lnsl -lsocket
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	config.m4
+SUBST_FILES.paths=	config.m4 configure
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 

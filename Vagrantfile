@@ -47,7 +47,8 @@ end
 Vagrant.configure('2') do |config|
   
   config.vm.define "Ubuntu" do |ubuntu|
-    ubuntu.vm.box = 'ubuntu/trusty64'
+    ubuntu.vm.box = 'trusty64'
+    ubuntu.vm.box_url = 'https://github.com/pagodabox/vagrant-packer-templates/releases/download/v0.1.0/trusty64_virtualbox.box'
   end
 
   config.vm.provider 'virtualbox' do |v|
@@ -59,7 +60,8 @@ Vagrant.configure('2') do |config|
     v.vmx["memsize"] = "4096"
     v.vmx["numvcpus"] = "4"
     v.gui = false
-    override.vm.box = "lattice/ubuntu-trusty-64"
+    override.vm.box = "trusty64_vmware"
+    override.vm.box_url = 'https://github.com/pagodabox/vagrant-packer-templates/releases/download/v0.1.0/trusty64_vmware.box'
   end
 
   # config.vm.network "private_network", type: "dhcp"
@@ -82,19 +84,19 @@ Vagrant.configure('2') do |config|
   nanobox_secret = ENV["NANOBOX_BASE_SECRET"]
 
   # cache
-  config.vm.synced_folder "./.distfiles", "/content/distfiles"#, type: "nfs"
-  config.vm.synced_folder "./.packages", "/content/packages"#, type: "nfs"
+  config.vm.synced_folder "./.distfiles", "/content/distfiles", type: "nfs"
+  config.vm.synced_folder "./.packages", "/content/packages", type: "nfs"
 
   # pkgsrc framework
-  config.vm.synced_folder $pkgsrc, "/content/pkgsrc"#, type: "nfs"
+  config.vm.synced_folder $pkgsrc, "/content/pkgsrc", type: "nfs"
   # package definitions
-  config.vm.synced_folder ".", "/content/pkgsrc/base"#, type: "nfs"
+  config.vm.synced_folder ".", "/content/pkgsrc/base", type: "nfs"
 
   # utility scripts
-  config.vm.synced_folder "./.scripts", "/opt/util"
+  config.vm.synced_folder "./.scripts", "/opt/util", type: "nfs"
 
   # ssh keys
-  config.vm.synced_folder "~/.ssh", "/var/.ssh"
+  config.vm.synced_folder "~/.ssh", "/var/.ssh", type: "nfs"
 
   config.vm.provision "shell", inline: <<-SCRIPT
     echo "Preparing Environment..."

@@ -47,8 +47,8 @@ create_chroot() {
   # link ssh keys
   sudo \
     /chroot/${chroot}/sandbox \
-      ln -s /var/.ssh/id_rsa /home/${user}/.ssh/id_rsa; \
-      ln -s /var/.ssh/id_rsa.pub /home/${user}/.ssh/id_rsa.pub;
+      cp -f /var/.ssh/id_rsa /home/${user}/.ssh/id_rsa; \
+      cp -f /var/.ssh/id_rsa.pub /home/${user}/.ssh/id_rsa.pub;
 
   # create the pkgsrc file cache
   if [ ! -d /content/packages/pkgsrc/${project}/${platform} ]; then
@@ -92,7 +92,9 @@ create_chroot() {
 
   # chown /data directory
   echo "chown-ing /data directory"
-  chown -R ${user}:${group} /data
+  sudo \
+    /chroot/${chroot}/sandbox \
+      chown -R ${user}:${group} /data
 }
 
 enter_chroot() {

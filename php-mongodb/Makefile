@@ -21,6 +21,12 @@ WRKSRC=			${WRKDIR}/mongodb-${PECL_VERSION}
 # PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	config.m4 configure
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_MESSAGE.paths=	Fixing paths.
+
 .include "../../base/php/extension_versions.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"

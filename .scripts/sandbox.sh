@@ -41,7 +41,7 @@ create_chroot() {
   sudo \
     /data/sbin/mksandbox \
       --without-pkgsrc \
-      --rwdirs=/run,/content,/home,/content/pkgsrc,/content/pkgsrc/base,/content/packages,/content/distfiles \
+      --rwdirs=/run,/content,/home,/var/.ssh,/content/pkgsrc,/content/pkgsrc/base,/content/packages,/content/distfiles \
       /chroot/${chroot}
 
   # link ssh keys

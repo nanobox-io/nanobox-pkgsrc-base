@@ -50,6 +50,12 @@ create_chroot() {
       cp -f /var/.ssh/id_rsa /home/${user}/.ssh/id_rsa; \
       cp -f /var/.ssh/id_rsa.pub /home/${user}/.ssh/id_rsa.pub;
 
+  # chown the ssh keys
+  sudo \
+    /chroot/${chroot}/sandbox \
+      chown ${user}:${user} /var/.ssh/id_rsa; \
+      chown ${user}:${user} /var/.ssh/id_rsa.pub;
+
   # create the pkgsrc file cache
   if [ ! -d /content/packages/pkgsrc/${project}/${platform} ]; then
     mkdir -p /content/packages/pkgsrc/${project}/${platform}

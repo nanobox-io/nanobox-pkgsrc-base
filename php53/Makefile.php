@@ -74,9 +74,6 @@ PKG_FAIL_REASON+=	"build this package without the suhosin option."
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.bz2
 PLIST.suhosin=		yes
-MESSAGE_SRC=		${.CURDIR}/../../base/php53/MESSAGE
-MESSAGE_SRC+=		${.CURDIR}/../../base/php53/MESSAGE.suhosin
-
 .  endif
 .endif
 

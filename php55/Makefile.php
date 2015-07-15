@@ -84,8 +84,6 @@ PKG_SUPPORTED_OPTIONS+=	dtrace
 #PATCHFILES+=		suhosin-patch-${SUHOSIN_PHPVER}-0.9.10.patch.gz
 #PATCH_DIST_STRIP=	-p1
 #PLIST.suhosin=		yes
-#MESSAGE_SRC=		${.CURDIR}/../../base/php54/MESSAGE
-#MESSAGE_SRC+=		${.CURDIR}/../../base/php54/MESSAGE.suhosin
 #.  endif
 #.endif
 

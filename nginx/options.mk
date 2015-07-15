@@ -213,9 +213,6 @@ DEPENDS+=		${RUBY_PKGPREFIX}-passenger-[0-9]*:../../wip/ruby-passenger
 
 CONFIGURE_ARGS+=	--add-module=${WRKDIR}/passenger/ext/nginx
 
-MESSAGE_SRC=		MESSAGE
-MESSAGE_SRC+=		MESSAGE.passenger
-
 .include "../../wip/ruby-passenger/inplace.mk"
 
 pre-configure: build-passenger-files

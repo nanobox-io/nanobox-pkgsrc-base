@@ -77,24 +77,18 @@ create_chroot() {
 
   # ensure /data/var/db/pkgin exists
   if [ ! -d /chroot/${chroot}/data/var/db/pkgin ]; then
-    mkdir -p /chroot/${chroot}/data/var/db/pkgin
+    sudo mkdir -p /chroot/${chroot}/data/var/db/pkgin
   fi
 
   # ensure the platform dir exists
   if [ ! -d /content/packages/pkgsrc/${project}/${platform}/All ]; then
-    mkdir -p /content/packages/pkgsrc/${project}/${platform}/All
+    sudo mkdir -p /content/packages/pkgsrc/${project}/${platform}/All
   fi
 
   # link /data/var/db/pkgin/cache to package dir
   if [ ! -L /chroot/${chroot}/data/var/db/pkgin/cache ]; then
-    ln -s /content/packages/pkgsrc/${project}/${platform}/All /chroot/${chroot}/data/var/db/pkgin/cache
+    sudo ln -s /content/packages/pkgsrc/${project}/${platform}/All /chroot/${chroot}/data/var/db/pkgin/cache
   fi
-
-  # install gcc
-  echo "Installing GNU compiler collection"
-  sudo \
-    /chroot/${chroot}/sandbox \
-      /data/bin/pkgin -y in gcc49 pkgdiff
 
   # chown /data directory
   echo "chown-ing /data directory"

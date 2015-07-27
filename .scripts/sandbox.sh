@@ -44,7 +44,7 @@ create_chroot() {
       --rwdirs=/run,/content,/home,/var/.ssh,/content/pkgsrc,/content/pkgsrc/base,/content/packages,/content/distfiles \
       /chroot/${chroot}
 
-  # link ssh keys
+  # copy ssh keys
   sudo \
     /chroot/${chroot}/sandbox \
       cp -f /var/.ssh/id_rsa /home/${user}/.ssh/id_rsa; \
@@ -53,8 +53,8 @@ create_chroot() {
   # chown the ssh keys
   sudo \
     /chroot/${chroot}/sandbox \
-      chown ${user}:${user} /var/.ssh/id_rsa; \
-      chown ${user}:${user} /var/.ssh/id_rsa.pub;
+      chown ${user}:${user} /home/${user}/.ssh/id_rsa; \
+      chown ${user}:${user} /home/${user}/.ssh/id_rsa.pub;
 
   # create the pkgsrc file cache
   if [ ! -d /content/packages/pkgsrc/${project}/${platform} ]; then

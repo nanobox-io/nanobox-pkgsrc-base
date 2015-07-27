@@ -109,39 +109,45 @@ Vagrant.configure('2') do |config|
     chmod +x /etc/profile.d/vagrant.sh
   SCRIPT
 
-  config.vm.provision 'shell', inline: <<-SCRIPT
-    echo "Downloading and Extracting Bootstrap..."
-
-    # detect platform
-    if [ $(uname | grep 'SunOS') ]; then
-      platform="SmartOS"
-    elif [ $(uname | grep 'Linux') ]; then
-      platform="Linux"
-    fi 
-
-    # download and extract the bootstrap
-    if [ ! -d /data ]; then
-      curl \
-        -s \
-        http://pkgsrc.nanobox.io/nanobox/base/${platform}/bootstrap.tar.gz \
-          | tar \
-              -xz \
-              -f - \
-              -C /
-    fi
-
-    # ensure /data/var/db exists
-    if [ ! -d /data/var/db ]; then
-      mkdir -p /data/var/db
-    fi
+  config.vm.provision "shell", inline: <<-SCRIPT
+    echo "installing build tools..."
+    apt-get -y update -qq
+    apt-get install -y build-essential
   SCRIPT
 
-  config.vm.provision 'shell', inline: <<-SCRIPT
-    echo "Install mksandbox utility..."
-    if [ ! -f /data/sbin/mksandbox ]; then
-      /data/bin/pkgin -y in mksandbox
-    fi
-  SCRIPT
+  # config.vm.provision 'shell', inline: <<-SCRIPT
+  #   echo "Downloading and Extracting Bootstrap..."
+
+  #   # detect platform
+  #   if [ $(uname | grep 'SunOS') ]; then
+  #     platform="SmartOS"
+  #   elif [ $(uname | grep 'Linux') ]; then
+  #     platform="Linux"
+  #   fi 
+
+  #   # download and extract the bootstrap
+  #   if [ ! -d /data ]; then
+  #     curl \
+  #       -s \
+  #       http://pkgsrc.nanobox.io/nanobox/base/${platform}/bootstrap.tar.gz \
+  #         | tar \
+  #             -xz \
+  #             -f - \
+  #             -C /
+  #   fi
+
+  #   # ensure /data/var/db exists
+  #   if [ ! -d /data/var/db ]; then
+  #     mkdir -p /data/var/db
+  #   fi
+  # SCRIPT
+
+  # config.vm.provision 'shell', inline: <<-SCRIPT
+  #   echo "Install mksandbox utility..."
+  #   if [ ! -f /data/sbin/mksandbox ]; then
+  #     /data/bin/pkgin -y in mksandbox
+  #   fi
+  # SCRIPT
 
   config.vm.provision 'shell', inline: <<-SCRIPT
     echo "Installing custom utilities..."

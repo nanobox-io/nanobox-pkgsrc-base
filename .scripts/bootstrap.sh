@@ -131,6 +131,38 @@ for i in ${packages[@]}; do
   sudo /data/sbin/pkg_add /content/packages/pkgsrc/${project}/Linux/All/${pkg_name}.tgz
 done
 
+# 10) set the source in pkgin
+sudo bash -c "/bin/cat > /data/etc/pkgin/repositories.conf" <<END
+# $Id: repositories.conf,v 1.3 2012/06/13 13:50:17 imilh Exp $
+#
+# Pkgin repositories list
+#
+# Simply add repositories URIs one below the other
+#
+# WARNING: order matters, duplicates will not be added, if two
+# repositories hold the same package, it will be fetched from 
+# the first one listed in this file.
+#
+# This file format supports the following macros:
+# $arch to define the machine hardware platform
+# $osrelease to define the release version for the operating system
+#
+# Remote ftp repository
+#
+# ftp://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/$arch/5.1/All
+#
+# Remote http repository
+#
+# http://mirror-master.dragonflybsd.org/packages/$arch/DragonFly-$osrelease/stable/All
+#
+# Local repository (must contain a pkg_summary.gz or bz2)
+#
+# file:///usr/pkgsrc/packages/All
+
+# Nanobox public repository
+http://pkgsrc.nanobox.io/nanobox/${project}/${platform}
+END
+
 # 10) tar
 sudo tar -czf /var/tmp/bootstrap.tar.gz -C / data
 
@@ -142,8 +174,13 @@ curl \
   --data-binary \@/var/tmp/bootstrap.tar.gz \
   https://pkgsrc.nanobox.io/${NANOBOX_USER}/${project}/${platform}/bootstrap.tar.gz
 
-# 12) build/install extra packages
+# 12) build/install/publish extra packages
 for i in ${extra_packages[@]}; do
   /data/bin/bmake -C /content/pkgsrc/${i} package
   /data/bin/bmake -C /content/pkgsrc/${i} install
+  /data/bin/bmake -C /content/pkgsrc/${i} publish
 done
+
+# 13) mv bootstrap into cache for chroots
+cp -f /var/tmp/bootstrap.tar.gz \
+  /content/packages/pkgsrc/${project}/${platform}/bootstrap.tar.gz

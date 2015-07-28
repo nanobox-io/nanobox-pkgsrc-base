@@ -1,14 +1,15 @@
 # $NetBSD$
 
-DISTNAME=	wkhtmltox-0.12.1
+DISTNAME=	wkhtmltox-${VERSION}
+VERSION=	0.12.2.1
 PKGNAME=	${DISTNAME:S/tox/topdf/}
-PKGREVISION=	1
+# PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wkhtmltopdf/}
+MASTER_SITES=	http://download.gna.org/wkhtmltopdf/0.12/${VERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zecrazytux@zecrazytux.net
-HOMEPAGE=	http://wkhtmltopdf.org//
+HOMEPAGE=	http://wkhtmltopdf.org/
 COMMENT=	Render HTML into PDF and image formats using QT Webkit
 LICENSE=	gnu-lgpl-v3
 

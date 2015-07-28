@@ -34,7 +34,7 @@ BUILDLINK_DEPMETHOD.readline=	build
 #PLIST.ndb=		yes
 #.endif
 
-PLIST_VARS+=		embedded ndb auth_socket
+PLIST_VARS+=		embedded ndb auth_socket solaris
 
 CMAKE_ARGS+=		-DWITH_ARCHIVE_STORAGE_ENGINE=ON
 CMAKE_ARGS+=		-DWITH_BLACKHOLE_STORAGE_ENGINE=ON

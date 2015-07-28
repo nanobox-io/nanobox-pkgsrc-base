@@ -47,6 +47,9 @@ CMAKE_ARGS+=		-DWITH_PERFSCHEMA_STORAGE_ENGINE=ON
 .if ${OPSYS} == "Linux"
 PLIST.auth_socket=	yes
 .endif
+.if ${OPSYS} == "SunOS"
+PLIST.solaris=	yes
+.endif
 
 PTHREAD_OPTS+=		require
 

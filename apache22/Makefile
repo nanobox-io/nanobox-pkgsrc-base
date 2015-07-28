@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 #  # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=		httpd-2.2.29
+DISTNAME=		httpd-2.2.31
 PKGNAME=		${DISTNAME:S/httpd/apache/}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \

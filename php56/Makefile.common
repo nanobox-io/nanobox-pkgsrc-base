@@ -40,7 +40,7 @@ EXTRACT_SUFX?=		.tar.bz2
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
 
-PHP_BASE_VERS=		5.6.10
+PHP_BASE_VERS=		5.6.11
 
 PHP_EXTENSION_ABI=	20131226
 

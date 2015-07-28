@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		erlang-${VERSION}
-VERSION=		18.0.1
+VERSION=		18.0.2
 PKGNAME=		erlang-${VERSION}
 # PKGREVISION=		1
 CATEGORIES=		base
@@ -16,6 +16,8 @@ COMMENT=		Erlang is a programming language
 
 USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake perl aclocal autoconf automake
+USE_JAVA=		yes
+USE_JAVA2=		yes
 
 HAS_CONFIGURE=		yes
 # CONFIGURE_SCRIPT=	./otp_build configure

@@ -24,7 +24,7 @@ NO_BUILD= 		yes
 INSTALL_UNSTRIPPED= 	yes
 INSTALLATION_DIRS+=	bin
 
-BUILD_DEPENDS+=		php>=5.3.27:../../base/php53
+# BUILD_DEPENDS+=		php>=5.3.27:../../base/php53
 
 pre-fetch:
 	if [[ ! -f ${_DISTDIR}${DISTNAME}.phar ]]; then \

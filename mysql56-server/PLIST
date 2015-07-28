@@ -54,6 +54,7 @@ lib/libmysqlclient.so.18
 lib/libmysqlclient.so.18.1.0
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
+${PLIST.auth_socket}lib/mysql/plugin/auth_socket.so
 lib/mysql/plugin/auth_test_plugin.so
 lib/mysql/plugin/auth.so
 lib/mysql/plugin/daemon_example.ini
@@ -139,7 +140,7 @@ share/mysql/romanian/errmsg.sys
 share/mysql/russian/errmsg.sys
 share/mysql/serbian/errmsg.sys
 share/mysql/slovak/errmsg.sys
-share/mysql/solaris/postinstall-solaris
+${PLIST.solaris}share/mysql/solaris/postinstall-solaris
 share/mysql/spanish/errmsg.sys
 share/mysql/sql-bench/sql-bench/bench-count-distinct
 share/mysql/sql-bench/sql-bench/bench-init.pl

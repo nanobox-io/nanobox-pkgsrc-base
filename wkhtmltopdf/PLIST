@@ -8,6 +8,6 @@ include/wkhtmltox/pdf.h
 lib/libwkhtmltox.so
 lib/libwkhtmltox.so.0
 lib/libwkhtmltox.so.0.12
-lib/libwkhtmltox.so.${PKGVERSION}
+lib/libwkhtmltox.so.0.12.2
 man/man1/wkhtmltoimage.1
 man/man1/wkhtmltopdf.1

@@ -36,6 +36,7 @@ packages=(
   )
 extra_packages=(
   pkgtools/mksandbox
+  pkgtools/pkgdiff
   )
 
 # 0) clean start
@@ -91,6 +92,7 @@ PACKAGES=     /content/packages/pkgsrc/${project}/Linux
 WRKOBJDIR=      /var/tmp/pkgsrc-build-${project}
 
 MAKE_JOBS=      6
+JPEG_DEFAULT=            libjpeg-turbo
 
 SU_CMD=       sudo sh -c
 
@@ -163,6 +165,10 @@ sudo bash -c "/bin/cat > /data/etc/pkgin/repositories.conf" <<END
 http://pkgsrc.nanobox.io/nanobox/${project}/${platform}
 END
 
+# 10) symlink openssl certs
+rm -rf /data/etc/openssl/certs
+ln -s /etc/ssl/certs/ /data/etc/openssl/certs
+
 # 10) tar
 sudo tar -czf /var/tmp/bootstrap.tar.gz -C / data
 
@@ -178,9 +184,11 @@ curl \
 for i in ${extra_packages[@]}; do
   /data/bin/bmake -C /content/pkgsrc/${i} package
   /data/bin/bmake -C /content/pkgsrc/${i} install
-  /data/bin/bmake -C /content/pkgsrc/${i} publish
 done
 
 # 13) mv bootstrap into cache for chroots
 cp -f /var/tmp/bootstrap.tar.gz \
   /content/packages/pkgsrc/${project}/${platform}/bootstrap.tar.gz
+
+# 14) publish extras
+/data/bin/bmake -C /content/pkgsrc/pkgtools/mksandbox publish

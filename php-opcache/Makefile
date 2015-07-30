@@ -32,7 +32,6 @@ WRKSRC=			${WRKDIR}/opcache
 
 .include "../../base/php/ext.mk"
 # this is not an usual extension, override MESSAGE.module
-MESSAGE_SRC=           ${.CURDIR}/MESSAGE
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}

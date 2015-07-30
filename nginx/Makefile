@@ -3,7 +3,7 @@
 #  # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		nginx-1.8.0
-PKGREVISION=		5
+# PKGREVISION=		5
 MAINTAINER=		joerg@NetBSD.org
 
 .include "../../base/nginx/Makefile.common"

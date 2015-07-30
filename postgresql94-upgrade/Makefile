@@ -4,9 +4,9 @@ PKGNAME=	${DISTNAME:C/-/94-upgrade-/}
 COMMENT=	PostgreSQL binary upgrade tool
 MAINTAINER=	pkgsrc-users@NetBSD.org
 
-DEPENDS+=	postgresql94-server>=${PKGVERSION_NOREV}:.../../base/postgresql94-server
+DEPENDS+=	postgresql94-server>=${PKGVERSION_NOREV}:../../base/postgresql94-server
 
-.include ".../../base/postgresql94/Makefile.common"
+.include "../../base/postgresql94/Makefile.common"
 
 BUILD_MAKE_FLAGS=	USE_PGXS=1
 
@@ -15,5 +15,5 @@ BUILD_DIRS+=		contrib/pg_upgrade_support
 
 LIBS.SunOS+=	-lintl
 
-.include ".../../base/postgresql94-client/buildlink3.mk"
+.include "../../base/postgresql94-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

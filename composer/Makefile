@@ -27,7 +27,7 @@ INSTALLATION_DIRS+=	bin
 # BUILD_DEPENDS+=		php>=5.3.27:../../base/php53
 
 pre-fetch:
-	if [[ ! -f ${_DISTDIR}${DISTNAME}.phar ]]; then \
+	if [ ! -f ${_DISTDIR}${DISTNAME}.phar ]; then \
 		${_FETCH_CMD.${FETCH_USING}} ${_FETCH_BEFORE_ARGS.${FETCH_USING}} ${_FETCH_OUTPUT_ARGS.${FETCH_USING}} ${_DISTDIR}${DISTNAME}.phar "${MASTER_SITES}composer.phar" ${_FETCH_AFTER_ARGS.${FETCH_USING}}; \
 	fi;
 

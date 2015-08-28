@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.orig	2015-08-21 20:33:09.000000000 +0000
++++ Makefile
+@@ -5,7 +5,7 @@ RELEASE=$(shell awk '/Release:/ { print
+ CVSTAG = $(NAME)_$(subst .,-,$(VERSION))_$(subst .,-,$(RELEASE))
+ RPMBUILD=$(shell `which rpmbuild >&/dev/null` && echo "rpmbuild" || echo "rpm")
+ 
+-prefix=/usr
++prefix=@PREFIX@
+ includedir=$(prefix)/include
+ libdir=$(prefix)/lib
+ 

@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- bin/jruby.orig	2015-08-20 17:02:24.000000000 +0000
++++ bin/jruby
+@@ -41,13 +41,7 @@ done
+ 
+ PRG=$SELF_PATH
+ 
+-JRUBY_HOME_1=`dirname "$PRG"`           # the ./bin dir
+-if [ "$JRUBY_HOME_1" = '.' ] ; then
+-  cwd=`pwd`
+-  JRUBY_HOME=`dirname $cwd` # JRUBY-2699
+-else
+-  JRUBY_HOME=`dirname "$JRUBY_HOME_1"`  # the . dir
+-fi
++JRUBY_HOME=@JRUBY_HOME@
+ 
+ if [ -z "$JRUBY_OPTS" ] ; then
+   JRUBY_OPTS=""

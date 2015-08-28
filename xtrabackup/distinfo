@@ -1,5 +1,5 @@
 $NetBSD$
 
-SHA1 (percona-xtrabackup-2.2.11.tar.gz) = 899c2c282c1547ff4ca1a96a8744bc60fa9701e2
-RMD160 (percona-xtrabackup-2.2.11.tar.gz) = 786061b17a9c2c9dacf083ed3624ce6fad9c47a5
-Size (percona-xtrabackup-2.2.11.tar.gz) = 34821172 bytes
+SHA1 (percona-xtrabackup-2.2.12.tar.gz) = 9aebf9c659760e348dd150ee946d93739ff9da13
+RMD160 (percona-xtrabackup-2.2.12.tar.gz) = 9b6bca69fbb1d6dee809cdfd58f36df4cbb18817
+Size (percona-xtrabackup-2.2.12.tar.gz) = 34827353 bytes

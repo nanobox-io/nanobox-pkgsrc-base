@@ -6,7 +6,7 @@
 # used by databases/mariadb55-galera-server/Makefile
 
 DISTNAME=		mariadb-galera-${VERSION}
-VERSION=		5.5.43
+VERSION=		5.5.45
 CATEGORIES=		databases
 MASTER_SITES=		http://ftp.utexas.edu/mariadb/mariadb-galera-${VERSION}/source/
 

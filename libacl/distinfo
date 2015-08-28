@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (acl-2.2.52.src.tar.gz) = 537dddc0ee7b6aa67960a3de2d36f1e2ff2059d9
+RMD160 (acl-2.2.52.src.tar.gz) = 2abac978d1b985c1a30aeaed8d78b13d96b467d6
+Size (acl-2.2.52.src.tar.gz) = 386604 bytes
+SHA1 (patch-include_builddefs.in) = 23e9f24545616df206bafe8e181fedd1ec1ab06c

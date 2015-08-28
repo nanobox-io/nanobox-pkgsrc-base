@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (mariadb-galera-10.0.19.tar.gz) = 15fc7f3799f816345fd771eeb229f630a12fdabc
-RMD160 (mariadb-galera-10.0.19.tar.gz) = 4ef93fef4c1c15ff14453295d14a39461a7fce0f
-Size (mariadb-galera-10.0.19.tar.gz) = 56520261 bytes
+SHA1 (mariadb-galera-10.0.21.tar.gz) = 500b852960a214b7793112367973d7a625607ba1
+RMD160 (mariadb-galera-10.0.21.tar.gz) = cfe530faad0a3845a51c9d0328d5b68134ba19c5
+Size (mariadb-galera-10.0.21.tar.gz) = 56518164 bytes
 SHA1 (sphinx-2.2.9-release.tar.gz) = 7ddde51bb1d428406acb278c615a2c2fda819daf
 RMD160 (sphinx-2.2.9-release.tar.gz) = e600bb0fcbb3fe9838dc60bd8b00ca2bedd0ce05
 Size (sphinx-2.2.9-release.tar.gz) = 2992905 bytes

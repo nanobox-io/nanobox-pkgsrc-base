@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- CMake/FindLibPng.cmake.orig	2015-08-25 22:48:08.000000000 +0000
++++ CMake/FindLibPng.cmake
+@@ -4,7 +4,7 @@ if (LIBPNG_LIBRARIES AND LIBPNG_INCLUDE_
+ endif (LIBPNG_LIBRARIES AND LIBPNG_INCLUDE_DIRS)
+ 
+ find_path(LIBPNG_INCLUDE_DIRS NAMES png.h)
+-find_library(LIBPNG_LIBRARIES NAMES png)
++find_library(LIBPNG_LIBRARIES NAMES png16)
+ 
+ include (FindPackageHandleStandardArgs)
+ FIND_PACKAGE_HANDLE_STANDARD_ARGS(LibPng DEFAULT_MSG

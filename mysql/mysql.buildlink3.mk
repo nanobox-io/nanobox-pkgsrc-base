@@ -9,7 +9,7 @@
 #	The preferred MySQL version.
 #
 #	Possible: 56 55 51 percona56 percona55 percona55-cluster
-#	Default: 55
+#	Default: 56
 #
 # === Package-settable variables ===
 #
@@ -42,7 +42,7 @@ _SYS_VARS.mysql=	MYSQL_VERSION MYSQL_PKG_PREFIX
 
 .include "../../mk/bsd.prefs.mk"
 
-MYSQL_VERSION_DEFAULT?=		55
+MYSQL_VERSION_DEFAULT?=		56
 BUILD_DEFS+=			MYSQL_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=		MYSQL_VERSION MYSQL_PKG_PREFIX
 

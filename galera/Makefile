@@ -27,6 +27,8 @@ MAKE_ENV+=	LIBPATH=${PREFIX}/lib
 MAKE_ENV+=	RPATH=${PREFIX}/lib
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
+WRKSRC=		${WRKDIR}/galera-${DISTNAME}
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} scons strict_build_flags=0 tests=0 -j 8
 

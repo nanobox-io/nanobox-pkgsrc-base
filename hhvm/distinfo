@@ -1,0 +1,4 @@
+$NetBSD$
+
+SHA1 (patch-CMake_FindLibPng.cmake) = f9de6fdc2130fc5a3843a67a1d11fe8e38d60008
+SHA1 (patch-third-party_folly_src_folly_io_async_AsyncSSLSocket.cpp) = 06552213e680efeff7c39aa9e8dd81bc1951fbf8

@@ -16,6 +16,11 @@ run_in_chroot() {
 
 for package in $(ls /content/pkgsrc/base); do
 
+  # skip files
+  if [ -f /content/pkgsrc/base/${package} ]; then
+    continue
+  fi
+
   # ignore if it's not a real package
   if [ ! -f /content/pkgsrc/base/${package}/Makefile ]; then
     echo "ignoring ${package} because it does not have a Makefile"
@@ -28,9 +33,22 @@ for package in $(ls /content/pkgsrc/base); do
     continue
   fi
 
+  # ignore if it's a lib, other things will build them
+  # also, some are only needed on certain OS's
+  if [[ "${package}" =~ "lib" ]]; then
+    echo "ignoring ${package} because it's a library"
+    continue
+  fi
+
   # ignore ruby common
   if [[ "${package}" = "ruby" ]]; then
     echo "ignoring ruby common"
+    continue
+  fi
+
+  # ignore hhvm, it doesn't build yet
+  if [[ "${package}" = "hhvm" ]]; then
+    echo "ignoring hhvm"
     continue
   fi
 
@@ -52,39 +70,9 @@ for package in $(ls /content/pkgsrc/base); do
     continue
   fi
 
-  # ignore apache 2.4 for now...
-  if [[ "${package}" = "apache24" ]]; then
-    echo "ignoring apache24 for the time being"
-    continue
-  fi
-
-  if [[ "${package}" = "composer" ]]; then
-    echo "ignoring composer for the time being"
-    continue
-  fi
-
-  if [[ "${package}" = "galera" ]]; then
-    echo "ignoring galera for now"
-    continue
-  fi
-
-  if [[ "${package}" = "librpcsoc" ]]; then
-    echo "ignoring librpcsoc because the source doesn't exist"
-    continue
-  fi
-
-  if [[ "${package}" =~ "mariadb" ]]; then
-    echo "skipping mariadb for now because it doesn't build"
-    continue
-  fi
-
-  if [[ "${package}" =~ "ruby19" ]]; then
-    echo "skipping ruby19 for now because it doesn't build"
-    continue
-  fi
-
-  if [[ "${package}" =~ "percona-galera" ]]; then
-    echo "skipping ${package} because it doesn't make sense for nanobox"
+  # ignore php 7.0 for now...
+  if [[ "${package}" = "php70" ]]; then
+    echo "ignoring php70 for the time being"
     continue
   fi
 
@@ -109,36 +97,68 @@ for package in $(ls /content/pkgsrc/base); do
   # 2) make package
   run_in_chroot \
     ${package} \
-    "/data/bin/bmake -C /content/pkgsrc/base/${package} package"
+    "/data/bin/bmake -C /content/pkgsrc/base/${package} fetch-depends"
+  if [ ! -f /content/packages/pkgsrc/base/Linux/All/${pkg_name}.tgz ]; then
+    run_in_chroot \
+      ${package} \
+      "/data/bin/bmake -C /content/pkgsrc/base/${package} package"
+  fi
 
   # 3) compile extensions or plugins if available
   if [[ "${package}" =~ "php" ]]; then
     php_version=${package/php/}
+    bundle_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/php-bundle show-var VARNAME=PKGNAME PHP_VERSION_DEFAULT=${php_version})
     run_in_chroot \
       ${package} \
       "/data/bin/bmake \
         -C /content/pkgsrc/base/php-bundle \
-        package \
+        fetch-depends \
         PHP_VERSION_DEFAULT=${php_version}"
+    if [ ! -f /content/packages/pkgsrc/base/Linux/All/${bundle_pkg_name}.tgz ]; then
+      run_in_chroot \
+        ${package} \
+        "/data/bin/bmake \
+          -C /content/pkgsrc/base/php-bundle \
+          package \
+          PHP_VERSION_DEFAULT=${php_version}"
+    fi
   elif [[ "${package}" =~ "ruby" ]]; then
     ruby_version=${package/ruby/}
     for gem in $(ls /content/pkgsrc/base | grep -e 'ruby-'); do
+      gem_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${gem} show-var VARNAME=PKGNAME RUBY_VERSION_SUPPORTED=${ruby_version})
       run_in_chroot \
         ${package} \
         "/data/bin/bmake \
           -C /content/pkgsrc/base/${gem} \
-          package \
+          fetch-depends \
           RUBY_VERSION_SUPPORTED=${ruby_version}"
+      if [ ! -f /content/packages/pkgsrc/base/Linux/All/${gem_pkg_name}.tgz ]; then
+        run_in_chroot \
+          ${package} \
+          "/data/bin/bmake \
+            -C /content/pkgsrc/base/${gem} \
+            package \
+            RUBY_VERSION_SUPPORTED=${ruby_version}"
+      fi
     done
   elif [[ "${package}" =~ "apache" ]]; then
-    apache_version=${package/apache/}
+    apache_version=${package}
     for extension in $(ls /content/pkgsrc/base | grep -e 'ap2?-'); do
+      extension_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${extension} show-var VARNAME=PKGNAME PKG_APACHE_DEFAULT=${apache_version})
       run_in_chroot \
         ${package} \
         "/data/bin/bmake \
           -C /content/pkgsrc/base/${extension} \
-          package \
+          fetch-depends \
           PKG_APACHE_DEFAULT=${apache_version}"
+      if [ ! -f /content/packages/pkgsrc/base/Linux/All/${extension_pkg_name}.tgz ]; then
+        run_in_chroot \
+          ${package} \
+          "/data/bin/bmake \
+            -C /content/pkgsrc/base/${extension} \
+            package \
+            PKG_APACHE_DEFAULT=${apache_version}"
+      fi
     done
   fi
 

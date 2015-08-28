@@ -1,8 +1,8 @@
 $NetBSD$
 
-SHA1 (mongodb-src-r3.0.4.tar.gz) = 5df86eabb1631dfb3cd29a1424f7c65f70277e58
-RMD160 (mongodb-src-r3.0.4.tar.gz) = e67ad3559cbe1c2ee56ed4f5b33cf1901c0b76c2
-Size (mongodb-src-r3.0.4.tar.gz) = 26615962 bytes
+SHA1 (mongodb-src-r3.0.5.tar.gz) = 7ffef18eec16a41208322c3612a92c0e2652d5f7
+RMD160 (mongodb-src-r3.0.5.tar.gz) = 770714f107555f724968ab01c20dfc99568e8f23
+Size (mongodb-src-r3.0.5.tar.gz) = 26332788 bytes
 SHA1 (patch-SConstruct) = 1a0e1e80db3b5cc31a36e9f86f395d56d8dcedb3
 SHA1 (patch-debian_mongod.conf) = 50a9d4ba7444d8d2e0cb01d0270d23f043ecc45c
 SHA1 (patch-src_mongo_base_initializer.h) = 02c88f31766f14a027493e04feb585a2d8ae0534

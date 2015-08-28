@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/dwarf.h
+include/libdwarf.h
+lib/libdwarf.a
+lib/libdwarf.so

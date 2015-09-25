@@ -3,6 +3,7 @@
 #  # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		httpd-2.2.31
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/httpd/apache/}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
@@ -94,13 +95,6 @@ PLIST.ldap=		yes
 .  endif
 .endif
 
-APACHE_USER?=		www
-APACHE_GROUP?=		www
-PKG_GROUPS=		${APACHE_GROUP}
-PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
-PKG_GROUPS_VARS+=	APACHE_GROUP
-PKG_USERS_VARS+=	APACHE_USER
-
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
 EGDIR=			${PREFIX}/share/examples/httpd
@@ -117,9 +111,6 @@ RCD_SCRIPTS=		apache
 
 REQD_DIRS=		${PREFIX}/share/httpd
 REQD_DIRS+=		${PREFIX}/share/httpd/htdocs
-OWN_DIRS=		${VARBASE}/log/httpd
-OWN_DIRS+=		${VARBASE}/db/httpd
-OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert
 FIX_MAN_PERMS=		man1/htdbm.1 man1/htpasswd.1 man1/htdigest.1
 FIX_MAN_PERMS+=		man1/dbmmanage.1 man8/httpd.8 man8/suexec.8
@@ -228,21 +219,6 @@ post-install:
 	${LN} -sf ${SBINDIR}/envvars-std ${DESTDIR}${SBINDIR}/envvars
 
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${DESTDIR}${PREFIX}/sbin${BINARCHSUFFIX}
-
-	for file in ${FIX_PERMS}; do \
-		${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/sbin${BINARCHSUFFIX}/$$file && \
-		${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/sbin${BINARCHSUFFIX}/$$file; \
-	done
-
-	${CHOWN} -RP ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/httpd
-	${CHOWN} -RP ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/include/httpd
-	${CHOWN} -RP ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib${LIBARCHSUFFIX}/httpd
-	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/test-cgi
-	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/printenv
-
-	for file in ${FIX_MAN_PERMS}; do \
-		${CHOWN} ${MANOWN}:${MANGRP} ${DESTDIR}${PREFIX}/${PKGMANDIR}/$$file; \
-	done
 
 	${CHMOD} -x ${DESTDIR}${PREFIX}/sbin${BINARCHSUFFIX}/envvars-std
 	${TEST} ! -f ${DESTDIR}${PREFIX}/sbin${BINARCHSUFFIX}/suexec || ${CHMOD} -w ${DESTDIR}${PREFIX}/sbin${BINARCHSUFFIX}/suexec

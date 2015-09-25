@@ -7,10 +7,10 @@ SUN_JRE8_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sun-jre8+=		sun-jre8-[0-9]*
 BUILDLINK_ABI_DEPENDS.sun-jre8+=		sun-jre8>=8.0.9
-BUILDLINK_PKGSRCDIR.sun-jre8?=		../../lang/sun-jre8
+BUILDLINK_PKGSRCDIR.sun-jre8?=		../../base/sun-jre8
 
 CHECK_BUILTIN.sun-jre8:=	yes
-.include "../../lang/sun-jre8/builtin.mk"
+.include "../../base/sun-jre8/builtin.mk"
 CHECK_BUILTIN.sun-jre8:=	no
 
 .if !empty(USE_BUILTIN.sun-jre8:M[yY][eE][sS])

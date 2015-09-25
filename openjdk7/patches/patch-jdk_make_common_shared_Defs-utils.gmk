@@ -1,0 +1,41 @@
+$NetBSD$
+
+--- jdk/make/common/shared/Defs-utils.gmk.orig	2015-01-26 15:20:56.000000000 +0000
++++ jdk/make/common/shared/Defs-utils.gmk
+@@ -210,7 +210,7 @@ ifeq ($(PLATFORM),linux)
+   # others have it in /usr/bin.
+   SORT=$(firstword $(wildcard $(UTILS_COMMAND_PATH)sort) \
+ 		   $(wildcard $(UTILS_USR_BIN_PATH)sort))
+-  NAWK           = $(USRBIN_PATH)gawk
++  NAWK           = @PREFIX@/bin/gawk
+   # Intrinsic unix command, with backslash-escaped character interpretation
+   ECHO           = /bin/echo -e
+   # These are really in UTILS_USR_BIN_PATH on Linux
+@@ -259,6 +259,10 @@ ifeq ($(PLATFORM), macosx)
+   ECHO         = echo
+ endif
+ 
++ZIPEXE     = $(PKGSRC_ZIPEXE)
++UNZIP      = $(PKGSRC_UNZIP)
++UNZIPSFX   = $(PKGSRC_UNZIPSFX)
++
+ # BSD specific
+ ifeq ($(PLATFORM),bsd)
+   BASENAME     = $(UTILS_USR_BIN_PATH)basename
+@@ -286,7 +290,14 @@ ifeq ($(PLATFORM),bsd)
+   endif
+   ifeq ($(OS_VENDOR), NetBSD)
+     NAWK       = $(UTILS_USR_BIN_PATH)awk
+-    ZIPEXE     = $(UTILS_DEVTOOL_PATH)zip
+-    UNZIP      = $(UTILS_DEVTOOL_PATH)unzip
++    ZIPEXE     = $(PKGSRC_ZIPEXE)
++    UNZIP      = $(PKGSRC_UNZIP)
++    UNZIPSFX   = $(PKGSRC_UNZIPSFX)
++  endif
++  ifeq ($(OS_VENDOR), DragonFlyBSD)
++    NAWK       = $(UTILS_USR_BIN_PATH)awk
++    ZIPEXE     = $(PKGSRC_ZIPEXE)
++    UNZIP      = $(PKGSRC_UNZIP)
++    UNZIPSFX   = $(PKGSRC_UNZIPSFX)
+   endif
+ endif

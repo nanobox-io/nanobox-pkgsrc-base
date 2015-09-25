@@ -53,7 +53,7 @@ Vagrant.configure('2') do |config|
 
   config.vm.provider 'virtualbox' do |v|
     v.memory = 4096
-    v.cpus   = 2
+    v.cpus   = 1
   end
 
   config.vm.provider "vmware_fusion" do |v, override|
@@ -66,17 +66,17 @@ Vagrant.configure('2') do |config|
 
   config.vm.network "private_network", type: "dhcp"
 
-  config.vm.define "SmartOS" do |smartos|
-    smartos.vm.box = '/Users/braxton/src/pagodabox/vagrant-packer-templates/smartos-x86_64/packer_virtualbox-iso_virtualbox.box'
-    smartos.vm.communicator = 'smartos'
-    smartos.ssh.insert_key = false
-    smartos.global_zone.platform_image = 'latest'
-    smartos.zone.name = 'base64'
-    smartos.zone.brand = 'joyent'
-    smartos.zone.image = '0edf00aa-0562-11e5-b92f-879647d45790'
-    smartos.zone.memory = 4096
-    smartos.zone.disk_size = 20
-  end
+  # config.vm.define "SmartOS" do |smartos|
+  #   smartos.vm.box = '/Users/braxton/src/pagodabox/vagrant-packer-templates/smartos-x86_64/packer_virtualbox-iso_virtualbox.box'
+  #   smartos.vm.communicator = 'smartos'
+  #   smartos.ssh.insert_key = false
+  #   smartos.global_zone.platform_image = 'latest'
+  #   smartos.zone.name = 'base64'
+  #   smartos.zone.brand = 'joyent'
+  #   smartos.zone.image = '0edf00aa-0562-11e5-b92f-879647d45790'
+  #   smartos.zone.memory = 4096
+  #   smartos.zone.disk_size = 20
+  # end
 
   nanobox_user = ENV["NANOBOX_USER"] || 'nanobox'
   nanobox_project = ENV["NANOBOX_BASE_PROJECT"] || 'base'

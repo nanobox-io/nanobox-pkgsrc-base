@@ -7,6 +7,7 @@
 DISTNAME=	jdk-8u${UPDATE_NUMBER}-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk8-8.0.${UPDATE_NUMBER}
 MASTER_SITES=	# empty
+PKGREVISION=	1
 
 LICENSE=	oracle-binary-code-license
 
@@ -67,5 +68,11 @@ pre-install:
 		${WRKSRC}/db/bin/startNetworkServer.bat \
 		${WRKSRC}/db/bin/stopNetworkServer.bat \
 		${WRKSRC}/db/bin/sysinfo.bat
+
+post-install:
+	${RM} -f ${DESTDIR}${JAVA_HOME}/bin/jjs
+	${RM} -f ${DESTDIR}${JAVA_HOME}/lib/${JAVA_ARCH}/libjawt.so
+	${RM} -f ${DESTDIR}${JAVA_HOME}/man/ja_JP.UTF-8/man1/jjs.1
+	${RM} -f ${DESTDIR}${JAVA_HOME}/man/man1/jjs.1
 
 .include "../../mk/bsd.pkg.mk"

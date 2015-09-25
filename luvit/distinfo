@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (luvit-2.5.5.tar.gz) = c3da0e012a4ef3a8bc43feb2bd7be1d217410868
+RMD160 (luvit-2.5.5.tar.gz) = d4efb7b11a50b1cedec461bb7dd742647fbed2c5
+Size (luvit-2.5.5.tar.gz) = 5888734 bytes
+SHA1 (patch-Makefile) = 8cd63ed1d2b38f4ea3ffa0cad7b31a5e85ecebae

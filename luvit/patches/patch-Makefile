@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- Makefile.orig	2015-09-23 21:26:25.000000000 +0000
++++ Makefile
+@@ -20,10 +20,10 @@ lit:
+ 	curl -L https://github.com/luvit/lit/raw/$(LIT_VERSION)/get-lit.sh | sh
+ 
+ install: luvit lit
+-	mkdir -p $(PREFIX)/bin
+-	install luvit $(PREFIX)/bin/
+-	install lit $(PREFIX)/bin/
+-	install luvi $(PREFIX)/bin/
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
++	install luvit $(DESTDIR)$(PREFIX)/bin/
++	install lit $(DESTDIR)$(PREFIX)/bin/
++	install luvi $(DESTDIR)$(PREFIX)/bin/
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/bin/luvit

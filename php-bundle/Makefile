@@ -3,7 +3,6 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		${PHP_PKG_PREFIX}-bundle-${PHP_BASE_VERS}
-PB_PKGBASE=		${PHP_PKG_PREFIX}-bundle
 VERSION=		${PHP_BASE_VERS}
 CATEGORIES=		meta-pkgs www
 META_PACKAGE=		yes

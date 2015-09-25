@@ -7,7 +7,7 @@ SUN_JDK8_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.sun-jdk8+=	sun-jdk8-[0-9]*
 BUILDLINK_ABI_DEPENDS.sun-jdk8+=	sun-jdk8>=8.0.9
-BUILDLINK_PKGSRCDIR.sun-jdk8?=	../../lang/sun-jdk8
+BUILDLINK_PKGSRCDIR.sun-jdk8?=	../../base/sun-jdk8
 BUILDLINK_DEPMETHOD.sun-jdk8?= build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_JAVA_PREFIX.sun-jre8}
@@ -25,7 +25,7 @@ BUILDLINK_CPPFLAGS.sun-jdk8=						\
 .endif
 
 BUILDLINK_DEPMETHOD.sun-jre8?=	${BUILDLINK_DEPMETHOD.sun-jdk8}
-.include "../../lang/sun-jre8/buildlink3.mk"
+.include "../../base/sun-jre8/buildlink3.mk"
 .endif # SUN_JDK8_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-sun-jdk8

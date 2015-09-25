@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.18 2014/11/15 21:01:26 ryoon Exp $
+
+SHA1 (jdk-7u80-linux-x64.tar.gz) = 21e5e18c3511def01590994e926a4350c0509f01
+RMD160 (jdk-7u80-linux-x64.tar.gz) = c519e687374915166441995d4e3951b52bb2f82b
+Size (jdk-7u80-linux-x64.tar.gz) = 153530841 bytes

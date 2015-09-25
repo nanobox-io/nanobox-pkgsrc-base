@@ -1,0 +1,65 @@
+$NetBSD: patch-au,v 1.7 2014/11/02 13:31:11 spz Exp $
+
+Fix for unpriviliged build.
+
+http://hg.python.org/cpython/rev/a0f43f4481e0
+
+--- Makefile.pre.in.orig	2014-06-30 02:05:39.000000000 +0000
++++ Makefile.pre.in
+@@ -120,7 +120,7 @@ SO=		@SO@
+ LDSHARED=	@LDSHARED@ $(LDFLAGS)
+ BLDSHARED=	@BLDSHARED@ $(LDFLAGS)
+ LDCXXSHARED=	@LDCXXSHARED@
+-DESTSHARED=	$(BINLIBDEST)/lib-dynload
++DESTSHARED=	$(BINLIBDEST)/lib-dynload@LIBARCHSUFFIX@
+ 
+ # Executable suffix (.exe on Windows and Mac OS X)
+ EXE=		@EXEEXT@
+@@ -494,7 +494,7 @@ gdbhooks: $(BUILDPYTHON)-gdb.py
+ 
+ SRC_GDB_HOOKS=$(srcdir)/Tools/gdb/libpython.py
+ $(BUILDPYTHON)-gdb.py: $(SRC_GDB_HOOKS)
+-	$(INSTALL_DATA) $(SRC_GDB_HOOKS) $(BUILDPYTHON)-gdb.py
++	cp $(SRC_GDB_HOOKS) $(BUILDPYTHON)-gdb.py
+ 
+ # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
+ # minimal framework (not including the Lib directory and such) in the current
+@@ -866,7 +866,7 @@ bininstall:	altbininstall
+ # Install the interpreter with $(VERSION) affixed
+ # This goes into $(exec_prefix)
+ altbininstall:	$(BUILDPYTHON)
+-	@for i in $(BINDIR) $(LIBDIR); \
++	@for i in $(BINDIR) $(LIBDIR)@LIBARCHSUFFIX@; \
+ 	do \
+ 		if test ! -d $(DESTDIR)$$i; then \
+ 			echo "Creating directory $$i"; \
+@@ -879,12 +879,13 @@ altbininstall:	$(BUILDPYTHON)
+ 		if test -n "$(DLLLIBRARY)" ; then \
+ 			$(INSTALL_SHARED) $(DLLLIBRARY) $(DESTDIR)$(BINDIR); \
+ 		else \
+-			$(INSTALL_SHARED) $(LDLIBRARY) $(DESTDIR)$(LIBDIR)/$(INSTSONAME); \
++			$(INSTALL_SHARED) $(LDLIBRARY) $(DESTDIR)$(LIBDIR)@LIBARCHSUFFIX@/$(INSTSONAME); \
+ 			if test $(LDLIBRARY) != $(INSTSONAME); then \
+-				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
++				(cd $(DESTDIR)$(LIBDIR)@LIBARCHSUFFIX@; $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
+ 			fi \
+ 		fi; \
+-	else	true; \
++	elif test -f $(INSTSONAME); then \
++		$(INSTALL_SHARED) $(INSTSONAME) $(DESTDIR)$(LIBDIR)@LIBARCHSUFFIX@; \
+ 	fi
+ 
+ # Install the versioned manual page
+@@ -1065,10 +1066,10 @@ inclinstall:
+ 
+ # Install the library and miscellaneous stuff needed for extending/embedding
+ # This goes into $(exec_prefix)
+-LIBPL=		$(LIBP)/config
++LIBPL=		$(LIBP)/config@LIBARCHSUFFIX@
+ 
+ # pkgconfig directory
+-LIBPC=		$(LIBDIR)/pkgconfig
++LIBPC=		$(LIBDIR)@LIBARCHSUFFIX@/pkgconfig
+ 
+ libainstall:	all python-config
+ 	@for i in $(LIBDIR) $(LIBP) $(LIBPL) $(LIBPC); \

@@ -1,0 +1,49 @@
+$NetBSD$
+
+--- jdk/make/sun/awt/mawt.gmk.orig	2015-01-26 15:20:57.000000000 +0000
++++ jdk/make/sun/awt/mawt.gmk
+@@ -193,12 +193,12 @@ endif
+ #
+ # Other extra flags needed for compiling.
+ #
+-ifneq ($(PLATFORM), bsd))
++ifneq ($(PLATFORM), bsd)
+ CPPFLAGS += -I$(CUPS_HEADERS_PATH)
+ 
+ ifndef HEADLESS
+ CPPFLAGS += -I$(OPENWIN_HOME)/include 
+-LDFLAGS  += -L$(OPENWIN_LIB)
++LDFLAGS  += -L$(OPENWIN_LIB) -Wl,-R$(OPENWIN_LIB)
+ 
+ endif # !HEADLESS
+ endif # !PLATFORM
+@@ -231,7 +231,7 @@ CPPFLAGS += -I$(CUPS_HEADERS_PATH)
+ ifndef HEADLESS
+ CPPFLAGS += -I$(MOTIF_DIR)/include \
+             -I$(OPENWIN_HOME)/include 
+-LDFLAGS  += -L$(MOTIF_LIB) -L$(OPENWIN_LIB)
++LDFLAGS  += -L$(MOTIF_LIB) -L$(OPENWIN_LIB) -Wl,-R$(OPENWIN_LIB)
+ ifeq ($(OS_NAME), netbsd)
+ LDFLAGS  += -Wl,-R$(OPENWIN_LIB)
+ endif
+@@ -242,16 +242,17 @@ endif # PLATFORM
+ ifeq ($(PLATFORM), linux)
+   # Checking for the X11/extensions headers at the additional location
+   CPPFLAGS += -I$(firstword $(wildcard $(OPENWIN_HOME)/include/X11/extensions) \
+-                        $(wildcard /usr/include/X11/extensions))
++                        $(wildcard /usr/include/X11/extensions) \
++                        $(wildcard @PREFIX@/include/X11/extensions))
+ endif
+ 
+-ifeq ($(PLATFORM), bsd))
++ifeq ($(PLATFORM), bsd)
+   CPPFLAGS += -I$(OPENWIN_HOME)/include/X11/extensions \
+               -I$(OPENWIN_HOME)/include \
+               -DX11_PATH=\"$(X11_PATH)\" -DPACKAGE_PATH=\"$(PACKAGE_PATH)\"
+ endif
+ 
+-ifeq ($(PLATFORM), macosx))
++ifeq ($(PLATFORM), macosx)
+   CPPFLAGS += -I$(OPENWIN_HOME)/include/X11/extensions \
+               -I$(OPENWIN_HOME)/include 
+ endif

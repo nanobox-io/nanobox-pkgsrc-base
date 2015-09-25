@@ -30,7 +30,6 @@ java/sun-8/bin/jdb
 java/sun-8/bin/jdeps
 java/sun-8/bin/jhat
 java/sun-8/bin/jinfo
-java/sun-8/bin/jjs
 java/sun-8/bin/jmap
 java/sun-8/bin/jmc
 java/sun-8/bin/jmc.ini
@@ -103,7 +102,6 @@ java/sun-8/include/linux/jni_md.h
 java/sun-8/javafx-src.zip
 java/sun-8/jre
 java/sun-8/lib/amd64/libattach.so
-java/sun-8/lib/amd64/libjawt.so
 java/sun-8/lib/amd64/libsaproc.so
 java/sun-8/lib/ant-javafx.jar
 java/sun-8/lib/ct.sym
@@ -1273,7 +1271,6 @@ java/sun-8/man/ja_JP.UTF-8/man1/jdb.1
 java/sun-8/man/ja_JP.UTF-8/man1/jdeps.1
 java/sun-8/man/ja_JP.UTF-8/man1/jhat.1
 java/sun-8/man/ja_JP.UTF-8/man1/jinfo.1
-java/sun-8/man/ja_JP.UTF-8/man1/jjs.1
 java/sun-8/man/ja_JP.UTF-8/man1/jmap.1
 java/sun-8/man/ja_JP.UTF-8/man1/jmc.1
 java/sun-8/man/ja_JP.UTF-8/man1/jps.1
@@ -1307,7 +1304,6 @@ java/sun-8/man/man1/jdb.1
 java/sun-8/man/man1/jdeps.1
 java/sun-8/man/man1/jhat.1
 java/sun-8/man/man1/jinfo.1
-java/sun-8/man/man1/jjs.1
 java/sun-8/man/man1/jmap.1
 java/sun-8/man/man1/jmc.1
 java/sun-8/man/man1/jps.1

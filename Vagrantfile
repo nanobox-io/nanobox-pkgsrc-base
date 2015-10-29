@@ -13,7 +13,7 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = ENV['NANOBOX_BUILD_VAGRANT_PROVIDER'] || 'virt
   path = File.expand_path(candidate, __FILE__)
   if ::File.exists? path
     $pkgsrc = path
-  end  
+  end
 end
 
 # if pkgsrc-lite does not exist, let's fetch it now
@@ -45,11 +45,9 @@ end
 end
 
 Vagrant.configure('2') do |config|
-  
-  config.vm.define "Ubuntu" do |ubuntu|
-    ubuntu.vm.box = 'trusty64'
-    ubuntu.vm.box_url = 'https://github.com/pagodabox/vagrant-packer-templates/releases/download/v0.2.0/trusty64_virtualbox.box'
-  end
+
+  config.vm.box = 'trusty64'
+  config.vm.box_url = 'https://github.com/pagodabox/vagrant-packer-templates/releases/download/v0.2.0/trusty64_virtualbox.box'
 
   config.vm.provider 'virtualbox' do |v|
     v.memory = 4096
@@ -65,18 +63,6 @@ Vagrant.configure('2') do |config|
   end
 
   config.vm.network "private_network", type: "dhcp"
-
-  # config.vm.define "SmartOS" do |smartos|
-  #   smartos.vm.box = '/Users/braxton/src/pagodabox/vagrant-packer-templates/smartos-x86_64/packer_virtualbox-iso_virtualbox.box'
-  #   smartos.vm.communicator = 'smartos'
-  #   smartos.ssh.insert_key = false
-  #   smartos.global_zone.platform_image = 'latest'
-  #   smartos.zone.name = 'base64'
-  #   smartos.zone.brand = 'joyent'
-  #   smartos.zone.image = '0edf00aa-0562-11e5-b92f-879647d45790'
-  #   smartos.zone.memory = 4096
-  #   smartos.zone.disk_size = 20
-  # end
 
   nanobox_user = ENV["NANOBOX_USER"] || 'nanobox'
   nanobox_project = ENV["NANOBOX_BASE_PROJECT"] || 'base'
@@ -134,7 +120,7 @@ Vagrant.configure('2') do |config|
       platform="SmartOS"
     elif [ $(uname | grep 'Linux') ]; then
       platform="Linux"
-    fi 
+    fi
 
     # download and extract the bootstrap
     if [ ! -d /data ]; then
@@ -168,6 +154,13 @@ Vagrant.configure('2') do |config|
         ln -s ${i} /usr/bin/${cmd}
       fi
     done
+  SCRIPT
+
+  config.vm.provision 'shell', inline: <<-SCRIPT
+    if [ -f /usr/bin/ruby ]; then
+      echo "Purging the system installation of ruby"
+      aptitude purge -y ruby
+    fi
   SCRIPT
 
 end

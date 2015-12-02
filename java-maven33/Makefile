@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.11 2014/12/09 11:52:03 fhajny Exp $
 #
 
-VERSION=	3.3.3
+VERSION=	3.3.9
 DISTNAME=	apache-maven-${VERSION}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/maven-3/${PKGVERSION_NOREV}/binaries/}

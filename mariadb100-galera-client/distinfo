@@ -1,11 +1,11 @@
 $NetBSD$
 
-SHA1 (mariadb-galera-10.0.21.tar.gz) = 500b852960a214b7793112367973d7a625607ba1
-RMD160 (mariadb-galera-10.0.21.tar.gz) = cfe530faad0a3845a51c9d0328d5b68134ba19c5
-Size (mariadb-galera-10.0.21.tar.gz) = 56518164 bytes
-SHA1 (sphinx-2.2.9-release.tar.gz) = 7ddde51bb1d428406acb278c615a2c2fda819daf
-RMD160 (sphinx-2.2.9-release.tar.gz) = e600bb0fcbb3fe9838dc60bd8b00ca2bedd0ce05
-Size (sphinx-2.2.9-release.tar.gz) = 2992905 bytes
+SHA1 (mariadb-galera-10.0.22.tar.gz) = 3e79ccd1cb10dd4ef87d67a163f001b0edd05103
+RMD160 (mariadb-galera-10.0.22.tar.gz) = 121cb44653deee0b489a404186f379769f1ce45e
+Size (mariadb-galera-10.0.22.tar.gz) = 56593286 bytes
+SHA1 (sphinx-2.2.10-release.tar.gz) = 0f2372dd41df2848ea06c6076a86af6f0f66a071
+RMD160 (sphinx-2.2.10-release.tar.gz) = 2712e8ce85609e78c53bd2d9fba877f1e630d5f2
+Size (sphinx-2.2.10-release.tar.gz) = 3109250 bytes
 SHA1 (patch-CMakeLists.txt) = a6cf9dc1c3d3e1ee2cc7e7467a99305d68cc4957
 SHA1 (patch-cmake_dtrace.cmake) = 50fa7a9957d5d1fbc6284d98f222cdc9a2687838
 SHA1 (patch-cmake_plugin.cmake) = e36f35ab2998f0082a5d220464d2a93db53a7482

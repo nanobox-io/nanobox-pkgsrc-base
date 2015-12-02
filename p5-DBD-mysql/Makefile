@@ -5,7 +5,7 @@
 # Cloned from ../../databases/p5-DBD-mysql
 # Requires mysql-client normally but that conflicts with mysql-client
 
-DISTNAME=	DBD-mysql-4.023
+DISTNAME=	DBD-mysql-4.033
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 SVR4_PKGNAME=	p5dmy

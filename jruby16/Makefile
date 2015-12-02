@@ -1,16 +1,17 @@
 # $NetBSD$
 #
 
-VERSION=	1.6.8
-DISTNAME=	jruby-bin-${VERSION}
-PKGNAME=	${DISTNAME:S/-bin//}
-CATEGORIES=	lang
+VERSION=		1.6.8
+PKGREVISION=	2
+DISTNAME=		jruby-bin-${VERSION}
+PKGNAME=		${DISTNAME:S/-bin//}
+CATEGORIES=		lang
 MASTER_SITES=	http://jruby.org.s3.amazonaws.com/downloads/${VERSION}/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jruby.org/
-COMMENT=	Implementation of the Ruby programming language atop the JVM
-LICENSE=	cpl-1.0 OR gnu-gpl-v2 OR gnu-lgpl-v2.1
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://jruby.org/
+COMMENT=		Implementation of the Ruby programming language atop the JVM
+LICENSE=		cpl-1.0 OR gnu-gpl-v2 OR gnu-lgpl-v2.1
 
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 
@@ -33,17 +34,25 @@ SUBST_FILES.jruby=	bin/*
 SUBST_SED.jruby=	-e 's,/usr/bin/env jruby,${PREFIX}/bin/jruby,'
 SUBST_SED.jruby+=	-e 's,@JRUBY_HOME@,${PREFIX}/share/${PKGNAME_NOREV},'
 
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	lib/ruby/site_ruby/1.8/rubygems/config_file.rb
+SUBST_SED.conf=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.conf=	Fixing configuration files.
+
 REPLACE_BASH+=	bin/*
 
 do-install:
 .for f in ${JRUBYDOMMANDS1}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} \
-		${DESTDIR}${PREFIX}/bin/${f}-jr
+		${DESTDIR}${PREFIX}/bin/${f}
 .endfor
 .for f in ${JRUBYDOMMANDS2}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} \
 		${DESTDIR}${PREFIX}/bin/
 .endfor
+
+	ln -s jruby ${DESTDIR}${PREFIX}/bin/ruby
 
 	cd ${WRKSRC}/docs && pax -rw -pmp * \
 		${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}

@@ -1,7 +1,23 @@
 $NetBSD$
 
-SHA1 (jruby-bin-1.7.22.tar.gz) = 6b9e310a04ad8173d0d6dbe299da04c0ef85fc15
-RMD160 (jruby-bin-1.7.22.tar.gz) = bd55549bb3ba551f0fbc40b868b73763ccb4694e
-Size (jruby-bin-1.7.22.tar.gz) = 29650765 bytes
+SHA1 (jruby-bin-1.7.23.tar.gz) = 2b5e796feeed2bcfab02f8bf2ff3d77ca318e310
+RMD160 (jruby-bin-1.7.23.tar.gz) = 4f97ac9c490d8d40a07055c1506f23b50ca7a37f
+Size (jruby-bin-1.7.23.tar.gz) = 21630974 bytes
 SHA1 (patch-bin_jruby) = 136ee71b45ff3aee04fb7d48301b8c12b0f5872e
 SHA1 (patch-bin_jruby.sh) = fa7590bd98939f2a33ca903454e3e02949fb5b95
+SHA1 (patch-lib_ruby_2.0_rdoc_ri_driver.rb) = 42f0e90b47b7bcd153184683c93e410524db27fe
+SHA1 (patch-lib_ruby_2.0_rdoc_text.rb) = 931cab0d32e582d05fe42c15732097ecfae4991f
+SHA1 (patch-lib_ruby_shared_rdoc_ri_driver.rb) = e48d938aa95783f2a534eb3d7ff3c974e4a1eac1
+SHA1 (patch-lib_ruby_shared_rdoc_text.rb) = b889b7cef68db16cb6db840901919aea979d0431
+SHA1 (patch-lib_ruby_shared_rubygems.rb) = b6d091aabcc877ac0f298d0ff0439830bb147818
+SHA1 (patch-lib_ruby_shared_rubygems_commands_setup__command.rb) = cf1576fb1bea6a38dd2b9f094ad9d653e8fc4de8
+SHA1 (patch-lib_ruby_shared_rubygems_commands_uninstall__command.rb) = af7107782e65608a7c950b76c4a24aaaa1bcbe84
+SHA1 (patch-lib_ruby_shared_rubygems_commands_unpack__command.rb) = f36c6b5b7a743fc0cc45e6a47804e4fdab2dc173
+SHA1 (patch-lib_ruby_shared_rubygems_config__file.rb) = 50dbeb818b40fbd3b0ec8e131447d2e9e0f5ee48
+SHA1 (patch-lib_ruby_shared_rubygems_defaults.rb) = 6b5be4fa579ec4b46e66dc5d4dafbfb66b8e2e05
+SHA1 (patch-lib_ruby_shared_rubygems_dependency__installer.rb) = ec5fc30b3f463fb3deea8a2d2cb8857e546f1545
+SHA1 (patch-lib_ruby_shared_rubygems_install__update__options.rb) = d2f81a7fa0c86c761bae5e7526eaba2411ba3beb
+SHA1 (patch-lib_ruby_shared_rubygems_installer.rb) = 33ec92f8e1b9d7f4165178032b3e67fe1f960429
+SHA1 (patch-lib_ruby_shared_rubygems_platform.rb) = d0bd8e45b837303de2c3de689c1c268e2b0f05fc
+SHA1 (patch-lib_ruby_shared_rubygems_specification.rb) = 76b7bde8037fa0e555e27465eaa2d4bf995a3867
+SHA1 (patch-lib_ruby_shared_rubygems_uninstaller.rb) = 95a388801dcfc670cd4eb52b1fde6f18d8e94c23

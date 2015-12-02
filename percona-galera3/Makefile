@@ -4,7 +4,7 @@
 
 DISTNAME=	percona-xtradb-cluster-galera-${VERSION}
 PKGNAME=	${DISTNAME:S/-xtradb-cluster-/-/:S/${VERSION}/${VERSION:S/-/./g}/}
-VERSION=	3-3.11
+VERSION=	3-3.12
 CATEGORIES=	databases
 MASTER_SITES=	https://www.percona.com/downloads/Percona-XtraDB-Cluster-56/Percona-XtraDB-Cluster-5.6.24-25.11/source/tarball/
 

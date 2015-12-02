@@ -3,9 +3,9 @@ $NetBSD$
 SHA1 (mariadb-galera-5.5.45.tar.gz) = 0fd79a1c7b2c525572bdd7899a1b1a81ac897516
 RMD160 (mariadb-galera-5.5.45.tar.gz) = ecfc556696cb711577dbb3240df7c2d9a46ffd70
 Size (mariadb-galera-5.5.45.tar.gz) = 45872637 bytes
-SHA1 (sphinx-2.2.9-release.tar.gz) = 7ddde51bb1d428406acb278c615a2c2fda819daf
-RMD160 (sphinx-2.2.9-release.tar.gz) = e600bb0fcbb3fe9838dc60bd8b00ca2bedd0ce05
-Size (sphinx-2.2.9-release.tar.gz) = 2992905 bytes
+SHA1 (sphinx-2.2.10-release.tar.gz) = 0f2372dd41df2848ea06c6076a86af6f0f66a071
+RMD160 (sphinx-2.2.10-release.tar.gz) = 2712e8ce85609e78c53bd2d9fba877f1e630d5f2
+Size (sphinx-2.2.10-release.tar.gz) = 3109250 bytes
 SHA1 (patch-include__my_context.h) = 667a8fa3edaba2347123e1d1ed2794ae272ab2b4
 SHA1 (patch-plugin_disable__myisam_disable__myisam.cc) = 7aa5fb323b8b44ee58451888ae681b4cc80370f2
 SHA1 (patch-scripts__wsreq_sst_rsync.sh) = 8823e020a735ab586d68e2875ac1a3e1b32da435

@@ -1,13 +1,11 @@
 $NetBSD$
 
---- Makefile.orig	2015-07-10 16:49:05.405208853 +0000
+--- Makefile.orig	2015-11-25 16:52:06.397451399 +0000
 +++ Makefile
-@@ -5,7 +5,7 @@ ERLC := erlc -I lib/elixir/include
- ERL := erl -I lib/elixir/include -noshell -pa lib/elixir/ebin
- VERSION := $(strip $(shell cat VERSION))
- Q := @
--PREFIX := /usr/local
-+PREFIX := @PREFIX@
- LIBDIR := lib
- INSTALL = install
- INSTALL_DIR = $(INSTALL) -m755 -d
+@@ -1,5 +1,5 @@
+ REBAR ?= "$(CURDIR)/rebar"
+-PREFIX ?= /usr/local
++PREFIX ?= @PREFIX@
+ DOCS := v1.1
+ ELIXIRC := bin/elixirc --verbose --ignore-module-conflict
+ ERLC := erlc -I lib/elixir/include

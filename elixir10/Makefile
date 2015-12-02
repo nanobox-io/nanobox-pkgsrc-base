@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		elixir-${VERSION}
-VERSION=		1.0.5
+VERSION=		1.1.1
 PKGNAME=		elixir-${VERSION}
 # PKGREVISION=		1
 CATEGORIES=		base
@@ -23,7 +23,7 @@ WRKSRC=			${WRKDIR}/elixir
 
 USE_LANGUAGES+=		c c++
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake gsed
 
 INSTALL_ENV+=		DESTDIR=${DESTDIR}
 

@@ -1,11 +1,11 @@
 $NetBSD: distinfo,v 1.13.2.1 2014/04/14 17:14:13 tron Exp $
 
-SHA1 (sphinx-2.2.9-release.tar.gz) = 7ddde51bb1d428406acb278c615a2c2fda819daf
-RMD160 (sphinx-2.2.9-release.tar.gz) = e600bb0fcbb3fe9838dc60bd8b00ca2bedd0ce05
-Size (sphinx-2.2.9-release.tar.gz) = 2992905 bytes
-SHA1 (wsrep_5.6.23-25.10.tar.gz) = 4ba11e3dbbf1bcd7bcccc99f6066fb52b6013265
-RMD160 (wsrep_5.6.23-25.10.tar.gz) = 329d298b6305b3324763b86077805e08c1251938
-Size (wsrep_5.6.23-25.10.tar.gz) = 31790522 bytes
+SHA1 (sphinx-2.2.10-release.tar.gz) = 0f2372dd41df2848ea06c6076a86af6f0f66a071
+RMD160 (sphinx-2.2.10-release.tar.gz) = 2712e8ce85609e78c53bd2d9fba877f1e630d5f2
+Size (sphinx-2.2.10-release.tar.gz) = 3109250 bytes
+SHA1 (wsrep_5.6.27-25.12.tar.gz) = 23c9726cc6fdbfe68536b84e030dfa851edf3d12
+RMD160 (wsrep_5.6.27-25.12.tar.gz) = afd35ecbd0d573d849c9680b4b4b1c7d99ebbdc9
+Size (wsrep_5.6.27-25.12.tar.gz) = 32012052 bytes
 SHA1 (patch-CMakeLists.txt) = b799d50e290e2136dad7d2fef52e56d5efe2d8a8
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93
@@ -39,5 +39,4 @@ SHA1 (patch-storage_myisam_CMakeLists.txt) = 55897ae78208f78a396776d1082cb5f9863
 SHA1 (patch-storage_myisammrg_CMakeLists.txt) = 0a56a16ccaff3fa9de996fec6ffc324af9855a4e
 SHA1 (patch-storage_ndb_include_util_Parser.hpp) = 037fc153619bf79ee95cb03a5ac4a71c14952c3a
 SHA1 (patch-strings_decimal.c) = 069c9d930c735f74510702baa9bef38aec425903
-SHA1 (patch-vio_viossl.c) = 9dcdae20a5fdef4f39642b928b97b02267e552d8
 SHA1 (patch-wsrep_CMakeLists.txt) = fdada47f722482fd8239f0db7c2fd5973cb0d821

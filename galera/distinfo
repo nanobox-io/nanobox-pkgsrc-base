@@ -1,7 +1,6 @@
 $NetBSD$
 
-SHA1 (release_25.3.10.tar.gz) = dc5605e4659ebfbb830c409aa829de204b5cba8b
-RMD160 (release_25.3.10.tar.gz) = b9bb279f75ff4fed325cf9b6ddda11f8de89585f
-Size (release_25.3.10.tar.gz) = 2950372 bytes
-SHA1 (patch-SConstruct) = 46ac41715de427925c7105f7b067091541dd7b2a
-SHA1 (patch-garb_files_freebsd_garb.sh) = a6228e4df6862256a363420eb7015a110293e038
+SHA1 (release_25.3.13.tar.gz) = 48450f1639603b14f6c8897d0f1f123d31d28f7b
+RMD160 (release_25.3.13.tar.gz) = e3f947c2814ce1969a1af7e1237e63380e1c4386
+Size (release_25.3.13.tar.gz) = 2950899 bytes
+SHA1 (patch-SConstruct) = f132509977be50f2998abc9d5464dc7fa36f216c

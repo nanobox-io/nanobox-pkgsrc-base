@@ -1,7 +1,7 @@
 # $NetBSD$
 #
 
-VERSION=	9.0.0.0
+VERSION=	9.0.4.0
 DISTNAME=	jruby-bin-${VERSION}
 PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	lang
@@ -38,12 +38,14 @@ REPLACE_BASH+=	bin/*
 do-install:
 .for f in ${JRUBYDOMMANDS1}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} \
-		${DESTDIR}${PREFIX}/bin/${f}-jr
+		${DESTDIR}${PREFIX}/bin/${f}
 .endfor
 .for f in ${JRUBYDOMMANDS2}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} \
 		${DESTDIR}${PREFIX}/bin/
 .endfor
+
+	ln -s jruby ${DESTDIR}${PREFIX}/bin/ruby
 
 	cd ${WRKSRC} && pax -rw -pmp lib \
 		${DESTDIR}${PREFIX}/share/${PKGNAME_NOREV}

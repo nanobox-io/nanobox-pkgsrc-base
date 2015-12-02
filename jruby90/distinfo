@@ -1,7 +1,22 @@
 $NetBSD$
 
-SHA1 (jruby-bin-9.0.0.0.tar.gz) = 7dd05e327ba3b39a4b8efb02b03f2ca7f5cec5ec
-RMD160 (jruby-bin-9.0.0.0.tar.gz) = ec4c1dfbf1a478192474760d5d9ed0a855f96b6c
-Size (jruby-bin-9.0.0.0.tar.gz) = 37095913 bytes
+SHA1 (jruby-bin-9.0.4.0.tar.gz) = 5a59b7d085af3025225d36ec2390027859ccc3a7
+RMD160 (jruby-bin-9.0.4.0.tar.gz) = 19c048f8df88e9a3f19e5cb174e6bece128f61d2
+Size (jruby-bin-9.0.4.0.tar.gz) = 38235489 bytes
 SHA1 (patch-bin_jruby) = 8686d39b6a3a9539f1f552a89aac305511719b55
 SHA1 (patch-bin_jruby.sh) = fa7590bd98939f2a33ca903454e3e02949fb5b95
+SHA1 (patch-lib_ruby_stdlib_rdoc_ri_driver.rb) = f1c111451b122b93e659a1b33fa4a7b1dd71c20c
+SHA1 (patch-lib_ruby_stdlib_rdoc_text.rb) = 0fb78664979fe974643af7657574f73174289112
+SHA1 (patch-lib_ruby_stdlib_rubygems.rb) = fa02104132bacddb9649a669be1b35caaed9c074
+SHA1 (patch-lib_ruby_stdlib_rubygems_commands_setup__command.rb) = 3ee016a5ad5178e39b72b708d73bd17caf709ff4
+SHA1 (patch-lib_ruby_stdlib_rubygems_commands_uninstall__command.rb) = 69145c5eb6b18c676a2b9b08c41cf6c91387027d
+SHA1 (patch-lib_ruby_stdlib_rubygems_commands_unpack__command.rb) = 050edf37b8ca0d0c1e74a991069f60bad6af5bd3
+SHA1 (patch-lib_ruby_stdlib_rubygems_config__file.rb) = cd5df2861e3f08654b0222f1a0bc44e9e69e42dd
+SHA1 (patch-lib_ruby_stdlib_rubygems_defaults.rb) = be09b8738174fcb90f026c029227cd397dac0301
+SHA1 (patch-lib_ruby_stdlib_rubygems_dependency__installer.rb) = c6bd841ce4dda5f069058f7e4e42213d5ff71bf8
+SHA1 (patch-lib_ruby_stdlib_rubygems_install__update__options.rb) = eed1088cfdff5388e0f2575c26afd264c3c2ecd6
+SHA1 (patch-lib_ruby_stdlib_rubygems_installer.rb) = 76ef2be5e48e62f2e3fa732b2d216a053557e50f
+SHA1 (patch-lib_ruby_stdlib_rubygems_platform.rb) = b3f8a6f25ed4d84090e566eecce591286d867e0c
+SHA1 (patch-lib_ruby_stdlib_rubygems_specification.rb) = b514f49779cedbce0db1a0c56c7a45bb39f51567
+SHA1 (patch-lib_ruby_stdlib_rubygems_uninstaller.rb) = da04ed63da197462aa7e44b21dca113c0611fd4e
+SHA1 (patch-lib_ruby_truffle_mri_rubygems.rb) = 5fa31862309daf920848531bfc55a4e1c5d9c8c7

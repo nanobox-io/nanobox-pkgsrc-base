@@ -3,10 +3,10 @@
 DISTNAME=	gperftools-2.4
 # PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://gperftools.googlecode.com/files/
+MASTER_SITES=	https://github.com/gperftools/gperftools/releases/download/gperftools-2.4/
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/gperftools/
+HOMEPAGE=	https://github.com/gperftools/gperftools
 COMMENT=	Fast, multi-threaded malloc() and nifty performance analysis tools
 LICENSE=	modified-bsd
 

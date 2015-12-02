@@ -6,9 +6,9 @@
 # used by databases/percona56-xtradb-server/Makefile
 
 DISTNAME=		Percona-XtraDB-Cluster-${VERSION}
-VERSION=		5.6.24-72.2
+VERSION=		5.6.26-74.0
 CATEGORIES=		databases
-MASTER_SITES=		http://www.percona.com/downloads/Percona-XtraDB-Cluster-56/Percona-XtraDB-Cluster-5.6.24-25.11/source/tarball/
+MASTER_SITES=		http://www.percona.com/downloads/Percona-XtraDB-Cluster-56/Percona-XtraDB-Cluster-5.6.26-25.12/source/tarball/
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
@@ -68,6 +68,8 @@ CMAKE_ARGS+=		-DINSTALL_SCRIPTDIR="bin${BINARCHSUFFIX}"
 CMAKE_ARGS+=		-DINSTALL_SQLBENCHDIR="share/mysql/sql-bench"
 CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mysql"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
+CMAKE_ARGS+=		-DENABLE_DOWNLOADS=1
+CMAKE_ARGS+=		-DWITHOUT_TOKUDB=yes
 
 CMAKE_ARGS+=		-DWITH_ZLIB="system"
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET:Q}
@@ -147,6 +149,9 @@ post-extract: sphinx_engine disable_myisam
 # CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editline}/lib/libedit.${SOEXT}
 # CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/include/readline
 
+# EDITLINE_SKIP_FNAME_TRANSFORM=	true
+
+.include "../../base/libaio/buildlink3.mk"
 .include "../../base/mysql/sphinx.mk"
 .include "../../base/mysql/disable_myisam.mk"
 .include "../../devel/readline/buildlink3.mk"

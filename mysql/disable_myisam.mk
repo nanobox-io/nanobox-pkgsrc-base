@@ -2,7 +2,9 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 #  # vim: ts=8 sw=8 ft=make noet
 
-.if exists(../../devel/git/Makefile)
+.if exists(../../base/git/Makefile)
+BUILD_DEPENDS+=         git>=1.6.4:../../base/git
+.elif exists(../../devel/git/Makefile)
 BUILD_DEPENDS+=         git-base>=1.6.4:../../devel/git-base
 .else
 BUILD_DEPENDS+=         scmgit-base>=1.6.4:../../devel/scmgit-base

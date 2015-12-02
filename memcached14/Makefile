@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		memcached-${VERSION}
-VERSION=		1.4.24
+VERSION=		1.4.25
 # PKGREVISION= 		1
 CATEGORIES=		devel
 

@@ -7,7 +7,7 @@ BUILDLINK_TREE+=  php-hash
 .if !defined(PHP_HASH_BUILDLINK3_MK)
 PHP_HASH_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.php-hash+= ${PHP_PKG_PREFIX}-hash-5.*
+BUILDLINK_API_DEPENDS.php-hash+= ${PHP_PKG_PREFIX}-hash>=${PHP_EXTENSION_VERSION.hash}
 BUILDLINK_ABI_DEPENDS.php-hash+= ${PHP_PKG_PREFIX}-hash>=${PHP_EXTENSION_VERSION.hash}
 BUILDLINK_PKGSRCDIR.php-hash?= ../../base/php-hash
 BUILDLINK_INCDIRS.php-hash?= include/php/ext/hash

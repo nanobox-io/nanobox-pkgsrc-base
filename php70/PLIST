@@ -1,6 +1,7 @@
 @comment $NetBSD$
 bin/php
 bin/php-config
+bin/phpdbg
 bin/phpize
 etc/php-fpm.conf.default
 etc/php-fpm.d/www.conf.default
@@ -161,6 +162,7 @@ include/php/Zend/zend_alloc_sizes.h
 include/php/Zend/zend_API.h
 include/php/Zend/zend_arena.h
 include/php/Zend/zend_ast.h
+include/php/Zend/zend_bitset.h
 include/php/Zend/zend_build.h
 include/php/Zend/zend_builtin_functions.h
 include/php/Zend/zend_closures.h
@@ -205,6 +207,7 @@ include/php/Zend/zend_objects.h
 include/php/Zend/zend_operators.h
 include/php/Zend/zend_portability.h
 include/php/Zend/zend_ptr_stack.h
+include/php/Zend/zend_range_check.h
 include/php/Zend/zend_signal.h
 include/php/Zend/zend_smart_str.h
 include/php/Zend/zend_smart_str_public.h
@@ -237,6 +240,7 @@ lib/php/build/shtool
 man/man1/php.1
 man/man1/php-cgi.1
 man/man1/php-config.1
+man/man1/phpdbg.1
 man/man1/phpize.1
 man/man8/php-fpm.8
 php/php/fpm/status.html

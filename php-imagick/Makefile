@@ -38,6 +38,6 @@ DEPENDS+=	ghostscript>=9:../../print/ghostscript
 
 .include "../../base/php/extension_versions.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/libjpeg-turbo/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

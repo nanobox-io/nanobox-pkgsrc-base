@@ -7,7 +7,7 @@ BUILDLINK_TREE+=  php-raphf
 .if !defined(PHP_RAPHF_BUILDLINK3_MK)
 PHP_RAPHF_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.php-raphf+= ${PHP_PKG_PREFIX}-raphf-1.0.*
+BUILDLINK_API_DEPENDS.php-raphf+= ${PHP_PKG_PREFIX}-raphf>=${PHP_EXTENSION_VERSION.raphf}
 BUILDLINK_ABI_DEPENDS.php-raphf+= ${PHP_PKG_PREFIX}-raphf>=${PHP_EXTENSION_VERSION.raphf}
 BUILDLINK_PKGSRCDIR.php-raphf?= ../../base/php-raphf
 BUILDLINK_INCDIRS.php-raphf?= include/php/ext/raphf

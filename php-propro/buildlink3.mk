@@ -7,7 +7,7 @@ BUILDLINK_TREE+=  php-propro
 .if !defined(PHP_PROPRO_BUILDLINK3_MK)
 PHP_PROPRO_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.php-propro+= ${PHP_PKG_PREFIX}-propro-1.0.*
+BUILDLINK_API_DEPENDS.php-propro+= ${PHP_PKG_PREFIX}-propro>=${PHP_EXTENSION_VERSION.propro}
 BUILDLINK_ABI_DEPENDS.php-propro+= ${PHP_PKG_PREFIX}-propro>=${PHP_EXTENSION_VERSION.propro}
 BUILDLINK_PKGSRCDIR.php-propro?= ../../base/php-propro
 BUILDLINK_INCDIRS.php-propro?= include/php/ext/propro

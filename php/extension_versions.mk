@@ -6,9 +6,13 @@ PHP_EXTENSION_VERSIONS_MK=	#defined
 .include "../../base/php/phpversion.mk"
 .include "../../base/newrelic/newrelicversion.mk"
 
-PHP_EXTENSION_VERSION.amqp=		1.4.0			# https://pecl.php.net/package/amqp
+PHP_EXTENSION_VERSION.amqp=		1.6.1			# https://pecl.php.net/package/amqp
 PHP_EXTENSION_VERSION.apc=		3.1.13			# https://pecl.php.net/package/APC
-PHP_EXTENSION_VERSION.apcu=		4.0.7			# https://pecl.php.net/package/APCu
+.if ${_PHP_VERSION} == "70"
+PHP_EXTENSION_VERSION.apcu=		5.1.0			# https://pecl.php.net/package/APCu
+.else
+PHP_EXTENSION_VERSION.apcu=		4.0.8			# https://pecl.php.net/package/APCu
+.endif
 PHP_EXTENSION_VERSION.apfd=		1.0.1			# https://pecl.php.net/package/apfd
 PHP_EXTENSION_VERSION.apm=		2.0.5			# https://pecl.php.net/package/APM
 PHP_EXTENSION_VERSION.bcmath=		${PHP_BASE_VERS}
@@ -33,7 +37,7 @@ PHP_EXTENSION_VERSION.gmp=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gnupg=		1.3.6			# https://pecl.php.net/package/gnupg
 PHP_EXTENSION_VERSION.hash=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.htscanner=	1.0.1			# https://pecl.php.net/package/htscanner
-PHP_EXTENSION_VERSION.http=		2.5.1			# https://pecl.php.net/package/pecl_http
+PHP_EXTENSION_VERSION.http=		2.5.3			# https://pecl.php.net/package/pecl_http
 PHP_EXTENSION_VERSION.iconv=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.igbinary=		1.2.1			# https://pecl.php.net/package/igbinary
 PHP_EXTENSION_VERSION.imagick=		3.1.2			# https://pecl.php.net/package/imagick
@@ -42,7 +46,7 @@ PHP_EXTENSION_VERSION.intl=		${PHP_BASE_VERS}
 .if ${OPSYS} == SunOS
 PHP_EXTENSION_VERSION.ioncube_loader=	4.6.0			# file from Scott
 .else
-PHP_EXTENSION_VERSION.ioncube_loader=	5.0.11			# http://www.ioncube.com/loaders.php
+PHP_EXTENSION_VERSION.ioncube_loader=	5.0.19			# http://www.ioncube.com/loaders.php
 .endif
 PHP_EXTENSION_VERSION.json=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.json_post=	1.0.1			# https://pecl.php.net/package/json_post
@@ -55,13 +59,13 @@ PHP_EXTENSION_VERSION.memcache=		3.0.8			# https://pecl.php.net/package/memcache
 PHP_EXTENSION_VERSION.memcached=	2.2.0			# https://pecl.php.net/package/memcached
 PHP_EXTENSION_VERSION.mogilefs=		0.9.2			# https://pecl.php.net/package/mogilefs
 PHP_EXTENSION_VERSION.mongo=		1.6.11			# https://pecl.php.net/package/mongo
-PHP_EXTENSION_VERSION.mongodb=		0.6.3			# https://pecl.php.net/package/mongodb
+PHP_EXTENSION_VERSION.mongodb=		1.0.0			# https://pecl.php.net/package/mongodb
 PHP_EXTENSION_VERSION.mssql=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mysql=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mysqli=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.ncurses=		1.0.2			# https://pecl.php.net/package/ncurses
 PHP_EXTENSION_VERSION.newrelic=		${NEWRELIC_VERSION}	# https://download.newrelic.com/php_agent/release/
-PHP_EXTENSION_VERSION.newt=		1.2.8			# https://pecl.php.net/package/newt
+PHP_EXTENSION_VERSION.newt=		1.2.9			# https://pecl.php.net/package/newt
 PHP_EXTENSION_VERSION.oauth=		1.2.3			# https://pecl.php.net/package/oauth
 .if ${_PHP_VERSION} == "53" || ${_PHP_VERSION} == "54"
 PHP_EXTENSION_VERSION.opcache=		7.0.5			# https://pecl.php.net/package/ZendOpcache or https://github.com/zendtech/ZendOptimizerPlus
@@ -77,7 +81,7 @@ PHP_EXTENSION_VERSION.pdo_odbc=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.pdo_pgsql=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.pdo_sqlite=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.pgsql=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.phalcon=		2.0.7			# https://github.com/phalcon/cphalcon
+PHP_EXTENSION_VERSION.phalcon=		2.0.8			# https://github.com/phalcon/cphalcon
 PHP_EXTENSION_VERSION.phar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.phpwkhtmltox=	0.10			# https://github.com/mreiferson/php-wkhtmltox
 PHP_EXTENSION_VERSION.posix=		${PHP_BASE_VERS}
@@ -105,7 +109,7 @@ PHP_EXTENSION_VERSION.sysvmsg=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvsem=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvshm=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.tidy=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.timezonedb=	2015.5			# https://pecl.php.net/package/timezonedb
+PHP_EXTENSION_VERSION.timezonedb=	2015.7			# https://pecl.php.net/package/timezonedb
 PHP_EXTENSION_VERSION.tokenizer=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.txforward=	1.0.7			# https://pecl.php.net/package/txforward
 PHP_EXTENSION_VERSION.uploadprogress=	1.0.3.1			# https://pecl.php.net/package/uploadprogress

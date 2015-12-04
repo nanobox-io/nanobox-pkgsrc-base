@@ -7,7 +7,7 @@ BUILDLINK_TREE+=  php-igbinary
 .if !defined(PHP_IGBINARY_BUILDLINK3_MK)
 PHP_IGBINARY_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.php-igbinary+= ${PHP_PKG_PREFIX}-igbinary-1.2.*
+BUILDLINK_API_DEPENDS.php-igbinary+= ${PHP_PKG_PREFIX}-igbinary>=${PHP_EXTENSION_VERSION.igbinary}
 BUILDLINK_ABI_DEPENDS.php-igbinary+= ${PHP_PKG_PREFIX}-igbinary>=${PHP_EXTENSION_VERSION.igbinary}
 BUILDLINK_PKGSRCDIR.php-igbinary?= ../../base/php-igbinary
 BUILDLINK_INCDIRS.php-igbinary?= include/php/ext/igbinary

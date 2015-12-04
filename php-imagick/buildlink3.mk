@@ -7,7 +7,7 @@ BUILDLINK_TREE+=  php-imagick
 .if !defined(PHP_IMAGICK_BUILDLINK3_MK)
 PHP_IMAGICK_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.php-imagick+= ${PHP_PKG_PREFIX}-imagick-5.*
+BUILDLINK_API_DEPENDS.php-imagick+= ${PHP_PKG_PREFIX}-imagick>=${PHP_EXTENSION_VERSION.imagick}
 BUILDLINK_ABI_DEPENDS.php-imagick+= ${PHP_PKG_PREFIX}-imagick>=${PHP_EXTENSION_VERSION.imagick}
 BUILDLINK_PKGSRCDIR.php-imagick?= ../../base/php-imagick
 BUILDLINK_INCDIRS.php-imagick?= include/php/ext/imagick

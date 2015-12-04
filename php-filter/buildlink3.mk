@@ -7,7 +7,7 @@ BUILDLINK_TREE+=  php-filter
 .if !defined(PHP_FILTER_BUILDLINK3_MK)
 PHP_FILTER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.php-filter+= ${PHP_PKG_PREFIX}-filter-5.*
+BUILDLINK_API_DEPENDS.php-filter+= ${PHP_PKG_PREFIX}-filter>=${PHP_EXTENSION_VERSION.filter}
 BUILDLINK_ABI_DEPENDS.php-filter+= ${PHP_PKG_PREFIX}-filter>=${PHP_EXTENSION_VERSION.filter}
 BUILDLINK_PKGSRCDIR.php-filter?= ../../base/php-filter
 BUILDLINK_INCDIRS.php-filter?= include/php/ext/filter

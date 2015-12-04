@@ -15,6 +15,12 @@ CONFLICTS=		php-apcu-[0-9]*
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 WRKSRC=			${WRKDIR}/apcu-${PECL_VERSION}
 
+.include "../../base/php/phpversion.mk"
+
+.if ${_PHP_VERSION} == "70"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+.endif
+
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}

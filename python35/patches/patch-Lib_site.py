@@ -1,10 +1,8 @@
 $NetBSD$
 
-Support multiarch site-packages.
-
---- Lib/site.py.orig	2014-10-08 08:18:12.000000000 +0000
+--- Lib/site.py.orig	2015-09-13 11:41:21.000000000 +0000
 +++ Lib/site.py
-@@ -304,9 +304,13 @@ def getsitepackages(prefixes=None):
+@@ -303,9 +303,13 @@ def getsitepackages(prefixes=None):
          seen.add(prefix)
  
          if os.sep == '/':
@@ -16,6 +14,6 @@ Support multiarch site-packages.
                                          "python" + sys.version[:3],
 -                                        "site-packages"))
 +                                        "site-packages", libarchsuffix).rstrip('/'))
-             sitepackages.append(os.path.join(prefix, "lib", "site-python"))
          else:
              sitepackages.append(prefix)
+             sitepackages.append(os.path.join(prefix, "lib", "site-packages"))

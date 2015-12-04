@@ -12,11 +12,11 @@ LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
 
-PLIST_AWK+=	-f ${PKGSRCDIR}/base/python/plist-python.awk
-PLIST_AWK_ENV+=	PYTHON_SOABI="cpython-35"
-PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
-PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
-PRINT_PLIST_AWK+=	gsub(/\.cpython-35/, "")}
+# PLIST_AWK+=	-f ${PKGSRCDIR}/base/python/plist-python.awk
+# PLIST_AWK_ENV+=	PYTHON_SOABI="cpython-35"
+# PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
+# PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
+# PRINT_PLIST_AWK+=	gsub(/\.cpython-35/, "")}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-threads
@@ -34,7 +34,7 @@ USE_MULTIARCH=		bin lib
 MAKE_JOBS_SAFE=		no
 MULTIARCH_DIRS.lib=	# empty, manually set in PLIST
 NO_MULTIARCH_LIBDIR=	# defined, manually set
-CHECK_INTERPRETER=no	# $PREFIX/bin/python3.4 not created until pkg_add
+CHECK_INTERPRETER=no	# $PREFIX/bin/python3.5 not created until pkg_add
 
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
@@ -114,9 +114,9 @@ MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}
 
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
-PRINT_PLIST_AWK+=	{ gsub(/${PY_PLATNAME}/, "$${PY_PLATNAME}") }
-PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER_SUFFIX}/, \
-				"python$${PY_VER_SUFFIX}") }
+# PRINT_PLIST_AWK+=	{ gsub(/${PY_PLATNAME}/, "$${PY_PLATNAME}") }
+# PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER_SUFFIX}/, \
+				# "python$${PY_VER_SUFFIX}") }
 
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
@@ -170,8 +170,8 @@ post-install:
 
 .if ${OPSYS} == "HPUX"
 post-install:
-	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython3.4.sl \
-		${DESTDIR}${PREFIX}/lib/libpython3.4.sl.1.0
+	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython3.5.sl \
+		${DESTDIR}${PREFIX}/lib/libpython3.5.sl.1.0
 .endif
 
 BUILDLINK_DEPMETHOD.readline=		build

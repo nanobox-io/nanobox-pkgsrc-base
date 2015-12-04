@@ -1,8 +1,6 @@
-$NetBSD: patch-au,v 1.2 2015/03/16 13:53:05 tnn Exp $
+$NetBSD$
 
-Support multiarch.
-
---- Makefile.pre.in.orig	2015-02-25 11:27:45.000000000 +0000
+--- Makefile.pre.in.orig	2015-09-13 11:41:23.000000000 +0000
 +++ Makefile.pre.in
 @@ -86,7 +86,7 @@ PY_CFLAGS_NODIST=$(CONFIGURE_CFLAGS_NODI
  # be able to build extension modules using the directories specified in the
@@ -22,25 +20,25 @@ Support multiarch.
  
  # Executable suffix (.exe on Windows and Mac OS X)
  EXE=		@EXEEXT@
-@@ -683,7 +683,7 @@ Modules/_testembed: Modules/_testembed.o
- Modules/_freeze_importlib: Modules/_freeze_importlib.o $(LIBRARY_OBJS_OMIT_FROZEN)
- 	$(LINKCC) $(PY_LDFLAGS) -o $@ Modules/_freeze_importlib.o $(LIBRARY_OBJS_OMIT_FROZEN) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST)
+@@ -700,7 +700,7 @@ Python/importlib_external.h: $(srcdir)/L
+ 	./Programs/_freeze_importlib \
+ 		$(srcdir)/Lib/importlib/_bootstrap_external.py Python/importlib_external.h
  
--Python/importlib.h: $(srcdir)/Lib/importlib/_bootstrap.py Modules/_freeze_importlib.c
-+Python/importlib.h: $(srcdir)/Lib/importlib/_bootstrap.py Modules/_freeze_importlib.c $(LIBRARY_OBJS_OMIT_FROZEN)
- 	$(MAKE) Modules/_freeze_importlib
- 	./Modules/_freeze_importlib \
+-Python/importlib.h: $(srcdir)/Lib/importlib/_bootstrap.py Programs/_freeze_importlib
++Python/importlib.h: $(srcdir)/Lib/importlib/_bootstrap.py Programs/_freeze_importlib $(LIBRARY_OBJS_OMIT_FROZEN)
+ 	./Programs/_freeze_importlib \
  		$(srcdir)/Lib/importlib/_bootstrap.py Python/importlib.h
-@@ -828,7 +828,7 @@ Objects/setobject.o: $(srcdir)/Objects/s
+ 
+@@ -845,7 +845,7 @@ Objects/setobject.o: $(srcdir)/Objects/s
  $(OPCODETARGETS_H): $(OPCODETARGETGEN_FILES)
  	$(OPCODETARGETGEN) $(OPCODETARGETS_H)
  
 -Python/ceval.o: $(OPCODETARGETS_H) $(srcdir)/Python/ceval_gil.h
 +#Python/ceval.o: $(OPCODETARGETS_H) $(srcdir)/Python/ceval_gil.h
  
- Python/frozen.o: Python/importlib.h
+ Python/frozen.o: Python/importlib.h Python/importlib_external.h
  
-@@ -1034,7 +1034,7 @@ $(DESTSHARED):
+@@ -1054,7 +1054,7 @@ $(DESTSHARED):
  # Install the interpreter with $(VERSION) affixed
  # This goes into $(exec_prefix)
  altbininstall: $(BUILDPYTHON) @FRAMEWORKPYTHONW@
@@ -49,7 +47,7 @@ Support multiarch.
  	do \
  		if test ! -d $(DESTDIR)$$i; then \
  			echo "Creating directory $$i"; \
-@@ -1057,15 +1057,16 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+@@ -1077,15 +1077,16 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  		if test -n "$(DLLLIBRARY)" ; then \
  			$(INSTALL_SHARED) $(DLLLIBRARY) $(DESTDIR)$(BINDIR); \
  		else \
@@ -70,11 +68,11 @@ Support multiarch.
  	fi
  	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
  		rm -f $(DESTDIR)$(BINDIR)python$(VERSION)-32$(EXE); \
-@@ -1310,10 +1311,10 @@ inclinstall:
+@@ -1343,10 +1344,10 @@ inclinstall:
  
  # Install the library and miscellaneous stuff needed for extending/embedding
  # This goes into $(exec_prefix)
--LIBPL=		$(LIBDEST)/config-$(LDVERSION)
+-LIBPL=		@LIBPL@
 +LIBPL=		$(LIBDEST)/config-$(LDVERSION)@LIBARCHSUFFIX@
  
  # pkgconfig directory

@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.45 2015/10/13 07:47:48 fhajny Exp $
 
-DISTNAME=	node-v4.2.2
+DISTNAME=	node-v4.2.6
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
+PKGREVISION=	1
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://nodejs.org/
@@ -15,6 +16,8 @@ USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.10.24
+
+PYTHON_FOR_BUILD_ONLY= yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

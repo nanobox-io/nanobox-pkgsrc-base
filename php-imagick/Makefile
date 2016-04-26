@@ -10,6 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Provides a wrapper to the ImageMagick library.
 LICENSE=		php
 
+.include "../../base/php/phpversion.mk"
+.if ${_PHP_VERSION} == "70"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+.endif
 
 CONFLICTS=		php-imagick-[0-9]*
 
@@ -21,9 +25,6 @@ WRKSRC=			${WRKDIR}/imagick-${PECL_VERSION}
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
-DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-
-INSTALLATION_DIRS=	${DOCDIR}
 INSTALLATION_DIRS+=	include/php/ext/imagick
 
 IMAGICK_INCLUDES=	php_imagick_defs.h php_imagick_file.h php_imagick_helpers.h php_imagick_macros.h php_imagick_shared.h php_imagick.h
@@ -32,7 +33,6 @@ post-install:
 .for inc in ${IMAGICK_INCLUDES}
 	${INSTALL_DATA} ${WRKSRC}/${inc} ${DESTDIR}${PREFIX}/include/php/ext/imagick/${inc}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 
 DEPENDS+=	ghostscript>=9:../../print/ghostscript
 

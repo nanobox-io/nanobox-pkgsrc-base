@@ -20,6 +20,7 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 PROPRO_INCLUDES=	php_propro.h
+PROPRO_SRC_INCLUDES=	php_propro_api.h
 
 INSTALLATION_DIRS+=	include/php/ext/propro
 
@@ -28,6 +29,15 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${inc} ${DESTDIR}${PREFIX}/include/php/ext/propro/${inc}
 .endfor
 
+.for inc in ${PROPRO_SRC_INCLUDES}
+	${INSTALL_DATA} ${WRKSRC}/src/${inc} ${DESTDIR}${PREFIX}/include/php/ext/propro/${inc}
+.endfor
+
 .include "../../base/php/extension_versions.mk"
+
+.if ${_PHP_VERSION} == "70"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+.endif
+
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

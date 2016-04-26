@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (php-http/pecl_http-3.0.1.tgz) = 9d1015774dcd50ac7c7fa845062269fdbac4c719
+RMD160 (php-http/pecl_http-3.0.1.tgz) = 63ea318a0bb3858b894a675726de762d16a4941e
+Size (php-http/pecl_http-3.0.1.tgz) = 197372 bytes
+SHA1 (patch-config9.m4) = 6244b755edd22443334935c422fb13ee449dd414

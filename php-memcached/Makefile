@@ -26,6 +26,15 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 .include "../../base/php/extension_versions.mk"
+
+.if ${_PHP_VERSION} == "70"
+GIT_REPOSITORIES=	memcached-${PECL_VERSION}
+GIT_REPO.memcached-${PECL_VERSION}=	git://github.com/php-memcached-dev/php-memcached.git
+GIT_TAG=		php7
+
+.include "../../base/git/git-package.mk"
+.endif
+
 .include "../../base/php-json/buildlink3.mk"
 .include "../../base/php-session/buildlink3.mk"
 .include "../../base/php-igbinary/buildlink3.mk"

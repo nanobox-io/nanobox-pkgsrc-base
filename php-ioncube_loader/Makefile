@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 PKGNAME=		${PHP_PKG_PREFIX}-ioncube_loader-${PHP_EXTENSION_VERSION.${MODNAME}}
-DISTNAME=		ioncube_loaders_${OS}_${SYSARCH}
+DISTNAME=		ioncube_loaders_${OS}_${SYSARCH}_${PHP_EXTENSION_VERSION.${MODNAME}}
 MODNAME=		ioncube_loader
 VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
 CATEGORIES+=		devel

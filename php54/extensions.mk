@@ -1,7 +1,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-# PHP_BUNDLE_PATCH= 1
+PHP_BUNDLE_PATCH= 1
 
 PHP_EXTENSION_LIST= dom filter hash json mbstring pdo session xml \
 	igbinary imagick raphf propro \

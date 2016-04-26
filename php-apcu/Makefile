@@ -19,6 +19,7 @@ WRKSRC=			${WRKDIR}/apcu-${PECL_VERSION}
 
 .if ${_PHP_VERSION} == "70"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+PKGREVISION=		1
 .endif
 
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}

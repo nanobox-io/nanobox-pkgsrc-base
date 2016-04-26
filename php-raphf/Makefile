@@ -20,6 +20,7 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 RAPHF_INCLUDES=		php_raphf.h
+RAPHF_SRC_INCLUDES=	php_raphf_api.h
 
 INSTALLATION_DIRS+=	include/php/ext/raphf
 
@@ -28,6 +29,15 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${inc} ${DESTDIR}${PREFIX}/include/php/ext/raphf/${inc}
 .endfor
 
+.for inc in ${RAPHF_SRC_INCLUDES}
+	${INSTALL_DATA} ${WRKSRC}/src/${inc} ${DESTDIR}${PREFIX}/include/php/ext/raphf/${inc}
+.endfor
+
 .include "../../base/php/extension_versions.mk"
+
+.if ${_PHP_VERSION} == "70"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+.endif
+
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

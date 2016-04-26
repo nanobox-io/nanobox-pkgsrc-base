@@ -17,4 +17,4 @@ include/php/ext/hash/php_hash_tiger.h
 include/php/ext/hash/php_hash_tiger_tables.h
 include/php/ext/hash/php_hash_whirlpool.h
 include/php/ext/hash/php_hash_whirlpool_tables.h
-lib/php/20141001/hash.so
+lib/php/20151012/hash.so

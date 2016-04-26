@@ -15,13 +15,18 @@ HOMEPAGE=		https://github.com/nicolasff/phpredis
 COMMENT=		PHP extension for Redis
 LICENSE=		php
 
+.include "../../base/php/extension_versions.mk"
+
 GIT_REPOSITORIES=	php-redis
 GIT_REPO.php-redis=	git://github.com/nicolasff/phpredis.git
+.if ${_PHP_VERSION} == "70"
+GIT_TAG=		php7
+.else
 GIT_TAG=		${PECL_VERSION}
+.endif
 
 WRKSRC=			${WRKDIR}/php-redis
 
-.include "../../base/php/extension_versions.mk"
 .include "../../base/git/git-package.mk"
 .include "../../base/php-session/buildlink3.mk"
 .include "../../base/php-igbinary/buildlink3.mk"

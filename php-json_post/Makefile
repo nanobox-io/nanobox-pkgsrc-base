@@ -16,6 +16,11 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}
 WRKSRC=			${WRKDIR}/json_post-${PECL_VERSION}
 
 .include "../../base/php/extension_versions.mk"
+
+.if ${_PHP_VERSION} == "70"
+PKGREVISION=		1
+.endif
+
 .include "../../base/php/ext.mk"
 .include "../../base/php-json/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

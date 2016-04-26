@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2013/09/21 16:06:07 taca Exp $
+$NetBSD$
 
 SHA1 (php-5.4.45.tar.bz2) = 3032efebf7001e7720c5e42d9898d7077612e9b4
 RMD160 (php-5.4.45.tar.bz2) = 352a0ea8fb75a447301c1434609ac0e4b96acc0c

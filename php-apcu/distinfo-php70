@@ -1,5 +1,5 @@
 $NetBSD$
 
-SHA1 (php-apcu/apcu-5.1.0.tgz) = 1fca922bff51dcbff816a72478cf91c72f1b90bc
-RMD160 (php-apcu/apcu-5.1.0.tgz) = a1b54de9fa02e18e0cff2fa5365b5eb456f56fcb
-Size (php-apcu/apcu-5.1.0.tgz) = 109359 bytes
+SHA1 (php-apcu/apcu-5.1.3.tgz) = 6d5d860360131cdf2f910f287fd2e277dda7ac68
+RMD160 (php-apcu/apcu-5.1.3.tgz) = c60bf6e3a9c9982750e2c0e0d76ed2dfae49fc6d
+Size (php-apcu/apcu-5.1.3.tgz) = 108422 bytes

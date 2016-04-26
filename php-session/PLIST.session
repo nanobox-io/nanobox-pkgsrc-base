@@ -2,3 +2,4 @@
 include/php/ext/session/mod_files.h
 include/php/ext/session/mod_user.h
 include/php/ext/session/php_session.h
+@pkgdir var/php/sessions

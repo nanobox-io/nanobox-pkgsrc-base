@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (php-mogilefs/mogilefs-0.9.3.1.tgz) = 0760783dfba301485caad442263175570d85b1f4
+RMD160 (php-mogilefs/mogilefs-0.9.3.1.tgz) = 2d575c34c509459c577b78330ac0d36df4b3f334
+Size (php-mogilefs/mogilefs-0.9.3.1.tgz) = 17365 bytes
+SHA1 (patch-config.m4) = d589e59fceda6a51f017499856cdace8e70e72d0

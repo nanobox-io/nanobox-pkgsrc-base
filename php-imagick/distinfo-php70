@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+$NetBSD$
 
 SHA1 (php-imagick/imagick-3.4.1.tgz) = 575e131f02b88d3e9fb887c7e9c37f7ef48fdcae
 RMD160 (php-imagick/imagick-3.4.1.tgz) = 83db47e46963e2d1db33c06e32ba152036d7fc15

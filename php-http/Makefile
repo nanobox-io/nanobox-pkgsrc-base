@@ -32,6 +32,11 @@ pre-configure:
 	sudo bash -c "echo extension=propro.so >> ${PREFIX}/etc/php/php.ini"
 
 .include "../../base/php/extension_versions.mk"
+
+.if ${_PHP_VERSION} == "70"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+.endif
+
 .include "../../base/php/ext.mk"
 .include "../../base/php-propro/buildlink3.mk"
 .include "../../base/php-raphf/buildlink3.mk"

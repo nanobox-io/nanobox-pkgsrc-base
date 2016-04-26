@@ -1,5 +1,5 @@
 $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
-SHA1 (php-radius/radius-1.2.7.tgz) = 229db6467a8d6edd7ad09c05d7eba9096c403d87
-RMD160 (php-radius/radius-1.2.7.tgz) = d579b4e6e978b1fc3565a56d140687340bac3927
-Size (php-radius/radius-1.2.7.tgz) = 35779 bytes
+SHA1 (php-radius/radius-1.3.0.tgz) = 6249b4c56389c3a37a799924baf0a4b4756000b6
+RMD160 (php-radius/radius-1.3.0.tgz) = d24434a801fb17b0f1a340ee4a2d78a0e5e8c19d
+Size (php-radius/radius-1.3.0.tgz) = 43060 bytes

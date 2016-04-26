@@ -15,6 +15,12 @@ CONFLICTS=		php-apfd-[0-9]*
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 WRKSRC=			${WRKDIR}/apfd-${PECL_VERSION}
 
+.include "../../base/php/phpversion.mk"
+
+.if ${_PHP_VERSION} == "70"
+PKGREVISION=		1
+.endif
+
 .include "../../base/php/extension_versions.mk"
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

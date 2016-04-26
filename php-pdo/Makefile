@@ -15,7 +15,10 @@ CONFIGURE_ARGS+=	--with-${MODNAME}
 
 INSTALLATION_DIRS+=	include/php/ext/pdo
 
-.if ${PKG_PHP_VERSION} == 56
+.if ${PKG_PHP_VERSION} == 70
+PDO_INCLUDES=		php_pdo_driver.h  php_pdo_error.h  php_pdo_int.h  php_pdo.h
+PLIST_SRC+=		${.CURDIR}/../../base/php-pdo/PLIST.pdo70
+.elif ${PKG_PHP_VERSION} == 56
 PDO_INCLUDES=		php_pdo_driver.h php_pdo.h php_pdo_error.h
 PLIST_SRC+=		${.CURDIR}/../../base/php-pdo/PLIST.pdo56
 .else

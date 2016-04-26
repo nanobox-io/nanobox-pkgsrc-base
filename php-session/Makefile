@@ -11,8 +11,12 @@ CONFLICTS=		php-session-[0-9]*
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
 .include "../../base/php/ext.mk"
+.if ${_PHP_VERSION} == "53" || ${_PHP_VERSION} == "54"
+PKGREVISION=		1
+.endif
 
 INSTALLATION_DIRS+=	include/php/ext/session
+INSTALLATION_DIRS+=	var/php/sessions
 
 SESSION_INCLUDES=	mod_files.h mod_user.h php_session.h
 PLIST_SRC+=		${.CURDIR}/../../base/php-session/PLIST.session

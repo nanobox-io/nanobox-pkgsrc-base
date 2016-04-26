@@ -1,5 +1,4 @@
 @comment $NetBSD: PLIST.extras,v 1.2 2009/06/14 22:00:30 joerg Exp $
-share/doc/${PKGBASE}/INSTALL
 include/php/ext/imagick/php_imagick_defs.h
 include/php/ext/imagick/php_imagick_file.h
 include/php/ext/imagick/php_imagick_helpers.h

@@ -28,6 +28,11 @@ SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
 .include "../../base/php/extension_versions.mk"
+
+.if ${_PHP_VERSION} == "70"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+.endif
+
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/neon/buildlink3.mk"
 .include "../../base/php/ext.mk"

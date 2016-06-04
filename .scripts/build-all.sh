@@ -21,6 +21,32 @@ for package in $(ls /content/pkgsrc/base); do
     continue
   fi
 
+  if [[ "${package}" =~ "flip" ]]; then
+    echo "can't build luvit"
+    continue
+  fi
+
+  if [[ "${package}" =~ "kaffe" ]]; then
+    echo "don't build kaffe"
+    continue
+  fi
+
+  if [[ "${package}" =~ "openjdk" ]]; then
+    echo "don't build openjdk yet"
+    continue
+  fi
+
+  if [[ "${package}" =~ "luvit" ]]; then
+    echo "gitorious is down"
+    continue
+  fi
+
+  # skip java*
+  if [[ "${package}" =~ "java-" ]]; then
+    echo "ignoring ${package} because it's a java package"
+    continue
+  fi
+
   # ignore if it's not a real package
   if [ ! -f /content/pkgsrc/base/${package}/Makefile ]; then
     echo "ignoring ${package} because it does not have a Makefile"
@@ -123,7 +149,7 @@ for package in $(ls /content/pkgsrc/base); do
           PHP_VERSION_DEFAULT=${php_version}"
     fi
   elif [[ "${package}" =~ "ruby" ]]; then
-    ruby_version=${package/ruby/}
+    ruby_version=${package}
     for gem in $(ls /content/pkgsrc/base | grep -e 'ruby-'); do
       gem_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${gem} show-var VARNAME=PKGNAME RUBY_VERSION_SUPPORTED=${ruby_version})
       run_in_chroot \

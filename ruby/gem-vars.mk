@@ -24,7 +24,7 @@ RUBY_GEMS_VERSION?=	${RUBY_GEMS_PKGSRC_VERS}
 _RUBYGEMS_MAJOR=	${RUBY_GEMS_VERSION:C/\.[0-9\.]+$//}
 _RUBYGEMS_MINORS=	${RUBY_GEMS_VERSION:C/^([0-9]+)\.*//}
 
-.if ${RUBY_VER} == "18"
+.if ${RUBY_VER} == "RUBY18"
 BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.1.0:../../ruby/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../ruby/rubygems
 .endif # !ruby18

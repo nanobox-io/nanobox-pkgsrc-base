@@ -11,4 +11,4 @@ PHP_EXTENSION_LIST= dom filter hash json mbstring pdo session xml \
 	posix pspell recode shmop simplexml snmp soap sockets sysvmsg \
 	sysvsem sysvshm tidy tokenizer wddx xmlreader xmlrpc xmlwriter \
 	xsl zip zlib \
-	apcu apfd apm gender http imagick json_post lzf memcached mogilefs mongodb newrelic oauth readline redis stats timezonedb xdebug
+	amqp apcu apfd apm gender http imagick json_post lzf memcached mogilefs mongodb newrelic oauth readline redis stats stomp timezonedb xdebug

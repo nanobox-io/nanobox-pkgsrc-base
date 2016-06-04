@@ -3,7 +3,7 @@
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${DISTNAME:S/-p/./}
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -12,7 +12,7 @@ HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby ${RUBY_VERSION} release minimum base package
 LICENSE=	${RUBY_LICENSE}
 
-RUBY_VERSION_SUPPORTED=	19
+RUBY_VERSION_SUPPORTED=	RUBY19
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c
@@ -81,12 +81,13 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 .include "../../base/ruby/rubyversion.mk"
 
 .if !empty(RUBY_SUFFIX)
-CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}
-CONFIGURE_ARGS+= --with-soname=${RUBY_NAME}
-CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VERSION}
+CONFIGURE_ARGS+=	--program-suffix=${RUBY_SUFFIX}
+CONFIGURE_ARGS+=	--with-soname=${RUBY_NAME}
+CONFIGURE_ARGS+=	--with-ruby-version=${RUBY_VERSION}
 .endif
-CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
-
+CONFIGURE_ARGS+=	--with-ruby-pc="ruby-${RUBY_VERSION}.pc"
+CONFIGURE_ARGS+=	--with-X11-dir=${X11BASE:Q}
+CONFIGURE_ARGS+=	--with-X11-lib=${BUILDLINK_PREFIX.libX11}/lib
 #
 # Win32 support (for Cygwin)
 #
@@ -140,12 +141,12 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 \
 # ${RUBY_ARCHINC} ${RUBY_ARCHLIB}
 EMPTY_DIRS=		generator/template markup/simple_markup
 
-pre-configure:
-	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
-	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
-	${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
-	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
-	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
+# pre-configure:
+# 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
+# 	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
+# 	${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
+# 	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
+# 	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
 
 pre-install:
 	cd ${WRKSRC}/lib; \
@@ -175,10 +176,17 @@ post-install:
 .endfor
 	${RUBY_GENERATE_PLIST}
 
-.include "../../mk/bdb.buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
+# .include "../../mk/bdb.buildlink3.mk"
+# .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
 .include "../../base/ruby/Makefile.common"
+.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
+# .include "../../databases/gdbm/buildlink3.mk"
+# .include "../../lang/tcl/buildlink3.mk"
+# .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -90,6 +90,12 @@ create_chroot() {
     sudo ln -s /content/packages/pkgsrc/${project}/${platform}/All /chroot/${chroot}/data/var/db/pkgin/cache
   fi
 
+  # link /etc/ssl/certs to the pkgin certs
+  if [ ! -L /chroot/${chroot}/data/etc/openssl/certs ]; then
+    sudo rm -rf /chroot/${chroot}/data/etc/openssl/certs
+    sudo ln -s /etc/ssl/certs /chroot/${chroot}/data/etc/openssl/certs
+  fi
+
   # chown /data directory
   echo "chown-ing /data directory"
   sudo \

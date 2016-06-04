@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 #  # vim: ts=8 sw=8 ft=make noet
 
-VERSION=		2.2.9
+VERSION=		2.2.10
 DISTNAME=		sphinx-${VERSION}-release
 
 PKGNAME=		${DISTNAME:S/-/search-client-/:S/-release//}

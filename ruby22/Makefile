@@ -3,6 +3,7 @@
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -11,7 +12,7 @@ HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby ${RUBY_VERSION} release minimum base package
 LICENSE=	${RUBY_LICENSE}
 
-RUBY_VERSION_SUPPORTED=	22
+RUBY_VERSION_SUPPORTED=	RUBY22
 
 USE_LANGUAGES=		c
 USE_TOOLS+=		pax yacc
@@ -78,11 +79,13 @@ SUBST_MESSAGE.conf=	Fixing configuration files.
 .include "../../base/ruby/rubyversion.mk"
 
 .if !empty(RUBY_SUFFIX)
-CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}
-CONFIGURE_ARGS+= --with-soname=${RUBY_NAME}
-CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VER_DIR}
+CONFIGURE_ARGS+=	--program-suffix=${RUBY_SUFFIX}
+CONFIGURE_ARGS+=	--with-soname=${RUBY_NAME}
+CONFIGURE_ARGS+=	--with-ruby-version=${RUBY_VER_DIR}
 .endif
-CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
+CONFIGURE_ARGS+=	--with-ruby-pc="ruby-${RUBY_VERSION}.pc"
+CONFIGURE_ARGS+=	--with-X11-dir=${X11BASE:Q}
+CONFIGURE_ARGS+=	--with-X11-lib=${BUILDLINK_PREFIX.libX11}/lib
 
 #
 # Ruby 2.0 don't like Apple's builtin OpenSSL.
@@ -153,11 +156,11 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${RUBY_DOC}/images \
 EMPTY_DIRS=		generator/template markup/simple_markup
 
 pre-configure:
-	${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
-	${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
-	${RM} -f ${WRKSRC}/ext/readline/extconf.rb
-	${RM} -f ${WRKSRC}/ext/tk/extconf.rb
-	${RM} -f ${WRKSRC}/ext/tk/tkutil/extconf.rb
+	# ${RM} -f ${WRKSRC}/ext/gdbm/extconf.rb
+	# ${RM} -f ${WRKSRC}/ext/fiddle/extconf.rb
+	# ${RM} -f ${WRKSRC}/ext/readline/extconf.rb
+	# ${RM} -f ${WRKSRC}/ext/tk/extconf.rb
+	# ${RM} -f ${WRKSRC}/ext/tk/tkutil/extconf.rb
 	${TOUCH} ${WRKSRC}/prelude.c
 
 pre-install:
@@ -189,10 +192,15 @@ post-install:
 	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/${GEM_HOME}/gems
 	${RUBY_GENERATE_PLIST}
 
-.include "../../mk/bdb.buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
+# .include "../../mk/bdb.buildlink3.mk"
+# .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libyaml/buildlink3.mk"
 .include "../../base/ruby/Makefile.common"
+.include "../../mk/readline.buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
+# .include "../../databases/gdbm/buildlink3.mk"
+# .include "../../lang/tcl/buildlink3.mk"
+# .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

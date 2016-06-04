@@ -1,0 +1,7 @@
+@comment $NetBSD$
+redundis/deps/luvit-redis/build/redis.luvit
+redundis/deps/luvit-redis/lib/commands.lua
+redundis/deps/luvit-redis/lib/init.lua
+redundis/deps/luvit-redis/package.lua
+redundis/lib/main.lua
+redundis/redis_proxy.lua

@@ -86,6 +86,9 @@ ${RUBY_LIB}/e2mmap.rb
 ${RUBY_LIB}/English.rb
 ${RUBY_LIB}/erb.rb
 ${RUBY_LIB}/expect.rb
+${RUBY_LIB}/fiddle/closure.rb
+${RUBY_LIB}/fiddle/function.rb
+${RUBY_LIB}/fiddle.rb
 ${RUBY_LIB}/fileutils.rb
 ${RUBY_LIB}/find.rb
 ${RUBY_LIB}/forwardable.rb
@@ -665,8 +668,8 @@ ${RUBY_LIB}/webrick/version.rb
 ${RUBY_ARCHLIB}/bigdecimal.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/continuation.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/coverage.${RUBY_DLEXT}
+${RUBY_ARCHLIB}/curses.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/date_core.${RUBY_DLEXT}
-${RUBY_ARCHLIB}/dbm.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/digest/bubblebabble.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/digest/md5.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/digest/rmd160.${RUBY_DLEXT}
@@ -730,6 +733,7 @@ ${RUBY_ARCHLIB}/enc/windows_1251.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/etc.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/fcntl.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/fiber.${RUBY_DLEXT}
+${RUBY_ARCHLIB}/fiddle.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/iconv.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/io/console.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/io/nonblock.${RUBY_DLEXT}
@@ -746,6 +750,7 @@ ${RUBY_ARCHLIB}/psych.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/pty.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/racc/cparse.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/rbconfig.rb
+${RUBY_ARCHLIB}/readline.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/ripper.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/sdbm.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/socket.${RUBY_DLEXT}

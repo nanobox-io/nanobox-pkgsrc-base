@@ -126,7 +126,7 @@ PLIST.no-nis=	yes
 .  endif
 .endif
 
-.include "../../mk/bdb.buildlink3.mk"
+# .include "../../mk/bdb.buildlink3.mk"
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
 .if empty(BDB_LIBS)
 BUILDLINK_TRANSFORM+=	rm:-ldb
@@ -186,6 +186,7 @@ BUILDLINK_DEPMETHOD.readline=		build
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

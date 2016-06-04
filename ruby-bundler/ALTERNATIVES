@@ -1,2 +1,2 @@
-bin/bundle @PREFIX@/bin/bundle@RUBY_SUFFIX@
-bin/bundler @PREFIX@/bin/bundler@RUBY_SUFFIX@
+bin/bundle @PREFIX@/lib/ruby/gems/2.3.0/gems/bundler-1.12.1/exe/bundle
+bin/bundler @PREFIX@/lib/ruby/gems/2.3.0/gems/bundler-1.12.1/exe/bundler

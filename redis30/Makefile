@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=		redis-3.0.3
+DISTNAME=		redis-3.0.5
 CATEGORIES=		databases
 MASTER_SITES=		http://download.redis.io/releases/
 

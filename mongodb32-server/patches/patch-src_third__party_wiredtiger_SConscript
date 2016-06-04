@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- src/third_party/wiredtiger/SConscript.orig	2016-04-21 20:21:39.000000000 +0000
++++ src/third_party/wiredtiger/SConscript
+@@ -48,11 +48,15 @@ elif env.TargetOSIs('osx'):
+     env.Append(CPPPATH=["build_darwin"])
+ elif env.TargetOSIs('solaris'):
+     env.Append(CPPPATH=["build_solaris"])
++elif env.TargetOSIs('dragonfly'):
++    env.Append(CPPPATH=["build_dragonfly"])
+     # For an explanation of __EXTENSIONS__,
+     # see http://docs.oracle.com/cd/E19253-01/816-5175/standards-5/index.html
+     env.Append(CPPDEFINES=["__EXTENSIONS__"])
+ elif env.TargetOSIs('freebsd'):
+     env.Append(CPPPATH=["build_freebsd"])
++elif env.TargetOSIs('netbsd'):
++    env.Append(CPPPATH=["build_netbsd"])
+ elif env.TargetOSIs('openbsd'):
+     env.Append(CPPPATH=["build_openbsd"])
+ elif env.TargetOSIs('linux'):

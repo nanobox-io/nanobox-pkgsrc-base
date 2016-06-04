@@ -6,7 +6,7 @@
 # used by databases/mysql55-server/Makefile
 
 DISTNAME=	wsrep_${VERSION}
-VERSION=	5.5.46-25.13
+VERSION=	5.5.47-25.14
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/codership/mysql-wsrep/archive/
 WRKSRC=		${WRKDIR}/mysql-wsrep-wsrep_${VERSION}

@@ -181,6 +181,7 @@ CHECK_PERMS_SKIP+=		${GEM_LIBDIR}/*
 PLIST_SUBST+=		GEM_NAME=${GEM_NAME}
 PLIST_SUBST+=		GEM_LIBDIR=${GEM_LIBDIR}
 PLIST_SUBST+=		GEM_DOCDIR=${GEM_DOCDIR}
+PLIST_SUBST+=		GEM_PREFIX=${GEM_PREFIX}
 
 # Add indirect support for print-PLIST
 _RUBY_PRINT_PLIST_GEM=	/${GEM_NAME}\.info$$/ \
@@ -264,6 +265,7 @@ RUBYGEM_INSTALL_ROOT=	${WRKDIR}/.inst
 _RUBYGEM_OPTIONS=	--no-update-sources	# don't cache the gem index
 _RUBYGEM_OPTIONS+=	--install-dir ${PREFIX}/${GEM_HOME}
 _RUBYGEM_OPTIONS+=	${RUBYGEM_INSTALL_ROOT_OPTION}
+_RUBYGEM_OPTIONS+=  --bindir ${PREFIX}/bin
 _RUBYGEM_OPTIONS+=	--ignore-dependencies
 _RUBYGEM_OPTIONS+=	--local ${WRKSRC}/${GEM_NAME}.gem
 .if !empty(RUBY_BUILD_RI:M[nN][oO])

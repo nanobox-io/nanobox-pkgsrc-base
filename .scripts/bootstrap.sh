@@ -53,6 +53,7 @@ sudo GCCBASE=/usr \
   SH=/bin/bash \
   /content/pkgsrc/bootstrap/bootstrap \
   --compiler=gcc \
+  --make-jobs=8 \
   --abi 64 \
   --full \
   --prefer-pkgsrc=yes \
@@ -91,7 +92,7 @@ PACKAGES=     /content/packages/pkgsrc/${project}/Linux
 
 WRKOBJDIR=      /var/tmp/pkgsrc-build-${project}
 
-MAKE_JOBS=      6
+MAKE_JOBS=      8
 JPEG_DEFAULT=            libjpeg-turbo
 
 SU_CMD=       sudo sh -c
@@ -166,8 +167,8 @@ http://pkgsrc.nanobox.io/nanobox/${project}/${platform}
 END
 
 # 10) symlink openssl certs
-rm -rf /data/etc/openssl/certs
-ln -s /etc/ssl/certs/ /data/etc/openssl/certs
+sudo rm -rf /data/etc/openssl/certs
+sudo ln -s /etc/ssl/certs/ /data/etc/openssl/certs
 
 # 10) tar
 sudo tar -czf /var/tmp/bootstrap.tar.gz -C / data

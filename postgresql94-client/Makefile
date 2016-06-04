@@ -2,6 +2,7 @@
 
 PKGNAME=	${DISTNAME:C/-/94-client-/}
 COMMENT=	PostgreSQL database client programs
+PKGREVISION=	1
 
 .include "../../base/postgresql94/Makefile.common"
 

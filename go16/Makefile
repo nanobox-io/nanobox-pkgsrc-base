@@ -2,8 +2,8 @@
 
 .include "../../base/go/version.mk"
 
-DISTNAME=	go${GO_VERSION}.src
-PKGNAME=	go-${GO_VERSION}
+DISTNAME=	go${GO16_VERSION}.src
+PKGNAME=	go-${GO16_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 

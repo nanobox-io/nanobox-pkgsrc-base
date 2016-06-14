@@ -2,10 +2,12 @@ $NetBSD: distinfo,v 1.13.2.1 2014/04/14 17:14:13 tron Exp $
 
 SHA1 (sphinx-2.2.10-release.tar.gz) = 0f2372dd41df2848ea06c6076a86af6f0f66a071
 RMD160 (sphinx-2.2.10-release.tar.gz) = 2712e8ce85609e78c53bd2d9fba877f1e630d5f2
+SHA512 (sphinx-2.2.10-release.tar.gz) = 07683f64df730368563e11a7d2939b521837c9a04944ab7d6d09732ab06e451b674169eca4f85db2aae41d883bd16fb4d17b9265912fea9691d07d407d7212d8
 Size (sphinx-2.2.10-release.tar.gz) = 3109250 bytes
-SHA1 (wsrep_5.6.27-25.12.tar.gz) = 23c9726cc6fdbfe68536b84e030dfa851edf3d12
-RMD160 (wsrep_5.6.27-25.12.tar.gz) = afd35ecbd0d573d849c9680b4b4b1c7d99ebbdc9
-Size (wsrep_5.6.27-25.12.tar.gz) = 32012052 bytes
+SHA1 (wsrep_5.6.28-25.13.tar.gz) = 4e350d9f48033310654287da8477b79c480070f5
+RMD160 (wsrep_5.6.28-25.13.tar.gz) = b5218e33586c0ae96455aa46051891558185d667
+SHA512 (wsrep_5.6.28-25.13.tar.gz) = 20b0787612855f6a215b74d1038b016249e1c013cdb2e5c95c6b1d4c970d91fa35eeab2e0f0f06f01723c80f89216b06c52ede1e8166cdef18b92e83f0439f3d
+Size (wsrep_5.6.28-25.13.tar.gz) = 32045142 bytes
 SHA1 (patch-CMakeLists.txt) = b799d50e290e2136dad7d2fef52e56d5efe2d8a8
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb
 SHA1 (patch-client_mysqladmin.cc) = e1650ef3695675bcc01375bacdebcb7318218b93

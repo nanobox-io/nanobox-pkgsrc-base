@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (mod_cloudflare.c) = b62767b4de61598bc342c2d3de481a77ea659a6d
-RMD160 (mod_cloudflare.c) = f89ef6c3474d7294aed2327eb3c8d1a4ccc78e07
-Size (mod_cloudflare.c) = 20516 bytes
+SHA1 (mod_cloudflare.c) = 2adff23f5c5ee145c6e047f89f90dc4f12f892cc
+RMD160 (mod_cloudflare.c) = 173da2c978440963afe0183a167b8fd2a50c19f7
+SHA512 (mod_cloudflare.c) = 98682db512ecfefdb2f3c39912c029e81b5978c09f45e79aef633fc7043e446f9b7d52a06278eb4b9f4b7181050daafed636503fae681d0364bc21645e24a400
+Size (mod_cloudflare.c) = 20842 bytes

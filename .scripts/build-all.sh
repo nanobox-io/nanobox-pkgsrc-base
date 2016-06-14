@@ -26,8 +26,28 @@ for package in $(ls /content/pkgsrc/base); do
     continue
   fi
 
+  if [[ "${package}" =~ "apache24" ]]; then
+    echo "can't build apache24"
+    continue
+  fi
+
   if [[ "${package}" =~ "kaffe" ]]; then
     echo "don't build kaffe"
+    continue
+  fi
+
+  if [[ "${package}" =~ "jruby" ]]; then
+    echo "don't build jruby"
+    continue
+  fi
+
+  if [[ "${package}" =~ "mariadb" ]]; then
+    echo "don't build mariadb"
+    continue
+  fi
+
+  if [[ "${package}" =~ "percona" ]]; then
+    echo "don't build percona"
     continue
   fi
 

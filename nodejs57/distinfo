@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.47 2015/11/09 20:19:35 fhajny Exp $
 
 SHA1 (node-v5.7.1.tar.gz) = bd7825efe70b5f82b4a34df17f9f1826d490213d
 RMD160 (node-v5.7.1.tar.gz) = 194fa74e1366149306c20de711463d4b499d752b
+SHA512 (node-v5.7.1.tar.gz) = 3702ef0a4cba9c106ece330ce81291b17d3ca1216efd486fc2a97ce1d0baaf0d457bce4f261d1af5898369b6a040c35cf64a6185cb54374e6417ad445580b937
 Size (node-v5.7.1.tar.gz) = 22393987 bytes
 SHA1 (patch-common.gypi) = 5b3a50617358637a6f910de28bb5a14f037317a6
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f

@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=	mongodb-src-r3.2.6
+DISTNAME=	mongodb-src-r3.2.7
 PKGNAME=	${DISTNAME:S/src-r/server-/:S/-rc/rc/}
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
@@ -35,10 +35,10 @@ SCONS_ARGS=	${_MAKE_JOBS}
 # SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX:Q}
 # CXX=${WRAPPER_BINDIR}/g++
 # CC=${WRAPPER_BINDIR}/gcc
-SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
-SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
-SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
-SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
+SCONS_ARGS+=	--use-system-boost
+SCONS_ARGS+=	--use-system-pcre
+SCONS_ARGS+=	--use-system-snappy
+SCONS_ARGS+=	--use-system-tcmalloc
 SCONS_ARGS+=	--use-system-yaml
 SCONS_ARGS+=	--use-system-zlib
 SCONS_ARGS+=	--release
@@ -46,12 +46,16 @@ SCONS_ARGS+=	--release
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if defined(MAKE_JOBS)
-MAKE_JOBS=	2
+MAKE_JOBS=	8
 .endif
 
 CPPFLAGS+=	-fno-jump-tables
 
 CXXFLAGS+=	-Wno-maybe-uninitialized
+CXXFLAGS+=	-Wno-unused-variable
+CXXFLAGS+=	-Wno-error=maybe-uninitialized
+CFLAGS+=	-Wno-unused-variable
+CFLAGS+=	-Wno-error=maybe-uninitialized
 
 .include "options.mk"
 
@@ -141,7 +145,7 @@ post-install:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/py-boost/buildlink3.mk"
 .if exists(../../devel/libexecinfo/buildlink3.mk)
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif

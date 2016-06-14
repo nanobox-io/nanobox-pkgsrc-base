@@ -31,7 +31,7 @@ SCONS_ARGS+=	--variant-dir=build
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if defined(MAKE_JOBS)
-MAKE_JOBS=	2
+MAKE_JOBS=	8
 .endif
 
 .if ${MACHINE_ARCH} == "x86_64"
@@ -41,6 +41,10 @@ SCONS_ARGS+=	--32
 .endif
 
 CPPFLAGS+=	-fno-jump-tables
+CXXFLAGS+=	-Wno-unused-variable
+CXXFLAGS+=	-Wno-error=maybe-uninitialized
+CFLAGS+=	-Wno-unused-variable
+CFLAGS+=	-Wno-error=maybe-uninitialized
 
 .include "options.mk"
 
@@ -123,7 +127,7 @@ post-install:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/py-boost/buildlink3.mk"
 .if exists(../../devel/libexecinfo/buildlink3.mk)
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif

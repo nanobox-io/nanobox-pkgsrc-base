@@ -1,7 +1,6 @@
 $NetBSD$
 
-Add support for NetBSD/Dragonfly, fix locations.
---- SConstruct.orig	2014-06-19 20:19:09.000000000 +0000
+--- SConstruct.orig	2016-03-21 16:09:46.000000000 +0000
 +++ SConstruct
 @@ -59,7 +59,9 @@ nix = False
  linux = False
@@ -26,7 +25,16 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif platform.startswith( "openbsd" ):
      openbsd = True
  elif "win32" == platform:
-@@ -679,6 +685,12 @@ elif solaris:
+@@ -676,6 +682,8 @@ if darwin:
+ elif linux:
+ 
+     env.Append( LIBS=['m'] )
++    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
++    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
+ 
+     if os.uname()[4] == "x86_64" and not force32:
+         linux64 = True
+@@ -696,6 +704,12 @@ elif solaris:
       env.Append( CPPDEFINES=[ "__sunos__" ] )
       env.Append( LIBS=["socket","resolv"] )
  
@@ -39,7 +47,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif freebsd:
      env.Append( LIBS=[ "kvm" ] )
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
-@@ -686,6 +698,12 @@ elif freebsd:
+@@ -703,6 +717,12 @@ elif freebsd:
      env.Append( CPPDEFINES=[ "__freebsd__" ] )
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
@@ -52,7 +60,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif openbsd:
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
      env.Append( EXTRALIBPATH=[ "/usr/local/lib" ] )
-@@ -826,8 +844,11 @@ if nix:
+@@ -846,8 +866,11 @@ if nix:
              env.Append( CCFLAGS=["-Werror"] )
  
      env.Append( CPPDEFINES=["_FILE_OFFSET_BITS=64"] )
@@ -64,7 +72,20 @@ Add support for NetBSD/Dragonfly, fix locations.
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -1399,7 +1420,7 @@ def doConfigure(myenv):
+@@ -1372,9 +1395,9 @@ def doConfigure(myenv):
+         conf.FindSysLibDep("yaml", ["yaml"])
+ 
+     if use_system_version_of_library("boost"):
+-        if not conf.CheckCXXHeader( "boost/filesystem/operations.hpp" ):
+-            print( "can't find boost headers" )
+-            Exit(1)
++        #if not conf.CheckCXXHeader( "boost/filesystem/operations.hpp" ):
++        #    print( "can't find boost headers" )
++        #    Exit(1)
+ 
+         conf.env.Append(CPPDEFINES=[("BOOST_THREAD_VERSION", "2")])
+ 
+@@ -1419,7 +1442,7 @@ def doConfigure(myenv):
          Exit(1)
  
      # requires ports devel/libexecinfo to be installed

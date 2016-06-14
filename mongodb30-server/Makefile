@@ -23,16 +23,16 @@ SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--c++11=on
 SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC:Q}
 SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX:Q}
-SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
-SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
-SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
-SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
+SCONS_ARGS+=	--use-system-boost
+SCONS_ARGS+=	--use-system-pcre
+SCONS_ARGS+=	--use-system-snappy
+SCONS_ARGS+=	--use-system-tcmalloc
 SCONS_ARGS+=	--variant-dir=build
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if defined(MAKE_JOBS)
-MAKE_JOBS=	2
+MAKE_JOBS=	8
 .endif
 
 .if ${MACHINE_ARCH} == "x86_64"
@@ -42,6 +42,10 @@ SCONS_ARGS+=	--32
 .endif
 
 CPPFLAGS+=	-fno-jump-tables
+CXXFLAGS+=	-Wno-unused-variable
+CXXFLAGS+=	-Wno-error=maybe-uninitialized
+CFLAGS+=	-Wno-unused-variable
+CFLAGS+=	-Wno-error=maybe-uninitialized
 
 .include "options.mk"
 
@@ -126,7 +130,7 @@ post-install:
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/py-boost/buildlink3.mk"
 .if exists(../../devel/libexecinfo/buildlink3.mk)
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif

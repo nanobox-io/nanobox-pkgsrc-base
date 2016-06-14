@@ -63,7 +63,7 @@ Vagrant.configure('2') do |config|
   end
 
   config.vm.provider "docker" do |v, override|
-    v.build_dir = '.'
+    v.build_dir = '.docker'
     v.create_args = ['--privileged']
     v.expose = [22]
     v.has_ssh = true

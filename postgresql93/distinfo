@@ -8,6 +8,7 @@ SHA1 (patch-config_perl.m4) = e035132b1c281a75752d570ac5e29a11176c25c5
 SHA1 (patch-configure) = 3de7635fe18532a05a619941fecad7bcda6c51b9
 SHA1 (patch-contrib_dblink_Makefile) = 11620938ce93109311df90df675b1ad6f0c15212
 SHA1 (patch-contrib_dblink_dblink.c) = a6f87ab9f2c28a72608d70267b71bd77437b0921
+SHA1 (patch-contrib_uuid-ossp_Makefile) = fb3f09657c522c75527f81525df466f460fe764a
 SHA1 (patch-src_Makefile.global.in) = 53e29e000d7fb71e2625aacd32324e9d7001b5b2
 SHA1 (patch-src_Makefile.shlib) = 69f980184fd8dbd821221a1c6ac3a88408f2c4cf
 SHA1 (patch-src_backend_Makefile) = deba6bc07ba2e4b8ef8f04f20efb2bdd54cb917e

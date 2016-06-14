@@ -2,6 +2,7 @@
 
 PKGNAME=	${DISTNAME:C/-/95-datatypes-/}
 COMMENT=	PostgreSQL data types support modules
+PKGREVISION=		1
 
 DEPENDS+=	postgresql95-server>=${PKGVERSION_NOREV}:../../base/postgresql95-server
 

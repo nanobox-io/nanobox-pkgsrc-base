@@ -38,7 +38,7 @@ SUBST_FILES.path+=	php.ini-development php.ini-production run-tests.php
 SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
-INSTALLATION_DIRS+=	${CGIDIR} ${EGDIR} share/php ${PHP_EXTENSION_DIR}
+INSTALLATION_DIRS+=	${CGIDIR} ${EGDIR} share/php ${PHP_EXTENSION_DIR} ${PKG_SYSCONFDIR}/php
 
 CONFIGURE_ARGS+=	--enable-fpm
 

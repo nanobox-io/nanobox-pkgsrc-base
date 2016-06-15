@@ -26,7 +26,7 @@ MESSAGE_SUBST+=		CGIDIR=${CGIDIR}
 CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 MAKE_ENV+=		INSTALL_ROOT=${DESTDIR}
 
-CONF_FILES=		${EGDIR}/php.ini-production ${PKG_SYSCONFDIR}/php.ini
+CONF_FILES=		${EGDIR}/php.ini-production ${PKG_SYSCONFDIR}/php/php.ini
 PLIST_SUBST+=		PHPEXTDIR="${PHP_EXTENSION_DIR}"
 
 SUBST_CLASSES+=		path
@@ -40,7 +40,7 @@ SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
 CONFIGURE_ARGS+=	--enable-fpm
 
-INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
+INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php ${PKG_SYSCONFDIR}/php
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"

@@ -29,6 +29,10 @@ SUBST_MESSAGE.paths=	Fixing paths.
 
 .include "../../base/php/extension_versions.mk"
 
+.if ${_PHP_VERSION} == "53"
+DISTINFO_FILE=          ${.CURDIR}/distinfo-php53
+.endif
+
 .if ${_PHP_VERSION} == "70"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
 .endif

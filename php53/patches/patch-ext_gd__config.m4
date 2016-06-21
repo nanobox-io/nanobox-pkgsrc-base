@@ -1,6 +1,6 @@
 $NetBSD$
 
---- ext/gd/config.m4.orig	2013-12-10 19:04:57.000000000 +0000
+--- ext/gd/config.m4.orig	2014-08-13 19:22:50.000000000 +0000
 +++ ext/gd/config.m4
 @@ -45,18 +45,7 @@ dnl Checks for the configure options
  dnl
@@ -72,17 +72,15 @@ $NetBSD$
        test -f $i/$PHP_LIBDIR/libXpm.$SHLIB_SUFFIX_NAME || test -f $i/$PHP_LIBDIR/libXpm.a && GD_XPM_DIR=$i && break
      done
  
-@@ -161,8 +149,8 @@ AC_DEFUN([PHP_GD_XPM],[
+@@ -161,7 +149,7 @@ AC_DEFUN([PHP_GD_XPM],[
  AC_DEFUN([PHP_GD_FREETYPE2],[
    if test "$PHP_FREETYPE_DIR" != "no"; then
  
 -    for i in $PHP_FREETYPE_DIR /usr/local /usr; do
--      if test -f "$i/include/freetype2/freetype/freetype.h"; then
 +    for i in $PHP_FREETYPE_DIR /usr/local /usr @PREFIX@; do
-+      if test -f "$i/include/freetype2/freetype.h"; then
+       if test -f "$i/include/freetype2/freetype/freetype.h"; then
          FREETYPE2_DIR=$i
          FREETYPE2_INC_DIR=$i/include/freetype2
-         break
 @@ -194,7 +182,7 @@ AC_DEFUN([PHP_GD_FREETYPE2],[
  AC_DEFUN([PHP_GD_T1LIB],[
    if test "$PHP_T1LIB" != "no"; then

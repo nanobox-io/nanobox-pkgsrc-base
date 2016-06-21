@@ -51,6 +51,11 @@ for package in $(ls /content/pkgsrc/base); do
     continue
   fi
 
+  if [[ "${package}" =~ "xtrabackup" ]]; then
+    echo "don't build xtrabackup"
+    continue
+  fi
+
   if [[ "${package}" =~ "openjdk" ]]; then
     echo "don't build openjdk yet"
     continue
@@ -58,6 +63,11 @@ for package in $(ls /content/pkgsrc/base); do
 
   if [[ "${package}" =~ "luvit" ]]; then
     echo "gitorious is down"
+    continue
+  fi
+
+  if [[ "${package}" =~ "redundis" ]]; then
+    echo "luvit doesn't work"
     continue
   fi
 

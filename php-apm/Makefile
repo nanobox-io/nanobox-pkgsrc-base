@@ -22,6 +22,10 @@ CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
 
+.if ${_PHP_VERSION} == "53"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php53
+.endif
+
 .include "../../base/php/extension_versions.mk"
 .include "../../base/php/ext.mk"
 .include "../../base/php-json/buildlink3.mk"

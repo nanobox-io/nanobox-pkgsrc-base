@@ -14,7 +14,11 @@ PHP_EXTENSION_VERSION.apcu=		5.1.4			# https://pecl.php.net/package/APCu
 PHP_EXTENSION_VERSION.apcu=		4.0.11			# https://pecl.php.net/package/APCu
 .endif
 PHP_EXTENSION_VERSION.apfd=		1.0.1			# https://pecl.php.net/package/apfd
+.if ${_PHP_VERSION} == "53"
+PHP_EXTENSION_VERSION.apm=              2.0.5                   # https://pecl.php.net/package/APM
+.else
 PHP_EXTENSION_VERSION.apm=		2.1.1			# https://pecl.php.net/package/APM
+.endif
 PHP_EXTENSION_VERSION.bcmath=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.bcompiler=	1.0.2			# https://pecl.php.net/package/bcompiler
 PHP_EXTENSION_VERSION.bz2=		${PHP_BASE_VERS}
@@ -73,6 +77,8 @@ PHP_EXTENSION_VERSION.mogilefs=		0.9.2			# https://pecl.php.net/package/mogilefs
 PHP_EXTENSION_VERSION.mongo=		1.6.14			# https://pecl.php.net/package/mongo
 .if ${_PHP_VERSION} == "70"
 PHP_EXTENSION_VERSION.mongodb=		1.1.6			# https://pecl.php.net/package/mongodb
+.elif ${_PHP_VERSION} == "53"
+PHP_EXTENSION_VERSION.mongodb=          1.1.0                   # https://pecl.php.net/package/mongodb
 .else
 PHP_EXTENSION_VERSION.mongodb=		1.1.6			# https://pecl.php.net/package/mongodb
 .endif
@@ -101,7 +107,11 @@ PHP_EXTENSION_VERSION.pdo_odbc=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.pdo_pgsql=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.pdo_sqlite=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.pgsql=		${PHP_BASE_VERS}
+.if ${_PHP_VERSION} == "53"
+PHP_EXTENSION_VERSION.phalcon=          2.0.9                  # https://github.com/phalcon/cphalcon
+.else
 PHP_EXTENSION_VERSION.phalcon=		2.0.13			# https://github.com/phalcon/cphalcon
+.endif
 PHP_EXTENSION_VERSION.phar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.phpwkhtmltox=	0.10			# https://github.com/mreiferson/php-wkhtmltox
 PHP_EXTENSION_VERSION.posix=		${PHP_BASE_VERS}
@@ -144,7 +154,7 @@ PHP_EXTENSION_VERSION.stomp=		2.0.0			# https://pecl.php.net/package/stomp
 .else
 PHP_EXTENSION_VERSION.stomp=		1.0.9			# https://pecl.php.net/package/stomp
 .endif
-PHP_EXTENSION_VERSION.svn=		1.0.2			# https://pecl.php.net/package/svn
+PHP_EXTENSION_VERSION.svn=		1.0.3			# https://pecl.php.net/package/svn
 PHP_EXTENSION_VERSION.sysvmsg=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvsem=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvshm=		${PHP_BASE_VERS}

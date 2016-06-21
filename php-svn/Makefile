@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 MODNAME=		svn
-PECL_VERSION=		1.0.2
+PECL_VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
 PKGREVISION=		1
 CATEGORIES+=		sysutils
 

@@ -29,6 +29,7 @@ SUBST_SED.man=		-e 's,share/man,${PKGMANDIR},g'
 
 CONFIGURE_DIRS=		build/qt
 BUILD_DIRS=		build/qt
+BUILD_DIRS+=		build/qt/src/3rdparty/webkit/Source/WebKit/qt
 INSTALL_DIRS=		build/app
 
 CONFIGURE_SCRIPT=	../../qt/configure

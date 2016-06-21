@@ -252,3 +252,4 @@ share/php/php.gif
 @pkgdir var/log
 @pkgdir lib/php/20141001
 @pkgdir include/php/include
+@pkgdir etc/php

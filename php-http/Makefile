@@ -26,8 +26,6 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 pre-configure:
-	sudo mkdir -p ${PREFIX}/etc/php
-	sudo cp ${PREFIX}/etc/php.ini ${PREFIX}/etc/php/php.ini
 	sudo bash -c "echo extension=raphf.so >> ${PREFIX}/etc/php/php.ini"
 	sudo bash -c "echo extension=propro.so >> ${PREFIX}/etc/php/php.ini"
 

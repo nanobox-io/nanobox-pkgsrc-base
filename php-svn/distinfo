@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
-SHA1 (php-svn/svn-1.0.2.tgz) = 32c3da0844f04921482225d01e8eaf7acfcf0e94
-RMD160 (php-svn/svn-1.0.2.tgz) = c4991e9a5c4203c0374529c4ddd156b6020af0a8
-Size (php-svn/svn-1.0.2.tgz) = 25226 bytes
+SHA1 (php-svn/svn-1.0.3.tgz) = 9a18bd8bf9567dba349531727acea0b011d2592b
+RMD160 (php-svn/svn-1.0.3.tgz) = fb7a7c33ab6609c0802055332a725f72931e3e55
+SHA512 (php-svn/svn-1.0.3.tgz) = 41f111c3a47f66317c47318162bfd17c22ffef6462ababdafd9ed38220b1135464e52a365fbc206fd510dafad739437174faf1d0dd144707fad62da43c6c1a79
+Size (php-svn/svn-1.0.3.tgz) = 27216 bytes

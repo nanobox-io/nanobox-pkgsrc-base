@@ -245,3 +245,4 @@ share/examples/php/php.ini-production
 share/php/php.gif
 @pkgdir lib/php/20121212
 @pkgdir include/php/include
+@pkgdir etc/php

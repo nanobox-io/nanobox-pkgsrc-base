@@ -5,7 +5,7 @@
 DISTNAME=		serf-1.3.8
 VERSION=		1.3.8
 CATEGORIES=		www
-MASTER_SITES=		http://serf.googlecode.com/svn/src_releases/
+MASTER_SITES=		https://archive.apache.org/dist/serf/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

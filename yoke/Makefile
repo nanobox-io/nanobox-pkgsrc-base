@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/yoke
 USE_LANGUAGES=		# none
 
 GIT_REPOSITORIES=	yoke
-GIT_REPO.yoke=		git@github.com:pagodabox/yoke.git
+GIT_REPO.yoke=		git@github.com:nanopack/yoke.git
 GIT_TAG=		${VERSION}
 
 GO_DOMAIN=		github.com

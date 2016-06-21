@@ -23,8 +23,9 @@ SUBST_FILES.paths=	config.m4 configure
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
+DEPENDS+=	gnupg2>=2:../../security/gnupg2
+
 .include "../../base/php/extension_versions.mk"
 .include "../../base/php/ext.mk"
 .include "../../security/gpgme/buildlink3.mk"
-.include "../../security/gnupg2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

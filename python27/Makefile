@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.50 2015/09/07 12:02:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.57 2016/03/05 11:28:44 jperkin Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
+PKGREVISION=	2
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
+
+DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
 CONFLICTS+=	python-[0-9]*
 
@@ -22,10 +25,19 @@ CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
 
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
 
+USE_MULTIARCH=		bin lib
+MULTIARCH_DIRS.lib=	# empty, manually set in PLIST
+NO_MULTIARCH_LIBDIR=	# defined, manually set
+CHECK_INTERPRETER=no	# $PREFIX/bin/python2.7 not created until pkg_add
+
 LDFLAGS+=		-L${WRKSRC}
 
 # $RANDOM usage there is fine
 CHECK_PORTABILITY_SKIP=	Tools/faqwiz/move-faqwiz.sh
+
+# Harmless PKG_CONFIG_LIBDIR references to BUILDLINK_DIR
+CHECK_WRKREF_SKIP+=	lib/python2.7/_sysconfigdata.py
+CHECK_WRKREF_SKIP+=	lib/python2.7/config/Makefile
 
 USE_LANGUAGES=		c c++
 
@@ -82,9 +94,9 @@ PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
-.if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "amd64") || \
-    (${MACHINE_ARCH} == "sparc64") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "powerpc64") || (defined(ABI) && ${ABI} == "64")
+.if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "sparc64") || \
+    (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "powerpc64") || \
+    (defined(ABI) && ${ABI} == "64")
 IS_64BIT_PLATFORM?=	yes
 .else
 IS_64BIT_PLATFORM?=	no
@@ -126,17 +138,15 @@ PLIST.no-nis=	yes
 .  endif
 .endif
 
-# .include "../../mk/bdb.buildlink3.mk"
+#.include "../../mk/bdb.buildlink3.mk"
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
 .if empty(BDB_LIBS)
 BUILDLINK_TRANSFORM+=	rm:-ldb
 .endif
 CFLAGS+=	-DHAVE_DB_185_H
 
-.if ${OPSYS} == "OSF1"
 # configure complains about buggy getaddrinfo()
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
+CONFIGURE_ARGS.OSF1+=	--disable-ipv6
 
 .if defined(BUILDLINK_TRANSFORM)
 MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}
@@ -153,6 +163,12 @@ REPLACE.py27.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
 REPLACE_FILES.py27=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
 REPLACE_FILES.py27+=	Lib/*/*/*/*.py
 
+SUBST_CLASSES+=		libffi
+SUBST_MESSAGE.libffi=	Fixing libffi include path on Darwin.
+SUBST_STAGE.libffi=	pre-configure
+SUBST_FILES.libffi=	setup.py
+SUBST_SED.libffi=	-e 's,/usr/include/ffi,${BUILDLINK_PREFIX.libffi}/include,'
+
 SUBST_CLASSES+=		findlib
 SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
 SUBST_STAGE.findlib=	pre-configure
@@ -165,10 +181,36 @@ SUBST_STAGE.sslbase=	pre-configure
 SUBST_FILES.sslbase=	setup.py
 SUBST_VARS.sslbase=	SSLBASE
 
+SUBST_CLASSES+=		cacert
+SUBST_MESSAGE.cacert=	Configuring location of default CA certificate file.
+SUBST_STAGE.cacert=	pre-configure
+SUBST_FILES.cacert=	Modules/_ssl.c
+SUBST_SED.cacert=	-e 's,@PREFIX@,${PREFIX},'
+
+SUBST_CLASSES+=		vars
+SUBST_MESSAGE.vars=	Substituting multiarch vars.
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	Makefile.pre.in Modules/getpath.c
+SUBST_FILES.vars+=	Lib/distutils/command/install.py Lib/site.py
+SUBST_FILES.vars+=	Lib/distutils/sysconfig.py Lib/sysconfig.py
+SUBST_SED.vars=		-e 's,@LIBARCHSUFFIX@,${LIBARCHSUFFIX},'
+.if !empty(MULTIARCH:M[Yy][Ee][Ss])
+SUBST_SED.vars+=	-e 's,@LIBARCHSUFFIX.32@,${LIBARCHSUFFIX.32},'
+SUBST_SED.vars+=	-e 's,@LIBARCHSUFFIX.64@,${LIBARCHSUFFIX.64},'
+.else
+SUBST_SED.vars+=	-e 's,@LIBARCHSUFFIX.32@,,'
+SUBST_SED.vars+=	-e 's,@LIBARCHSUFFIX.64@,,'
+.endif
+
 post-extract:
 	${LN} -s ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Tools/scripts/smtpd${PY_VER_SUFFIX}.py
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
 	${MV} ${WRKSRC}/Tools/scripts/2to3 ${WRKSRC}/Tools/scripts/2to3-${PY_VER_SUFFIX}
+
+do-install-multiarch-hook:
+	${MKDIR} ${DESTDIR}/${PREFIX}/include/python${PY_VER_SUFFIX}/${INCARCHSUFFIX}
+	${MV} ${DESTDIR}/${PREFIX}/include/python${PY_VER_SUFFIX}/pyconfig.h \
+		${DESTDIR}/${PREFIX}/include/python${PY_VER_SUFFIX}/${INCARCHSUFFIX}
 
 .if ${OPSYS} == "HPUX"
 post-install:
@@ -182,11 +224,16 @@ post-install:
 CONFIGURE_ENV+=		ac_cv_type_socklen_t=yes
 .endif
 
+.if !empty(MULTIARCH:M[Yy][Ee][Ss])
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/pyconfig.h \
+		${DESTDIR}/${PREFIX}/include/python${PY_VER_SUFFIX}
+.endif
+
 BUILDLINK_DEPMETHOD.readline=		build
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

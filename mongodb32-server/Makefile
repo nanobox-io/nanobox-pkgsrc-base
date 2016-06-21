@@ -142,6 +142,9 @@ post-install:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/debian/mongod.conf \
 		${DESTDIR}${PREFIX}/share/examples/mongodb
+	for i in ${DESTDIR}${PREFIX}/bin/*; do \
+		strip $$i; \
+	done
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

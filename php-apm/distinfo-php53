@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (php-apm/APM-2.0.5.tgz) = aaca3a88b6ebe4d17acaadc201657ff8fc7f6670
+RMD160 (php-apm/APM-2.0.5.tgz) = 3ae4c8b51a24d4a249aa94a0d986a353c3f304fd
+SHA512 (php-apm/APM-2.0.5.tgz) = c22ca82e271ed50e5d127466dad19d6df06de91f1540bbc70d8723fc06007afbeef320bb3e4c3ba0d3f427c9c8d57e0525f445ea1c14b952999caf86caed7532
+Size (php-apm/APM-2.0.5.tgz) = 31484 bytes
+SHA1 (patch-config.m4) = 0bc6b747c8c0420792997c90de90b9c6996e95e1

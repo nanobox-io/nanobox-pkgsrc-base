@@ -7,5 +7,5 @@
 # changing the version.
 
 .if !defined(SVNVER)
-SVNVER=		1.8.13
+SVNVER=		1.9.4
 .endif

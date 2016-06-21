@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.18 2014/11/15 21:01:26 ryoon Exp $
-
-SHA1 (jdk-8u60-linux-x64.tar.gz) = 19470e2ed867d9453e1bb5e1d6adca87cc23f55e
-RMD160 (jdk-8u60-linux-x64.tar.gz) = bd8ffc56062490cc6b4cd553a4a1d0c3d2a3d1fd
-Size (jdk-8u60-linux-x64.tar.gz) = 181238643 bytes

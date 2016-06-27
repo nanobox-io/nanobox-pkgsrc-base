@@ -85,4 +85,4 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
 	cd ${WRKSRC} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
 
-.include "../../mk/java-env.mk"
+.include "../../base/java/java-env.mk"

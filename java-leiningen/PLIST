@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/lein
+etc/bash_completion.d/_lein.bash
+lib/java/leiningen/leiningen.jar
+share/zsh/site-functions/_lein

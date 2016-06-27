@@ -49,6 +49,6 @@ do-install:
 
 BUILDLINK_DEPMETHOD.sun-jdk6= full
 BUILDLINK_DEPMETHOD.sun-jdk7= full
-BUILDLINK_DEPMETHOD.sun-jdk8= full
+BUILDLINK_DEPMETHOD.oracle-jdk8= full
 .include "../../base/java/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

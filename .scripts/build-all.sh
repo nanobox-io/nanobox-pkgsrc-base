@@ -216,6 +216,25 @@ for package in $(ls /content/pkgsrc/base); do
             PKG_APACHE_DEFAULT=${apache_version}"
       fi
     done
+  elif [[ "${package}" =~ "jdk" ]]; then
+    java_version=${package}
+    for java in $(ls /content/pkgsrc/base | grep -e 'java-'); do
+      java_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${java} show-var VARNAME=PKGNAME PKG_JVM_DEFAULT=${java_version})
+      run_in_chroot \
+        ${package} \
+        "/data/bin/bmake \
+          -C /content/pkgsrc/base/${java} \
+          fetch-depends \
+          PKG_JVM_DEFAULT=${java_version}"
+      if [ ! -f /content/packages/pkgsrc/base/Linux/All/${java_pkg_name}.tgz ]; then
+        run_in_chroot \
+          ${package} \
+          "/data/bin/bmake \
+            -C /content/pkgsrc/base/${java} \
+            package \
+            PKG_JVM_DEFAULT=${java_version}"
+      fi
+    done
   fi
 
   # 4) cleanup chroot

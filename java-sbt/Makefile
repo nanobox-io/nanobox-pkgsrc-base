@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2013/06/11 19:51:27 asau Exp $
 
-VERSION=	0.13.9
+VERSION=	0.13.11
 PKGREVISION=	2
 DISTNAME=	sbt-${VERSION}
 CATEGORIES=	devel

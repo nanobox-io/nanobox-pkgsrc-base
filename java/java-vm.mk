@@ -291,7 +291,7 @@ UNLIMIT_RESOURCES+=	datasize
 .elif ${_PKG_JVM} == "oracle-jdk8"
 _JDK_PKGSRCDIR=		../../base/oracle-jdk8
 _JRE_PKGSRCDIR=		../../base/oracle-jdk8
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-8
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/oracle-8
 UNLIMIT_RESOURCES+=	datasize
 .endif
 

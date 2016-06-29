@@ -2,7 +2,6 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apr-util
 PKG_SUPPORTED_OPTIONS=	db4 ldap mysql pgsql sqlite3
-PKG_SUGGESTED_OPTIONS=  db4 ldap mysql pgsql sqlite3
 
 .include "../../mk/bsd.options.mk"
 

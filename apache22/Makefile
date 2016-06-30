@@ -3,7 +3,7 @@
 #  # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		httpd-2.2.31
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		${DISTNAME:S/httpd/apache/}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \

@@ -1,10 +1,10 @@
 @comment $NetBSD$
 bin/clj
 lib/java/clojure/clojure.jar
-share/doc/clojure-${PKGVERSION}/changes.md
 share/doc/clojure-${PKGVERSION}/CommonLispFormat.markdown
-share/doc/clojure-${PKGVERSION}/epl-v10.html
 share/doc/clojure-${PKGVERSION}/PrettyPrinting.markdown
+share/doc/clojure-${PKGVERSION}/changes.md
+share/doc/clojure-${PKGVERSION}/epl-v10.html
 share/doc/clojure-${PKGVERSION}/readme.txt
 share/examples/clojure-${PKGVERSION}/test_clojure/agents.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/annotations.clj
@@ -19,9 +19,11 @@ share/examples/clojure-${PKGVERSION}/test_clojure/clojure_zip.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/compilation.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/compilation/examples.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/compilation/line_number_examples.clj
+share/examples/clojure-${PKGVERSION}/test_clojure/compilation/load_ns.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/control.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/data.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/data_structures.clj
+share/examples/clojure-${PKGVERSION}/test_clojure/data_structures_interop.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/def.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/delays.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/edn.clj
@@ -32,10 +34,10 @@ share/examples/clojure-${PKGVERSION}/test_clojure/for.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/genclass.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/genclass/examples.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/generators.clj
-share/examples/clojure-${PKGVERSION}/test_clojure/java_interop.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/java/io.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/java/javadoc.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/java/shell.clj
+share/examples/clojure-${PKGVERSION}/test_clojure/java_interop.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/keywords.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/logic.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/macros.clj
@@ -65,6 +67,7 @@ share/examples/clojure-${PKGVERSION}/test_clojure/repl/example.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/rt.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/sequences.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/serialization.clj
+share/examples/clojure-${PKGVERSION}/test_clojure/server.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/special.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/string.clj
 share/examples/clojure-${PKGVERSION}/test_clojure/test.clj

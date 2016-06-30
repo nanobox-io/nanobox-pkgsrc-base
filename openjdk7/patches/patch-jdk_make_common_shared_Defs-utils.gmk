@@ -1,17 +1,10 @@
-$NetBSD$
+$NetBSD: patch-jdk_make_common_shared_Defs-utils.gmk,v 1.2 2014/01/02 01:16:35 ryoon Exp $
 
---- jdk/make/common/shared/Defs-utils.gmk.orig	2015-01-26 15:20:56.000000000 +0000
+Use pkgsrc zip commands.
+
+--- jdk/make/common/shared/Defs-utils.gmk.orig	2014-01-01 05:53:33.000000000 +0000
 +++ jdk/make/common/shared/Defs-utils.gmk
-@@ -210,7 +210,7 @@ ifeq ($(PLATFORM),linux)
-   # others have it in /usr/bin.
-   SORT=$(firstword $(wildcard $(UTILS_COMMAND_PATH)sort) \
- 		   $(wildcard $(UTILS_USR_BIN_PATH)sort))
--  NAWK           = $(USRBIN_PATH)gawk
-+  NAWK           = @PREFIX@/bin/gawk
-   # Intrinsic unix command, with backslash-escaped character interpretation
-   ECHO           = /bin/echo -e
-   # These are really in UTILS_USR_BIN_PATH on Linux
-@@ -259,6 +259,10 @@ ifeq ($(PLATFORM), macosx)
+@@ -259,6 +259,10 @@ ifeq ($(PLATFORM), macosx) 
    ECHO         = echo
  endif
  

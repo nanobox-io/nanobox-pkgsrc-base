@@ -92,7 +92,7 @@ _PHP_VERSION_${pv}_OK=		yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/lib/php/20141001)
+.if exists(${LOCALBASE}/lib/php/20151012)
 _PHP_VERSION_70_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .elif exists(${LOCALBASE}/lib/php/20131226)

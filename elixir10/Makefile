@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		elixir-${VERSION}
-VERSION=		1.1.1
+VERSION=		1.3.1
 PKGNAME=		elixir-${VERSION}
 # PKGREVISION=		1
 CATEGORIES=		base

@@ -6,10 +6,10 @@ PHP_EXTENSION_VERSIONS_MK=	#defined
 .include "../../base/php/phpversion.mk"
 .include "../../base/newrelic/newrelicversion.mk"
 
-PHP_EXTENSION_VERSION.amqp=		1.7.0			# https://pecl.php.net/package/amqp
+PHP_EXTENSION_VERSION.amqp=		1.7.1			# https://pecl.php.net/package/amqp
 PHP_EXTENSION_VERSION.apc=		3.1.13			# https://pecl.php.net/package/APC
 .if ${_PHP_VERSION} == "70"
-PHP_EXTENSION_VERSION.apcu=		5.1.4			# https://pecl.php.net/package/APCu
+PHP_EXTENSION_VERSION.apcu=		5.1.5			# https://pecl.php.net/package/APCu
 .else
 PHP_EXTENSION_VERSION.apcu=		4.0.11			# https://pecl.php.net/package/APCu
 .endif
@@ -76,11 +76,11 @@ PHP_EXTENSION_VERSION.mogilefs=		0.9.2			# https://pecl.php.net/package/mogilefs
 .endif
 PHP_EXTENSION_VERSION.mongo=		1.6.14			# https://pecl.php.net/package/mongo
 .if ${_PHP_VERSION} == "70"
-PHP_EXTENSION_VERSION.mongodb=		1.1.6			# https://pecl.php.net/package/mongodb
+PHP_EXTENSION_VERSION.mongodb=		1.1.8			# https://pecl.php.net/package/mongodb
 .elif ${_PHP_VERSION} == "53"
 PHP_EXTENSION_VERSION.mongodb=          1.1.0                   # https://pecl.php.net/package/mongodb
 .else
-PHP_EXTENSION_VERSION.mongodb=		1.1.6			# https://pecl.php.net/package/mongodb
+PHP_EXTENSION_VERSION.mongodb=		1.1.8			# https://pecl.php.net/package/mongodb
 .endif
 PHP_EXTENSION_VERSION.mssql=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mysql=		${PHP_BASE_VERS}
@@ -89,7 +89,7 @@ PHP_EXTENSION_VERSION.ncurses=		1.0.2			# https://pecl.php.net/package/ncurses
 PHP_EXTENSION_VERSION.newrelic=		${NEWRELIC_VERSION}	# https://download.newrelic.com/php_agent/release/
 PHP_EXTENSION_VERSION.newt=		1.2.9			# https://pecl.php.net/package/newt
 .if ${_PHP_VERSION} == "70"
-PHP_EXTENSION_VERSION.oauth=		2.0.1			# https://pecl.php.net/package/oauth
+PHP_EXTENSION_VERSION.oauth=		2.0.2			# https://pecl.php.net/package/oauth
 .else
 PHP_EXTENSION_VERSION.oauth=		1.2.3			# https://pecl.php.net/package/oauth
 .endif
@@ -109,8 +109,10 @@ PHP_EXTENSION_VERSION.pdo_sqlite=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.pgsql=		${PHP_BASE_VERS}
 .if ${_PHP_VERSION} == "53"
 PHP_EXTENSION_VERSION.phalcon=          2.0.9                  # https://github.com/phalcon/cphalcon
-.else
+.elif ${_PHP_VERSION} == "54"
 PHP_EXTENSION_VERSION.phalcon=		2.0.13			# https://github.com/phalcon/cphalcon
+.else
+PHP_EXTENSION_VERSION.phalcon=		3.0.0			# https://github.com/phalcon/cphalcon
 .endif
 PHP_EXTENSION_VERSION.phar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.phpwkhtmltox=	0.10			# https://github.com/mreiferson/php-wkhtmltox
@@ -131,9 +133,9 @@ PHP_EXTENSION_VERSION.rar=		3.0.2			# https://pecl.php.net/package/rar
 PHP_EXTENSION_VERSION.readline=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.recode=		${PHP_BASE_VERS}
 .if ${_PHP_VERSION} == "70"
-PHP_EXTENSION_VERSION.redis=		2.2.8			# https://pecl.php.net/package/redis
+PHP_EXTENSION_VERSION.redis=		3.0.0			# https://pecl.php.net/package/redis
 .else
-PHP_EXTENSION_VERSION.redis=		2.2.7			# https://pecl.php.net/package/redis
+PHP_EXTENSION_VERSION.redis=		2.2.8			# https://pecl.php.net/package/redis
 .endif
 PHP_EXTENSION_VERSION.session=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.shmop=		${PHP_BASE_VERS}
@@ -143,11 +145,15 @@ PHP_EXTENSION_VERSION.soap=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sockets=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sphinx=		1.3.3			# https://pecl.php.net/package/sphinx
 PHP_EXTENSION_VERSION.sqlite=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.ssh2=		0.12			# https://pecl.php.net/package/ssh2
 .if ${_PHP_VERSION} == "70"
-PHP_EXTENSION_VERSION.stats=		2.0.1			# https://pecl.php.net/package/stats
+PHP_EXTENSION_VERSION.ssh2=		1.0			# https://pecl.php.net/package/ssh2
 .else
-PHP_EXTENSION_VERSION.stats=		1.0.3			# https://pecl.php.net/package/stats
+PHP_EXTENSION_VERSION.ssh2=		0.13			# https://pecl.php.net/package/ssh2
+.endif
+.if ${_PHP_VERSION} == "70"
+PHP_EXTENSION_VERSION.stats=		2.0.3			# https://pecl.php.net/package/stats
+.else
+PHP_EXTENSION_VERSION.stats=		1.0.5			# https://pecl.php.net/package/stats
 .endif
 .if ${_PHP_VERSION} == "70"
 PHP_EXTENSION_VERSION.stomp=		2.0.0			# https://pecl.php.net/package/stomp
@@ -159,7 +165,7 @@ PHP_EXTENSION_VERSION.sysvmsg=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvsem=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvshm=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.tidy=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.timezonedb=	2016.4			# https://pecl.php.net/package/timezonedb
+PHP_EXTENSION_VERSION.timezonedb=	2016.6			# https://pecl.php.net/package/timezonedb
 PHP_EXTENSION_VERSION.tokenizer=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.txforward=	1.0.7			# https://pecl.php.net/package/txforward
 PHP_EXTENSION_VERSION.uploadprogress=	1.0.3.1			# https://pecl.php.net/package/uploadprogress
@@ -169,7 +175,7 @@ PHP_EXTENSION_VERSION.xcache=		3.2.0			# http://xcache.lighttpd.net/
 .if ${_PHP_VERSION} == "53"
 PHP_EXTENSION_VERSION.xdebug=		2.2.7			# https://pecl.php.net/package/xdebug
 .else
-PHP_EXTENSION_VERSION.xdebug=		2.4.0			# https://pecl.php.net/package/xdebug
+PHP_EXTENSION_VERSION.xdebug=		2.4.1			# https://pecl.php.net/package/xdebug
 .endif
 PHP_EXTENSION_VERSION.xml=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.xmlreader=	${PHP_BASE_VERS}

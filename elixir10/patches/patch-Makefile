@@ -1,11 +1,11 @@
 $NetBSD$
 
---- Makefile.orig	2015-11-25 16:52:06.397451399 +0000
+--- Makefile.orig	2016-07-12 15:28:39.283683429 +0000
 +++ Makefile
 @@ -1,5 +1,5 @@
  REBAR ?= "$(CURDIR)/rebar"
 -PREFIX ?= /usr/local
 +PREFIX ?= @PREFIX@
- DOCS := v1.1
+ DOCS := v1.3
+ CANONICAL := stable
  ELIXIRC := bin/elixirc --verbose --ignore-module-conflict
- ERLC := erlc -I lib/elixir/include

@@ -13,9 +13,15 @@ LICENSE=		php
 
 INSTALLATION_DIRS=	${DOCDIR}
 
+.include "../../base/php/extension_versions.mk"
+
 GIT_REPOSITORIES=	phalcon
 GIT_REPO.phalcon=	git://github.com/phalcon/cphalcon.git
+.if ${_PHP_VERSION} == "53" || ${_PHP_VERSION} == "54"
 GIT_TAG=		phalcon-v${PECL_VERSION}
+.else
+GIT_TAG=		v${PECL_VERSION}
+.endif
 
 WRKSRC=			${WRKDIR}/phalcon/ext
 
@@ -23,7 +29,6 @@ USE_LANGUAGES+=		c c++
 
 USE_TOOLS+=		gmake
 
-.include "../../base/php/extension_versions.mk"
 .include "../../base/php/ext.mk"
 .include "../../base/php-pdo/buildlink3.mk"
 .include "../../base/git/git-package.mk"

@@ -35,7 +35,7 @@ PHP_EXTENSION_VERSION.filter=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.ftp=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gd=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gender=		1.1.0			# https://pecl.php.net/package/gender
-PHP_EXTENSION_VERSION.geoip=		1.1.0			# https://pecl.php.net/package/geoip
+PHP_EXTENSION_VERSION.geoip=		1.1.1			# https://pecl.php.net/package/geoip
 PHP_EXTENSION_VERSION.gettext=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gmp=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gnupg=		1.3.6			# https://pecl.php.net/package/gnupg
@@ -112,7 +112,7 @@ PHP_EXTENSION_VERSION.phalcon=          2.0.9                  # https://github.
 .elif ${_PHP_VERSION} == "54"
 PHP_EXTENSION_VERSION.phalcon=		2.0.13			# https://github.com/phalcon/cphalcon
 .else
-PHP_EXTENSION_VERSION.phalcon=		3.0.0			# https://github.com/phalcon/cphalcon
+PHP_EXTENSION_VERSION.phalcon=		3.0.1			# https://github.com/phalcon/cphalcon
 .endif
 PHP_EXTENSION_VERSION.phar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.phpwkhtmltox=	0.10			# https://github.com/mreiferson/php-wkhtmltox

@@ -14,6 +14,7 @@ LICENSE=				php
 
 CONFIGURE_ARGS+=			--with-${MODNAME}
 CONFIGURE_ARGS+=			--with-${PKGMODNAME}=shared,${BUILDLINK_DIR}
+CONFIGURE_ARGS+=			--with-librabbitmq-dir=${PREFIX}
 
 BUILDLINK_TREE+=			rabbitmq-c
 RABBITMQ_C_BUILDLINK3_MK:=

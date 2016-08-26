@@ -1,5 +1,6 @@
 $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
-SHA1 (php-timezonedb/timezonedb-2016.4.tgz) = 6d5ee0c81e4e226b5f489bcebb2dc0f454e8381a
-RMD160 (php-timezonedb/timezonedb-2016.4.tgz) = 0f2ffb1a9121b590951f9529f853b70b4ce5b2b6
-Size (php-timezonedb/timezonedb-2016.4.tgz) = 420502 bytes
+SHA1 (php-timezonedb/timezonedb-2016.6.tgz) = a1426795882c0d96aa72cefd8dd132b80ad94a54
+RMD160 (php-timezonedb/timezonedb-2016.6.tgz) = ba2d43940a3ef0bb29f8795e2b33a3d3a143d143
+SHA512 (php-timezonedb/timezonedb-2016.6.tgz) = 04d1d4659b60335f4d1d13eb988ef6292e382e6db92de5df6aab20385679d443715a5375fd3302fa4e4ff33dd7059eb812ca77ca9fc42f6bab9e44d0f026e3a6
+Size (php-timezonedb/timezonedb-2016.6.tgz) = 420851 bytes

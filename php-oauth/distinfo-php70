@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (php-oauth/oauth-2.0.1.tgz) = 9e6cc27823a3e6055199580769d66638252a1d18
-RMD160 (php-oauth/oauth-2.0.1.tgz) = d50d585731a68da9099b5538cdb0e08a747c8158
-Size (php-oauth/oauth-2.0.1.tgz) = 49064 bytes
+SHA1 (php-oauth/oauth-2.0.2.tgz) = 04e28c7c3cde93c2664a52cdcfa70b871a6199f7
+RMD160 (php-oauth/oauth-2.0.2.tgz) = e55b94d499f97906576b48bb7e9498cdbb6f8533
+SHA512 (php-oauth/oauth-2.0.2.tgz) = b7aa9459542ec390a5420127d75607702ae6df6254f4e39acb62d35c6a39b8b7990499c279df07ce681081e455b55219c51df42fd516321f317465badf6d459d
+Size (php-oauth/oauth-2.0.2.tgz) = 49115 bytes

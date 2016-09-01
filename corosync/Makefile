@@ -31,6 +31,7 @@ pre-configure:
 	./autogen.sh
 
 BUILD_DEPENDS+=         groff>=1.22.3:../../textproc/groff
+BUILD_DEPENDS+=         libtool-base>=2.4.2:../../devel/libtool-base
 
 .include "../../devel/nss/buildlink3.mk"
 .include "../../base/libqb/buildlink3.mk"

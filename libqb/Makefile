@@ -28,5 +28,7 @@ pre-configure:
 	cd ${WRKSRC}; \
 	./autogen.sh
 
+BUILD_DEPENDS+=         libtool-base>=2.4.2:../../devel/libtool-base
+
 .include "../../base/git/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

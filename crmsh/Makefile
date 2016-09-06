@@ -23,6 +23,15 @@ pre-configure:
 	cd ${WRKSRC}; \
 	./autogen.sh
 
+DEPENDS+=         ${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
+DEPENDS+=         ${PYPKGPREFIX}-readline>=${PY_DISTVERSION}:../../devel/py-readline
+DEPENDS+=         ${PYPKGPREFIX}-curses>=${PY_DISTVERSION}:../../devel/py-curses
+DEPENDS+=         ${PYPKGPREFIX}-dateutil>=2.4.0:../../time/py-dateutil
+DEPENDS+=         ${PYPKGPREFIX}-yaml>=3.11:../../time/py-yaml
+
+DEPENDS+=         ${PYPKGPREFIX}-nosexcover>=1.0.10:../../base/py-nosexcover
+DEPENDS+=         ${PYPKGPREFIX}-parallax>=1.0.1:../../base/py-parallax
+
 .include "../../base/python/egg.mk"
 .include "../../base/git/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

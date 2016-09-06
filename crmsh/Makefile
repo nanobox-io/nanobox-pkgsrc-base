@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.27 2015/12/05 21:25:47 adam Exp $
+
+DISTNAME=	crmsh-${VERSION}
+VERSION=	2.3.1
+CATEGORIES=	base
+MASTER_SITES=	https://github.com/ClusterLabs/crmsh
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ClusterLabs/crmsh
+COMMENT=	crmsh is a cluster management shell for the Pacemaker High Availability stack.
+LICENSE=	GPL-2
+
+USE_TOOLS+=		gmake aclocal autoconf automake pkg-config
+
+GNU_CONFIGURE=		yes
+CONFIG_SHELL=		bash
+
+GIT_REPOSITORIES=	crmsh-${VERSION}
+GIT_REPO.crmsh-${VERSION}=	git@github.com:ClusterLabs/crmsh.git
+GIT_TAG=		${VERSION}
+
+pre-configure:
+	cd ${WRKSRC}; \
+	./autogen.sh
+
+.include "../../base/python/egg.mk"
+.include "../../base/git/git-package.mk"
+.include "../../mk/bsd.pkg.mk"

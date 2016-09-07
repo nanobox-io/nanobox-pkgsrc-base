@@ -5,7 +5,7 @@ DISTNAME=		nosexcover-${VERSION}
 VERSION=		1.0.10
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
-MASTER_SITES=		https://pypi.python.org/packages/79/5e/e882c69e11c7fa1ae1c73f8470294559420593a12ec876acbcd44b4e58e5/nosexcover-1.0.10.tar.gz
+MASTER_SITES=		https://pypi.python.org/packages/79/5e/e882c69e11c7fa1ae1c73f8470294559420593a12ec876acbcd44b4e58e5/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://github.com/cmheisel/nose-xcover/

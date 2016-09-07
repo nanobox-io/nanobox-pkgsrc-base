@@ -13,4 +13,5 @@ COMMENT=		Execute commands and copy files over SSH to multiple machines at once
 LICENSE=		bsd
 
 .include "../../lang/python/egg.mk"
+_PYSETUPTOOLSINSTALLARGS= #nothing
 .include "../../mk/bsd.pkg.mk"

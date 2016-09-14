@@ -2,8 +2,8 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 #  # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=		serf-1.3.8
-VERSION=		1.3.8
+DISTNAME=		serf-${VERSION}
+VERSION=		1.3.9
 CATEGORIES=		www
 MASTER_SITES=		https://archive.apache.org/dist/serf/
 EXTRACT_SUFX=		.tar.bz2

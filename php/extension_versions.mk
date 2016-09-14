@@ -38,7 +38,7 @@ PHP_EXTENSION_VERSION.gender=		1.1.0			# https://pecl.php.net/package/gender
 PHP_EXTENSION_VERSION.geoip=		1.1.1			# https://pecl.php.net/package/geoip
 PHP_EXTENSION_VERSION.gettext=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gmp=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.gnupg=		1.3.6			# https://pecl.php.net/package/gnupg
+PHP_EXTENSION_VERSION.gnupg=		1.4.0			# https://pecl.php.net/package/gnupg
 PHP_EXTENSION_VERSION.hash=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.htscanner=	1.0.1			# https://pecl.php.net/package/htscanner
 .if ${_PHP_VERSION} == "70"

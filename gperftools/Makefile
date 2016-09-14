@@ -1,9 +1,9 @@
 # $NetBSD: Makefile,v 1.2 2014/05/29 23:35:35 wiz Exp $
 
-DISTNAME=	gperftools-2.4
+DISTNAME=	gperftools-2.5
 # PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/gperftools/gperftools/releases/download/gperftools-2.4/
+MASTER_SITES=	https://github.com/gperftools/gperftools/releases/download/gperftools-2.5/
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://github.com/gperftools/gperftools

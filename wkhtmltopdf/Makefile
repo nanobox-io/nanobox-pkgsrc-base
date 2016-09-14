@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	wkhtmltox-${VERSION}
-VERSION=	0.12.2.1
+VERSION=	0.12.3
 PKGNAME=	${DISTNAME:S/tox/topdf/}
 # PKGREVISION=	1
 CATEGORIES=	textproc

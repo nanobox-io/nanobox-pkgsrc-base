@@ -4,7 +4,7 @@
 
 PKGNAME=		${DISTNAME:S/wsrep_/mysql-server-/:S/${VERSION}/${VERSION:S/-/./}/}
 SVR4_PKGNAME=		mysqs
-PKGREVISION?=		1
+PKGREVISION?=		2
 COMMENT=		MySQL 5, a free SQL database (server)
 
 CONFLICTS=		mysql3-server-[0-9]*
@@ -53,12 +53,12 @@ PLIST.solaris=	yes
 
 PTHREAD_OPTS+=		require
 
-PKG_GROUPS=		${MYSQL_GROUP}
-PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}
+# PKG_GROUPS=		${MYSQL_GROUP}
+# PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}
 
-PKG_GECOS.${MYSQL_USER}=	MySQL database administrator
-PKG_HOME.${MYSQL_USER}=		${MYSQL_DATADIR}
-PKG_SHELL.${MYSQL_USER}=	${SH}
+# PKG_GECOS.${MYSQL_USER}=	MySQL database administrator
+# PKG_HOME.${MYSQL_USER}=		${MYSQL_DATADIR}
+# PKG_SHELL.${MYSQL_USER}=	${SH}
 
 RCD_SCRIPTS=		mysqld
 SMF_NAME=		mysql

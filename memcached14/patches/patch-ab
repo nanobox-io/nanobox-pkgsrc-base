@@ -1,15 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2012/02/25 20:52:53 mspo Exp $
+$NetBSD$
 
-time_t changes
-
---- memcached.h.orig	2011-08-10 04:53:38.000000000 +0000
+--- memcached.h.orig	2016-08-20 00:37:10.000000000 +0000
 +++ memcached.h
-@@ -199,7 +199,7 @@ enum delta_result_type {
+@@ -221,7 +221,7 @@ enum delta_result_type {
  };
  
  /** Time relative to server start. Smaller than time_t on 64-bit systems. */
 -typedef unsigned int rel_time_t;
 +typedef intmax_t rel_time_t;
  
- /** Stats stored per slab (and per thread). */
- struct slab_stats {
+ /** Use X macros to avoid iterating over the stats fields during reset and
+  * aggregation. No longer have to add new stats in 3+ places.

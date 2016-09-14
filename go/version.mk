@@ -2,7 +2,8 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-GO16_VERSION=	1.6.2
+GO17_VERSION=	1.7.1
+GO16_VERSION=	1.6.3
 GO15_VERSION=	1.5.4
 GO14_VERSION=	1.4.3
 

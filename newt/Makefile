@@ -4,7 +4,7 @@
 
 
 DISTNAME=		newt-${VERSION}
-VERSION=		0.52.18
+VERSION=		0.52.19
 CATEGORIES=		pagoda
 MASTER_SITES=		https://fedorahosted.org/releases/n/e/newt/
 

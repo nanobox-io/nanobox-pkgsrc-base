@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.1.1.1 2012/02/06 22:44:56 fhajny Exp $
 
 SHA1 (php-bcompiler/bcompiler-1.0.2.tgz) = 5af67d65aabcc2b3754880fd9fb58d7e3af91c9e
 RMD160 (php-bcompiler/bcompiler-1.0.2.tgz) = 59f4f28fa97d2b3b789882f3a8ec81c273bf5141
+SHA512 (php-bcompiler/bcompiler-1.0.2.tgz) = 76e0b809918108e574c8459ccb8d80dca2b1ed1ddd159a67ab079b8fa6edf4671d0dd3049ced666eadf5d90f9b8d17f2188a3920f6e96ed0bc7d81875bb89de9
 Size (php-bcompiler/bcompiler-1.0.2.tgz) = 57347 bytes

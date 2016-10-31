@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-htscanner/htscanner-1.0.1.tgz) = 0844772ffb6d1d7232eea654e9ed199a028c064c
 RMD160 (php-htscanner/htscanner-1.0.1.tgz) = 3f53b8d79dd99653409dc19675bfa902b39ad71f
+SHA512 (php-htscanner/htscanner-1.0.1.tgz) = c0ccc0e4c945806364d5fd162c901bb9a44afe9eeedca864ca30f9fda430e60bf86d4ef41c0540639252c215eb72b1d34b28eba823aaeb64217bd9400a99f22e
 Size (php-htscanner/htscanner-1.0.1.tgz) = 10229 bytes

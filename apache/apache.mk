@@ -133,10 +133,10 @@ PKG_APACHE=		none
 APACHE_PKG_PREFIX=	${_APACHE_PKG_PREFIX.${PKG_APACHE}}
 
 .if (${PKG_APACHE} == "apache2") && !empty(USE_APR:M[yY][eE][sS])
-.  include "../../base/apr0/buildlink3.mk"
+.  include "../../devel/apr0/buildlink3.mk"
 .elif (${PKG_APACHE} != "apache13") && !empty(USE_APR:M[Yy][Ee][Ss])
-.  include "../../base/apr/buildlink3.mk"
-.  include "../../base/apr-util/buildlink3.mk"
+.  include "../../devel/apr/buildlink3.mk"
+.  include "../../devel/apr-util/buildlink3.mk"
 .endif
 
 #

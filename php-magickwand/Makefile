@@ -29,5 +29,5 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}
 
 .include "../../base/php/extension_versions.mk"
 .include "../../base/php/ext.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

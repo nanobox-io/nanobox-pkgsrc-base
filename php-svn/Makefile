@@ -22,6 +22,6 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 .include "../../base/php/extension_versions.mk"
-.include "../../base/subversion-base/buildlink3.mk"
+.include "../../devel/subversion-base/buildlink3.mk"
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

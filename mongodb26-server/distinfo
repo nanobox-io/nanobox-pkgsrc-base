@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (mongodb-src-r2.6.12.tar.gz) = 5568f745bc76b414116a8ae957364cdb47eb4b6e
 RMD160 (mongodb-src-r2.6.12.tar.gz) = ea28e2e4ac0eb66ba03c3d82f16eae0cf109d0d2
+SHA512 (mongodb-src-r2.6.12.tar.gz) = ceed10f2da50ca390f56cc79d39ea4db7a1ef6764e37dae61c3f3f664708be72de09443bbf94f8e58479e4f2923ff2ab9eee45652e82271b3bad591e03ef7657
 Size (mongodb-src-r2.6.12.tar.gz) = 16462842 bytes
 SHA1 (patch-SConstruct) = 12296855bfcffd7798b75d6b6394da0bdc2d5e21
 SHA1 (patch-debian_mongod.conf) = 35f3d7e7da4f573458bef0fe742c1790adec8200

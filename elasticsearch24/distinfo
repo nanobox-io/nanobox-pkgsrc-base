@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (elasticsearch-2.4.1.tar.gz) = 6a6acfc7bf7b4354dc6136daea54db1c844d632f
+RMD160 (elasticsearch-2.4.1.tar.gz) = b8accded2531c9d472ce7ce992b901fa5a9f50fd
+SHA512 (elasticsearch-2.4.1.tar.gz) = 69b22d5c2fc93e9bc83c5da415e110105d4d977aa98633041f51f8c55ba9e6045803584965367f6e1f962122ad81a8e07fefcc5a01c5381057ec921d65bc1751
+Size (elasticsearch-2.4.1.tar.gz) = 27364109 bytes
+SHA1 (patch-bin_elasticsearch.in.sh) = 47d94c09d8b703484c35e0c24aab7634156bfe92
+SHA1 (patch-bin_plugin) = 5ddd9b55797305c2c1e77b174ae410c00ecb7b89
+SHA1 (patch-config_elasticsearch.yml) = 7729dfb1ed106f0a34e6daaf7a46d0352d42f1f1

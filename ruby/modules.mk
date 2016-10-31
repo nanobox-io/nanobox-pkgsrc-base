@@ -206,7 +206,7 @@ BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.7:../../devel/ruby-rake
 #	The path to the ``rake'' binary.
 #
 EVAL_PREFIX+=	RAKE_PREFIX=${RAKE_NAME}
-RAKE=		${RAKE_PREFIX}/bin/${RAKE_NAME}
+RAKE=		${PREFIX}/bin/${RAKE_NAME}
 MAKE_ENV+=	RAKE=${RAKE:Q}
 .endif
 

@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-json_post/json_post-1.0.1.tgz) = 71982d67f72dddf435591cf121596d175bd16d01
 RMD160 (php-json_post/json_post-1.0.1.tgz) = 69ffe82247f893a09a3a817122e0204b19d2aa1c
+SHA512 (php-json_post/json_post-1.0.1.tgz) = edda1cca01b8b2eae4bd1e2bee346c95b73e76e5a0d07bc404f66d1fb17a0bd701a7cdeb7714212f95e50e1c7633a3cf04636ad6de58ff679517f48f8c891dbb
 Size (php-json_post/json_post-1.0.1.tgz) = 4712 bytes

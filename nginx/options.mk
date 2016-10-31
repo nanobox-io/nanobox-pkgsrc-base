@@ -2,11 +2,11 @@
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
-			pcre push realip ssl sub uwsgi image-filter upload \
-			debug status nginx-autodetect-cflags spdy echo \
+			pcre push realip ssl sub uwsgi image-filter \
+			debug status nginx-autodetect-cflags echo \
 			set-misc headers-more array-var encrypted-session \
-			form-input
-PKG_SUPPORTED_OPTIONS+=	passenger
+			form-input perl gzip v2
+
 PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl
 
 PLIST_VARS+=		naxsi uwsgi
@@ -55,6 +55,7 @@ CONFIGURE_ARGS+=	--with-http_sub_module
 
 .if !empty(PKG_OPTIONS:Mgtools)
 CONFIGURE_ARGS+=	--with-google_perftools_module
+.include "../../base/gperftools/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmail-proxy)

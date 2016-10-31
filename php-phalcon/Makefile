@@ -29,6 +29,35 @@ USE_LANGUAGES+=		c c++
 
 USE_TOOLS+=		gmake
 
+.if ${_PHP_VERSION} == "70"
+EXTENSIONS=		phar json filter hash gmp ctype pdo pdo_sqlite simplexml tokenizer xmlwriter dom zip mbstring xml
+
+.for extension in ${EXTENSIONS}
+
+.if exists(../../base/php-${extension}/depends.mk)
+.include "../../base/php-${extension}/depends.mk"
+.endif
+
+BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-${extension}>=${PHP_EXTENSION_VERSION.${extension}}:../../base/php-${extension}
+
+BUILD_DEPENDS+=	composer>=1.2.1:../../base/composer
+BUILD_DEPENDS+=	re2c>=0.15.3:../../devel/re2c
+
+.endfor
+
+PHALCONDIR= ${WRKDIR}/phalcon
+
+pre-configure:
+	if [ ! -f ${PREFIX}/etc/php.ini ]; then sudo cp ${PREFIX}/etc/php/php.ini ${PREFIX}/etc/php.ini; fi
+	sudo cp ${PREFIX}/etc/php.ini ${PREFIX}/etc/php/php.ini
+	sudo chown vagrant ${PREFIX}/etc/php/php.ini
+	for i in ${EXTENSIONS}; do echo "extension=$${i}.so" >> ${PREFIX}/etc/php/php.ini; done
+	cd ${PHALCONDIR}; composer install
+	cd ${PHALCONDIR}; chmod 755 vendor/phalcon/zephir/parser/parser/build_linux.sh
+	cd ${PHALCONDIR}; vendor/bin/zephir generate -backend=ZendEngine3
+
+.endif
+
 .include "../../base/php/ext.mk"
 .include "../../base/php-pdo/buildlink3.mk"
 .include "../../base/git/git-package.mk"

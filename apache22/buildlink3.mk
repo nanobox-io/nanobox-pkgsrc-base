@@ -27,8 +27,8 @@ APXS?=		${BUILDLINK_PREFIX.apache}/sbin/apxs
 CONFIGURE_ARGS+=	--with-apxs2=${APXS:Q}
 .endif
 
-.include "../../base/apr/buildlink3.mk"
-.include "../../base/apr-util/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .endif # APACHE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-apache

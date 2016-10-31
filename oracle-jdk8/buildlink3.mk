@@ -24,6 +24,9 @@ BUILDLINK_CPPFLAGS.oracle-jdk8=						\
 	-I${BUILDLINK_JAVA_PREFIX.oracle-jre8}/include/linux
 .endif
 
+#CPPFLAGS+=	${BUILDLINK_CPPFLAGS.oracle-jdk8}
+#CXXFLAGS+=      ${BUILDLINK_CPPFLAGS.oracle-jdk8}
+
 BUILDLINK_DEPMETHOD.oracle-jre8?=	${BUILDLINK_DEPMETHOD.oracle-jdk8}
 .include "../../base/oracle-jre8/buildlink3.mk"
 .endif # ORACLE_JDK8_BUILDLINK3_MK

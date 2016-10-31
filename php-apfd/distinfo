@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-apfd/apfd-1.0.1.tgz) = 57c94db2f77a1c62b61f9abab804c1a276c4a8d0
 RMD160 (php-apfd/apfd-1.0.1.tgz) = d01cb16891bad6d39a37426863b7026c71baa486
+SHA512 (php-apfd/apfd-1.0.1.tgz) = 7f8d30ddf5bc56676ed2d85b977e55200193899cd4de3096352f96ab3a33bffd908ffac8e07b43b7be220d62e077e011fe09db51d27ace964837787ae0901886
 Size (php-apfd/apfd-1.0.1.tgz) = 4375 bytes

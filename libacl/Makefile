@@ -33,4 +33,5 @@ post-install:
 	ln -sf libacl.so.1.1.0 ${DESTDIR}${PREFIX}/lib/libacl.so.1
 
 .include "../../base/libattr/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

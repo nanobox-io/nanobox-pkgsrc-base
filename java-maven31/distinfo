@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.10 2014/12/09 11:52:03 fhajny Exp $
 
 SHA1 (apache-maven-3.1.1-bin.tar.gz) = 630eea2107b0742acb315b214009ba08602dda5f
 RMD160 (apache-maven-3.1.1-bin.tar.gz) = 0b198d4e56d00ece70dc7648b8609287a67c0084
+SHA512 (apache-maven-3.1.1-bin.tar.gz) = 507d340930cc32268128e8969742dbba34a0144f3e7a561b45f71e254ebff2e6f926fd5c7925081fc94995c3f5b4807caf2204ab70297374857bc66c582610a1
 Size (apache-maven-3.1.1-bin.tar.gz) = 5494427 bytes
 SHA1 (patch-bin_m2.conf) = e267855998ee06efa649aee9e30a28833b7223cb
 SHA1 (patch-bin_mvn) = 3c70f0f6b50df1e001945155e08b9d8b90319955

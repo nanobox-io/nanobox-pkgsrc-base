@@ -71,6 +71,11 @@ for package in $(ls /content/pkgsrc/base); do
     continue
   fi
 
+  if [[ "${package}" =~ "yoke" ]]; then
+    echo "yoke doesn't work"
+    continue
+  fi
+
   # skip java*
   if [[ "${package}" =~ "java-" ]]; then
     echo "ignoring ${package} because it's a java package"
@@ -86,6 +91,11 @@ for package in $(ls /content/pkgsrc/base); do
   # ignore if it's a php extension
   if [[ "${package}" =~ "php-" ]]; then
     echo "ignoring ${package} because it's a php extension"
+    continue
+  fi
+
+  if [[ "${package}" =~ "py-" ]]; then
+    echo "ignoring ${package} because it's a python extension"
     continue
   fi
 
@@ -127,10 +137,10 @@ for package in $(ls /content/pkgsrc/base); do
   fi
 
   # ignore php 7.0 for now...
-  if [[ "${package}" = "php70" ]]; then
-    echo "ignoring php70 for the time being"
-    continue
-  fi
+  # if [[ "${package}" = "php70" ]]; then
+  #   echo "ignoring php70 for the time being"
+  #   continue
+  # fi
 
   # skip if package is already built
   pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${package} show-var VARNAME=PKGNAME)
@@ -151,9 +161,9 @@ for package in $(ls /content/pkgsrc/base); do
   fi
 
   # 2) make package
-  run_in_chroot \
-    ${package} \
-    "/data/bin/bmake -C /content/pkgsrc/base/${package} fetch-depends"
+  #  run_in_chroot \
+  #    ${package} \
+  #    "/data/bin/bmake -C /content/pkgsrc/base/${package} fetch-depends"
   if [ ! -f /content/packages/pkgsrc/base/Linux/All/${pkg_name}.tgz ]; then
     run_in_chroot \
       ${package} \
@@ -164,12 +174,12 @@ for package in $(ls /content/pkgsrc/base); do
   if [[ "${package}" =~ "php" ]]; then
     php_version=${package/php/}
     bundle_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/php-bundle show-var VARNAME=PKGNAME PHP_VERSION_DEFAULT=${php_version})
-    run_in_chroot \
-      ${package} \
-      "/data/bin/bmake \
-        -C /content/pkgsrc/base/php-bundle \
-        fetch-depends \
-        PHP_VERSION_DEFAULT=${php_version}"
+  #  run_in_chroot \
+  #    ${package} \
+  #    "/data/bin/bmake \
+  #      -C /content/pkgsrc/base/php-bundle \
+  #      fetch-depends \
+  #      PHP_VERSION_DEFAULT=${php_version}"
     if [ ! -f /content/packages/pkgsrc/base/Linux/All/${bundle_pkg_name}.tgz ]; then
       run_in_chroot \
         ${package} \
@@ -182,12 +192,12 @@ for package in $(ls /content/pkgsrc/base); do
     ruby_version=${package}
     for gem in $(ls /content/pkgsrc/base | grep -e 'ruby-'); do
       gem_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${gem} show-var VARNAME=PKGNAME RUBY_VERSION_SUPPORTED=${ruby_version})
-      run_in_chroot \
-        ${package} \
-        "/data/bin/bmake \
-          -C /content/pkgsrc/base/${gem} \
-          fetch-depends \
-          RUBY_VERSION_SUPPORTED=${ruby_version}"
+  #    run_in_chroot \
+  #      ${package} \
+  #      "/data/bin/bmake \
+  #        -C /content/pkgsrc/base/${gem} \
+  #        fetch-depends \
+  #        RUBY_VERSION_SUPPORTED=${ruby_version}"
       if [ ! -f /content/packages/pkgsrc/base/Linux/All/${gem_pkg_name}.tgz ]; then
         run_in_chroot \
           ${package} \
@@ -201,12 +211,12 @@ for package in $(ls /content/pkgsrc/base); do
     apache_version=${package}
     for extension in $(ls /content/pkgsrc/base | grep -e 'ap2?-'); do
       extension_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${extension} show-var VARNAME=PKGNAME PKG_APACHE_DEFAULT=${apache_version})
-      run_in_chroot \
-        ${package} \
-        "/data/bin/bmake \
-          -C /content/pkgsrc/base/${extension} \
-          fetch-depends \
-          PKG_APACHE_DEFAULT=${apache_version}"
+  #    run_in_chroot \
+  #      ${package} \
+  #      "/data/bin/bmake \
+  #        -C /content/pkgsrc/base/${extension} \
+  #        fetch-depends \
+  #        PKG_APACHE_DEFAULT=${apache_version}"
       if [ ! -f /content/packages/pkgsrc/base/Linux/All/${extension_pkg_name}.tgz ]; then
         run_in_chroot \
           ${package} \
@@ -219,13 +229,18 @@ for package in $(ls /content/pkgsrc/base); do
   elif [[ "${package}" =~ "jdk" ]]; then
     java_version=${package}
     for java in $(ls /content/pkgsrc/base | grep -e 'java-'); do
+      if [[ ${java_version} = "sun-jdk6" ]]; then
+         if [[ "${java}" = "java-maven33" ]]; then
+            continue
+         fi
+      fi
       java_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${java} show-var VARNAME=PKGNAME PKG_JVM_DEFAULT=${java_version})
-      run_in_chroot \
-        ${package} \
-        "/data/bin/bmake \
-          -C /content/pkgsrc/base/${java} \
-          fetch-depends \
-          PKG_JVM_DEFAULT=${java_version}"
+  #    run_in_chroot \
+  #      ${package} \
+  #      "/data/bin/bmake \
+  #        -C /content/pkgsrc/base/${java} \
+  #        fetch-depends \
+  #        PKG_JVM_DEFAULT=${java_version}"
       if [ ! -f /content/packages/pkgsrc/base/Linux/All/${java_pkg_name}.tgz ]; then
         run_in_chroot \
           ${package} \
@@ -233,6 +248,25 @@ for package in $(ls /content/pkgsrc/base); do
             -C /content/pkgsrc/base/${java} \
             package \
             PKG_JVM_DEFAULT=${java_version}"
+      fi
+    done
+  elif [[ "${package}" =~ "^python" ]]; then
+    python_version=${package}
+    for python in $(ls /content/pkgsrc/base | grep -e 'py-'); do
+      python_pkg_name=$(/data/bin/bmake -C /content/pkgsrc/base/${python} show-var VARNAME=PKGNAME PYTHON_VERSION_DEFAULT=${python_version})
+  #    run_in_chroot \
+  #      ${package} \
+  #      "/data/bin/bmake \
+  #        -C /content/pkgsrc/base/${python} \
+  #        fetch-depends \
+  #        PYTHON_VERSION_DEFAULT=${python_version}"
+      if [ ! -f /content/packages/pkgsrc/base/Linux/All/${python_pkg_name}.tgz ]; then
+        run_in_chroot \
+          ${package} \
+          "/data/bin/bmake \
+            -C /content/pkgsrc/base/${python} \
+            package \
+            PYTHON_VERSION_DEFAULT=${python_version}"
       fi
     done
   fi

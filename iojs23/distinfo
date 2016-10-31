@@ -2,4 +2,5 @@ $NetBSD$
 
 SHA1 (iojs-v2.3.4.tar.gz) = 97639c34ebb951a4655ce8b903fa38a3f0135396
 RMD160 (iojs-v2.3.4.tar.gz) = b5aee88fac0b397992b2a80443405d211ac63f84
+SHA512 (iojs-v2.3.4.tar.gz) = 2068686de85339b2e8f0ba39609f977f0e1c0e0d0c64f670b7419d65e2d6c7d476825d6f5879676d72ecfe964febcae74712da75d1e9e87fce81690024b4c0aa
 Size (iojs-v2.3.4.tar.gz) = 22126474 bytes

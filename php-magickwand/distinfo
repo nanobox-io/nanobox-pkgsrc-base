@@ -2,5 +2,6 @@ $NetBSD$
 
 SHA1 (php-magickwand/MagickWandForPHP-1.0.9-2.tar.gz) = 789cf2278eeabecd4ecffa6042ab9e1b5ed2507a
 RMD160 (php-magickwand/MagickWandForPHP-1.0.9-2.tar.gz) = ad2167fbfb75f8ed28726732a1f0c483c2218e1d
+SHA512 (php-magickwand/MagickWandForPHP-1.0.9-2.tar.gz) = 1ac857342ce219320ff2dc4e33898fff529675d7a9c1f06d30f3b801fbeda79de088551ed582035206531dd999adc688e8944045b1bde4e5685c474dad867e7d
 Size (php-magickwand/MagickWandForPHP-1.0.9-2.tar.gz) = 156611 bytes
-SHA1 (patch-config.m4) = 714f2ef8cd553f6617e54a69b79dea378cebf0ba
+SHA1 (patch-config.m4) = da8be9dbcd3f5e9557fdf57e097d0a72702a5351

@@ -32,6 +32,6 @@ DEPENDS+=         ${PYPKGPREFIX}-yaml>=3.11:../../textproc/py-yaml
 DEPENDS+=         ${PYPKGPREFIX}-nosexcover>=1.0.10:../../base/py-nosexcover
 DEPENDS+=         ${PYPKGPREFIX}-parallax>=1.0.1:../../base/py-parallax
 
-.include "../../base/python/egg.mk"
+.include "../../lang/python/egg.mk"
 .include "../../base/git/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

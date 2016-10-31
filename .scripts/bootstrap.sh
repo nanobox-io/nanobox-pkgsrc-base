@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 detect_platform() {
   if [ $(uname | grep 'SunOS') ]; then
     echo "SmartOS"

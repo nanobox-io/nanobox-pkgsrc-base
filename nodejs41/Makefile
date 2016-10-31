@@ -62,6 +62,6 @@ pre-install:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../base/python/application.mk"
-.include "../../base/python/tool.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/rethinkdb
+etc/init.d/rethinkdb
+etc/rethinkdb/default.conf.sample
+share/doc/rethinkdb/copyright
+share/man/man1/rethinkdb.1.gz
+@pkgdir var/lib/rethinkdb/instances.d
+@pkgdir etc/rethinkdb/instances.d

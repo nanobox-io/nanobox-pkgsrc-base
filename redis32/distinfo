@@ -1,8 +1,9 @@
 $NetBSD$
 
-SHA1 (redis-3.0.5.tar.gz) = ad3ee178c42bfcfd310c72bbddffbbe35db9b4a6
-RMD160 (redis-3.0.5.tar.gz) = b4de06682819c3c9f1431d3ced18790180456f0d
-Size (redis-3.0.5.tar.gz) = 1366160 bytes
+SHA1 (redis-3.2.3.tar.gz) = 92d6d93ef2efc91e595c8bf578bf72baff397507
+RMD160 (redis-3.2.3.tar.gz) = ad82033f72e24458c9cf1cbb28996b2b7e173365
+SHA512 (redis-3.2.3.tar.gz) = 373643d384a3b68ca5d0486101a342e3843ffa81b0ead49a66c1aa1d92d9a51924bc1f5a1b1068718902a05c242183fbd62c9179d3fe36e9b77f37f3ddf81975
+Size (redis-3.2.3.tar.gz) = 1541401 bytes
 SHA1 (patch-ab) = 7899ea5cb96c3187a12ec049d07d9f2516c0a162
-SHA1 (patch-ac) = 6ae8ffaca828a420dab6232a7d183d067d2237b7
+SHA1 (patch-ac) = 29bbf3688691c065032e5dfe57215439d0037003
 SHA1 (patch-src_cluster.c) = 83ef44d9b59c88a76cd1aed4bdf3552e3f3083ce

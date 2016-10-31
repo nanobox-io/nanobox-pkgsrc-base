@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-http/pecl_http-2.5.6.tgz) = 935a51fe0463497fbcd63755efc89abc6fff4186
 RMD160 (php-http/pecl_http-2.5.6.tgz) = 054adc8c50ed2ed494d70c3ccf154746d2ee3333
+SHA512 (php-http/pecl_http-2.5.6.tgz) = a4ddb2e55b537a240dc79ad38665f9cb79ef56a70f50e0393ca19c36f744c21374ba801e31e68545516c4be98cff65587ee91b2b25f05dd587120afcb87dfe4a
 Size (php-http/pecl_http-2.5.6.tgz) = 200469 bytes
 SHA1 (patch-config9.m4) = 6244b755edd22443334935c422fb13ee449dd414

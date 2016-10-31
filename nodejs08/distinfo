@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (node-v0.8.28.tar.gz) = ea2b94d75658914ddfe6a536ef27d1c016156e2d
 RMD160 (node-v0.8.28.tar.gz) = 2f5e11a2fcb72131b030e3aab7f69e7db9bb8215
+SHA512 (node-v0.8.28.tar.gz) = 6b12fa374ca506e2f7cac3cccd9144072a8908e6e7854b7e62b7b0e05b5b687fd16a941377acbb874c7798126695cc3d9263407f24a54e532b5d9487ee9429e6
 Size (node-v0.8.28.tar.gz) = 13187411 bytes
 SHA1 (patch-common.gypi) = 427e299ec84722321240878e2e6df5860909ee16
 SHA1 (patch-deps_uv_common.gypi) = 556d40673e4e2deff8ade09c03dec3c301ab3464

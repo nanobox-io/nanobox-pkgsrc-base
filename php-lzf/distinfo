@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-lzf/LZF-1.6.5.tgz) = 58a53bdef7de03d4f4dfaf0a526571bbf917d9bc
 RMD160 (php-lzf/LZF-1.6.5.tgz) = 3f41e173a69004c435dfc9644e50ebea2308b4e5
+SHA512 (php-lzf/LZF-1.6.5.tgz) = 0c34bf7c62be1d963dd229733836103a965dc5e24e663f48fba4a65cd3aca2dcc311069c3fd90d944359051eae51ba427f28a024e2214638a4c7886c08d1912d
 Size (php-lzf/LZF-1.6.5.tgz) = 16968 bytes

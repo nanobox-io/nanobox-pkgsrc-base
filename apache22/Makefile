@@ -50,8 +50,8 @@ CHECK_PORTABILITY_SKIP+=	srclib/pcre/* \
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../base/apr/buildlink3.mk"
-.include "../../base/apr-util/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

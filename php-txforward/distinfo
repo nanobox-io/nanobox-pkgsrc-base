@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-txforward/txforward-1.0.7.tgz) = da68b16ad41569e5a5636d7fc821137667a26a55
 RMD160 (php-txforward/txforward-1.0.7.tgz) = 77b435aae0a757f8418bb7c482d802f880f91826
+SHA512 (php-txforward/txforward-1.0.7.tgz) = 7f00b685232463d0f4ce9e97ca012adc943faecbcee28291020269cbeb64cf4fcfdcac42966febcb73b5dcaf3c6750f9eb674c1f9edc7c91d21965549525edc6
 Size (php-txforward/txforward-1.0.7.tgz) = 4763 bytes

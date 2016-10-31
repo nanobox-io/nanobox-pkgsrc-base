@@ -9,7 +9,7 @@ PHP_EXTENSION_VERSIONS_MK=	#defined
 PHP_EXTENSION_VERSION.amqp=		1.7.1			# https://pecl.php.net/package/amqp
 PHP_EXTENSION_VERSION.apc=		3.1.13			# https://pecl.php.net/package/APC
 .if ${_PHP_VERSION} == "70"
-PHP_EXTENSION_VERSION.apcu=		5.1.5			# https://pecl.php.net/package/APCu
+PHP_EXTENSION_VERSION.apcu=		5.1.7			# https://pecl.php.net/package/APCu
 .else
 PHP_EXTENSION_VERSION.apcu=		4.0.11			# https://pecl.php.net/package/APCu
 .endif
@@ -55,7 +55,7 @@ PHP_EXTENSION_VERSION.igbinary=		1.2.1			# https://pecl.php.net/package/igbinary
 PHP_EXTENSION_VERSION.imagick=		3.4.2			# https://pecl.php.net/package/imagick
 PHP_EXTENSION_VERSION.imap=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.intl=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.ioncube_loader=	5.1.2			# http://www.ioncube.com/loaders.php
+PHP_EXTENSION_VERSION.ioncube_loader=	6.0.6			# http://www.ioncube.com/loaders.php
 PHP_EXTENSION_VERSION.json=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.json_post=	1.0.1			# https://pecl.php.net/package/json_post
 PHP_EXTENSION_VERSION.ldap=		${PHP_BASE_VERS}
@@ -76,11 +76,11 @@ PHP_EXTENSION_VERSION.mogilefs=		0.9.2			# https://pecl.php.net/package/mogilefs
 .endif
 PHP_EXTENSION_VERSION.mongo=		1.6.14			# https://pecl.php.net/package/mongo
 .if ${_PHP_VERSION} == "70"
-PHP_EXTENSION_VERSION.mongodb=		1.1.8			# https://pecl.php.net/package/mongodb
+PHP_EXTENSION_VERSION.mongodb=		1.1.9			# https://pecl.php.net/package/mongodb
 .elif ${_PHP_VERSION} == "53"
 PHP_EXTENSION_VERSION.mongodb=          1.1.0                   # https://pecl.php.net/package/mongodb
 .else
-PHP_EXTENSION_VERSION.mongodb=		1.1.8			# https://pecl.php.net/package/mongodb
+PHP_EXTENSION_VERSION.mongodb=		1.1.9			# https://pecl.php.net/package/mongodb
 .endif
 PHP_EXTENSION_VERSION.mssql=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mysql=		${PHP_BASE_VERS}
@@ -165,7 +165,7 @@ PHP_EXTENSION_VERSION.sysvmsg=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvsem=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sysvshm=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.tidy=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.timezonedb=	2016.6			# https://pecl.php.net/package/timezonedb
+PHP_EXTENSION_VERSION.timezonedb=	2016.8			# https://pecl.php.net/package/timezonedb
 PHP_EXTENSION_VERSION.tokenizer=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.txforward=	1.0.7			# https://pecl.php.net/package/txforward
 PHP_EXTENSION_VERSION.uploadprogress=	1.0.3.1			# https://pecl.php.net/package/uploadprogress
@@ -182,7 +182,11 @@ PHP_EXTENSION_VERSION.xmlreader=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.xmlrpc=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.xmlwriter=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.xsl=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.yaml=		1.2.0			# https://pecl.php.net/package/yaml
+.if ${_PHP_VERSION} == "70"
+PHP_EXTENSION_VERSION.yaml=             2.0.0                   # https://pecl.php.net/package/yaml
+.else
+PHP_EXTENSION_VERSION.yaml=		1.3.0			# https://pecl.php.net/package/yaml
+.endif
 PHP_EXTENSION_VERSION.zip=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.zlib=		${PHP_BASE_VERS}
 

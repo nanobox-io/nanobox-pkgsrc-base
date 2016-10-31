@@ -36,9 +36,9 @@ CFLAGS.SunOS+=		-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__
 
 .include "../../mk/bsd.prefs.mk"
 BUILDLINK_API_DEPENDS.apr+=	apr>=1.5.0
-.include "../../base/apr/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.5.3
-.include "../../base/apr-util/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

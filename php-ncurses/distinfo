@@ -2,4 +2,5 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-ncurses/ncurses-1.0.2.tgz) = beb7408c6956584efef2cde509d0923f40bd29bf
 RMD160 (php-ncurses/ncurses-1.0.2.tgz) = f2f49dcb428babad3945f9a29e63453fbb0b24df
+SHA512 (php-ncurses/ncurses-1.0.2.tgz) = e1f684dcab2aa4dd3fded79fed02c78de1525f0384027fe64ad08759617f13ca6fb11742e3407723eecc431ed99847c0c98ae559797dc98ce373a01ba8413bf2
 Size (php-ncurses/ncurses-1.0.2.tgz) = 16226 bytes

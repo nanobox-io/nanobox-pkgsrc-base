@@ -1,0 +1,7 @@
+Behavior-driven development (or BDD) is an agile software development technique that encourages collaboration between developers, QA and non-technical or business participants in a software project.
+
+behave uses tests written in a natural language style, backed up by Python code.
+
+First, install *behave*.
+
+Now make a directory called features/. In that directory create a file called example.feature containing:

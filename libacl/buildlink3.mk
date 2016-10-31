@@ -9,6 +9,8 @@ BUILDLINK_API_DEPENDS.libacl+=	libacl>=2.2
 BUILDLINK_ABI_DEPENDS.libacl+=	libacl>=2.2
 BUILDLINK_PKGSRCDIR.libacl?=		../../base/libacl
 
+.include "../../base/libattr/buildlink3.mk"
+
 .endif # LIBACL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libacl

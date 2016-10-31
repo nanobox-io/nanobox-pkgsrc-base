@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/inotifywait
+bin/inotifywatch
+include/inotifytools/inotify-nosys.h
+include/inotifytools/inotify.h
+include/inotifytools/inotifytools.h
+lib/libinotifytools.la
+man/man1/inotifywait.1
+man/man1/inotifywatch.1

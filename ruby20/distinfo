@@ -2,6 +2,7 @@ $NetBSD: distinfo,v 1.21.2.1 2015/04/26 08:26:15 tron Exp $
 
 SHA1 (ruby-2.0.0-p648.tar.bz2) = 504be2eae6cdfe93aa7ed02ec55e35043d067ad5
 RMD160 (ruby-2.0.0-p648.tar.bz2) = 3b6fd5d89e6e53fb71f512f44b710148698a6e29
+SHA512 (ruby-2.0.0-p648.tar.bz2) = 609acf6d6352c9746e21cd7f0e7d29f5eb522e6fff2d5fad0431d63c568cc084ed5b7141f84cd33512d8213200d2d1a22e8d7df71469a980a3a92886133fea38
 Size (ruby-2.0.0-p648.tar.bz2) = 10785918 bytes
 SHA1 (patch-configure) = aaa93fd2e4f130bb2cb852b15b58a1840e57dba5
 SHA1 (patch-ext_dbm_extconf.rb) = 7322637de769b7d01650e1ed566e891801ce3e92

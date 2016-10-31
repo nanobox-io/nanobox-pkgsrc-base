@@ -2,63 +2,60 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-ERLANG_VERSION=			18.1.4
-DIST_VERSION_MAJOR=		18.1.4
+ERLANG_VERSION=			19.0.5
+DIST_VERSION_MAJOR=		19.0.5
 #DIST_VERSION_MINOR=		1
 
 _VERSIONS=				\
-	asn1			4.0	\
-	common_test		1.11	\
-	compiler		6.0.1	\
-	cosEvent		2.2	\
-	cosEventDomain		1.2	\
-	cosFileTransfer		1.2	\
-	cosNotification		1.2	\
-	cosProperty		1.2	\
-	cosTime			1.2	\
-	cosTransactions		1.3	\
-	crypto			3.6.1	\
-	debugger		4.1.1	\
-	dialyzer		2.8.1	\
-	diameter		1.11	\
-	edoc			0.7.17	\
-	eldap			1.2	\
-	erl_docgen		0.4	\
-	erl_interface		3.8	\
-	erts			7.1	\
-	et			1.5.1	\
-	eunit			2.2.11	\
-	gs			1.6	\
-	hipe			3.13	\
-	ic			4.4	\
-	inets			6.0.3	\
-	jinterface		1.6	\
-	kernel			4.1	\
-	megaco			3.18	\
-	mnesia			4.13.2	\
-	observer		2.1	\
-	odbc			2.11.1	\
-	orber			3.8	\
-	os_mon			2.4	\
-	ose			1.1	\
-	otp_mibs		1.1	\
-	parsetools		2.1	\
-	percept			0.8.11	\
-	public_key		1.0.1	\
-	reltool			0.7	\
-	runtime_tools		1.9.1	\
-	sasl			2.6	\
-	snmp			5.2	\
-	ssh			4.1.2	\
-	ssl			7.1	\
-	stdlib			2.6	\
-	syntax_tools		1.7	\
-	test_server		3.9	\
-	tools			2.8.1	\
-	typer			0.9.9	\
-	webtool			0.9	\
-	wx			1.5	\
-	xmerl			1.3.8
+	asn1			4.0.3	\
+	common_test		1.12.2	\
+	compiler		7.0.1	\
+	cosEvent		2.2.1	\
+	cosEventDomain		1.2.1	\
+	cosFileTransfer		1.2.1	\
+	cosNotification		1.2.2	\
+	cosProperty		1.2.1	\
+	cosTime			1.2.2	\
+	cosTransactions		1.3.2	\
+	crypto			3.7	\
+	debugger		4.2	\
+	dialyzer		3.0.1	\
+	diameter		1.12	\
+	edoc			0.7.19	\
+	eldap			1.2.2	\
+	erl_docgen		0.5	\
+	erl_interface		3.9	\
+	erts			8.0.3	\
+	et			1.6	\
+	eunit			2.3	\
+	gs			1.6.1	\
+	hipe			3.15.1	\
+	ic			4.4.1	\
+	inets			6.3.2	\
+	jinterface		1.7	\
+	kernel			5.0.2	\
+	megaco			3.18.1	\
+	mnesia			4.14	\
+	observer		2.2.1	\
+	odbc			2.11.2	\
+	orber			3.8.2	\
+	os_mon			2.4.1	\
+	otp_mibs		1.1.1	\
+	parsetools		2.1.2	\
+	percept			0.9	\
+	public_key		1.2	\
+	reltool			0.7.1	\
+	runtime_tools		1.10	\
+	sasl			3.0	\
+	snmp			5.2.3	\
+	ssh			4.3.1	\
+	ssl			8.0.1	\
+	stdlib			3.0.1	\
+	syntax_tools		2.0	\
+	tools			2.8.5	\
+	typer			0.9.11	\
+	wx			1.7	\
+	xmerl			1.3.11
 
 PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
 

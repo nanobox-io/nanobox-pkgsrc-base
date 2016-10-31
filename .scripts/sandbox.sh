@@ -44,6 +44,14 @@ create_chroot() {
       --rwdirs=/run,/content,/home,/var/.ssh,/content/pkgsrc,/content/pkgsrc/base,/content/packages,/content/distfiles \
       /chroot/${chroot}
 
+  sudo \
+    /chroot/${chroot}/sandbox \
+      chmod 777 /dev/shm
+
+  sudo \
+    /chroot/${chroot}/sandbox \
+      chmod +t /dev/shm
+
   # copy ssh keys
   sudo \
     /chroot/${chroot}/sandbox \

@@ -1,31 +1,42 @@
-$NetBSD: patch-src_timezone_localtime.c,v 1.1 2015/01/14 21:01:18 adam Exp $
+$NetBSD$
 
---- src/timezone/localtime.c.orig	2009-06-11 16:49:15.000000000 +0200
+--- src/timezone/localtime.c.orig	2016-08-08 20:29:39.000000000 +0000
 +++ src/timezone/localtime.c
-@@ -81,20 +81,20 @@ static pg_time_t detzcode64(const char *
- static int	differ_by_repeat(pg_time_t t1, pg_time_t t0);
- static const char *getzname(const char *strp);
- static const char *getqzname(const char *strp, int delim);
--static const char *getnum(const char *strp, int *nump, int min, int max);
-+static const char *getnum(const char *strp, int *nump, const int min, const int max);
- static const char *getsecs(const char *strp, long *secsp);
- static const char *getoffset(const char *strp, long *offsetp);
- static const char *getrule(const char *strp, struct rule * rulep);
- static void gmtload(struct state * sp);
--static struct pg_tm *gmtsub(const pg_time_t *timep, long offset,
-+static struct pg_tm *gmtsub(const pg_time_t *timep, const long offset,
- 	   struct pg_tm * tmp);
--static struct pg_tm *localsub(const pg_time_t *timep, long offset,
-+static struct pg_tm *localsub(const pg_time_t *timep, const long offset,
- 		 struct pg_tm * tmp, const pg_tz *tz);
- static int	increment_overflow(int *number, int delta);
--static pg_time_t transtime(pg_time_t janfirst, int year,
--		  const struct rule * rulep, long offset);
-+static pg_time_t transtime(pg_time_t janfirst, const int year,
-+		  const struct rule * rulep, const long offset);
- static int	typesequiv(const struct state * sp, int a, int b);
--static struct pg_tm *timesub(const pg_time_t *timep, long offset,
-+static struct pg_tm *timesub(const pg_time_t *timep, const long offset,
- 		const struct state * sp, struct pg_tm * tmp);
+@@ -623,7 +623,7 @@ getqzname(const char *strp, int delim)
+  * Otherwise, return a pointer to the first character not part of the number.
+  */
+ static const char *
+-getnum(const char *strp, int *nump, int min, int max)
++getnum(const char *strp, int *nump, const int min, const int max)
+ {
+ 	char		c;
+ 	int			num;
+@@ -778,8 +778,8 @@ getrule(const char *strp, struct rule *
+  * effect, calculate the year-relative time that rule takes effect.
+  */
+ static int32
+-transtime(int year, const struct rule * rulep,
+-		  int32 offset)
++transtime(const int year, const struct rule * rulep,
++		  const int32 offset)
+ {
+ 	bool		leapyear;
+ 	int32		value;
+@@ -1263,7 +1263,7 @@ pg_localtime(const pg_time_t *timep, con
+  * Except we have a private "struct state" for GMT, so no sp is passed in.
+  */
+ static struct pg_tm *
+-gmtsub(pg_time_t const * timep, int32 offset, struct pg_tm * tmp)
++gmtsub(pg_time_t const * timep, const int32 offset, struct pg_tm * tmp)
+ {
+ 	struct pg_tm *result;
  
- /* GMT timezone */
+@@ -1310,7 +1310,7 @@ leaps_thru_end_of(const int y)
+ }
+ 
+ static struct pg_tm *
+-timesub(const pg_time_t *timep, int32 offset,
++timesub(const pg_time_t *timep, const int32 offset,
+ 		const struct state * sp, struct pg_tm * tmp)
+ {
+ 	const struct lsinfo *lp;

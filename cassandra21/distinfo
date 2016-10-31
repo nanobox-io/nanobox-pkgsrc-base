@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (apache-cassandra-2.1.16-bin.tar.gz) = 2dc9e729129baaf5fdd7c0c81417c38c319d5023
+RMD160 (apache-cassandra-2.1.16-bin.tar.gz) = f4f80a524e4c3708643dceb3bd07f523530cdeee
+SHA512 (apache-cassandra-2.1.16-bin.tar.gz) = 996e88cbc734713b342e8928deaa1e80c307da243745098b3e432732718f82fa7e4bdb2ecd3035f0ed1cbf2940c61e824640d5d5572e969f0d59e680214d6bdc
+Size (apache-cassandra-2.1.16-bin.tar.gz) = 24538453 bytes

@@ -2,5 +2,6 @@ $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
 SHA1 (php-newt/newt-1.2.9.tgz) = 4e6fb6983acb973affad2680ba4e67d0e6578b58
 RMD160 (php-newt/newt-1.2.9.tgz) = 927df7a8e5d9ebb8a6497b86b37469d57a206bf8
+SHA512 (php-newt/newt-1.2.9.tgz) = 5e45a735aba95bc93af7a3d12b4734c7ad49cc9db851c90dbfb5ee6dd2e79622b2d74da7eb8a4d4eea3c334bca1ca0706bb32f26ec86d7139989caced98e4469
 Size (php-newt/newt-1.2.9.tgz) = 27005 bytes
 SHA1 (patch-config.m4) = 48a400d37753ab75bced018228a5f328fb9c8c5b

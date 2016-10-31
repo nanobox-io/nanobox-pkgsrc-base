@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${PYSITELIB}/parse.py
+${PYSITELIB}/parse.pyc
+${PYSITELIB}/parse.pyo

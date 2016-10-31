@@ -2,6 +2,7 @@ $NetBSD$
 
 SHA1 (jruby-bin-1.6.8.tar.gz) = b1d191723b34255e5833946c6591bc5e89379d8c
 RMD160 (jruby-bin-1.6.8.tar.gz) = 3955837f3d925256c74ce5d3e31fd76f939b92c3
+SHA512 (jruby-bin-1.6.8.tar.gz) = 3dcea9a441ce317d10a73149cc5f0f22d8484262e6a2aafc21a6c1225952362a7bd5131beb4c0617dec2c958558c8cb78a2128d0266af075b42d9c2424659674
 Size (jruby-bin-1.6.8.tar.gz) = 15705394 bytes
 SHA1 (patch-bin_jruby) = c0e1e2d03e1f80f6f52846bd2fe4e4b076e3e3d2
 SHA1 (patch-bin_jruby.sh) = fa7590bd98939f2a33ca903454e3e02949fb5b95

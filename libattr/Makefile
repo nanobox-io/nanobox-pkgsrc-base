@@ -32,4 +32,5 @@ post-install:
 	cp ${WRKSRC}/libattr/.libs/libattr.so.1.1.0 ${DESTDIR}${PREFIX}/lib
 	ln -sf libattr.so.1.1.0 ${DESTDIR}${PREFIX}/lib/libattr.so.1
 
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

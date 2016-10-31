@@ -69,7 +69,7 @@ CHECK_INTERPRETER_SKIP+=	go/src/clean.rc
 CHECK_INTERPRETER_SKIP+=	go/src/make.rc
 CHECK_INTERPRETER_SKIP+=	go/src/run.rc
 
-BUILD_DEPENDS+=		go14-1.4*:../../base/go14
+BUILD_DEPENDS+=		go-1.4*:../../base/go14
 GOROOT_BOOTSTRAP=	${PREFIX}/go14
 
 .include "../../mk/bsd.prefs.mk"

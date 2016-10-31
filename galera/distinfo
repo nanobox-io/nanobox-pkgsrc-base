@@ -1,6 +1,7 @@
 $NetBSD$
 
-SHA1 (release_25.3.13.tar.gz) = 48450f1639603b14f6c8897d0f1f123d31d28f7b
-RMD160 (release_25.3.13.tar.gz) = e3f947c2814ce1969a1af7e1237e63380e1c4386
-Size (release_25.3.13.tar.gz) = 2950899 bytes
+SHA1 (release_25.3.17.tar.gz) = a178e699bfc1ef59ae31a66731d84c482a008260
+RMD160 (release_25.3.17.tar.gz) = 8a7a6018817b892e3a3ecc135ca953ccb4f4103a
+SHA512 (release_25.3.17.tar.gz) = 60594c4ef990ab8f2541abfd337de6057637d34e37e3b0b7d2463e85f4af025089da7de33f2d6db4a13f53d322d59bdcc89a2643c3bdb03249e6041cfe47bcf8
+Size (release_25.3.17.tar.gz) = 2960146 bytes
 SHA1 (patch-SConstruct) = f132509977be50f2998abc9d5464dc7fa36f216c

@@ -23,7 +23,7 @@ CONFIG_SHELL=		bash
 
 GIT_REPOSITORIES=	pacemaker-${VERSION}
 GIT_REPO.pacemaker-${VERSION}=	git@github.com:ClusterLabs/pacemaker.git
-GIT_TAG=		Pacemaker-${VERSION}
+GIT_TAG.pacemaker-${VERSION}=	Pacemaker-${VERSION}
 
 pre-configure:
 	cd ${WRKSRC}; \

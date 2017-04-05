@@ -19,7 +19,7 @@ USE_LANGUAGES=		# none
 
 GIT_REPOSITORIES=	mongo-tools
 GIT_REPO.mongo-tools=	git@github.com:mongodb/mongo-tools.git
-GIT_TAG=		r${VERSION}
+GIT_TAG.mongo-tools=	r${VERSION}
 
 GO_DOMAIN=		github.com
 GO_USER=		mongodb

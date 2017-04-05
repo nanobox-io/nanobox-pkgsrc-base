@@ -18,9 +18,9 @@ USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/redundis
 
 GIT_REPOSITORIES=	redundis
-GIT_REPO.redundis=		git@github.com:nanopack/redundis.git
+GIT_REPO.redundis=	git@github.com:nanopack/redundis.git
 # GIT_TAG=		${VERSION}
-GIT_TAG=		master
+GIT_BRANCH.redundis=	master
 
 .include "../../base/git/git-package.mk"
 .include "../../base/luvit/buildlink3.mk"

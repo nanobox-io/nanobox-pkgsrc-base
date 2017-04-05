@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		elixir-${VERSION}
-VERSION=		1.3.2
+VERSION=		1.4.0
 PKGNAME=		elixir-${VERSION}
 # PKGREVISION=		1
 CATEGORIES=		base
@@ -15,7 +15,7 @@ LICENSE=		Apache
 
 GIT_REPOSITORIES=	elixir
 GIT_REPO.elixir=	git@github.com:elixir-lang/elixir.git
-GIT_TAG=		v${VERSION}
+GIT_TAG.elixir=		v${VERSION}
 
 BUILD_TARGET=		compile
 

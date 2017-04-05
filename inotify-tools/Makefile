@@ -22,7 +22,7 @@ BUILD_DEPENDS+=         libtool-base>=2.4.2:../../devel/libtool-base
 
 GIT_REPOSITORIES=       inotify-tools
 GIT_REPO.inotify-tools=	git@github.com:rvoicilas/inotify-tools.git
-GIT_TAG=                v${VERSION}
+GIT_TAG.inotify-tools=  v${VERSION}
 
 WRKSRC=			${WRKDIR}/inotify-tools
 

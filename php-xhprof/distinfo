@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-xhprof/xhprof-0.9.4.tgz) = 1dfd36dd6f85accc64060e4b52bf17bc4c85e694
+RMD160 (php-xhprof/xhprof-0.9.4.tgz) = e484c4902f287ef18d9f75dda75a28d73bb8272d
+SHA512 (php-xhprof/xhprof-0.9.4.tgz) = 25de7b69cef9b5b468eba1b4151e53f721c1b1437eb5a63a99da996857b77052513cf13c27d4f9034e8eff558b9bd8941ce8bd7ce824087636f5e000f3a647ff
+Size (php-xhprof/xhprof-0.9.4.tgz) = 842077 bytes

@@ -24,7 +24,7 @@ HAS_CONFIGURE=		yes
 
 GIT_REPOSITORIES=	erlang-${VERSION}
 GIT_REPO.erlang-${VERSION}=	git@github.com:erlang/otp.git
-GIT_TAG=		OTP-${VERSION}
+GIT_TAG.erlang-${VERSION}=	OTP-${VERSION}
 
 # MAKE_JOBS_SAFE=		no
 

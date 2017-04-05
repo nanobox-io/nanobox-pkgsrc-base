@@ -7,6 +7,7 @@ CATEGORIES+=		databases
 COMMENT=		PHP extension for PHP Data Objects (MySQL)
 
 USE_PHP_EXT_PATCHES=	yes
+USE_CWRAPPERS= no
 
 .include "../../mk/bsd.prefs.mk"
 

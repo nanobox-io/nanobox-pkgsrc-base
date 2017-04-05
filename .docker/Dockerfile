@@ -7,7 +7,7 @@ RUN mkdir -p /var/log/gonano
 
 # Install basic things
 RUN apt-get update -qq && \
-    apt-get -y install openssh-server sudo curl ftp build-essential && \
+    apt-get -y install openssh-server sudo curl ftp build-essential vim && \
     apt-get clean all && \
     rm -rf /var/lib/apt/lists/*
 
@@ -32,6 +32,7 @@ RUN echo -n 'vagrant:vagrant' | chpasswd
 RUN mkdir -p /etc/sudoers.d
 RUN install -b -m 0440 /dev/null /etc/sudoers.d/vagrant
 RUN echo 'vagrant ALL=NOPASSWD: ALL' >> /etc/sudoers.d/vagrant
+RUN mkdir /chroot && chown vagrant:vagrant /chroot
 
 # Run runit automatically
 CMD [ "/bin/nanoinit", "/bin/sleep", "365d" ]

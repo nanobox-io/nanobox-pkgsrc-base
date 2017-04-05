@@ -26,7 +26,7 @@ INSTALLATION_DIRS=	${DOCDIR}
 
 GIT_REPOSITORIES=	opcache
 GIT_REPO.opcache=	git@github.com:zendtech/ZendOptimizerPlus.git
-GIT_TAG=		v${PECL_VERSION}
+GIT_TAG.opcache=	v${PECL_VERSION}
 
 WRKSRC=			${WRKDIR}/opcache
 

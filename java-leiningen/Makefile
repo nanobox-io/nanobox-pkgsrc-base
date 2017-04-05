@@ -20,7 +20,7 @@ NO_BUILD=	yes
 
 GIT_REPOSITORIES=	leiningen
 GIT_REPO.leiningen=	git@github.com:technomancy/leiningen.git
-GIT_TAG=		${VERSION}
+GIT_TAG.leiningen=	${VERSION}
 
 WRKSRC=			${WRKDIR}/leiningen
 

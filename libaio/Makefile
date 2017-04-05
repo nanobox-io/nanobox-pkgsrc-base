@@ -17,7 +17,7 @@ BUILD_DEPENDS+=         coreutils>=8.22:../../sysutils/coreutils
 
 GIT_REPOSITORIES=	libaio
 GIT_REPO.libaio=	https://git.fedorahosted.org/git/libaio.git
-GIT_TAG=		libaio-0.3.110-1
+GIT_TAG.libaio=		libaio-0.3.110-1
 
 USE_CONFIGURE=		No
 

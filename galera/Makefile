@@ -4,7 +4,7 @@
 
 DISTNAME=	release_${VERSION}
 PKGNAME=	${DISTNAME:S/release_/galera-/}
-VERSION=	25.3.17
+VERSION=	25.3.20
 CATEGORIES=	databases
 MASTER_SITES=	https://github.com/codership/galera/archive/
 

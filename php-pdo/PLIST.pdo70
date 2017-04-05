@@ -3,4 +3,3 @@ include/php/ext/pdo/php_pdo_driver.h
 include/php/ext/pdo/php_pdo_error.h
 include/php/ext/pdo/php_pdo_int.h
 include/php/ext/pdo/php_pdo.h
-lib/php/20151012/pdo.so

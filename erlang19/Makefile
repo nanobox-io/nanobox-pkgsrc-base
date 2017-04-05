@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		erlang-${VERSION}
-VERSION=		19.0.5
+VERSION=		19.2.1
 PKGNAME=		erlang-${VERSION}
 # PKGREVISION=		1
 CATEGORIES=		base
@@ -24,7 +24,7 @@ HAS_CONFIGURE=		yes
 
 GIT_REPOSITORIES=	erlang-${VERSION}
 GIT_REPO.erlang-${VERSION}=	git@github.com:erlang/otp.git
-GIT_TAG=		OTP-${VERSION}
+GIT_TAG.erlang-${VERSION}=	OTP-${VERSION}
 
 # MAKE_JOBS_SAFE=		no
 

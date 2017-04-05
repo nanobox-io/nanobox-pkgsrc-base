@@ -1,0 +1,5 @@
+bin/2to3
+bin/pydoc
+bin/python
+bin/python2
+bin/smtpd.py

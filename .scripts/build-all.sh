@@ -31,6 +31,26 @@ for package in $(ls /content/pkgsrc/base); do
     continue
   fi
 
+  if [[ "${package}" =~ "cassandra" ]]; then
+    echo "can't build cassandra"
+    continue
+  fi
+
+  if [[ "${package}" =~ "couchbase" ]]; then
+    echo "can't build couchbase"
+    continue
+  fi
+
+  if [[ "${package}" =~ "nginx-passenger" ]]; then
+    echo "can't build nginx-passenger"
+    continue
+  fi
+
+  if [[ "${package}" =~ "riak" ]]; then
+    echo "can't build riak"
+    continue
+  fi
+
   if [[ "${package}" =~ "kaffe" ]]; then
     echo "don't build kaffe"
     continue

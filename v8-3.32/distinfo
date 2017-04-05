@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.12 2014/10/05 11:12:29 heidnes Exp $
+
+SHA1 (v8-3.32.7.tar.bz2) = d256900bc9125e4a109a23f53b668d225dc37c27
+RMD160 (v8-3.32.7.tar.bz2) = ecc13f6bdaf424846b3d1eb61013df824ba72df2
+SHA512 (v8-3.32.7.tar.bz2) = ec29182e8df0ded0178d80ff4feff91535b262e43b0325fba1b23ff3cb1ad28ffc5dae8cbb31c2ef018334a1076ad6366383e9a7dd402120d3c3d6b000cf75bb
+Size (v8-3.32.7.tar.bz2) = 54516735 bytes
+SHA1 (patch-Makefile) = 34f3e15418fdadaa14d8b8e0daaf248b3b4f61cc
+SHA1 (patch-Makefile.nacl) = 5a20988305722b97f07c10fcf2ea35af1886e924
+SHA1 (patch-src_base_logging.cc) = ce5a8992bca9cb75ba825ba48f9506134db16554
+SHA1 (patch-src_base_platform_platform-posix.cc) = 5f09f837a768100931801ed2f47314d78d118360
+SHA1 (patch-src_base_platform_platform-solaris.cc) = 07359eb3811367dcd5b6e004272c5c2de9ea61de
+SHA1 (patch-src_base_platform_semaphore.cc) = b898a2cf757cd3e1034435b0aec3cee428c60c97

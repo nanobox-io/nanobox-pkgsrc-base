@@ -33,12 +33,12 @@ SUBST_MESSAGE.paths=	Fixing paths.
 DISTINFO_FILE=          ${.CURDIR}/distinfo-php53
 .endif
 
-.if ${_PHP_VERSION} == "70"
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/cyrus-sasl/buildlink3.mk"
-# .include "../../base/php-json/buildlink3.mk"
+.include "../../base/php-json/buildlink3.mk"
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

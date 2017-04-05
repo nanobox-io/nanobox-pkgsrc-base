@@ -1,0 +1,14 @@
+$NetBSD$
+
+SHA1 (couchbase-4.6.0.tar.gz) = 89d033a4d44a9455ef7a2b0540f63dc83acbe10f
+RMD160 (couchbase-4.6.0.tar.gz) = 790f5e481fab3a411ad625d57154b631b3bfe938
+SHA512 (couchbase-4.6.0.tar.gz) = 23892e581b140c6a7cd29e872d357534a84351473a85cdeb1d3bc463e61b7bf7f5544dbbd0bf536671129b069b1076535b6c643bf6d0a009a2f1cc4c53be137e
+Size (couchbase-4.6.0.tar.gz) = 84573265 bytes
+SHA1 (patch-Makefile) = 113195adee957fe6b59074e886d889a2aab4b5f9
+SHA1 (patch-couchdb_src_couch__dcp_src_couch__dcp__client.erl) = e5269137291269b531e63e187ad1bc5d4c648509
+SHA1 (patch-couchdb_src_couch__set__view_src_couch__set__view__group.erl) = cad84bd70576e543daf53fb2d19842d40f139d95
+SHA1 (patch-couchdb_src_couch__set__view_src_mapreduce__view.erl) = 205c9e05b21dbdc37dbdb1e2215e444159f21390
+SHA1 (patch-geocouch_vtree_src_vtree__cleanup.erl) = 06bdac0e9eda918d40647344fd9594d84656ddce
+SHA1 (patch-geocouch_vtree_src_vtree__delete.erl) = 3c48fd20d4bb53e6b8222c538c55c5bcedd5480a
+SHA1 (patch-geocouch_vtree_src_vtree__insert.erl) = aa5d9f01dda6390d13a4b47147f0630d81fdfec2
+SHA1 (patch-geocouchbase_gc-couchbase_src_spatial__view.erl) = bb8793b5ac7a6a6b089bfdff4315781ae344d498

@@ -5,10 +5,10 @@
 
 MODNAME=		redis
 PECL_VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
-PECL_DISTNAME=		phpredis-${PECL_VERSION}
-DISTNAME=		phpredis
+#PECL_DISTNAME=		phpredis-${PECL_VERSION}
+#DISTNAME=		phpredis
 CATEGORIES=		databases
-MASTER_SITES=		http://download.github.com/
+#MASTER_SITES=		http://download.github.com/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/nicolasff/phpredis
@@ -17,17 +17,17 @@ LICENSE=		php
 
 .include "../../base/php/extension_versions.mk"
 
-GIT_REPOSITORIES=	php-redis
-GIT_REPO.php-redis=	git://github.com/nicolasff/phpredis.git
-.if ${_PHP_VERSION} == "70"
-GIT_TAG=		php7
-.else
-GIT_TAG=		${PECL_VERSION}
-.endif
+#GIT_REPOSITORIES=	php-redis
+#GIT_REPO.php-redis=	git://github.com/nicolasff/phpredis.git
+#.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+#GIT_BRANCH.php-redis=	php7
+#.else
+#GIT_TAG.php-redis=	${PECL_VERSION}
+#.endif
 
-WRKSRC=			${WRKDIR}/php-redis
+WRKSRC=			${WRKDIR}/${MODNAME}-${PECL_VERSION}
 
-.include "../../base/git/git-package.mk"
+#.include "../../base/git/git-package.mk"
 .include "../../base/php-session/buildlink3.mk"
 .include "../../base/php-igbinary/buildlink3.mk"
 .include "../../base/php/ext.mk"

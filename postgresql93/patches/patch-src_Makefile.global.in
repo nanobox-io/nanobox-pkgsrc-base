@@ -1,23 +1,8 @@
-$NetBSD$
+$NetBSD: patch-src_Makefile.global.in,v 1.1 2013/10/04 18:23:40 joerg Exp $
 
---- src/Makefile.global.in.orig	2016-08-08 20:31:43.000000000 +0000
+--- src/Makefile.global.in.orig	2013-09-02 20:53:17.000000000 +0000
 +++ src/Makefile.global.in
-@@ -392,11 +392,12 @@ endif
- ifdef PGXS
- # some contribs assumes headers and libs are in the source tree...
- libpq_srcdir = $(includedir)
--libpq_builddir = $(libdir)
-+#libpq_builddir = $(libdir)
- else
- libpq_srcdir = $(top_srcdir)/src/interfaces/libpq
--libpq_builddir = $(top_builddir)/src/interfaces/libpq
-+#libpq_builddir = $(top_builddir)/src/interfaces/libpq
- endif
-+libpq_builddir = $(top_builddir)/src/interfaces/libpq
- 
- # This macro is for use by libraries linking to libpq.  (Because libpgport
- # isn't created with the same link flags as libpq, it can't be used.)
-@@ -509,6 +510,11 @@ ifeq ($(PORTNAME),win32)
+@@ -508,6 +508,11 @@ ifeq ($(PORTNAME),win32)
  LIBS += -lws2_32 -lshfolder
  endif
  

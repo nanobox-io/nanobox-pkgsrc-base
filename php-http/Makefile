@@ -31,8 +31,10 @@ pre-configure:
 
 .include "../../base/php/extension_versions.mk"
 
-.if ${_PHP_VERSION} == "70"
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+PATCHDIR=		${.CURDIR}/patches70
+.include "../../textproc/icu/buildlink3.mk"
 .endif
 
 .include "../../base/php/ext.mk"

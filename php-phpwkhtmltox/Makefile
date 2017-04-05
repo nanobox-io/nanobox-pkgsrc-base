@@ -13,7 +13,7 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 
 GIT_REPOSITORIES=	php-wkhtmltox
 GIT_REPO.php-wkhtmltox=	git@github.com:mreiferson/php-wkhtmltox.git
-GIT_TAG=		master
+GIT_BRANCH.php-wkhtmltox=	master
 
 CPPFLAGS+=  		-I${WRKDIR}/${DISTNAME}
 

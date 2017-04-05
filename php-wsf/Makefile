@@ -17,7 +17,7 @@ LICENSE=		php
 
 GIT_REPOSITORIES=	wsf
 GIT_REPO.wsf=		git://github.com/notxarb/wsf-php.git
-GIT_TAG=		master
+GIT_BRANCH.wsf=		master
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libxml-dir=${BUILDLINK_PREFIX.libxml2}

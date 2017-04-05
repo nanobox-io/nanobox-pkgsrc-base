@@ -23,7 +23,7 @@ CONFIG_SHELL=		bash
 
 GIT_REPOSITORIES=	corosync-${VERSION}
 GIT_REPO.corosync-${VERSION}=	git@github.com:ClusterLabs/corosync.git
-GIT_TAG=		v${VERSION}
+GIT_TAG.corosync-${VERSION}=	v${VERSION}
 
 pre-configure:
 	which groff; \

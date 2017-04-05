@@ -6,6 +6,7 @@
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 VERSION=		${PHP_BASE_VERS}
+#PKGREVISION=		1
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/

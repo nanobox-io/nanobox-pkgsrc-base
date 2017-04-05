@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- Makefile.orig	2017-01-30 21:16:19.000000000 +0000
++++ Makefile
+@@ -10,9 +10,9 @@
+ # dependencies in this directory, so you may pre-build dependencies
+ # that you wish to ship with your compiled Couchbase into this
+ # directory.
+-PREFIX=$(MAKEDIR)\\install
++PREFIX?=$(MAKEDIR)\\install
+ # The makefile type to generate
+-MAKETYPE=NMake Makefiles
++MAKETYPE?=NMake Makefiles
+ # The command used to delete directories
+ RM=rmdir
+ # Options passed to the command to nuke directories

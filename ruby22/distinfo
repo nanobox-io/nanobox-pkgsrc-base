@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.1.2.1 2015/04/26 08:47:12 tron Exp $
 
-SHA1 (ruby-2.2.5.tar.bz2) = f78473fe60a632b778599374ae64612592c2c9c1
-RMD160 (ruby-2.2.5.tar.bz2) = b690115c7c4e6a70c560b72c2bafa62ae8f37957
-SHA512 (ruby-2.2.5.tar.bz2) = d3224814361c297bc36646c2e40f63c461ccf5a77fea5a3acdcb2c7ad1705bb229ac6abbd7ad1ae61cbe0fefd7a008c6102568d11366ad3107179302cd3e734e
-Size (ruby-2.2.5.tar.bz2) = 13350551 bytes
+SHA1 (ruby-2.2.6.tar.bz2) = 67b15fcc394bb1ffb5a7e926dcd6222d8e988188
+RMD160 (ruby-2.2.6.tar.bz2) = f157ece8e73ab9bbc49badb6a5fbb16815ac2af7
+SHA512 (ruby-2.2.6.tar.bz2) = 7a93f72d236521ac28c8a0bc0c73cf805797a8813d22e02f42c5fc05dd39f6e422817272e0db6a24c245f6f97ad4b2b412a9a47ac50156ab186df596918a5f34
+Size (ruby-2.2.6.tar.bz2) = 13378616 bytes
 SHA1 (patch-configure) = 02b3bbfcea5ccfb4be7684b50643c4378eaaad96
 SHA1 (patch-eval.c) = a1e86d4ed1729398393e83d519e991259c6163de
 SHA1 (patch-eval__error.c) = cc313587bb24e16e4702f784b30e64618ae3f5a4

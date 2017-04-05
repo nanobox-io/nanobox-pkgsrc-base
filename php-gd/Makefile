@@ -5,6 +5,7 @@
 MODNAME=		gd
 CATEGORIES+=		graphics
 COMMENT=		PHP extension for GD graphics library
+PKGREVISION=		1
 
 CONFLICTS=		php-gd-[0-9]*
 
@@ -32,5 +33,6 @@ SUBST_MESSAGE.paths=	Fixing paths.
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

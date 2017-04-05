@@ -12,7 +12,7 @@
 #	The PHP version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 53 54 55 56 70
+#	Possible: 53 54 55 56 70 71
 #	Default: 54
 #
 # === Infrastructure variables ===
@@ -29,15 +29,15 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 53 54 55 56 70
-#	Default: 54 53 55 56 70
+#	Possible: 53 54 55 56 70 71
+#	Default: 54 53 55 56 70 71
 #
 # === Variables defined by this file ===
 #
 # PKG_PHP_VERSION
 #	The selected PHP version.
 #
-#	Possible: 53 54 55 56 70
+#	Possible: 53 54 55 56 70 71
 #	Default: ${PHP_VERSION_DEFAULT}
 #
 # PHP_BASE_VERS
@@ -80,11 +80,12 @@ _SYS_VARS.php=			PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 PHP53_VERSION=			5.3.29
 PHP54_VERSION=			5.4.45
 PHP55_VERSION=			5.5.38
-PHP56_VERSION=			5.6.27
-PHP70_VERSION=			7.0.12
+PHP56_VERSION=			5.6.30
+PHP70_VERSION=			7.0.17
+PHP71_VERSION=                  7.1.3
 
-PHP_VERSION_DEFAULT?=		55
-PHP_VERSIONS_ACCEPTED?=		54 53 55 56 70
+PHP_VERSION_DEFAULT?=		56
+PHP_VERSIONS_ACCEPTED?=		54 53 55 56 70 71
 
 # transform the list into individual variables
 .for pv in ${PHP_VERSIONS_ACCEPTED}
@@ -92,7 +93,10 @@ _PHP_VERSION_${pv}_OK=		yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/lib/php/20151012)
+.if exists(${LOCALBASE}/lib/php/20160303)
+_PHP_VERSION_71_INSTALLED=      yes
+_PHP_INSTALLED=                 yes
+.elif exists(${LOCALBASE}/lib/php/20151012)
 _PHP_VERSION_70_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .elif exists(${LOCALBASE}/lib/php/20131226)
@@ -152,7 +156,7 @@ PKG_PHP_VERSION:=		${_PHP_VERSION:C/\.[0-9]//}
 PKG_PHP:=			PHP${_PHP_VERSION:C/([0-9])([0-9])/\1.\2/}
 
 # currently only 7.0 is not a PHP 5.x packages.
-.if ${_PHP_VERSION} == "70"
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
 PKG_PHP_MAJOR_VERS:=		7
 .else
 PKG_PHP_MAJOR_VERS:=		5
@@ -200,6 +204,11 @@ PHPPKGSRCDIR=			../../base/php70
 PHP_BASE_VERS=			${PHP70_VERSION}
 PHP_NEXT_VERS=			7.1
 PHP_PKG_PREFIX=			php70
+.elif ${_PHP_VERSION} == "71"
+PHPPKGSRCDIR=                   ../../base/php71
+PHP_BASE_VERS=                  ${PHP71_VERSION}
+PHP_NEXT_VERS=                  7.2
+PHP_PKG_PREFIX=                 php71
 .else
 # force an error
 PKG_SKIP_REASON+=		"${PKG_PHP} is not a valid package"

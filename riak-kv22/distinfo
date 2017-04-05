@@ -1,0 +1,25 @@
+$NetBSD: distinfo,v 1.24 2015/07/14 19:44:09 fhajny Exp $
+
+SHA1 (basho/riak-2.2.0.tar.gz) = 027aebf38bdcdfa15938c064c896435d3e6f815c
+RMD160 (basho/riak-2.2.0.tar.gz) = a8ce472c32f14945bcd22f1629920921c8de9bce
+SHA512 (basho/riak-2.2.0.tar.gz) = f1d2b201b21dedf3142722e2917a7b921a1bb2e23d71b2163f1afc729061eda1b9fbc94095928ed0e3469fbf345ce01e6e930c2b8351811d17ae39a10ea6cb81
+Size (basho/riak-2.2.0.tar.gz) = 20926448 bytes
+SHA1 (basho/solr-4.10.4-yz-2.tgz) = edefefa63a22de7e61b5854c5ce6e15d83be6040
+RMD160 (basho/solr-4.10.4-yz-2.tgz) = 6bf54045314de6b8c5dc9af05cb32f57a2bd5edf
+SHA512 (basho/solr-4.10.4-yz-2.tgz) = 215196d0f872daffdc73fbb6187f0627e4013e077cea5f3de6b365930fada1d704697a11cf3d4d487e0fbce4e18c168053fdced4629896854d3403c4bda213ab
+Size (basho/solr-4.10.4-yz-2.tgz) = 164689366 bytes
+SHA1 (basho/yokozuna-3.jar) = 8a1c98342258bdfa85cdeff5a13573f12e1590e4
+RMD160 (basho/yokozuna-3.jar) = edd77a888b1ef31a33745d87b23415c90e476b1b
+SHA512 (basho/yokozuna-3.jar) = d00720af7962e53ede000c2ea79b7342ace7cc233a11ac0c7ee1da8892db352d30aaf9ebf7f394f38a198140021880d67513ce836888a6a9fad751fbcb5acf2c
+Size (basho/yokozuna-3.jar) = 11261 bytes
+SHA1 (basho/yz_monitor-1.jar) = 40a8d9a79db9036aca73a0ddd61a79d604d542ce
+RMD160 (basho/yz_monitor-1.jar) = 27681f3be21c51aaae40d15d975bd3bced5fd3f8
+SHA512 (basho/yz_monitor-1.jar) = 0732bd5d7119d1eff325e99028a888b4f339485a214999c84ca50f8612524022095a9be89854e3d33f00e7068e25ce6df5fcc2098b57c81854f3de9aca18edb6
+Size (basho/yz_monitor-1.jar) = 2661 bytes
+SHA1 (patch-deps__erlang_js__c_src__Makefile) = a49481f9cb0ae9130a96102b3d540a828b8ec5f7
+SHA1 (patch-deps_cuttlefish_rebar.config) = 23a0b960b88277a9370eefe5a284b7aa8bd71f42
+SHA1 (patch-deps_eleveldb_c__src_build__deps.sh) = 8878a0e99d89f084b0cf8860743f4a39a996c47f
+SHA1 (patch-deps_node__package_priv_base_env.sh) = ee305e631180a50a1192a10e5dd4bf185c2e96c8
+SHA1 (patch-deps_node__package_priv_base_runner) = 0fa3cdbab932ba7033f56bb4260f56208ecb4741
+SHA1 (patch-deps_yokozuna_tools_grab-solr.sh) = d90115d3522238cd6a6774ff221fad009d17ebbb
+SHA1 (patch-rel__vars.config) = fe328bb4c6202ba7d36c092663622c56cbda1a7f

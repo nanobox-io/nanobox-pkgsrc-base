@@ -5,7 +5,7 @@
 .if !defined(GO_APP_MK)
 GO_APP_MK=	#defined
 
-BUILD_DEPENDS+=         go>=1.3.1:../../base/go17
+BUILD_DEPENDS+=         go>=1.3.1:../../base/go18
 BUILD_DEPENDS+=		mercurial>=3.3.2:../../devel/mercurial
 BUILD_DEPENDS+=		bzr>=2.5.1:../../devel/bzr
 BUILD_DEPENDS+=         git-base>=1.6.4:../../devel/git-base

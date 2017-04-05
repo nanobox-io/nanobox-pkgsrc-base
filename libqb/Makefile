@@ -22,7 +22,7 @@ CONFIG_SHELL=		bash
 
 GIT_REPOSITORIES=	libqb-${VERSION}
 GIT_REPO.libqb-${VERSION}=	git@github.com:ClusterLabs/libqb.git
-GIT_TAG=		v${VERSION}
+GIT_TAG.libqb-${VERSION}=	v${VERSION}
 
 pre-configure:
 	cd ${WRKSRC}; \

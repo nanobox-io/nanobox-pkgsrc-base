@@ -21,7 +21,7 @@ WRKSRC=			${WRKDIR}/rebar3
 
 GIT_REPOSITORIES=	rebar3
 GIT_REPO.rebar3=	git@github.com:erlang/rebar3.git
-GIT_TAG=		${VERSION}
+GIT_TAG.rebar3=		${VERSION}
 #GIT_TAG=		master
 
 SUBST_CLASSES+=		shebang

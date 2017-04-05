@@ -34,7 +34,9 @@ PKG_SKIP_REASON+=	"Operating system not supported"
   SYSARCH= x86
 .endif
 
-.if exists(${LOCALBASE}/lib/php/20151012)
+.if exists(${LOCALBASE}/lib/php/20160303)
+PHPAPI=			20160303
+.elif exists(${LOCALBASE}/lib/php/20151012)
 PHPAPI=			20151012
 .elif exists(${LOCALBASE}/lib/php/20131226)
 PHPAPI=			20131226

@@ -44,6 +44,7 @@ extra_packages=(
 # 0) clean start
 sudo rm -rf /data
 sudo rm -rf /var/tmp/${project}-bootstrap
+sudo rm -rf /var/tmp/pkgsrc-build-base
 # sudo rm -rf /content/packages/pkgsrc/data/Linux
 
 # 1) install build-essential

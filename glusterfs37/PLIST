@@ -231,7 +231,6 @@ var/lib/glusterd/hooks/1/add-brick/post/disabled-quota-root-xattr-heal.sh
 var/lib/glusterd/hooks/1/add-brick/pre/S28Quota-enable-root-xattr-heal.sh
 var/lib/glusterd/hooks/1/delete/post/S57glusterfind-delete-post
 var/lib/glusterd/hooks/1/gsync-create/post/S56glusterd-geo-rep-create-post.sh
-var/lib/glusterd/hooks/1/reset/post/S31ganesha-reset.sh
 var/lib/glusterd/hooks/1/set/post/S30samba-set.sh
 var/lib/glusterd/hooks/1/set/post/S32gluster_enable_shared_storage.sh
 var/lib/glusterd/hooks/1/start/post/S29CTDBsetup.sh

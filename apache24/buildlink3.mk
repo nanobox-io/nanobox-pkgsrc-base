@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/02/12 23:18:43 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2016/03/05 11:27:57 jperkin Exp $
 
 BUILDLINK_TREE+=	apache
 
@@ -6,8 +6,8 @@ BUILDLINK_TREE+=	apache
 APACHE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.4.7<2.5
-BUILDLINK_ABI_DEPENDS.apache+=	apache>=2.4.7nb1
-BUILDLINK_PKGSRCDIR.apache?=	../../base/apache24
+BUILDLINK_ABI_DEPENDS.apache+=	apache>=2.4.18nb1
+BUILDLINK_PKGSRCDIR.apache?=	../../www/apache24
 BUILDLINK_DEPMETHOD.apache?=	build
 .if defined(APACHE_MODULE)
 BUILDLINK_DEPMETHOD.apache+=	full
@@ -27,8 +27,8 @@ APXS?=		${BUILDLINK_PREFIX.apache}/bin/apxs
 CONFIGURE_ARGS+=	--with-apxs2=${APXS:Q}
 .endif
 
-.include "../../base/apr/buildlink3.mk"
-.include "../../base/apr-util/buildlink3.mk"
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
 .endif # APACHE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-apache

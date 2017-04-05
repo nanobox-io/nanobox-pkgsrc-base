@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-src_interfaces_ecpg_pgtypeslib_interval.c,v 1.2 2016/05/23 14:27:35 adam Exp $
 
 --- src/interfaces/ecpg/pgtypeslib/interval.c.orig	2016-05-09 20:50:23.000000000 +0000
 +++ src/interfaces/ecpg/pgtypeslib/interval.c

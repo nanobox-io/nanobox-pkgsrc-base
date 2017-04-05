@@ -17,7 +17,7 @@ CONFIG_SHELL=		bash
 
 GIT_REPOSITORIES=	crmsh-${VERSION}
 GIT_REPO.crmsh-${VERSION}=	git@github.com:ClusterLabs/crmsh.git
-GIT_TAG=		${VERSION}
+GIT_TAG.crmsh-${VERSION}=	${VERSION}
 
 pre-configure:
 	cd ${WRKSRC}; \

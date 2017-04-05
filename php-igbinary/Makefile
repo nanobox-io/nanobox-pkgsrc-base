@@ -26,17 +26,19 @@ INSTALLATION_DIRS+=	include/php/ext/igbinary
 
 .include "../../base/php/extension_versions.mk"
 
-.if ${_PHP_VERSION} == "70"
-GIT_REPOSITORIES=	igbinary-${PECL_VERSION}
-GIT_REPO.igbinary-${PECL_VERSION}=	git://github.com/igbinary/igbinary.git
-GIT_TAG=		php7-dev-playground2
-
-.include "../../base/git/git-package.mk"
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+# GIT_REPOSITORIES=	igbinary-${PECL_VERSION}
+# GIT_REPO.igbinary-${PECL_VERSION}=	git://github.com/igbinary/igbinary.git
+# GIT_BRANCH.igbinary-${PECL_VERSION}=		php7-dev-playground2
+#
+# .include "../../base/git/git-package.mk"
+INCLUDE_DIR=	src/php7
+.else
+INCLUDE_DIR=	src/php5
 .endif
-
 post-install:
 .for inc in ${IGBINARY_INCLUDES}
-	${INSTALL_DATA} ${WRKSRC}/${inc} ${DESTDIR}${PREFIX}/include/php/ext/igbinary/${inc}
+	${INSTALL_DATA} ${WRKSRC}/${INCLUDE_DIR}/${inc} ${DESTDIR}${PREFIX}/include/php/ext/igbinary/${inc}
 .endfor
 
 .include "../../base/php-session/buildlink3.mk"

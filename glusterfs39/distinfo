@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (glusterfs-3.9.1.tar.gz) = 2c0dfd4009ef52e85cdd681c04f9f088f7c01002
+RMD160 (glusterfs-3.9.1.tar.gz) = ec73a643ae10c012b2733443a198ea691604cb09
+SHA512 (glusterfs-3.9.1.tar.gz) = ffd786567be73b6b0c3569dc24769cb2bc1aed17675747d1192f96da755acde63d8f2ab8bbad6f1ba687a8484d0a9b7dd71fe0cce7fab0fa7b8b0dae9576a1cc
+Size (glusterfs-3.9.1.tar.gz) = 8810650 bytes
+SHA1 (patch-extras_Makefile.am) = cc63cd3d6e793d3f3b1ac9155ca21468b34b5cee
+SHA1 (patch-extras_Makefile.in) = a575c0407bffbdf6172e1f689deb2e988fe4ba98

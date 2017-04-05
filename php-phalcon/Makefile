@@ -18,9 +18,9 @@ INSTALLATION_DIRS=	${DOCDIR}
 GIT_REPOSITORIES=	phalcon
 GIT_REPO.phalcon=	git://github.com/phalcon/cphalcon.git
 .if ${_PHP_VERSION} == "53" || ${_PHP_VERSION} == "54"
-GIT_TAG=		phalcon-v${PECL_VERSION}
+GIT_TAG.phalcon=	phalcon-v${PECL_VERSION}
 .else
-GIT_TAG=		v${PECL_VERSION}
+GIT_TAG.phalcon=	v${PECL_VERSION}
 .endif
 
 WRKSRC=			${WRKDIR}/phalcon/ext
@@ -29,7 +29,7 @@ USE_LANGUAGES+=		c c++
 
 USE_TOOLS+=		gmake
 
-.if ${_PHP_VERSION} == "70"
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71" 
 EXTENSIONS=		phar json filter hash gmp ctype pdo pdo_sqlite simplexml tokenizer xmlwriter dom zip mbstring xml
 
 .for extension in ${EXTENSIONS}
@@ -53,7 +53,7 @@ pre-configure:
 	sudo chown vagrant ${PREFIX}/etc/php/php.ini
 	for i in ${EXTENSIONS}; do echo "extension=$${i}.so" >> ${PREFIX}/etc/php/php.ini; done
 	cd ${PHALCONDIR}; composer install
-	cd ${PHALCONDIR}; chmod 755 vendor/phalcon/zephir/parser/parser/build_linux.sh
+	cd ${PHALCONDIR}; composer require "phalcon/zephir:dev-master"
 	cd ${PHALCONDIR}; vendor/bin/zephir generate -backend=ZendEngine3
 
 .endif

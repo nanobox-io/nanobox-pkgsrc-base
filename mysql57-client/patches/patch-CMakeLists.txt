@@ -1,0 +1,29 @@
+$NetBSD$
+
+--- CMakeLists.txt.orig	2017-01-25 07:59:13.000000000 +0000
++++ CMakeLists.txt
+@@ -592,7 +592,6 @@ ADD_SUBDIRECTORY(vio)
+ ADD_SUBDIRECTORY(regex)
+ ADD_SUBDIRECTORY(mysys)
+ ADD_SUBDIRECTORY(mysys_ssl)
+-ADD_SUBDIRECTORY(libmysql)
+ ADD_SUBDIRECTORY(libbinlogevents)
+ ADD_SUBDIRECTORY(libbinlogstandalone)
+ IF(WITH_WSREP)
+@@ -623,12 +622,12 @@ ADD_SUBDIRECTORY(client)
+ ADD_SUBDIRECTORY(sql/share)
+ ADD_SUBDIRECTORY(libservices)
+ 
+-IF(UNIX)
++IF(WITHOUT_SERVER)
++  ADD_SUBDIRECTORY(libmysql)
+   ADD_SUBDIRECTORY(man)
+-ENDIF()
+-
+-IF(NOT WITHOUT_SERVER)
+   ADD_SUBDIRECTORY(testclients)
++ELSE()
++  ADD_SUBDIRECTORY(libmysql)
+   ADD_SUBDIRECTORY(sql)
+   OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
+   IF(WITH_EMBEDDED_SERVER) 

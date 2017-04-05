@@ -1,0 +1,75 @@
+$NetBSD$
+
+--- Makefile.orig	2015-01-19 21:34:45.000000000 +0000
++++ Makefile
+@@ -379,8 +379,44 @@ $(addsuffix .check, $(NACL_ARCHES)): \
+                 $(addprefix $$(basename $$@).,$(MODES)).check
+ 
+ native.check: native
+-	@tools/run-tests.py $(TESTJOBS) --outdir=$(OUTDIR)/native \
+-	    --arch-and-mode=. $(TESTFLAGS)
++	@tools/run-tests.py $(TESTJOBS) \
++		--arch-and-mode=native.release \
++		--no-presubmit \
++		--quickcheck \
++		--report \
++		--progress=verbose \
++		$(TESTFLAGS)
++
++# These tests currently fail on NetBSD
++FAILING_TESTS= \
++	mjsunit/d8-os						\
++	mjsunit/math-pow					\
++	base-unittests/ThreadLocalStorageTest.DoTest		\
++	cctest/test-api/Threading1				\
++	cctest/test-api/Threading2				\
++	cctest/test-api/Threading3				\
++	cctest/test-platform/StackAlignment			\
++	cctest/test-lockers/MultithreadedParallelIsolates	\
++	cctest/test-mark-compact/MarkCompactCollector		\
++	cctest/test-lockers/SeparateIsolatesLocksNonexclusive	\
++	base-unittests/ConditionVariable.MultipleThreadsWithSharedSeparateConditionVariables	\
++	cctest/test-lockers/LockerUnlocker			\
++	cctest/test-lockers/LockTwiceAndUnlock			\
++	cctest/test-lockers/LockUnlockLockMultithreaded		\
++	cctest/test-lockers/SeparateIsolatesLocksNonexclusive	\
++	cctest/test-lockers/LockerUnlocker			\
++	cctest/test-lockers/LockUnlockLockDefaultIsolateMultithreaded	\
++	cctest/test-lockers/ExtensionsRegistration		\
++	intl/collator/default-locale
++
++failing-tests:
++	tools/run-tests.py --arch-and-mode=native.release \
++		--no-presubmit \
++		--quickcheck \
++		--report \
++		--progress=verbose \
++		$(TESTFLAGS) \
++		${FAILING_TESTS}
+ 
+ SUPERFASTTESTMODES = ia32.release
+ FASTTESTMODES = $(SUPERFASTTESTMODES),x64.release,ia32.optdebug,x64.optdebug,arm.optdebug,arm64.release
+@@ -429,9 +465,9 @@ $(OUT_MAKEFILES): $(GYPFILES) $(ENVFILE)
+ 	$(eval CXX_TARGET_ARCH:=$(subst aarch64,arm64,$(CXX_TARGET_ARCH)))
+ 	$(eval CXX_TARGET_ARCH:=$(subst x86_64,x64,$(CXX_TARGET_ARCH)))
+ 	$(eval V8_TARGET_ARCH:=$(subst .,,$(suffix $(basename $@))))
+-	PYTHONPATH="$(shell pwd)/tools/generate_shim_headers:$(shell pwd)/build:$(PYTHONPATH):$(shell pwd)/build/gyp/pylib:$(PYTHONPATH)" \
++	PYTHONPATH="$(shell pwd)/tools/generate_shim_headers:$(shell pwd)/build:$(PYTHONPATH) \
+ 	GYP_GENERATORS=make \
+-	build/gyp/gyp --generator-output="$(OUTDIR)" build/all.gyp \
++	gyp --generator-output="$(OUTDIR)" build/all.gyp \
+ 	              -Ibuild/standalone.gypi --depth=. \
+ 	              -Dv8_target_arch=$(V8_TARGET_ARCH) \
+ 	              $(if $(findstring $(CXX_TARGET_ARCH),$(V8_TARGET_ARCH)), \
+@@ -440,9 +476,9 @@ $(OUT_MAKEFILES): $(GYPFILES) $(ENVFILE)
+ 	              -S$(suffix $(basename $@))$(suffix $@) $(GYPFLAGS)
+ 
+ $(OUTDIR)/Makefile.native: $(GYPFILES) $(ENVFILE)
+-	PYTHONPATH="$(shell pwd)/tools/generate_shim_headers:$(shell pwd)/build:$(PYTHONPATH):$(shell pwd)/build/gyp/pylib:$(PYTHONPATH)" \
++	PYTHONPATH="$(shell pwd)/tools/generate_shim_headers:$(shell pwd)/build:$(PYTHONPATH):$(PYTHONPATH)" \
+ 	GYP_GENERATORS=make \
+-	build/gyp/gyp --generator-output="$(OUTDIR)" build/all.gyp \
++	gyp --generator-output="$(OUTDIR)" build/all.gyp \
+ 	              -Ibuild/standalone.gypi --depth=. -S.native $(GYPFLAGS)
+ 
+ must-set-ANDROID_NDK_ROOT_OR_TOOLCHAIN:

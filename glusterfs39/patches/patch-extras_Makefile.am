@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- extras/Makefile.am.orig	2017-01-17 18:47:06.627255758 +0000
++++ extras/Makefile.am
+@@ -4,7 +4,7 @@ addonexec_SCRIPTS = peer_add_secret_pub
+ EditorModedir = $(docdir)
+ EditorMode_DATA = glusterfs-mode.el glusterfs.vim
+ 
+-SUBDIRS = init.d systemd benchmarking hook-scripts $(OCF_SUBDIR) LinuxRPM \
++SUBDIRS = benchmarking hook-scripts $(OCF_SUBDIR) LinuxRPM \
+           $(GEOREP_EXTRAS_SUBDIR) ganesha snap_scheduler firewalld cliutils
+ 
+ confdir = $(sysconfdir)/glusterfs

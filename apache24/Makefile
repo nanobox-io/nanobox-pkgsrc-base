@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.26 2014/03/18 20:09:08 adam Exp $
-# -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
-#  # vim: ts=8 sw=8 ft=make noet
+# $NetBSD: Makefile,v 1.45.2.1 2016/07/20 04:59:21 spz Exp $
+#
+# When updating this package, make sure that no strings like
+# "PR 12345" are in the commit message. Upstream likes
+# to reference their own PRs this way, but this ends up
+# in NetBSD GNATS.
 
-DISTNAME=		httpd-2.4.17
-PKGNAME=		${DISTNAME:S/httpd/apache/}
-CATEGORIES=		www
-MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
-			http://archive.apache.org/dist/httpd/ \
-			http://archive.eu.apache.org/dist/httpd/
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	httpd-2.4.25
+PKGNAME=	${DISTNAME:S/httpd/apache/}
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
+		http://archive.apache.org/dist/httpd/ \
+		http://archive.eu.apache.org/dist/httpd/
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		ryoon@NetBSD.org
-HOMEPAGE=		http://httpd.apache.org/
-COMMENT=		Apache HTTP (Web) server, version 2.4
-LICENSE=		apache-2.0
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://httpd.apache.org/
+COMMENT=	Apache HTTP (Web) server, version 2.4
+LICENSE=	apache-2.0
 
-BUILD_DEFS+=		IPV6_READY
-BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
+BUILD_DEFS+=	IPV6_READY
+BUILD_DEFS+=	VARBASE
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pax perl pkg-config
@@ -30,9 +32,8 @@ CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr-util}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
-CONFIGURE_ENV+=		CFLAGS=${APACHE_CUSTOM_CFLAGS:M*:Q}
 
-CFLAGS.SunOS+=		-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__
 
 .include "../../mk/bsd.prefs.mk"
 BUILDLINK_API_DEPENDS.apr+=	apr>=1.5.0
@@ -47,28 +48,24 @@ BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.5.3
 
 CONFIGURE_ARGS+=	--disable-xml2enc
 CONFIGURE_ARGS+=	--disable-proxy-html
+CONFIGURE_ARGS+=	--enable-proxy-fdpass
 
 DFLT_APACHE_MODULES+=	all
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 .include "options.mk"
 
-FIND_PREFIX:=	APRDIR=apr
-.include "../../mk/find-prefix.mk"
-
 # LDAP support
 PLIST_VARS+=		ldap
-.if exists(${APRDIR}/lib/apr-util-1/apr_ldap.la)
+.if exists(${LOCALBASE}/lib/apr-util-1/apr_ldap.la)
 DFLT_APACHE_MODULES+=	ldap authnz_ldap
 PLIST.ldap=		yes
 .endif
 
-APACHE_USER?=		www
-APACHE_GROUP?=		www
-PKG_GROUPS=		${APACHE_GROUP}
-PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
-PKG_GROUPS_VARS=	APACHE_GROUP
-PKG_USERS_VARS=		APACHE_USER
+PLIST_VARS+=		ssl
+.if !empty(PKG_BUILD_OPTIONS.apr-util:Mssl)
+PLIST.ssl=		yes
+.endif
 
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
@@ -86,9 +83,6 @@ RCD_SCRIPTS=		apache
 
 REQD_DIRS=		${PREFIX}/share/httpd
 REQD_DIRS+=		${PREFIX}/share/httpd/htdocs
-OWN_DIRS=		${VARBASE}/log/httpd
-OWN_DIRS+=		${VARBASE}/db/httpd
-OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS_SBIN=		apachectl envvars-std
 FIX_PERMS_BIN=		apxs dbmmanage mkcert
 FIX_MAN_PERMS=		man1/htdbm.1 man1/htpasswd.1 man1/htdigest.1
@@ -163,7 +157,7 @@ INSTALL_TARGET=		install-conf install
 INSTALL_MAKE_FLAGS+=	sysconfdir="${EGDIR}"
 
 post-install:
-	${LN} -sf ${APRDIR}/libexec/apr/libtool ${DESTDIR}${PREFIX}/share/httpd/build
+	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${DESTDIR}${PREFIX}/share/httpd/build
 	${LN} -sf ${SBINDIR}/envvars-std ${DESTDIR}${SBINDIR}/envvars
 
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${DESTDIR}${PREFIX}/bin
@@ -194,4 +188,5 @@ post-install:
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

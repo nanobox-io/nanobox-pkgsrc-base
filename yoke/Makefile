@@ -19,7 +19,7 @@ USE_LANGUAGES=		# none
 
 GIT_REPOSITORIES=	yoke
 GIT_REPO.yoke=		git@github.com:nanopack/yoke.git
-GIT_TAG=		${VERSION}
+GIT_TAG.yoke=		${VERSION}
 
 GO_DOMAIN=		github.com
 GO_USER=		pagodabox

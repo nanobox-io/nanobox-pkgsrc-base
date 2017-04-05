@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/02/06 22:44:56 fhajny Exp $
 
-SHA1 (php-apm/APM-2.1.1.tgz) = 09b7df9f941f056055a70e94c21b2a2046128909
-RMD160 (php-apm/APM-2.1.1.tgz) = 6d5e81aae5c0bc8be5d2bc49e0e8732f54b640f4
-SHA512 (php-apm/APM-2.1.1.tgz) = 0850f38b49b022de177275a80a9b7638d1498d1f7af1162b21a6dc10079ce37f9e984270d096ddc7e0090f05a4ef29f2f4494bf3d5b30b16ea38a66d9a4e1bc6
-Size (php-apm/APM-2.1.1.tgz) = 32706 bytes
+SHA1 (php-apm/APM-2.1.3.tgz) = 396319735a6780ef91217dca65036e120616d4c0
+RMD160 (php-apm/APM-2.1.3.tgz) = 1613e33c8b7010035905148e9981baf5ff6cb28d
+SHA512 (php-apm/APM-2.1.3.tgz) = 0f59d318a9f3ad04b4672f6d03ab74be1041bd69ed0ae9e55dd1aa2005b964002c7f05e3ed8ebabafa2e65d674353ccd95905000d56eba8cbdda4ad03b21c89d
+Size (php-apm/APM-2.1.3.tgz) = 33188 bytes
 SHA1 (patch-config.m4) = 0bc6b747c8c0420792997c90de90b9c6996e95e1

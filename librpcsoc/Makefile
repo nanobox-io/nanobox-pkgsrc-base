@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/librpcsoc
 
 GIT_REPOSITORIES=	librpcsoc
 GIT_REPO.librpcsoc=	braxton@172.16.35.1:/Users/braxton/src/pagodaboxshovel/librpcsoc/.git
-GIT_TAG=		master
+GIT_BRANCH.librpcsoc=	master
 
 CFLAGS+= 		-g
 CONFIGURE_ARGS+= 	--prefix=/opt/local

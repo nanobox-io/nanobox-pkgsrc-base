@@ -1,0 +1,37 @@
+$NetBSD$
+
+--- scripts/CMakeLists.txt.orig	2017-01-25 07:59:13.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -436,19 +436,21 @@ ELSE()
+   # On Unix, most of the files end up in the bin directory
+   SET(mysql_config_COMPONENT COMPONENT Development)
+ 
++  IF(WITHOUT_SERVER)
++    SET(BIN_SCRIPTS mysql_config)
++  ELSE()
+   IF(WITH_SYSTEMD)
+     SET(BIN_SCRIPTS
+-      mysql_config
+       mysqldumpslow
+       )
+   ELSE()
+     SET(BIN_SCRIPTS
+-      mysql_config
+       mysqldumpslow
+       mysqld_multi
+       mysqld_safe
+       )
+   ENDIF()
++  ENDIF()
+   IF(WITH_WSREP)
+     SET(BIN_SCRIPTS
+       ${BIN_SCRIPTS}
+@@ -474,7 +476,7 @@ ELSE()
+     ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}
+     ESCAPE_QUOTES @ONLY)
+ 
+-  IF(INSTALL_PKGCONFIGDIR)
++  IF(INSTALL_PKGCONFIGDIR AND WITHOUT_SERVER)
+     MESSAGE(STATUS "INSTALL ${PKGCONFIG_FILE} ${INSTALL_PKGCONFIGDIR}")
+     INSTALL(FILES
+       ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}

@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-VERSION=		3.8.5
+VERSION=		3.8.9
 DISTNAME=		glusterfs-${VERSION}
 CATEGORIES=		pagoda
 MASTER_SITES=	http://download.gluster.org/pub/gluster/glusterfs/3.8/${VERSION}/

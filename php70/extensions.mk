@@ -8,7 +8,7 @@ PHP_EXTENSION_LIST= dom filter hash json mbstring pdo session xml \
 	bcmath bz2 calendar ctype curl dba enchant exif fileinfo ftp gd \
 	gettext gmp iconv imap intl ldap mcrypt mysqli opcache \
 	pcntl pdo_dblib pdo_mysql pdo_odbc pdo_pgsql pdo_sqlite pgsql phar \
-	posix pspell recode shmop simplexml snmp soap sockets sysvmsg \
+	posix pspell recode shmop simplexml snmp soap sockets sqlite3 sysvmsg \
 	sysvsem sysvshm tidy tokenizer wddx xmlreader xmlrpc xmlwriter \
 	xsl zip zlib \
-	amqp apcu apfd apm gender geoip gnupg http imagick ioncube_loader json_post lzf memcached mogilefs mongodb newrelic oauth phalcon readline redis ssh2 stats stomp timezonedb xdebug
+	amqp apcu apfd apm blackfire gender geoip gnupg http imagick ioncube_loader json_post libsodium lzf memcache memcached mogilefs mongodb newrelic oauth phalcon readline redis ssh2 stats stomp timezonedb xdebug

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (php-mongodb/mongodb-1.1.9.tgz) = be93002289ce05a624db6868ce4e41d77f2aa7fd
-RMD160 (php-mongodb/mongodb-1.1.9.tgz) = ab34c9ab6b9ce7c49fc28a40a36a75ea0b7e322d
-SHA512 (php-mongodb/mongodb-1.1.9.tgz) = 8fd65016107b4e5bdb803eac4d33d166533b30c364a64c133f7ec7b216beebf47d3a33dde9f29b93ce259e964ea1bfafad5f44098f9b74355b58db15b330e3be
-Size (php-mongodb/mongodb-1.1.9.tgz) = 806532 bytes
+SHA1 (php-mongodb/mongodb-1.2.7.tgz) = 91df7b192f8bd049ab3098cdd301f5861736988c
+RMD160 (php-mongodb/mongodb-1.2.7.tgz) = a09374eca2aa165b42f8eab7678749a5717bbe2f
+SHA512 (php-mongodb/mongodb-1.2.7.tgz) = 2511090c380a4b65f3b8095f91d970a91c09da4e650b8d8c18d96f8842fb3a273dda89c1f5d11c6578254cbc1ebb4d6851221ae9187b471d068c97955ae905a9
+Size (php-mongodb/mongodb-1.2.7.tgz) = 785238 bytes

@@ -20,7 +20,7 @@ NO_BUILD=	yes
 GIT_REPOSITORIES=	depot_tools
 GIT_REPO.depot_tools=	https://chromium.googlesource.com/chromium/tools/depot_tools.git
 # GIT_TAG=		${VERSION}
-GIT_TAG=		master
+GIT_BRANCH.depot_tools=	master
 
 pre-install:
 	rm -rf ${WRKSRC}/.git

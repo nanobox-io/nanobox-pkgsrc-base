@@ -15,7 +15,7 @@ LICENSE=		MIT
 
 GIT_REPOSITORIES=	flip
 GIT_REPO.flip=		git@github.com:fliping/flip.git
-GIT_TAG=		v${VERSION}
+GIT_TAG.flip=		v${VERSION}
 
 WRKSRC=			${WRKDIR}/flip
 

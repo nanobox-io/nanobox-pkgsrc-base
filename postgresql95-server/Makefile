@@ -44,24 +44,25 @@ DL_LIBS+=	-lltdl
 # PGGROUP	group of the database administrator
 # PGHOME	home directory of the database administrator and location of
 #		the databases
-FILES_SUBST+=		PGUSER=${PGUSER}
-FILES_SUBST+=		PGGROUP=${PGGROUP}
-FILES_SUBST+=		PGHOME=${PGHOME}
-BUILD_DEFS+=		PGHOME VARBASE
+#FILES_SUBST+=		PGUSER=${PGUSER}
+#FILES_SUBST+=		PGGROUP=${PGGROUP}
+#FILES_SUBST+=		PGHOME=${PGHOME}
+#BUILD_DEFS+=		PGHOME 
+BUILD_DEFS+=		VARBASE
 
 ALL_ENV+=		INSTALLED_LIBPQ=yes
 
-PKG_GROUPS_VARS+=	PGGROUP
-PKG_USERS_VARS+=	PGUSER
+#PKG_GROUPS_VARS+=	PGGROUP
+#PKG_USERS_VARS+=	PGUSER
 
-PKG_GROUPS=		${PGGROUP}
-PKG_USERS=		${PGUSER}:${PGGROUP}
-PKG_GECOS.${PGUSER}=	PostgreSQL database administrator
-PKG_HOME.${PGUSER}=	${PGHOME}
+#PKG_GROUPS=		${PGGROUP}
+#PKG_USERS=		${PGUSER}:${PGGROUP}
+#PKG_GECOS.${PGUSER}=	PostgreSQL database administrator
+#PKG_HOME.${PGUSER}=	${PGHOME}
 
-RCD_SCRIPTS=		pgsql
-SMF_METHODS=		postgresql
-SMF_NAME=		postgresql
+#RCD_SCRIPTS=		pgsql
+#SMF_METHODS=		postgresql
+#SMF_NAME=		postgresql
 
 .include "../../base/postgresql95-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

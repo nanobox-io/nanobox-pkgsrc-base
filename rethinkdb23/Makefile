@@ -32,12 +32,12 @@ LIBS+=		-pthread
 pre-configure:
 	echo ${CONFIGURE_ARGS}
 
-
+DEPENDS+=	python>=2.7<=28:../../lang/python27
 DEPENDS+=	nodejs>=0.10:../../base/nodejs010
 BUILD_DEPENDS+=	m4>=1.4.17:../../devel/m4
 
 #.include "../../devel/protobuf/buildlink3.mk"
-#.include "../../devel/jemalloc/buildlink3.mk"
+.include "../../devel/jemalloc/buildlink3.mk"
 #.include "../../devel/re2/buildlink3.mk"
 #.include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-${MODNAME}
 
 GIT_REPOSITORIES=	eaccelerator
 GIT_REPO.eaccelerator=	git@github.com:eaccelerator/eaccelerator.git
-GIT_TAG=		master
+GIT_BRANCH.eaccelerator=	master
 
 WRKSRC=			${WRKDIR}/eaccelerator
 

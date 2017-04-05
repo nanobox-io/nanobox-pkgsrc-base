@@ -5,20 +5,23 @@
 MODNAME=		imagick
 PECL_VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
 CATEGORIES+=		sysutils
+PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Provides a wrapper to the ImageMagick library.
 LICENSE=		php
 
 .include "../../base/php/phpversion.mk"
-.if ${_PHP_VERSION} == "70"
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
 .endif
 
 CONFLICTS=		php-imagick-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
-CONFIGURE_ARGS+=	--with-imagick=${BUILDLINK_PREFIX.ImageMagick}
+CONFIGURE_ARGS+=	--with-imagick=${BUILDLINK_PREFIX.ImageMagick6}
+
+CFLAGS+=		-Wno-deprecated-declarations
 
 WRKSRC=			${WRKDIR}/imagick-${PECL_VERSION}
 
@@ -37,7 +40,8 @@ post-install:
 DEPENDS+=	ghostscript>=9:../../print/ghostscript
 
 .include "../../base/php/extension_versions.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

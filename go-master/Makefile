@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 GIT_REPOSITORIES=	go
 GIT_REPO.go=		git@github.com:golang/go.git
 # GIT_TAG=		${VERSION}
-GIT_TAG=		master
+GIT_TAG.go=		master
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax

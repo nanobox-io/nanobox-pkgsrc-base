@@ -1,9 +1,7 @@
-# $NetBSD$
-# -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
-#  # vim: ts=8 sw=8 ft=make noet
+# $NetBSD: Makefile,v 1.69 2017/02/28 15:20:11 ryoon Exp $
 
-DISTNAME=		nginx-1.8.1
-PKGREVISION=		3	
+DISTNAME=		nginx-1.10.3
 MAINTAINER=		joerg@NetBSD.org
 
+PKGREVISION= 3
 .include "../../base/nginx/Makefile.common"

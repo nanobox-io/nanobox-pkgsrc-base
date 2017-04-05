@@ -25,7 +25,7 @@ TOOLS_PATH.awk=		/data/bin/gawk
 
 GIT_REPOSITORIES=	hhvm
 GIT_REPO.hhvm=		git@github.com:facebook/hhvm.git
-GIT_TAG=		HHVM-${VERSION}
+GIT_TAG.hhvm=		HHVM-${VERSION}
 CMAKE_ARGS+=		-DLIBELF_INCLUDE_DIRS=/data/include/libelf
 CMAKE_ARGS+=		-DLIBDWARF_INCLUDE_DIRS=/data/include
 CMAKE_ARGS+=		-DLIBPNG_INCLUDE_DIRS=/data/include/libpng16

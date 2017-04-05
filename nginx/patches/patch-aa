@@ -1,6 +1,8 @@
-$NetBSD$
+$NetBSD: patch-aa,v 1.4 2014/04/27 11:05:45 rodent Exp $
 
---- conf/nginx.conf.orig	2015-04-21 14:11:59.000000000 +0000
+This patch provides config file adapted to pkgsrc settings.
+
+--- conf/nginx.conf.orig	2014-04-24 12:52:24.000000000 +0000
 +++ conf/nginx.conf
 @@ -1,28 +1,29 @@
  
@@ -62,12 +64,7 @@ $NetBSD$
          }
  
          # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-@@ -63,11 +64,11 @@ http {
-         # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-         #
-         #location ~ \.php$ {
--        #    root           html;
-+        #    root           share/examples/nginx/html;
+@@ -67,7 +68,7 @@ http {
          #    fastcgi_pass   127.0.0.1:9000;
          #    fastcgi_index  index.php;
          #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;

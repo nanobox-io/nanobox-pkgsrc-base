@@ -35,7 +35,7 @@ post-install:
 
 .include "../../base/php/extension_versions.mk"
 
-.if ${_PHP_VERSION} == "70"
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
 .endif
 

@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=	mongodb-src-r3.2.9
+DISTNAME=	mongodb-src-r3.2.13
 PKGNAME=	${DISTNAME:S/src-r/server-/:S/-rc/rc/}
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
@@ -14,6 +14,7 @@ LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_CWRAPPERS=	no
 
 DEPENDS+=	mongodb32-tools>=3.2.0:../../base/mongodb32-tools
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
@@ -70,19 +71,19 @@ MONGODB_GROUP?=		mongodb
 MONGODB_DBPATH?=	${VARBASE}/mongodb
 MONGODB_LOGPATH?=	${VARBASE}/log/mongodb
 
-PKG_USERS_VARS+=	MONGODB_USER
-PKG_GROUPS_VARS+=	MONGODB_GROUP
+#PKG_USERS_VARS+=	MONGODB_USER
+#PKG_GROUPS_VARS+=	MONGODB_GROUP
 
-PKG_GROUPS=		${MONGODB_GROUP}
-PKG_USERS=		${MONGODB_USER}:${MONGODB_GROUP}
+#PKG_GROUPS=		${MONGODB_GROUP}
+#PKG_USERS=		${MONGODB_USER}:${MONGODB_GROUP}
 
-PKG_GECOS.${MONGODB_USER}=	MongoDB database administrator
-PKG_HOME.${MONGODB_USER}=	${MONGODB_DBPATH}
-PKG_SHELL.${MONGODB_USER}=	${SH}
+#PKG_GECOS.${MONGODB_USER}=	MongoDB database administrator
+#PKG_HOME.${MONGODB_USER}=	${MONGODB_DBPATH}
+#PKG_SHELL.${MONGODB_USER}=	${SH}
 
-OWN_DIRS_PERMS+=	${MONGODB_DBPATH} ${MONGODB_USER} ${MONGODB_GROUP} 0755
-OWN_DIRS_PERMS+=	${MONGODB_DBPATH}/journal ${MONGODB_USER} ${MONGODB_GROUP} 0755
-OWN_DIRS_PERMS+=	${MONGODB_LOGPATH} ${MONGODB_USER} ${MONGODB_GROUP} 0755
+#OWN_DIRS_PERMS+=	${MONGODB_DBPATH} ${MONGODB_USER} ${MONGODB_GROUP} 0755
+#OWN_DIRS_PERMS+=	${MONGODB_DBPATH}/journal ${MONGODB_USER} ${MONGODB_GROUP} 0755
+#OWN_DIRS_PERMS+=	${MONGODB_LOGPATH} ${MONGODB_USER} ${MONGODB_GROUP} 0755
 
 FILES_SUBST+=		MONGODB_USER=${MONGODB_USER}
 FILES_SUBST+=		MONGODB_GROUP=${MONGODB_GROUP}
@@ -107,7 +108,7 @@ MONGODB_MAN_FILES=	bsondump.1 mongo.1 mongod.1 mongodump.1 mongoexport.1	\
 			mongofiles.1 mongoimport.1 mongooplog.1 mongoperf.1	\
 			mongorestore.1 mongos.1 mongosniff.1 mongostat.1 mongotop.1
 
-RCD_SCRIPTS=		mongodb
+#RCD_SCRIPTS=		mongodb
 
 INSTALLATION_DIRS=	share/doc/mongodb share/examples/mongodb ${PKGMANDIR}/man1
 

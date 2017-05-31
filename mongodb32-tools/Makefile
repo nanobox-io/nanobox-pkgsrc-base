@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		mongodb32-tools-${VERSION}
-VERSION?=		3.2.9
+VERSION?=		3.2.13
 # PKGREVISION?=		1
 CATEGORIES=		pagoda
 MASTER_SITES=		github.com/mongodb/mongo-tools
@@ -15,7 +15,9 @@ COMMENT=		Tools for managing mongodb
 
 WRKSRC=			${WRKDIR}/mongo-tools
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES=		c
+
+USE_TOOLS+=		gsed
 
 GIT_REPOSITORIES=	mongo-tools
 GIT_REPO.mongo-tools=	git@github.com:mongodb/mongo-tools.git

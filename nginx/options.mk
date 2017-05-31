@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
 			set-misc headers-more array-var encrypted-session \
 			form-input perl gzip v2
 
-PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl v2
+PKG_SUGGESTED_OPTIONS=	inet6 pcre ssl v2 set-misc sub 
 
 PLIST_VARS+=		naxsi perl uwsgi
 

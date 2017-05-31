@@ -8,6 +8,7 @@
 DISTNAME=	jre-7u${UPDATE_NUMBER}-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jre7-7.0.${UPDATE_NUMBER}
 MASTER_SITES=	# empty
+PKGREVISION=	1
 
 LICENSE=	oracle-binary-code-license
 

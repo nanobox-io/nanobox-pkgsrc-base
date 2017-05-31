@@ -2,7 +2,7 @@
 
 DISTNAME=	jdk-6u45-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk6-6.0.45
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	# empty
 
 LICENSE=	sun-jdk6-license

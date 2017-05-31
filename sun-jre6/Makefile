@@ -6,6 +6,7 @@
 DISTNAME=	jre-6u45-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jre6-6.0.45
 MASTER_SITES=	# empty
+PKGREVISION=	1
 
 LICENSE=	sun-jre6-license
 

@@ -21,7 +21,7 @@ EMUL_PLATFORMS=		darwin-x86_64 linux-i386 linux-x86_64 solaris-i386 solaris-x86_
 USE_TOOLS+=	pax
 
 # JDK8 Update number
-UPDATE_NUMBER=	91
+UPDATE_NUMBER=	131
 
 .include "../../mk/bsd.prefs.mk"
 

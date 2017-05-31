@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (openjdk8-1.8.102.tar.gz) = 192dd3505da8c7d16e65dd672f7ad219b1514760
-RMD160 (openjdk8-1.8.102.tar.gz) = 49edb274e1d0fd1aaedec8d7b5848c8abc6b18ba
-SHA512 (openjdk8-1.8.102.tar.gz) = 4a3a27a8c8224ed41a3d033295c63cbbf10ecab10192c3a6b14f5f387bcfd72dfc971a38fc9181812a283c7b3f80ea2daf58c0325719e84bc401f26c7e25e63c
-Size (openjdk8-1.8.102.tar.gz) = 74371595 bytes
+SHA1 (openjdk8-1.8.112.tar.gz) = 64df358cd2d91c3e72cdddd2127a293a6f45c0ef
+RMD160 (openjdk8-1.8.112.tar.gz) = a741053b8b4fa5c68c2d2bc93151a63607bbaeb0
+SHA512 (openjdk8-1.8.112.tar.gz) = 7283f3c065f05b6b9fdd809c3c7e01edb447cfc4b92242aded02c7524d81fe1252fc6ee24e67d4b5b66e46d37031596530abf95455885fbb6f59e00a5cb8c1a8
+Size (openjdk8-1.8.112.tar.gz) = 203257209 bytes

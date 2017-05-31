@@ -80,7 +80,7 @@ ${WRKDIR}/${w}:
 	@${ECHO} '${ULIMIT_CMD_${f}}' >>${WRKDIR}/${w}
 .      endfor
 .      undef f
-	@${ECHO} '${JAVA_WRAPPER_BIN.${w}} "$$@"' >>${WRKDIR}/${w}
+	@${ECHO} 'exec ${JAVA_WRAPPER_BIN.${w}} "$$@"' >>${WRKDIR}/${w}
 .    endif
 
 install-java-wrapper-${w}:

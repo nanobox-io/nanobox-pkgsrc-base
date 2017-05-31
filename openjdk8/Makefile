@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.97 2015/03/02 03:53:26 tnn Exp $
 
-JDK_MICRO=      102
+JDK_MICRO=      112
 DISTNAME=       openjdk8-1.8.${JDK_MICRO}
 PKGNAME=        openjdk8-1.8.${JDK_MICRO}
 CATEGORIES=     lang

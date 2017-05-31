@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		r${VERSION}
-VERSION?=		3.0.12
+VERSION?=		3.0.15
 PKGNAME=		mongodb30-tools-${VERSION}
 # PKGREVISION?=		1
 CATEGORIES=		databases
@@ -18,7 +18,9 @@ COMMENT=		Tools for managing mongodb
 
 WRKSRC=			${WRKDIR}/mongo-tools-r${VERSION}
 
-USE_LANGUAGES=		# none
+USE_LANGUAGES+=		c
+
+USE_TOOLS+=		gsed
 
 GO_DOMAIN=		github.com
 GO_USER=		mongodb

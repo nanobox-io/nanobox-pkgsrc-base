@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=	mongodb-src-r3.0.12
+DISTNAME=	mongodb-src-r3.0.15
 PKGNAME=	${DISTNAME:S/src-r/server-/:S/-rc/rc/}
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
@@ -14,6 +14,7 @@ LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_CWRAPPERS=	no
 
 DEPENDS+=	mongodb30-tools>=3.0.0:../../base/mongodb30-tools
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons

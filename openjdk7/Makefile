@@ -3,7 +3,7 @@
 JDK_MICRO=      85
 DISTNAME=       openjdk7-1.7.${JDK_MICRO}
 PKGNAME=        openjdk7-1.7.${JDK_MICRO}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     lang
 
 MAINTAINER=     pkgsrc-users@NetBSD.org

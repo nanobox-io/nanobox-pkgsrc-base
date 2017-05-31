@@ -3,6 +3,7 @@
 JDK_MICRO=      112
 DISTNAME=       openjdk8-1.8.${JDK_MICRO}
 PKGNAME=        openjdk8-1.8.${JDK_MICRO}
+PKGREVISION=	1
 CATEGORIES=     lang
 
 MAINTAINER=     pkgsrc-users@NetBSD.org

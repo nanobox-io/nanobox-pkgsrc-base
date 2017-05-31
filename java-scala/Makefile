@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.10 2014/06/12 17:35:46 yyamano Exp $
 
-VERSION=	2.11.8
+VERSION=	2.12.2
 DISTNAME=	scala-${VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	http://www.scala-lang.org/files/archive/

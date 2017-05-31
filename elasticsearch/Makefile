@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.21 2016/12/05 10:51:03 fhajny Exp $
 
-DISTNAME=	elasticsearch-5.2.2
+DISTNAME=	elasticsearch-5.4.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://artifacts.elastic.co/downloads/elasticsearch/
 
@@ -35,10 +36,10 @@ ES_DBDIR?=	${VARBASE}/db/elasticsearch
 ES_LOGDIR?=	${VARBASE}/log/elasticsearch
 ES_PIDDIR?=	${VARBASE}/run
 
-PKG_USERS_VARS+=	ES_USER
-PKG_GROUPS_VARS+=	ES_GROUP
-PKG_GROUPS=		${ES_GROUP}
-PKG_USERS=		${ES_USER}:${ES_GROUP}
+#PKG_USERS_VARS+=	ES_USER
+#PKG_GROUPS_VARS+=	ES_GROUP
+#PKG_GROUPS=		${ES_GROUP}
+#PKG_USERS=		${ES_USER}:${ES_GROUP}
 
 FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME} ES_USER=${ES_USER}	\
 			ES_GROUP=${ES_GROUP} ES_BASEDIR=${ES_BASEDIR}	\
@@ -46,11 +47,11 @@ FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME} ES_USER=${ES_USER}	\
 			ES_DBDIR=${ES_DBDIR} 				\
 			DISTNAME=${DISTNAME}
 
-RCD_SCRIPTS=		elasticsearch
+#RCD_SCRIPTS=		elasticsearch
 
-OWN_DIRS+=		${ES_BASEDIR}/plugins
-OWN_DIRS_PERMS+=	${ES_LOGDIR} ${ES_USER} ${ES_GROUP} 0700
-OWN_DIRS_PERMS+=	${ES_DBDIR} ${ES_USER} ${ES_GROUP} 0700
+#OWN_DIRS+=		${ES_BASEDIR}/plugins
+#OWN_DIRS_PERMS+=	${ES_LOGDIR} ${ES_USER} ${ES_GROUP} 0700
+#OWN_DIRS_PERMS+=	${ES_DBDIR} ${ES_USER} ${ES_GROUP} 0700
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/scripts
 
 REPLACE_BASH+=		bin/elasticsearch bin/elasticsearch.in.sh bin/elasticsearch-plugin

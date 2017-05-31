@@ -6,6 +6,7 @@
 # in NetBSD GNATS.
 
 DISTNAME=	httpd-2.4.25
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:S/httpd/apache/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \

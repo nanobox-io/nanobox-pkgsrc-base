@@ -7,7 +7,7 @@ APACHE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.4.7<2.5
 BUILDLINK_ABI_DEPENDS.apache+=	apache>=2.4.18nb1
-BUILDLINK_PKGSRCDIR.apache?=	../../www/apache24
+BUILDLINK_PKGSRCDIR.apache?=	../../base/apache24
 BUILDLINK_DEPMETHOD.apache?=	build
 .if defined(APACHE_MODULE)
 BUILDLINK_DEPMETHOD.apache+=	full

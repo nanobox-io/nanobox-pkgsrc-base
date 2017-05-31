@@ -12,6 +12,7 @@ PKGNAME=        cassandra-${CASSANDRA_VER}
 CATEGORIES=	databases
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 MASTER_SITES=	${MASTER_SITE_APACHE:=cassandra/${CASSANDRA_VER:C/-.*//}/}
+PKGREVISION=	1
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://cassandra.apache.org/
@@ -30,7 +31,7 @@ CASSANDRA_HOME=		${PREFIX}/share/cassandra
 EGDIR=			${PREFIX}/share/examples/cassandra
 DOCDIR=			${PREFIX}/share/doc/cassandra
 
-BINFILES=	cassandra cassandra.in.sh cqlsh debug-cql \
+BINFILES=	cassandra cassandra.in.sh cqlsh cqlsh.py debug-cql \
 		nodetool sstableloader sstablescrub sstableupgrade sstableutil sstableverify \
 		stop-server
 DOCFILES=	CHANGES LICENSE NEWS NOTICE

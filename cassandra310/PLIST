@@ -2,6 +2,7 @@
 share/cassandra/bin/cassandra
 share/cassandra/bin/cassandra.in.sh
 share/cassandra/bin/cqlsh
+share/cassandra/bin/cqlsh.py
 share/cassandra/bin/debug-cql
 share/cassandra/bin/nodetool
 share/cassandra/bin/sstableloader

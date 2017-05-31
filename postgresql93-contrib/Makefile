@@ -2,7 +2,7 @@
 
 PKGNAME=	${DISTNAME:C/-/93-contrib-/}
 COMMENT=	Contrib subtree of tools and plug-ins
-PKGREVISION=    1
+PKGREVISION=    2
 
 .include "../../base/postgresql93/Makefile.common"
 
@@ -71,6 +71,7 @@ CONFIGURE_ARGS+=	--with-ossp-uuid
 BUILD_DIRS+=		contrib/uuid-ossp
 # because global pg_config.h is included, we have to define this
 BUILD_MAKE_FLAGS+=	PG_CPPFLAGS=-DHAVE_UUID_H
+BUILD_MAKE_FLAGS+=      UUID_LIBS=-lossp-uuid
 .include "../../devel/ossp-uuid/buildlink3.mk"
 .endif
 

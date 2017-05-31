@@ -1483,8 +1483,8 @@ ${RUBY_EG}/webrick/httpd.rb
 ${RUBY_EG}/webrick/httpproxy.rb
 ${RUBY_EG}/webrick/httpsd.rb
 @pkgdir share/examples/${RUBY_NAME}/curses
-@pkgdir lib/${RUBY_NAME}/vendor_ruby/2.3.0/${MACHINE_ARCH}-linux
-@pkgdir lib/${RUBY_NAME}/site_ruby/2.3.0/${MACHINE_ARCH}-linux
+@pkgdir lib/${RUBY_NAME}/vendor_ruby/2.3.0/x86_64-linux
+@pkgdir lib/${RUBY_NAME}/site_ruby/2.3.0/x86_64-linux
 @pkgdir lib/${RUBY_NAME}/gems/2.3.0/extensions
 @pkgdir lib/${RUBY_NAME}/gems/2.3.0/doc
 @pkgdir lib/${RUBY_NAME}/gems/2.3.0/build_info

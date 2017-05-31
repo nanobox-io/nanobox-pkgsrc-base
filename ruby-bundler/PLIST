@@ -265,6 +265,6 @@ ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/gemfile.5.txt
 ${GEM_LIBDIR}/man/index.txt
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/${RUBY_NAME}/gems/2.4.0/extensions
-@pkgdir lib/${RUBY_NAME}/gems/2.4.0/doc
-@pkgdir lib/${RUBY_NAME}/gems/2.4.0/build_info
+@pkgdir lib/${RUBY_NAME}/gems/2.2.0/extensions
+@pkgdir lib/${RUBY_NAME}/gems/2.2.0/doc
+@pkgdir lib/${RUBY_NAME}/gems/2.2.0/build_info

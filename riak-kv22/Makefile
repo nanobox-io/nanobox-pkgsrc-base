@@ -1,6 +1,7 @@
 # $NetBSD: Makefile,v 1.27 2015/07/14 19:44:09 fhajny Exp $
 
 DISTNAME=		riak-2.2.0
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/2.2/${PKGVERSION}/ \
 			http://s3.amazonaws.com/files.basho.com/solr/ \
@@ -46,23 +47,23 @@ RIAK_DATA?=		${VARBASE}/db/riak
 RIAK_LOG?=		${VARBASE}/log/riak
 RIAK_RUN?=		${VARBASE}/run
 
-PKG_GROUPS+=		${RIAK_GROUP}
-PKG_USERS+=		${RIAK_USER}:${RIAK_GROUP}
-PKG_HOME.${RIAK_USER}=	${RIAK_DATA}
-PKG_GECOS.${RIAK_USER}=	Riak daemon user
-PKG_SHELL.${RIAK_USER}=	${SH}
+#PKG_GROUPS+=		${RIAK_GROUP}
+#PKG_USERS+=		${RIAK_USER}:${RIAK_GROUP}
+#PKG_HOME.${RIAK_USER}=	${RIAK_DATA}
+#PKG_GECOS.${RIAK_USER}=	Riak daemon user
+#PKG_SHELL.${RIAK_USER}=	${SH}
 
-OWN_DIRS+=		${RIAK_DATA} ${RIAK_LOG}
-OWN_DIRS_PERMS+=	${RIAK_DATA} ${RIAK_USER} ${RIAK_GROUP} 0770
-OWN_DIRS_PERMS+=	${RIAK_LOG} ${RIAK_USER} ${RIAK_GROUP} 0770
+#OWN_DIRS+=		${RIAK_DATA} ${RIAK_LOG}
+#OWN_DIRS_PERMS+=	${RIAK_DATA} ${RIAK_USER} ${RIAK_GROUP} 0770
+#OWN_DIRS_PERMS+=	${RIAK_LOG} ${RIAK_USER} ${RIAK_GROUP} 0770
 
 PKG_SYSCONFSUBDIR=	riak
 CONF_FILES+=		share/examples/riak/riak.conf ${PKG_SYSCONFDIR}/riak.conf
 CONF_FILES+=		share/examples/riak/solr-log4j.properties ${PKG_SYSCONFDIR}/solr-log4j.properties
 
-SMF_USER=		${RIAK_USER}
-SMF_GROUP=		${RIAK_GROUP}
-SMF_HOME=		${RIAK_DATA}
+#SMF_USER=		${RIAK_USER}
+#SMF_GROUP=		${RIAK_GROUP}
+#SMF_HOME=		${RIAK_DATA}
 
 BUILD_TARGET=		rel
 

@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.13 2017/02/07 13:50:31 wiz Exp $
+
+SHA1 (protobuf-cpp-3.3.0.tar.gz) = 4bbc45997f556515b94b7c816e1402b1bda4ccb2
+RMD160 (protobuf-cpp-3.3.0.tar.gz) = 389681ca0f1d806c75ee34a53a1072f50e80fbb6
+SHA512 (protobuf-cpp-3.3.0.tar.gz) = ef01300bdda4a1a33a6056aea1d55e9d66ab1ca644aa2d9d5633cfc0bccfe4c24fdfa1015889b2c1c568e89ad053c701de1aca45196a6439130b7bb8f461595f
+Size (protobuf-cpp-3.3.0.tar.gz) = 4218377 bytes
+SHA1 (patch-gmock_configure) = 49a4c9301ad4c1973ee7058213df50a7833161f0
+SHA1 (patch-gmock_configure.ac) = cfd7b7c87eff4b06ce6ecb34dec046561bbdc113
+SHA1 (patch-src_google_protobuf_message__lite.cc) = 8f2ffe07b2710de5365148153978ad6d9939f522
+SHA1 (patch-src_google_protobuf_stubs_atomicops.h) = 9ec851134da674980a49302e9582a432a47f7974
+SHA1 (patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = d60c554be8ff7fc9370bb036eef9101f9a6433e3

@@ -5,7 +5,7 @@
 .if !defined(YARN_MK)
 YARN_MK=	# defined
 
-YARN_VERSION=	0.21.3
+YARN_VERSION=	0.23.3
 
 YARN_DISTFILE=	yarn-v${YARN_VERSION}.tar.gz
 

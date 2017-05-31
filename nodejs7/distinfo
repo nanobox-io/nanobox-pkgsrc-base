@@ -1,13 +1,13 @@
 $NetBSD: distinfo,v 1.47 2015/11/09 20:19:35 fhajny Exp $
 
-SHA1 (node-v7.7.4.tar.gz) = b8583eb913eb2b7c0b6c762909d98d62ce6a3404
-RMD160 (node-v7.7.4.tar.gz) = 644cf065599899fbea0ecc46d1618229ace59cb3
-SHA512 (node-v7.7.4.tar.gz) = 2bd09784001354e187227f727e11c871c0f36e0caf18a5c1c1a374938a536ac6601a3240055d9ac659eeeac0b461aaa91bf05b49b27901d17afc22740b7f29ab
-Size (node-v7.7.4.tar.gz) = 28109651 bytes
-SHA1 (yarn-v0.21.3.tar.gz) = d3129b5eb49e9644b7637af09d0de87297dd9a8e
-RMD160 (yarn-v0.21.3.tar.gz) = 78445148ef57ec832d7866cd4ef51fc7a43fab41
-SHA512 (yarn-v0.21.3.tar.gz) = dad7181c78dd1aaf2b07ff32055a8442b55ff9b68a73cf611f4142d612e95f43dcd376e6f2306a4cccc5249680bb82365a7e9ee3160e5c5083f50ee0791a448d
-Size (yarn-v0.21.3.tar.gz) = 3408603 bytes
+SHA1 (node-v7.9.0.tar.gz) = 19f3feadd52ada7417e63e360fdf9a96be1dd49e
+RMD160 (node-v7.9.0.tar.gz) = 43d62e5e6e8665d4eeb0c7b11e651b3f189e6adc
+SHA512 (node-v7.9.0.tar.gz) = 38ae9a8084ab5f20d895b8f2fb6c4f010789f5c01a05f3260ab290d85c3e7c00b79c0f412a3f1ca2bc2e3bd0d644146a7455fdcd384b532bb56cf16e9ad2bca3
+Size (node-v7.9.0.tar.gz) = 28049500 bytes
+SHA1 (yarn-v0.23.3.tar.gz) = 17463974754b1e3d5a130cb3cc5c58649e7e5ffe
+RMD160 (yarn-v0.23.3.tar.gz) = c2fb4be95340e2bc259707d4e6419c241ba3c474
+SHA512 (yarn-v0.23.3.tar.gz) = cad26e826e485a396027fc063f762d4739af66f01bc3606958190db5ec218694bf2ffe5e1b776dd5b0319fe4ae5fae9940f18171876e5e3575c768438c808076
+Size (yarn-v0.23.3.tar.gz) = 3954501 bytes
 SHA1 (patch-common.gypi) = 5b3a50617358637a6f910de28bb5a14f037317a6
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
 SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 78d6ddd37ae30e869e0da666a78baad86a638c50

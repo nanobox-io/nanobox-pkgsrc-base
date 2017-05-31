@@ -1,10 +1,8 @@
-$NetBSD: patch-bin_elasticsearch,v 1.1 2016/11/08 09:18:01 fhajny Exp $
+$NetBSD$
 
-Default paths.
-
---- bin/elasticsearch.orig	2016-10-26 04:35:54.000000000 +0000
+--- bin/elasticsearch.orig	2017-04-28 17:41:47.000000000 +0000
 +++ bin/elasticsearch
-@@ -104,8 +104,13 @@ while [ -h "$SCRIPT" ] ; do
+@@ -104,15 +104,20 @@ while [ -h "$SCRIPT" ] ; do
    fi
  done
  
@@ -19,3 +17,11 @@ Default paths.
  
  # make ELASTICSEARCH_HOME absolute
  ES_HOME=`cd "$ES_HOME"; pwd`
+ 
+ if [ -z "$ES_JVM_OPTIONS" ]; then
+     for jvm_options in "$ES_HOME"/config/jvm.options \
+-                      /etc/elasticsearch/jvm.options; do
++                      @PREFIX@/etc/elasticsearch/jvm.options; do
+         if [ -r "$jvm_options" ]; then
+             ES_JVM_OPTIONS=$jvm_options
+             break

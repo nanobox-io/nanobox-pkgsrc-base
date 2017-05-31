@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.21 2016/12/05 10:51:03 fhajny Exp $
 
 DISTNAME=	elasticsearch-5.4.0
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	https://artifacts.elastic.co/downloads/elasticsearch/
 
@@ -44,7 +44,7 @@ ES_PIDDIR?=	${VARBASE}/run
 FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME} ES_USER=${ES_USER}	\
 			ES_GROUP=${ES_GROUP} ES_BASEDIR=${ES_BASEDIR}	\
 			ES_LOGDIR=${ES_LOGDIR} ES_PIDDIR=${ES_PIDDIR}	\
-			ES_DBDIR=${ES_DBDIR} 				\
+			ES_DBDIR=${ES_DBDIR} PREFIX=${PREFIX} 		\
 			DISTNAME=${DISTNAME}
 
 #RCD_SCRIPTS=		elasticsearch
@@ -55,13 +55,13 @@ FILES_SUBST+=		JAVA_HOME=${PKG_JAVA_HOME} ES_USER=${ES_USER}	\
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/scripts
 
 REPLACE_BASH+=		bin/elasticsearch bin/elasticsearch.in.sh bin/elasticsearch-plugin
-INSTALLATION_DIRS+=	bin ${ES_BASEDIR}/bin
+INSTALLATION_DIRS+=	bin ${ES_BASEDIR}/bin ${ES_BASEDIR}/plugins
 INSTALLATION_DIRS+=	${EGDIR} ${PREFIX}/share/doc/elasticsearch
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/elasticsearch bin/elasticsearch-plugin config/elasticsearch.yml
-SUBST_VARS.paths=	PKG_JAVA_HOME PKG_SYSCONFDIR ES_DBDIR ES_BASEDIR ES_LOGDIR
+SUBST_VARS.paths=	PKG_JAVA_HOME PKG_SYSCONFDIR ES_DBDIR ES_BASEDIR ES_LOGDIR PREFIX
 
 do-install:
 .for f in ${CONFS}

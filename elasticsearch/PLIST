@@ -94,3 +94,4 @@ share/doc/elasticsearch/README.textile
 share/examples/elasticsearch/elasticsearch.yml
 share/examples/elasticsearch/jvm.options
 share/examples/elasticsearch/log4j2.properties
+@pkgdir lib/elasticsearch/plugins

@@ -1,0 +1,107 @@
+$NetBSD$
+
+--- SConstruct.orig	2017-04-20 21:43:42.000000000 +0000
++++ SConstruct
+@@ -49,8 +49,12 @@ def get_running_os_name():
+     running_os = os.sys.platform
+     if running_os.startswith('linux'):
+         running_os = 'linux'
++    elif running_os.startswith('dragonfly'):
++        running_os = 'dragonfly'
+     elif running_os.startswith('freebsd'):
+         running_os = 'freebsd'
++    elif running_os.startswith('netbsd'):
++        running_os = 'netbsd'
+     elif running_os.startswith('openbsd'):
+         running_os = 'openbsd'
+     elif running_os == 'sunos5':
+@@ -68,7 +72,7 @@ def env_get_os_name_wrapper(self):
+ 
+ def is_os_raw(target_os, os_list_to_check):
+     okay = False
+-    posix_os_list = [ 'linux', 'openbsd', 'freebsd', 'osx', 'solaris' ]
++    posix_os_list = [ 'linux', 'openbsd', 'freebsd', 'osx', 'solaris', 'dragonfly', 'netbsd' ]
+ 
+     for p in os_list_to_check:
+         if p == 'posix' and target_os in posix_os_list:
+@@ -892,6 +896,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+                INSTALL_DIR=installDir,
+                CONFIG_HEADER_DEFINES={},
+                LIBDEPS_TAG_EXPANSIONS=[],
++               ENV = os.environ,
+                )
+ 
+ env = Environment(variables=env_vars, **envDict)
+@@ -1029,7 +1034,9 @@ def CheckForProcessor(context, which_arc
+ os_macros = {
+     "windows": "_WIN32",
+     "solaris": "__sun",
++    "dragonfly": "__DragonFly__",
+     "freebsd": "__FreeBSD__",
++    "netbsd": "__NetBSD__",
+     "openbsd": "__OpenBSD__",
+     "osx": "__APPLE__",
+     "linux": "__linux__",
+@@ -1360,7 +1367,7 @@ elif env['_LIBDEPS'] == '$_LIBDEPS_LIBS'
+ 
+ libdeps.setup_environment(env, emitting_shared=(link_model.startswith("dynamic")))
+ 
+-if env.TargetOSIs('linux', 'freebsd', 'openbsd'):
++if env.TargetOSIs('linux', 'dragonfly', 'freebsd', 'netbsd', 'openbsd'):
+     env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
+     env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
+     env['LINK_WHOLE_ARCHIVE_START'] = '-Wl,--whole-archive'
+@@ -1388,10 +1395,24 @@ if env.TargetOSIs('linux'):
+ elif env.TargetOSIs('solaris'):
+      env.Append( LIBS=["socket","resolv","lgrp"] )
+ 
++elif os.sys.platform.startswith( "dragonfly" ):
++    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
++    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
++    env.Append( LIBS=[ "m" ] )
++    env.Append( LIBS=[ "kvm" ] )
++    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
++
+ elif env.TargetOSIs('freebsd'):
+     env.Append( LIBS=[ "kvm" ] )
+     env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
+ 
++elif os.sys.platform.startswith( "netbsd" ):
++    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
++    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
++    env.Append( LIBS=[ "m" ] )
++    env.Append( LIBS=[ "kvm" ] )
++    env.Append( CPPDEFINES=[ "__netbsd__" ] )
++
+ elif env.TargetOSIs('openbsd'):
+     env.Append( LIBS=[ "kvm" ] )
+ 
+@@ -1568,8 +1589,11 @@ if env.TargetOSIs('posix'):
+         if not has_option("disable-warnings-as-errors"):
+             env.Append( CCFLAGS=["-Werror"] )
+ 
++    env.Append( CPPDEFINES=["XP_UNIX=1"] )
+     env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
++    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
+     env.Append( LINKFLAGS=["-pthread"] )
++    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
+ 
+     # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
+     # startup.
+@@ -2764,6 +2788,7 @@ def doConfigure(myenv):
+             # permit more than four parameters.
+             "BOOST_THREAD_DONT_PROVIDE_VARIADIC_THREAD",
+             "BOOST_SYSTEM_NO_DEPRECATED",
++            "BOOST_OPTIONAL_USE_SINGLETON_DEFINITION_OF_NONE",
+         ]
+     )
+ 
+@@ -2830,7 +2855,7 @@ def doConfigure(myenv):
+         myenv.ConfError("Couldn't find SASL header/libraries")
+ 
+     # requires ports devel/libexecinfo to be installed
+-    if env.TargetOSIs('freebsd', 'openbsd'):
++    if env.TargetOSIs('dragonfly', 'freebsd', 'netbsd', 'openbsd'):
+         if not conf.CheckLib("execinfo"):
+             myenv.ConfError("Cannot find libexecinfo, please install devel/libexecinfo.")
+ 

@@ -5,7 +5,7 @@
 MODNAME=		imagick
 PECL_VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
 CATEGORIES+=		sysutils
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Provides a wrapper to the ImageMagick library.

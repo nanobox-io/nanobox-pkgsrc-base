@@ -28,6 +28,7 @@ WRKSRC=			${WRKDIR}/phalcon/ext
 USE_LANGUAGES+=		c c++
 
 USE_TOOLS+=		gmake
+CFLAGS+=		-O2 -Wall -fvisibility=hidden -flto -DZEPHIR_RELEASE=1
 
 .if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71" 
 EXTENSIONS=		phar json filter hash gmp ctype pdo pdo_sqlite simplexml tokenizer xmlwriter dom zip mbstring xml
@@ -55,6 +56,7 @@ pre-configure:
 	cd ${PHALCONDIR}; composer install
 	cd ${PHALCONDIR}; composer require "phalcon/zephir:dev-master"
 	cd ${PHALCONDIR}; vendor/bin/zephir generate -backend=ZendEngine3
+	cd ${WRKSRC}; phpize
 
 .endif
 

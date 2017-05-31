@@ -21,7 +21,7 @@ PHP_EXTENSION_VERSION.apm=		2.1.3			# https://pecl.php.net/package/APM
 .endif
 PHP_EXTENSION_VERSION.bcmath=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.bcompiler=	1.0.2			# https://pecl.php.net/package/bcompiler
-PHP_EXTENSION_VERSION.blackfire=	1.16.0			# https://blackfire.io/docs/up-and-running/installation
+PHP_EXTENSION_VERSION.blackfire=	1.16.2			# https://blackfire.io/docs/up-and-running/installation
 PHP_EXTENSION_VERSION.bz2=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.calendar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.ctype=		${PHP_BASE_VERS}
@@ -78,11 +78,11 @@ PHP_EXTENSION_VERSION.mogilefs=		0.9.2			# https://pecl.php.net/package/mogilefs
 .endif
 PHP_EXTENSION_VERSION.mongo=		1.6.14			# https://pecl.php.net/package/mongo
 .if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
-PHP_EXTENSION_VERSION.mongodb=		1.2.8			# https://pecl.php.net/package/mongodb
+PHP_EXTENSION_VERSION.mongodb=		1.2.9			# https://pecl.php.net/package/mongodb
 .elif ${_PHP_VERSION} == "53"
 PHP_EXTENSION_VERSION.mongodb=          1.1.0                   # https://pecl.php.net/package/mongodb
 .else
-PHP_EXTENSION_VERSION.mongodb=		1.2.8			# https://pecl.php.net/package/mongodb
+PHP_EXTENSION_VERSION.mongodb=		1.2.9			# https://pecl.php.net/package/mongodb
 .endif
 PHP_EXTENSION_VERSION.mssql=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mysql=		${PHP_BASE_VERS}
@@ -114,7 +114,7 @@ PHP_EXTENSION_VERSION.phalcon=          2.0.9                  # https://github.
 .elif ${_PHP_VERSION} == "54"
 PHP_EXTENSION_VERSION.phalcon=		2.0.13			# https://github.com/phalcon/cphalcon
 .else
-PHP_EXTENSION_VERSION.phalcon=		3.1.1			# https://github.com/phalcon/cphalcon
+PHP_EXTENSION_VERSION.phalcon=		3.1.2			# https://github.com/phalcon/cphalcon
 .endif
 PHP_EXTENSION_VERSION.phar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.phpwkhtmltox=	0.10			# https://github.com/mreiferson/php-wkhtmltox
@@ -159,7 +159,7 @@ PHP_EXTENSION_VERSION.stats=		2.0.3			# https://pecl.php.net/package/stats
 PHP_EXTENSION_VERSION.stats=		1.0.5			# https://pecl.php.net/package/stats
 .endif
 .if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
-PHP_EXTENSION_VERSION.stomp=		2.0.0			# https://pecl.php.net/package/stomp
+PHP_EXTENSION_VERSION.stomp=		2.0.1			# https://pecl.php.net/package/stomp
 .else
 PHP_EXTENSION_VERSION.stomp=		1.0.9			# https://pecl.php.net/package/stomp
 .endif
@@ -180,7 +180,7 @@ PHP_EXTENSION_VERSION.xdebug=		2.2.7			# https://pecl.php.net/package/xdebug
 .elif ${_PHP_VERSION} == "54"
 PHP_EXTENSION_VERSION.xdebug=		2.4.1			# https://pecl.php.net/package/xdebug
 .else
-PHP_EXTENSION_VERSION.xdebug=           2.5.1                   # https://pecl.php.net/package/xdebug
+PHP_EXTENSION_VERSION.xdebug=           2.5.4                   # https://pecl.php.net/package/xdebug
 .endif
 PHP_EXTENSION_VERSION.xhprof=           0.9.4                   # https://pecl.php.net/package/xhprof
 PHP_EXTENSION_VERSION.xml=		${PHP_BASE_VERS}

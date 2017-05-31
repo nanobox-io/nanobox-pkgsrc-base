@@ -7,6 +7,7 @@ MODNAME=		magickwand
 PECL_VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
 PECL_DISTNAME=		MagickWandForPHP-1.0.9-2
 PKGNAME=		${PHP_PKG_PREFIX}-${MODNAME}-${PECL_VERSION}
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://www.magickwand.org/download/php/
 EXTRACT_SUFX=		.tar.gz # required, because ../../base/php/ext.mk

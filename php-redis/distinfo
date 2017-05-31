@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2011/06/08 10:10:16 fhajny Exp $
 
-SHA1 (php-redis/redis-3.1.1.tgz) = a2dfa71fedad3b369da3d49b30f18e7e37fc02c2
-RMD160 (php-redis/redis-3.1.1.tgz) = d8666bb281252a772e1c5425dd790c15ab47db42
-SHA512 (php-redis/redis-3.1.1.tgz) = a9bf74342dbaec518623f99a958130d61ae643111448dd16c974fcf96ec722d34c1f7d2e7b09e786abe7432bff1d34e2d8bd895c8b6c5f9b88faac701eb77b2a
-Size (php-redis/redis-3.1.1.tgz) = 198597 bytes
+SHA1 (php-redis/redis-3.1.2.tgz) = 00bba9d3820d767c3623d21135d7e20d1b7584ba
+RMD160 (php-redis/redis-3.1.2.tgz) = 1e57aca2206fd4ca033ef6ba9c4b2a24e7338629
+SHA512 (php-redis/redis-3.1.2.tgz) = 14b6321072f8ab41b8293b40ea8e1e2bdac1bb694c4566467ea4e6ced37c8fc41bf5712bd27cebf509f25fda0492765cd2c8d2fe61395bcb0b0d9cbbceebe684
+Size (php-redis/redis-3.1.2.tgz) = 199041 bytes

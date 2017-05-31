@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
-SHA1 (php-stomp/stomp-2.0.0.tgz) = f66e21ea5fea7152930a3b2bf1eac5b2fa5b970d
-RMD160 (php-stomp/stomp-2.0.0.tgz) = 3c787a75d29fa3cc4ae7fd87f7ed2492e9677c04
-SHA512 (php-stomp/stomp-2.0.0.tgz) = f999762f842f19e920bca35175e65e20173c9ef5162eba3b79a7a2a70a52991c5d39f6d9dd6d9dfa081f1c2fb23e0dae5fa42224dcad4626666e5785076f1a12
-Size (php-stomp/stomp-2.0.0.tgz) = 23422 bytes
+SHA1 (php-stomp/stomp-2.0.1.tgz) = f1e5f153d074db35d0927676162dcffcb339459e
+RMD160 (php-stomp/stomp-2.0.1.tgz) = 447331268050ec45ec7ed09defe4b6ee22c338ab
+SHA512 (php-stomp/stomp-2.0.1.tgz) = 61cfacbd96f1061dc869ede6c1ca0f7bceb6120b28cc4a78fabcbace54a66ba540faf41ef72747b8bcc6a4ef98e405daac04e82bd4e079d90293f030684b04d3
+Size (php-stomp/stomp-2.0.1.tgz) = 23494 bytes

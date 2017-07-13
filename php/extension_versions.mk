@@ -6,7 +6,7 @@ PHP_EXTENSION_VERSIONS_MK=	#defined
 .include "../../base/php/phpversion.mk"
 .include "../../base/newrelic/newrelicversion.mk"
 
-PHP_EXTENSION_VERSION.amqp=		1.9.0			# https://pecl.php.net/package/amqp
+PHP_EXTENSION_VERSION.amqp=		1.9.1			# https://pecl.php.net/package/amqp
 PHP_EXTENSION_VERSION.apc=		3.1.13			# https://pecl.php.net/package/APC
 .if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
 PHP_EXTENSION_VERSION.apcu=		5.1.8			# https://pecl.php.net/package/APCu
@@ -21,7 +21,7 @@ PHP_EXTENSION_VERSION.apm=		2.1.3			# https://pecl.php.net/package/APM
 .endif
 PHP_EXTENSION_VERSION.bcmath=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.bcompiler=	1.0.2			# https://pecl.php.net/package/bcompiler
-PHP_EXTENSION_VERSION.blackfire=	1.16.2			# https://blackfire.io/docs/up-and-running/installation
+PHP_EXTENSION_VERSION.blackfire=	1.17.3			# https://blackfire.io/docs/up-and-running/installation
 PHP_EXTENSION_VERSION.bz2=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.calendar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.ctype=		${PHP_BASE_VERS}
@@ -56,12 +56,12 @@ PHP_EXTENSION_VERSION.igbinary=		2.0.1			# https://pecl.php.net/package/igbinary
 PHP_EXTENSION_VERSION.imagick=		3.4.3			# https://pecl.php.net/package/imagick
 PHP_EXTENSION_VERSION.imap=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.intl=		${PHP_BASE_VERS}
-PHP_EXTENSION_VERSION.ioncube_loader=	6.0.9			# http://www.ioncube.com/loaders.php
+PHP_EXTENSION_VERSION.ioncube_loader=	6.1.0			# http://www.ioncube.com/loaders.php
 PHP_EXTENSION_VERSION.json=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.json_post=	1.0.1			# https://pecl.php.net/package/json_post
 PHP_EXTENSION_VERSION.ldap=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.libsodium=	1.0.6			# https://pecl.php.net/package/libsodium
-PHP_EXTENSION_VERSION.lzf=		1.6.5			# https://pecl.php.net/package/lzf
+PHP_EXTENSION_VERSION.lzf=		1.6.6			# https://pecl.php.net/package/lzf
 PHP_EXTENSION_VERSION.magickwand=	1.0.9			# http://www.magickwand.org/download/php/
 PHP_EXTENSION_VERSION.mbstring=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mcrypt=		${PHP_BASE_VERS}
@@ -114,7 +114,7 @@ PHP_EXTENSION_VERSION.phalcon=          2.0.9                  # https://github.
 .elif ${_PHP_VERSION} == "54"
 PHP_EXTENSION_VERSION.phalcon=		2.0.13			# https://github.com/phalcon/cphalcon
 .else
-PHP_EXTENSION_VERSION.phalcon=		3.1.2			# https://github.com/phalcon/cphalcon
+PHP_EXTENSION_VERSION.phalcon=		3.2.0			# https://github.com/phalcon/cphalcon
 .endif
 PHP_EXTENSION_VERSION.phar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.phpwkhtmltox=	0.10			# https://github.com/mreiferson/php-wkhtmltox
@@ -149,7 +149,7 @@ PHP_EXTENSION_VERSION.sphinx=		1.3.3			# https://pecl.php.net/package/sphinx
 PHP_EXTENSION_VERSION.sqlite=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sqlite3=		${PHP_BASE_VERS}
 .if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
-PHP_EXTENSION_VERSION.ssh2=		1.0			# https://pecl.php.net/package/ssh2
+PHP_EXTENSION_VERSION.ssh2=		1.1.1			# https://pecl.php.net/package/ssh2
 .else
 PHP_EXTENSION_VERSION.ssh2=		0.13			# https://pecl.php.net/package/ssh2
 .endif
@@ -180,7 +180,7 @@ PHP_EXTENSION_VERSION.xdebug=		2.2.7			# https://pecl.php.net/package/xdebug
 .elif ${_PHP_VERSION} == "54"
 PHP_EXTENSION_VERSION.xdebug=		2.4.1			# https://pecl.php.net/package/xdebug
 .else
-PHP_EXTENSION_VERSION.xdebug=           2.5.4                   # https://pecl.php.net/package/xdebug
+PHP_EXTENSION_VERSION.xdebug=           2.5.5                   # https://pecl.php.net/package/xdebug
 .endif
 PHP_EXTENSION_VERSION.xhprof=           0.9.4                   # https://pecl.php.net/package/xhprof
 PHP_EXTENSION_VERSION.xml=		${PHP_BASE_VERS}

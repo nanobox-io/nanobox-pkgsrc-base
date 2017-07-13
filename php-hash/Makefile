@@ -27,6 +27,8 @@ HASH_INCLUDES=		php_hash_adler32.h php_hash_crc32.h php_hash_gost_tables.h php_h
 HASH_INCLUDES=		php_hash_adler32.h php_hash_crc32.h php_hash_crc32_tables.h php_hash_fnv.h php_hash_gost.h php_hash_gost_tables.h php_hash.h php_hash_haval.h php_hash_joaat.h php_hash_md.h php_hash_ripemd.h php_hash_sha.h php_hash_snefru.h php_hash_snefru_tables.h php_hash_tiger.h php_hash_tiger_tables.h php_hash_whirlpool.h php_hash_whirlpool_tables.h
 .elif ${PKG_PHP_VERSION} == 71
 HASH_INCLUDES=		php_hash_gost_tables.h php_hash_snefru.h php_hash.h php_hash_haval.h php_hash_snefru_tables.h php_hash_adler32.h php_hash_joaat.h php_hash_tiger.h php_hash_crc32.h php_hash_md.h php_hash_tiger_tables.h php_hash_crc32_tables.h php_hash_ripemd.h php_hash_whirlpool.h php_hash_fnv.h php_hash_sha.h php_hash_whirlpool_tables.h php_hash_gost.h php_hash_sha3.h
+.elif ${PKG_PHP_VERSION} == 72
+HASH_INCLUDES=		php_hash.h php_hash_adler32.h php_hash_crc32.h php_hash_crc32_tables.h php_hash_fnv.h php_hash_gost.h php_hash_gost_tables.h php_hash_haval.h php_hash_joaat.h php_hash_md.h php_hash_ripemd.h php_hash_sha.h php_hash_sha3.h php_hash_snefru.h php_hash_snefru_tables.h php_hash_tiger.h php_hash_tiger_tables.h php_hash_whirlpool.h php_hash_whirlpool_tables.h
 .endif
 
 PLIST_SRC+=		${.CURDIR}/../../base/php-hash/PLIST.hash${PKG_PHP_VERSION}

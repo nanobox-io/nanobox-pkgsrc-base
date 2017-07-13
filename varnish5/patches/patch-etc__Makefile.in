@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- etc/Makefile.in.orig	2017-04-07 11:19:09.000000000 +0000
++++ etc/Makefile.in
+@@ -315,7 +315,7 @@ DISTCLEANFILES = builtin.vcl
+ dist_doc_DATA = builtin.vcl \
+ 		example.vcl
+ 
+-vcldir = $(datarootdir)/varnish/vcl
++vcldir = @prefix@/share/examples/@PACKAGE@
+ dist_vcl_DATA = devicedetect.vcl
+ all: all-am
+ 

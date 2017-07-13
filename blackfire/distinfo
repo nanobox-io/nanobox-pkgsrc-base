@@ -1,10 +1,10 @@
 $NetBSD$
 
-SHA1 (blackfire-1.11.2/blackfire-agent-linux_static_amd64) = 52085669dcfb639fe1dcce63bfe3f9e632f059db
-RMD160 (blackfire-1.11.2/blackfire-agent-linux_static_amd64) = 62fbe6f83c3681bbb941e21ae057ef2df4348651
-SHA512 (blackfire-1.11.2/blackfire-agent-linux_static_amd64) = 734d55ff048e9eeee4112455f02bbd72d9af54877e7165bcbc40d58e697eacbbe62261b67608362808ae5f1bfcceae2fa4d9507622faace6cae2b2b64a3b8450
-Size (blackfire-1.11.2/blackfire-agent-linux_static_amd64) = 9155776 bytes
-SHA1 (blackfire-1.11.2/blackfire-cli-linux_static_amd64) = 4b16214050543dbe5161498beb42c497cfd8d1d6
-RMD160 (blackfire-1.11.2/blackfire-cli-linux_static_amd64) = d32ba3b0b90b817c2ab55c394d85d9b527b50c44
-SHA512 (blackfire-1.11.2/blackfire-cli-linux_static_amd64) = 599fccb308d60dd9c5cfb6efd866398d5f02e1a3be7ef741016ec573e224639c975e5a5a3b5507173f78f09c3ef4404c13e71403e994a0a04e222f7820da2e32
-Size (blackfire-1.11.2/blackfire-cli-linux_static_amd64) = 9305792 bytes
+SHA1 (blackfire-1.14.0/blackfire-agent-linux_static_amd64) = 32b412fe451580c62fe2e860098fd5117a01ca0f
+RMD160 (blackfire-1.14.0/blackfire-agent-linux_static_amd64) = c1bcf51364ffd13bcaedf11d9813ca36ea896955
+SHA512 (blackfire-1.14.0/blackfire-agent-linux_static_amd64) = eac513085e32e69a870b327cc3ac303b0f6de77323000995bd619b59ad948ca919f724217545c3172e49f3d0ad9d22a78d1cc5eac7cbdce1bad993a1dcd57fbb
+Size (blackfire-1.14.0/blackfire-agent-linux_static_amd64) = 7899360 bytes
+SHA1 (blackfire-1.14.0/blackfire-cli-linux_static_amd64) = 57fdd7c28bf3843fd41b66aaf31046410663fb27
+RMD160 (blackfire-1.14.0/blackfire-cli-linux_static_amd64) = 26fa87a8c78bb9a7224f74a9bfa07cda9e7adabb
+SHA512 (blackfire-1.14.0/blackfire-cli-linux_static_amd64) = a7e81d544dd7183c7bfe4161b622c09fbdf1540a1b4b470cb191ffa7914d3ba6e383895b4376c5043b146b52e02484477972c8e61fce029a7c2d6aeba833f745
+Size (blackfire-1.14.0/blackfire-cli-linux_static_amd64) = 7806112 bytes

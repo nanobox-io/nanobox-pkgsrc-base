@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 PKGNAME=		blackfire-${VERSION}
-VERSION=		1.11.2
+VERSION=		1.14.0
 PKGREVISION=		1
 CATEGORIES=		www
 DISTFILES=		blackfire-agent-linux_static_amd64 blackfire-cli-linux_static_amd64

@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		erlang-${VERSION}
-VERSION=		19.3.2
+VERSION=		19.3.6
 PKGNAME=		erlang-${VERSION}
 # PKGREVISION=		1
 CATEGORIES=		base
@@ -58,7 +58,7 @@ BUILD_DEPENDS+=         fop>=1.1:../../textproc/fop
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/java-vm.mk"
+.include "../../base/java/java-vm.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../base/git/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

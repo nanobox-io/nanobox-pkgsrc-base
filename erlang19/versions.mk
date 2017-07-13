@@ -2,8 +2,8 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-ERLANG_VERSION=			19.3.2
-DIST_VERSION_MAJOR=		19.3.2
+ERLANG_VERSION=			19.3.6
+DIST_VERSION_MAJOR=		19.3.6
 #DIST_VERSION_MINOR=		1
 
 _VERSIONS=				\
@@ -19,19 +19,19 @@ _VERSIONS=				\
 	cosTransactions		1.3.2	\
 	crypto			3.7.4	\
 	debugger		4.2.1	\
-	dialyzer		3.1	\
+	dialyzer		3.1.1	\
 	diameter		1.12.2	\
 	edoc			0.8.1	\
 	eldap			1.2.2	\
 	erl_docgen		0.6.1	\
 	erl_interface		3.9.3	\
-	erts			8.3.2	\
+	erts			8.3.5	\
 	et			1.6	\
 	eunit			2.3.2	\
 	gs			1.6.2	\
 	hipe			3.15.4	\
 	ic			4.4.2	\
-	inets			6.3.7	\
+	inets			6.3.9	\
 	jinterface		1.7.1	\
 	kernel			5.2	\
 	megaco			3.18.1	\
@@ -49,13 +49,13 @@ _VERSIONS=				\
 	sasl			3.0.3	\
 	snmp			5.2.5	\
 	ssh			4.4.2	\
-	ssl			8.1.2	\
+	ssl			8.1.3	\
 	stdlib			3.3	\
 	syntax_tools		2.1.1	\
 	tools			2.9.1	\
 	typer			0.9.12	\
 	wx			1.8	\
-	xmerl			1.3.13
+	xmerl			1.3.14
 
 PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
 

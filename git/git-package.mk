@@ -114,10 +114,12 @@ _GIT_EXTRACT_CACHED.${repo}=	\
 
 #   create cache archive
 _GIT_CREATE_CACHE.${repo}=	\
-	${STEP_MSG} "Creating cached GIT archive "${_GIT_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_GIT_DISTDIR:Q};					\
-	pax -w ${GIT_MODULE.${repo}:Q} | gzip > ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp;	\
-	${MV} '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp' '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}'
+	if [ ! -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} ]; then \
+	  ${STEP_MSG} "Creating cached GIT archive "${_GIT_DISTFILE.${repo}:Q}"."; \
+	  ${MKDIR} ${_GIT_DISTDIR:Q};					\
+	  pax -w ${GIT_MODULE.${repo}:Q} | gzip > ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp;	\
+	  ${MV} '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}.tmp' '${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}'; \
+	fi
 
 #   fetch git repo or update cached one
 _GIT_FETCH_REPO.${repo}=	\
@@ -138,7 +140,7 @@ _GIT_FETCH_REPO.${repo}=	\
 	  checkout ${_GIT_CHECKOUT_FLAGS} ${_GIT_FLAG.${repo}:Q};		\
 	${STEP_MSG} "Updating submodules of "${_GIT_FLAG.${repo}:Q}".";		\
 	${SETENV} ${_GIT_ENV.${repo}} ${_GIT_CMD} -C ${GIT_MODULE.${repo}:Q}	\
-	  submodule update --recursive
+	  submodule update --init --recursive
 .endfor
 
 pre-extract: do-git-extract

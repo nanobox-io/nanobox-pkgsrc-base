@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.3 2013/09/14 09:13:26 adam Exp $
+bin/gifdiff
+bin/gifsicle
+${PLIST.x11}bin/gifview
+man/man1/gifdiff.1
+man/man1/gifsicle.1
+${PLIST.x11}man/man1/gifview.1

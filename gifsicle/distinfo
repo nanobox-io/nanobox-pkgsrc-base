@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.9 2017/04/05 16:07:17 wiz Exp $
+
+SHA1 (gifsicle-1.90.tar.gz) = 879e9d0b16e6a62429a0e5ee5b43d3c331260145
+RMD160 (gifsicle-1.90.tar.gz) = 55af17df719e8ffcf5a1aeba5e466597965261b5
+SHA512 (gifsicle-1.90.tar.gz) = a5fd815c3aa1388690199edc16c0d5c0c32257cefd1cf8a1b660024b8e2324a6b4a54e19013984f905549df42d7719cdb1a875979b77729723f70d8e43f9bab7
+Size (gifsicle-1.90.tar.gz) = 571910 bytes

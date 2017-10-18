@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- src/Makefile.orig	2017-07-14 11:28:42.000000000 +0000
++++ src/Makefile
+@@ -25,8 +25,8 @@ WARN=-Wall -W -Wno-missing-field-initial
+ OPT=$(OPTIMIZATION)
+ 
+ PREFIX?=/usr/local
+-INSTALL_BIN=$(PREFIX)/bin
+-INSTALL=install
++INSTALL_BIN=$(DESTDIR)$(PREFIX)/bin
++INSTALL=$(BSD_INSTALL_PROGRAM)
+ 
+ # Default allocator defaults to Jemalloc if it's not an ARM
+ MALLOC=libc

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2014/01/03 05:31:52 othyro Exp $
+
+SHA1 (beanstalkd/v1.10.tar.gz) = bfc0ccf99e15b15eac03ec1d8a57a3aaff143237
+RMD160 (beanstalkd/v1.10.tar.gz) = bcd40208a48499cb3662f44b99484b5c992223a0
+Size (beanstalkd/v1.10.tar.gz) = 66243 bytes
+SHA1 (patch-Makefile) = 30c5095705d93a9ed11958d1c78bc481d2c45163
+SHA1 (patch-darwin.c) = 83db9922d20d12cff4f99c5214a45ffdc17285c2
+SHA1 (patch-dat.h) = ba5ff30986e077f33bb53804c86f2c655372d577

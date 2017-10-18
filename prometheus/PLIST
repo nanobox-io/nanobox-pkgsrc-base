@@ -1,0 +1,27 @@
+@comment $NetBSD$
+bin/prometheus
+bin/promtool
+etc/prometheus.yml
+lib/prometheus/console_libraries/menu.lib
+lib/prometheus/console_libraries/prom.lib
+lib/prometheus/consoles/aws_elasticache.html
+lib/prometheus/consoles/aws_elb.html
+lib/prometheus/consoles/aws_redshift-cluster.html
+lib/prometheus/consoles/aws_redshift.html
+lib/prometheus/consoles/blackbox.html
+lib/prometheus/consoles/cassandra.html
+lib/prometheus/consoles/cloudwatch.html
+lib/prometheus/consoles/haproxy-backend.html
+lib/prometheus/consoles/haproxy-backends.html
+lib/prometheus/consoles/haproxy-frontend.html
+lib/prometheus/consoles/haproxy-frontends.html
+lib/prometheus/consoles/haproxy.html
+lib/prometheus/consoles/index.html.example
+lib/prometheus/consoles/node-cpu.html
+lib/prometheus/consoles/node-disk.html
+lib/prometheus/consoles/node-overview.html
+lib/prometheus/consoles/node.html
+lib/prometheus/consoles/prometheus-overview.html
+lib/prometheus/consoles/prometheus.html
+lib/prometheus/consoles/snmp-overview.html
+lib/prometheus/consoles/snmp.html

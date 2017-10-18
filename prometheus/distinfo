@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (prometheus-1.7.2.linux-amd64.tar.gz) = 7fbcb3d54a2cf7095617e7fa4726b34b4b5b248a
+RMD160 (prometheus-1.7.2.linux-amd64.tar.gz) = d10a1ef604613c7f97e61327388c69ccfa0ed164
+SHA512 (prometheus-1.7.2.linux-amd64.tar.gz) = 334ee7d5b0d22aa413b64ccd5a0a6ba3318a3f359725777387152f9ae915f41c958ae1c778ccbb4dccc1b48b05a6289ee6dd048468c6af6c2b27331ec1ecda5c
+Size (prometheus-1.7.2.linux-amd64.tar.gz) = 17163877 bytes

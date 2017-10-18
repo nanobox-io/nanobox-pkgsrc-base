@@ -56,7 +56,7 @@ sudo GCCBASE=/usr \
   SH=/bin/bash \
   /content/pkgsrc/bootstrap/bootstrap \
   --compiler=gcc \
-  --make-jobs=8 \
+  --make-jobs=16 \
   --abi 64 \
   --full \
   --prefer-pkgsrc=yes \
@@ -95,7 +95,7 @@ PACKAGES=     /content/packages/pkgsrc/${project}/Linux
 
 WRKOBJDIR=      /var/tmp/pkgsrc-build-${project}
 
-MAKE_JOBS=      8
+MAKE_JOBS=      16
 JPEG_DEFAULT=            libjpeg-turbo
 
 SU_CMD=       sudo sh -c
@@ -166,7 +166,7 @@ sudo bash -c "/bin/cat > /data/etc/pkgin/repositories.conf" <<END
 # file:///usr/pkgsrc/packages/All
 
 # Nanobox public repository
-http://pkgsrc.nanobox.io/nanobox/${project}/${platform}
+http://d7zr21m3kwv6q.cloudfront.net/nanobox/${project}/${platform}
 END
 
 # 10) symlink openssl certs

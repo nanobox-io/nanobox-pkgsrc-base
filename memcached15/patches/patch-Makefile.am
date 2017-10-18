@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- Makefile.am.orig	2017-08-25 04:32:51.000000000 +0000
++++ Makefile.am
+@@ -91,7 +91,7 @@ EXTRA_DIST = doc scripts t memcached.spe
+ 
+ MOSTLYCLEANFILES = *.gcov *.gcno *.gcda *.tcov
+ 
+-test:	memcached-debug sizes testapp
++test:	memcached-debug sizes testapp timedrun
+ 	$(srcdir)/sizes
+ 	$(srcdir)/testapp
+ 	@if test -n "${PARALLEL}"; then \

@@ -1,0 +1,9 @@
+@comment $NetBSD$
+bin/memcached
+bin/memcached-tool
+include/memcached/protocol_binary.h
+man/man1/memcached.1
+share/doc/memcached/new_lru.txt
+share/doc/memcached/protocol.txt
+share/doc/memcached/readme.txt
+share/doc/memcached/threads.txt

@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.27 2015/04/06 07:22:54 adam Exp $
+
+BUILDLINK_TREE+=	icu
+
+.if !defined(ICU_BUILDLINK3_MK)
+ICU_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.icu+=	icu>=55.1<56
+BUILDLINK_ABI_DEPENDS.icu+=	icu>=55.1<56
+BUILDLINK_PKGSRCDIR.icu?=	../../base/icu-55
+.endif # ICU_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-icu

@@ -1,8 +1,8 @@
-$NetBSD: patch-src_pl_plperl_plperl.h,v 1.1 2016/02/25 21:37:35 tnn Exp $
+$NetBSD$
 
---- src/pl/plperl/plperl.h.orig	2011-09-22 23:57:57.000000000 +0200
-+++ src/pl/plperl/plperl.h	2011-10-12 20:36:11.783264869 +0200
-@@ -44,12 +44,21 @@
+--- src/pl/plperl/plperl.h.orig	2017-08-07 21:13:41.000000000 +0000
++++ src/pl/plperl/plperl.h
+@@ -42,6 +42,10 @@
  #undef vsnprintf
  #endif
  
@@ -11,10 +11,11 @@ $NetBSD: patch-src_pl_plperl_plperl.h,v 1.1 2016/02/25 21:37:35 tnn Exp $
 +#define list_tail sun_list_tail
 +#endif
  
- /* required for perl API */
- #include "EXTERN.h"
- #include "perl.h"
+ /*
+  * Get the basic Perl API.  We use PERL_NO_GET_CONTEXT mode so that our code
+@@ -60,6 +64,11 @@
  #include "XSUB.h"
+ #endif
  
 +#ifdef __sun
 +#undef list_head

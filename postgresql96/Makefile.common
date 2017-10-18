@@ -16,7 +16,7 @@
 # used by base/postgresql96-pltcl/Makefile
 # used by base/postgresql96-server/Makefile
 
-DISTNAME=	postgresql-9.6.3
+DISTNAME=	postgresql-9.6.5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2

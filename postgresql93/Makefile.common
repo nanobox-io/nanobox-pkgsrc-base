@@ -16,7 +16,7 @@
 # used by base/postgresql93-pltcl/Makefile
 # used by base/postgresql93-server/Makefile
 
-DISTNAME=	postgresql-9.3.17
+DISTNAME=	postgresql-9.3.19
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=source/v${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2

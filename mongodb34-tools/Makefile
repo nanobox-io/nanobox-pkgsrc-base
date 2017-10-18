@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		mongodb34-tools-${VERSION}
-VERSION?=		3.4.6
+VERSION?=		3.4.9
 # PKGREVISION?=		1
 CATEGORIES=		pagoda
 MASTER_SITES=		github.com/mongodb/mongo-tools

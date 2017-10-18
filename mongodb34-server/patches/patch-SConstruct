@@ -1,6 +1,6 @@
 $NetBSD$
 
---- SConstruct.orig	2017-04-20 21:43:42.000000000 +0000
+--- SConstruct.orig	2017-08-01 03:03:23.000000000 +0000
 +++ SConstruct
 @@ -49,8 +49,12 @@ def get_running_os_name():
      running_os = os.sys.platform
@@ -56,8 +56,8 @@ $NetBSD$
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
-+    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
-+    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
++    env.Append( CPPPATH=[ "/data/include" ] )
++    env.Append( LIBPATH=[ "/data/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( LIBS=[ "kvm" ] )
 +    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
@@ -67,8 +67,8 @@ $NetBSD$
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
-+    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
-+    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
++    env.Append( CPPPATH=[ "/data/include" ] )
++    env.Append( LIBPATH=[ "/data/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( LIBS=[ "kvm" ] )
 +    env.Append( CPPDEFINES=[ "__netbsd__" ] )
@@ -76,19 +76,30 @@ $NetBSD$
  elif env.TargetOSIs('openbsd'):
      env.Append( LIBS=[ "kvm" ] )
  
-@@ -1568,8 +1589,11 @@ if env.TargetOSIs('posix'):
-         if not has_option("disable-warnings-as-errors"):
-             env.Append( CCFLAGS=["-Werror"] )
+@@ -1570,6 +1591,9 @@ if env.TargetOSIs('posix'):
  
-+    env.Append( CPPDEFINES=["XP_UNIX=1"] )
      env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
-+    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
      env.Append( LINKFLAGS=["-pthread"] )
++    env.Append( CPPDEFINES=["XP_UNIX=1"] )
++    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
 +    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -2764,6 +2788,7 @@ def doConfigure(myenv):
+@@ -2158,9 +2182,9 @@ def doConfigure(myenv):
+     if usingLibStdCxx:
+         def CheckModernLibStdCxx(context):
+             test_body = """
+-            #if !__has_include(<experimental/filesystem>)
+-            #error "libstdc++ from GCC 5.3.0 or newer is required"
+-            #endif
++            //#if !__has_include(<experimental/filesystem>)
++            //#error "libstdc++ from GCC 5.3.0 or newer is required"
++            //#endif
+             """
+ 
+             context.Message('Checking for libstdc++ 5.3.0 or better... ')
+@@ -2792,6 +2816,7 @@ def doConfigure(myenv):
              # permit more than four parameters.
              "BOOST_THREAD_DONT_PROVIDE_VARIADIC_THREAD",
              "BOOST_SYSTEM_NO_DEPRECATED",
@@ -96,7 +107,7 @@ $NetBSD$
          ]
      )
  
-@@ -2830,7 +2855,7 @@ def doConfigure(myenv):
+@@ -2858,7 +2883,7 @@ def doConfigure(myenv):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed

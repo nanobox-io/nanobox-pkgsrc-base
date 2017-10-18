@@ -1,8 +1,8 @@
-$NetBSD: patch-sql_conn__handler_socket__connection.cc,v 1.1 2016/09/16 06:49:11 adam Exp $
+$NetBSD$
 
---- sql/conn_handler/socket_connection.cc.orig	2016-03-28 18:06:12.000000000 +0000
+--- sql/conn_handler/socket_connection.cc.orig	2017-06-12 10:31:29.000000000 +0000
 +++ sql/conn_handler/socket_connection.cc
-@@ -939,20 +939,23 @@ Channel_info* Mysqld_socket_listener::li
+@@ -945,22 +945,25 @@ Channel_info* Mysqld_socket_listener::li
      signal(SIGCHLD, SIG_DFL);
      request_init(&req, RQ_DAEMON, m_libwrap_name, RQ_FILE,
                   mysql_socket_getfd(connect_sock), NULL);
@@ -24,9 +24,11 @@ $NetBSD: patch-sql_conn__handler_socket__connection.cc,v 1.1 2016/09/16 06:49:11
 -             "refused connect from %s", eval_client(&req));
 +             "refused connect from %s", my_eval_client(&req));
  
+ #ifdef HAVE_LIBWRAP_PROTOTYPES
+       // Some distros have patched tcpd.h to have proper prototypes
        if (req.sink)
 -        (req.sink)(req.fd);
 +        ((void (*)(int)) (req.sink))(req.fd);
- 
-       mysql_socket_shutdown(listen_sock, SHUT_RDWR);
-       mysql_socket_close(listen_sock);
+ #else
+       // Some distros have not patched tcpd.h
+       if (req.sink)

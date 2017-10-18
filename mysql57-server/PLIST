@@ -134,7 +134,6 @@ share/mysql/italian/errmsg.sys
 share/mysql/japanese/errmsg.sys
 share/mysql/korean/errmsg.sys
 share/mysql/magic
-share/mysql/my-default.cnf
 share/mysql/mysql-log-rotate
 share/mysql/mysql.server
 share/mysql/mysql_security_commands.sql

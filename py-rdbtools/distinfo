@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (rdbtools-0.1.7.tar.gz) = 5527f97ff46bf2b5ec613dc1b888588f95d87145
-RMD160 (rdbtools-0.1.7.tar.gz) = ff1a232fcf237252fc33a8f92c9933d6efa52076
-SHA512 (rdbtools-0.1.7.tar.gz) = 303053cb9a7b582f8f93aa53126dd3f5b559a321d0c4bcd212b6603bad2e1922e9c1c1a47de558d957a1f050ef134b45fbd2fc76b9cadbd412a4ede8cc469442
-Size (rdbtools-0.1.7.tar.gz) = 204746 bytes
+SHA1 (rdbtools-0.1.11.tar.gz) = 1d4a26280caecfdfaccd733ae5bf79edc1d18061
+RMD160 (rdbtools-0.1.11.tar.gz) = 7351f0c5875ab3250aadd4c4a85d07b4cb080439
+SHA512 (rdbtools-0.1.11.tar.gz) = 5ae999c1d0860d56ed385a294768b890257d5c0fce7855a9c769f5c64acfe79513548189549ccf506db5c2ba012c27915970a8e2e043729ea87b807aa5621ef9
+Size (rdbtools-0.1.11.tar.gz) = 218248 bytes

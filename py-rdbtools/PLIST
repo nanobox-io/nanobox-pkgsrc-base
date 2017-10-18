@@ -6,6 +6,7 @@ ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/rdbtools/__init__.py
 ${PYSITELIB}/rdbtools/__init__.pyc
@@ -25,10 +26,16 @@ ${PYSITELIB}/rdbtools/cli/redis_memory_for_key.pyo
 ${PYSITELIB}/rdbtools/cli/redis_profiler.py
 ${PYSITELIB}/rdbtools/cli/redis_profiler.pyc
 ${PYSITELIB}/rdbtools/cli/redis_profiler.pyo
-${PYSITELIB}/rdbtools/cli/report.html.template
+${PYSITELIB}/rdbtools/compat.py
+${PYSITELIB}/rdbtools/compat.pyc
+${PYSITELIB}/rdbtools/compat.pyo
+${PYSITELIB}/rdbtools/encodehelpers.py
+${PYSITELIB}/rdbtools/encodehelpers.pyc
+${PYSITELIB}/rdbtools/encodehelpers.pyo
 ${PYSITELIB}/rdbtools/memprofiler.py
 ${PYSITELIB}/rdbtools/memprofiler.pyc
 ${PYSITELIB}/rdbtools/memprofiler.pyo
 ${PYSITELIB}/rdbtools/parser.py
 ${PYSITELIB}/rdbtools/parser.pyc
 ${PYSITELIB}/rdbtools/parser.pyo
+${PYSITELIB}/rdbtools/templates/report.html.template

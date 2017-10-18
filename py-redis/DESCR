@@ -1,0 +1,3 @@
+Python client for Redis key-value store
+
+The Python interface to the Redis key-value store.

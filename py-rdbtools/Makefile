@@ -2,7 +2,8 @@
 #
 
 DISTNAME=		rdbtools-${VERSION}
-VERSION=		0.1.7
+VERSION=		0.1.11
+PKGREVISION=		1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
 MASTER_SITES=		https://github.com/sripathikrishnan/redis-rdb-tools/archive/
@@ -13,6 +14,8 @@ COMMENT=		Utilities to convert Redis RDB files to JSON or SQL formats
 LICENSE=		mit
 
 WRKSRC=			${WRKDIR}/redis-rdb-tools-rdbtools-${VERSION}
+
+DEPENDS+=		${PYPKGPREFIX}-redis>=2.10.5:../../base/py-redis
 
 .include "../../lang/python/egg.mk"
 #_PYSETUPTOOLSINSTALLARGS= #nothing

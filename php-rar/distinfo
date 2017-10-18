@@ -1,7 +1,6 @@
 $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
-SHA1 (php-rar/rar-3.0.2.tgz) = 610071cd64c4c46c21badd57bd3759a2259402e7
-RMD160 (php-rar/rar-3.0.2.tgz) = f5e499ee75d435272410468292e129370602004c
-SHA512 (php-rar/rar-3.0.2.tgz) = 8ca02f0f7443325b6b7e71fffaab341f5516b6ae187191d90b89b178592ed7f50da3278a95829fd370cf4cb3e88de715bc63e1175be03230b8670793932547ed
-Size (php-rar/rar-3.0.2.tgz) = 257787 bytes
-SHA1 (patch-unrar-os.hpp) = a138a8dcb7dc20492748c74fe66356b4d04d3023
+SHA1 (php-rar/rar-4.0.0.tgz) = 55ab04391ac786b03a0b19f4de5bac19662d45f5
+RMD160 (php-rar/rar-4.0.0.tgz) = 305f7605d23f9ab7d4d153a3375c3b800cff0298
+SHA512 (php-rar/rar-4.0.0.tgz) = b68c9c322f98cc24a62050040506f7f9c2d0814b8a18c4d249f9a2fe64a0b0d9fae6c7ff3145b91514c804290f500a8b2e34ac1d7bdafc75d5014ec4dd3979be
+Size (php-rar/rar-4.0.0.tgz) = 383732 bytes

@@ -1,0 +1,21 @@
+@comment $NetBSD$
+include/php/ext/hash/php_hash.h
+include/php/ext/hash/php_hash_adler32.h
+include/php/ext/hash/php_hash_crc32.h
+include/php/ext/hash/php_hash_crc32_tables.h
+include/php/ext/hash/php_hash_fnv.h
+include/php/ext/hash/php_hash_gost.h
+include/php/ext/hash/php_hash_gost_tables.h
+include/php/ext/hash/php_hash_haval.h
+include/php/ext/hash/php_hash_joaat.h
+include/php/ext/hash/php_hash_md.h
+include/php/ext/hash/php_hash_ripemd.h
+include/php/ext/hash/php_hash_sha.h
+include/php/ext/hash/php_hash_sha3.h
+include/php/ext/hash/php_hash_snefru.h
+include/php/ext/hash/php_hash_snefru_tables.h
+include/php/ext/hash/php_hash_tiger.h
+include/php/ext/hash/php_hash_tiger_tables.h
+include/php/ext/hash/php_hash_whirlpool.h
+include/php/ext/hash/php_hash_whirlpool_tables.h
+lib/php/20160731/hash.so

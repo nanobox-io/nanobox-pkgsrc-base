@@ -22,6 +22,11 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 .include "../../base/php/extension_versions.mk"
+
+.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php70
+.endif
+
 .include "../../textproc/libyaml/buildlink3.mk"
 .include "../../base/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"

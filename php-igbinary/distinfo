@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
-SHA1 (php-igbinary/igbinary-2.0.1.tgz) = f8f0dd78116acf93fff504df97507e11dda963e1
-RMD160 (php-igbinary/igbinary-2.0.1.tgz) = c3b1dc1b5255563929b28b62fa2d4ec41c90e4a5
-SHA512 (php-igbinary/igbinary-2.0.1.tgz) = bcf6cf9154c00d4840d447113c831405c85ba1ff6c88ea2832490ee1d6d354be044b4c2c90590eb8fe2458545b292160b4d7f8330147613cfcbf467e38662781
-Size (php-igbinary/igbinary-2.0.1.tgz) = 66826 bytes
+SHA1 (php-igbinary/igbinary-2.0.4.tgz) = 8decf6a25ea2eabf222fda5320ddd7b1bef1b15f
+RMD160 (php-igbinary/igbinary-2.0.4.tgz) = 69516eac72dc469607072c1a6785c604a64f6813
+SHA512 (php-igbinary/igbinary-2.0.4.tgz) = 1c4a303ae9d5e3c4f2c569d50cb9d7ba6c5d92d99bda1cec9219fda0d3b98749b087042313813560a9606676b15386a9df54a2250e2cb3fec8d4c62f7caba567
+Size (php-igbinary/igbinary-2.0.4.tgz) = 68294 bytes

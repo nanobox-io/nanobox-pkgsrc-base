@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-trader/trader-0.4.0.tgz) = 9d8ccee43a7679c3826949c6e8259031e931f7bd
+RMD160 (php-trader/trader-0.4.0.tgz) = dd6b39b1cbbbd709e919bfc63faae1662cf9cbf8
+SHA512 (php-trader/trader-0.4.0.tgz) = 0a7d2209378d94362f1b24ad5f4c8d8b7077b7e33703f31fb1fddd8ce872f36e63a52a47bd9068b2993b008457349e4e0ecb9091ad2cb1109fad5d8eb9a9470d
+Size (php-trader/trader-0.4.0.tgz) = 298434 bytes

@@ -1,7 +1,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-PHP_BUNDLE_PATCH= 2
+PHP_BUNDLE_PATCH= 5
 
 PHP_EXTENSION_LIST= dom filter hash json mbstring pdo session xml \
 	igbinary imagick raphf propro \
@@ -15,4 +15,4 @@ PHP_EXTENSION_LIST= dom filter hash json mbstring pdo session xml \
 	ioncube_loader json_post libsodium lzf magickwand memcache memcached mogilefs \
 	mongo mongodb ncurses newrelic newt oauth opcache phalcon \
 	phpwkhtmltox radius rar readline redis sphinx ssh2 stats stomp svn \
-	timezonedb txforward uploadprogress xcache xdebug yaml
+	timezonedb trader txforward uploadprogress xcache xdebug yaml

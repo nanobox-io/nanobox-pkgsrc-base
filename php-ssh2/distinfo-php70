@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (php-ssh2/ssh2-1.1.1.tgz) = e4fd07fb657784c84b912b5c803550af9b7468da
-RMD160 (php-ssh2/ssh2-1.1.1.tgz) = f81d3b909d0ece92062cd223ca6ba2f35dded0df
-SHA512 (php-ssh2/ssh2-1.1.1.tgz) = 92cc40627a6114a4b0e7b8437e5e0b219b49dfbed9668937e7d0d37492a101c9f25381b5a1533f91c0530fdebe66af7bcb68ff4231a7ecd806b99d8a04f74d79
-Size (php-ssh2/ssh2-1.1.1.tgz) = 27551 bytes
+SHA1 (php-ssh2/ssh2-1.1.2.tgz) = ffd8aa2324d8c9448f6cfbea31579e08d99f38e4
+RMD160 (php-ssh2/ssh2-1.1.2.tgz) = d3af94cd3eff499d6db7ff5ad1c901aa781e0820
+SHA512 (php-ssh2/ssh2-1.1.2.tgz) = 36793191448745b8a9b3cc628fe9fb431480792c7a2ff0bf2eccd58cda1cf944933be1d301c455d4a6f3dabf7e04ffef248bc402a8ff99bfafcba0deddb25c36
+Size (php-ssh2/ssh2-1.1.2.tgz) = 32057 bytes

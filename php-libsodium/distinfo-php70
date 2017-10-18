@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+$NetBSD$
 
 SHA1 (php-libsodium/libsodium-2.0.4.tgz) = 061a2d3c952dc54b685f03d112e48b1238d262ac
 RMD160 (php-libsodium/libsodium-2.0.4.tgz) = 6e220bc6e5723a62ff6ee938817f10bafc46db3e

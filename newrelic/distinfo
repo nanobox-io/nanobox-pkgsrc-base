@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (newrelic-php5-7.4.0.198-linux.tar.gz) = 09eafc37e0bb80ed41f791cb5d791c6b220441dc
-RMD160 (newrelic-php5-7.4.0.198-linux.tar.gz) = a33a7599df0e54ef41c7a7e0d023a992105510a9
-SHA512 (newrelic-php5-7.4.0.198-linux.tar.gz) = f15b7202c4b0f89d32314122ee4f41e5b0fa17a3b99e5c0c94a97130b5299adb28beee948ae50d21b570ef431084767d04316b555fea3036ae1154504c03abc6
-Size (newrelic-php5-7.4.0.198-linux.tar.gz) = 18336645 bytes
+SHA1 (newrelic-php5-7.5.0.199-linux.tar.gz) = 2852681ffe8ef8c3abcc3f958cee1defe75f72d0
+RMD160 (newrelic-php5-7.5.0.199-linux.tar.gz) = fb384f831abdd50b8b8f382146941cbf9cd3dc89
+SHA512 (newrelic-php5-7.5.0.199-linux.tar.gz) = 25e2dbe20f4d1a980790add4b135c5821c5547b252cb14bfb7b42c3b1463d8bfcd06f8960a6fa4c200e64570dbe1a99185e948903c2686d6052d4a213828c2cd
+Size (newrelic-php5-7.5.0.199-linux.tar.gz) = 18460633 bytes

@@ -2,8 +2,9 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-MODNAME=		libsodium
+MODNAME=		sodium
 PECL_VERSION=		${PHP_EXTENSION_VERSION.${MODNAME}}
+PECL_DISTNAME=          libsodium-${PECL_VERSION}
 CATEGORIES+=		sysutils
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -20,11 +21,6 @@ PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
 
 .include "../../base/php/extension_versions.mk"
-
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
-DISTINFO_FILE=		${.CURDIR}/distinfo-php70
-.endif
-
 .include "../../base/php/ext.mk"
 .include "../../security/libsodium/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

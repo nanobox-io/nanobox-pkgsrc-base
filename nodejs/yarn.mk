@@ -5,11 +5,11 @@
 .if !defined(YARN_MK)
 YARN_MK=	# defined
 
-YARN_VERSION=	0.27.5
+YARN_VERSION=	1.1.0
 
 YARN_DISTFILE=	yarn-v${YARN_VERSION}.tar.gz
 
-YARN_SRC_DIR=		${WRKDIR}/dist/
+YARN_SRC_DIR=		${WRKDIR}/yarn-v${YARN_VERSION}/
 YARN_INSTALL_DIR=	${WRKSRC}/deps/yarn/
 
 DISTFILES+=	${YARN_DISTFILE}

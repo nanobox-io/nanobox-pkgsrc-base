@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/02/23 16:11:06 leot1990 Exp $
+
+SHA1 (phantomjs-2.1.1-linux-x86_64.tar.bz2) = f8afc8a24eec34c2badccc93812879a3d6f2caf3
+RMD160 (phantomjs-2.1.1-linux-x86_64.tar.bz2) = 0d5140ecaad6c2dde5fd5d42ebb5c71e9c6259c9
+SHA512 (phantomjs-2.1.1-linux-x86_64.tar.bz2) = 039b62ecf2fa4196357e129727871a53b046948e17b21900c78a1af4d0b523e41b9d4137e7454b0a638333d7fc27e65d14f4af8c665e982a504c12f828525419
+Size (phantomjs-2.1.1-linux-x86_64.tar.bz2) = 23415665 bytes

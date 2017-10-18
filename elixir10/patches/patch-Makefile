@@ -1,11 +1,11 @@
 $NetBSD$
 
---- Makefile.orig	2017-01-06 18:19:24.243424038 +0000
+--- Makefile.orig	2017-07-31 15:20:39.297610628 +0000
 +++ Makefile
 @@ -1,5 +1,5 @@
  REBAR ?= "$(CURDIR)/rebar"
 -PREFIX ?= /usr/local
 +PREFIX ?= @PREFIX@
  SHARE_PREFIX ?= $(PREFIX)/share
- CANONICAL :=
+ CANONICAL := v1.5/
  ELIXIRC := bin/elixirc --verbose --ignore-module-conflict

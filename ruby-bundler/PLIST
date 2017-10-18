@@ -117,7 +117,6 @@ ${GEM_LIBDIR}/lib/bundler/plugin/installer.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/installer/git.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/installer/rubygems.rb
 ${GEM_LIBDIR}/lib/bundler/plugin/source_list.rb
-${GEM_LIBDIR}/lib/bundler/postit_trampoline.rb
 ${GEM_LIBDIR}/lib/bundler/psyched_yaml.rb
 ${GEM_LIBDIR}/lib/bundler/remote_specification.rb
 ${GEM_LIBDIR}/lib/bundler/resolver.rb
@@ -200,12 +199,6 @@ ${GEM_LIBDIR}/lib/bundler/vendor/molinillo/lib/molinillo/state.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/faster.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/net-http-persistent/lib/net/http/persistent/ssl_reuse.rb
-${GEM_LIBDIR}/lib/bundler/vendor/postit/lib/postit.rb
-${GEM_LIBDIR}/lib/bundler/vendor/postit/lib/postit/environment.rb
-${GEM_LIBDIR}/lib/bundler/vendor/postit/lib/postit/installer.rb
-${GEM_LIBDIR}/lib/bundler/vendor/postit/lib/postit/parser.rb
-${GEM_LIBDIR}/lib/bundler/vendor/postit/lib/postit/setup.rb
-${GEM_LIBDIR}/lib/bundler/vendor/postit/lib/postit/version.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/actions.rb
 ${GEM_LIBDIR}/lib/bundler/vendor/thor/lib/thor/actions/create_file.rb
@@ -315,5 +308,6 @@ ${GEM_LIBDIR}/man/gemfile.5.txt
 ${GEM_LIBDIR}/man/index.txt
 ${GEM_LIBDIR}/task/release.rake
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/${RUBY_NAME}/gems/2.0.0/doc
-@pkgdir lib/${RUBY_NAME}/gems/2.0.0/build_info
+@pkgdir lib/${RUBY_NAME}/gems/2.2.0/extensions
+@pkgdir lib/${RUBY_NAME}/gems/2.2.0/doc
+@pkgdir lib/${RUBY_NAME}/gems/2.2.0/build_info

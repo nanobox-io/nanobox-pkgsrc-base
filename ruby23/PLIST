@@ -1234,8 +1234,8 @@ lib/${RUBY_NAME}/gems/2.3.0/gems/test-unit-3.1.5/test/util/test_observable.rb
 lib/${RUBY_NAME}/gems/2.3.0/gems/test-unit-3.1.5/test/util/test_procwrapper.rb
 lib/${RUBY_NAME}/gems/2.3.0/specifications/default/bigdecimal-1.2.8.gemspec
 lib/${RUBY_NAME}/gems/2.3.0/specifications/default/io-console-0.4.5.gemspec
-lib/${RUBY_NAME}/gems/2.3.0/specifications/default/json-1.8.3.gemspec
-lib/${RUBY_NAME}/gems/2.3.0/specifications/default/psych-2.1.0.gemspec
+lib/${RUBY_NAME}/gems/2.3.0/specifications/default/json-1.8.3.1.gemspec
+lib/${RUBY_NAME}/gems/2.3.0/specifications/default/psych-2.1.0.1.gemspec
 lib/${RUBY_NAME}/gems/2.3.0/specifications/default/rdoc-4.2.1.gemspec
 lib/${RUBY_NAME}/gems/2.3.0/specifications/did_you_mean-1.0.0.gemspec
 lib/${RUBY_NAME}/gems/2.3.0/specifications/minitest-5.8.5.gemspec

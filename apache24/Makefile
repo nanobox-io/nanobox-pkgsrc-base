@@ -5,8 +5,8 @@
 # to reference their own PRs this way, but this ends up
 # in NetBSD GNATS.
 
-DISTNAME=	httpd-2.4.27
-PKGREVISION=	1
+DISTNAME=	httpd-2.4.29
+#PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/httpd/apache/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \

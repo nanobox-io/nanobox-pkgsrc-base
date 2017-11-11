@@ -82,7 +82,6 @@ go/doc/go1.5.html
 go/doc/go1.6.html
 go/doc/go1.7.html
 go/doc/go1.8.html
-go/doc/go1.8.txt
 go/doc/go1.html
 go/doc/go1compat.html
 go/doc/go_faq.html
@@ -6271,6 +6270,7 @@ go/test/fixedbugs/issue19743.go
 go/test/fixedbugs/issue20029.go
 go/test/fixedbugs/issue20097.go
 go/test/fixedbugs/issue20335.go
+go/test/fixedbugs/issue20530.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go

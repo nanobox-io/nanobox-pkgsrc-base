@@ -1271,6 +1271,8 @@ share/httpd/manual/mod/mpm_winnt.html.ja.utf8
 share/httpd/manual/mod/mpmt_os2.html
 share/httpd/manual/mod/mpmt_os2.html.en
 share/httpd/manual/mod/mpmt_os2.html.fr
+share/httpd/manual/mod/overrides.html
+share/httpd/manual/mod/overrides.html.en
 share/httpd/manual/mod/prefork.html
 share/httpd/manual/mod/prefork.html.de
 share/httpd/manual/mod/prefork.html.en

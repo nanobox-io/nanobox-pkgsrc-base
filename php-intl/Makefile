@@ -7,7 +7,7 @@ CATEGORIES+=		textproc
 COMMENT=		PHP extension for i18n
 LICENSE=		php
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 
 .include "../../base/php/ext.mk"

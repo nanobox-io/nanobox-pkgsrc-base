@@ -13,5 +13,5 @@ BUILD_DEPENDS+=         scmgit-base>=1.6.4:../../devel/scmgit-base
 .PHONY: disable_myisam
 
 disable_myisam:
-	git clone git@github.com:xiezhenye/mysql-plugin-disable-myisam.git ${WRKDIR}/mysql-plugin-disable-myisam
+	git clone https://github.com/xiezhenye/mysql-plugin-disable-myisam.git ${WRKDIR}/mysql-plugin-disable-myisam
 	${CP} -r ${WRKDIR}/mysql-plugin-disable-myisam/src ${WRKSRC}/plugin/disable_myisam

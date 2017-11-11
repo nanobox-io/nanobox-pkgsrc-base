@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.1.1.1 2012/02/06 22:44:56 fhajny Exp $
 
-SHA1 (php-amqp/amqp-1.9.1.tgz) = 1379fc543ee153366a39c08a45679bc3a7ca9388
-RMD160 (php-amqp/amqp-1.9.1.tgz) = 2bd4307650b8d0430ed18aa4b0846dafe936603b
-SHA512 (php-amqp/amqp-1.9.1.tgz) = 5d3208fdf64148f0fd0c0efc7634750a7abd308ad5fd4b8db09cc7ff87dc46c88d3214ec4bec3cba43d51b30ea04ec93e08fe31c7a70ec2e63810cf01d7c3e39
-Size (php-amqp/amqp-1.9.1.tgz) = 98444 bytes
+SHA1 (php-amqp/amqp-1.9.3.tgz) = 4231377a0d684dbc85ea9a913e05ca62593b2bf9
+RMD160 (php-amqp/amqp-1.9.3.tgz) = 14e0ad1abba8871bbba7a43fc6779dd4978ad3b1
+SHA512 (php-amqp/amqp-1.9.3.tgz) = d4731ed5dc760a01621889e8518b5d1258a8335f701d241c453fd553924d83507a0a918b9733e249955fa11b43a1bdacf65c1f1cb55b8ed3c5b661277f5798b9
+Size (php-amqp/amqp-1.9.3.tgz) = 101342 bytes

@@ -28,6 +28,8 @@ DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
 INSTALLATION_DIRS=	${DOCDIR}
 
+PLIST_SRC+=		${.CURDIR}/../../base/php-apcu/PLIST.apcu
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
 

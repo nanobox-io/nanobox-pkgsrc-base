@@ -1,0 +1,824 @@
+@comment $NetBSD$
+share/dotnet/additionalDeps/Microsoft.AspNetCore.ApplicationInsights.HostingStartup/shared/Microsoft.NETCore.App/2.0.0/Microsoft.AspNetCore.ApplicationInsights.HostingStartup.deps.json
+share/dotnet/additionalDeps/Microsoft.AspNetCore.AzureAppServices.HostingStartup/shared/Microsoft.NETCore.App/2.0.0/Microsoft.AspNetCore.AzureAppServices.HostingStartup.deps.json
+share/dotnet/sdk/${PKGVERSION}/.version
+share/dotnet/sdk/${PKGVERSION}/15.0/Microsoft.Common.CrossTargeting.targets/ImportAfter/Microsoft.TestPlatform.CrossTargeting.targets
+share/dotnet/sdk/${PKGVERSION}/15.0/Microsoft.Common.props
+share/dotnet/sdk/${PKGVERSION}/15.0/Microsoft.Common.targets/ImportAfter/Microsoft.NET.Build.Extensions.targets
+share/dotnet/sdk/${PKGVERSION}/15.0/Microsoft.Common.targets/ImportAfter/Microsoft.NuGet.ImportAfter.targets
+share/dotnet/sdk/${PKGVERSION}/15.0/Microsoft.Common.targets/ImportAfter/Microsoft.TestPlatform.ImportAfter.targets
+share/dotnet/sdk/${PKGVERSION}/15.0/SolutionFile/ImportAfter/Microsoft.NuGet.ImportAfter.targets
+share/dotnet/sdk/${PKGVERSION}/Extensions/Microsoft.TestPlatform.TestHostRuntimeProvider.dll
+share/dotnet/sdk/${PKGVERSION}/Extensions/Microsoft.VisualStudio.TestPlatform.Extensions.Trx.TestLogger.dll
+share/dotnet/sdk/${PKGVERSION}/FSharp/FSharp.Build.dll
+share/dotnet/sdk/${PKGVERSION}/FSharp/FSharp.Compiler.Interactive.Settings.dll
+share/dotnet/sdk/${PKGVERSION}/FSharp/FSharp.Compiler.Private.dll
+share/dotnet/sdk/${PKGVERSION}/FSharp/FSharp.Core.dll
+share/dotnet/sdk/${PKGVERSION}/FSharp/Microsoft.DiaSymReader.PortablePdb.dll
+share/dotnet/sdk/${PKGVERSION}/FSharp/Microsoft.DiaSymReader.dll
+share/dotnet/sdk/${PKGVERSION}/FSharp/Microsoft.FSharp.NetSdk.props
+share/dotnet/sdk/${PKGVERSION}/FSharp/Microsoft.FSharp.NetSdk.targets
+share/dotnet/sdk/${PKGVERSION}/FSharp/Microsoft.FSharp.Targets
+share/dotnet/sdk/${PKGVERSION}/FSharp/Microsoft.Portable.FSharp.Targets
+share/dotnet/sdk/${PKGVERSION}/FSharp/RunFsc.cmd
+share/dotnet/sdk/${PKGVERSION}/FSharp/RunFsc.sh
+share/dotnet/sdk/${PKGVERSION}/FSharp/default.win32manifest
+share/dotnet/sdk/${PKGVERSION}/FSharp/fsc.deps.json
+share/dotnet/sdk/${PKGVERSION}/FSharp/fsc.exe
+share/dotnet/sdk/${PKGVERSION}/FSharp/fsc.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/FSharp/fsi.exe
+share/dotnet/sdk/${PKGVERSION}/MSBuild.deps.json
+share/dotnet/sdk/${PKGVERSION}/MSBuild.dll
+share/dotnet/sdk/${PKGVERSION}/MSBuild.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/Microsoft.ApplicationInsights.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Build.Framework.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Build.Tasks.Core.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Build.Utilities.Core.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Build.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.CSharp.CrossTargeting.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.CSharp.CurrentVersion.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.CSharp.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.CodeAnalysis.CSharp.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.CodeAnalysis.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Common.CrossTargeting.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Common.CurrentVersion.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Common.overridetasks
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Common.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Common.tasks
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.Archive.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.Cli.CommandLine.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.Cli.Sln.Internal.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.Cli.Utils.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.Configurer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.InternalAbstractions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.PlatformAbstractions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.ProjectJsonMigration.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.TestFramework.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.DotNet.Tools.MigrateCommand.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Extensions.CommandLineUtils.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.Extensions.DependencyModel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.NETCoreSdk.BundledVersions.props
+share/dotnet/sdk/${PKGVERSION}/Microsoft.NETFramework.CurrentVersion.props
+share/dotnet/sdk/${PKGVERSION}/Microsoft.NETFramework.CurrentVersion.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.NETFramework.props
+share/dotnet/sdk/${PKGVERSION}/Microsoft.NETFramework.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TemplateEngine.Abstractions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TemplateEngine.Cli.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TemplateEngine.Core.Contracts.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TemplateEngine.Core.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TemplateEngine.Edge.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TemplateEngine.Orchestrator.RunnableProjects.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TemplateEngine.Utils.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.Build.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.CommunicationUtilities.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.CoreUtilities.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.CrossPlatEngine.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.PlatformAbstractions.deps.json
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.PlatformAbstractions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.Utilities.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft.TestPlatform.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualBasic.CrossTargeting.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualBasic.CurrentVersion.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualBasic.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualStudio.TestPlatform.Client.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualStudio.TestPlatform.Common.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualStudioVersion.v11.Common.props
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualStudioVersion.v12.Common.props
+share/dotnet/sdk/${PKGVERSION}/Microsoft.VisualStudioVersion.v14.Common.props
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/Microsoft.NET.Build.Extensions.ConflictResolution.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/Microsoft.NET.Build.Extensions.NETFramework.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/Microsoft.NET.Build.Extensions.targets
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/Microsoft.Win32.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.AppContext.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Collections.Concurrent.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Collections.NonGeneric.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Collections.Specialized.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Collections.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.ComponentModel.EventBasedAsync.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.ComponentModel.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.ComponentModel.TypeConverter.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.ComponentModel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Console.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Data.Common.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.Contracts.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.Debug.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.FileVersionInfo.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.Process.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.StackTrace.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.TextWriterTraceListener.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.Tools.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.TraceSource.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Diagnostics.Tracing.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Drawing.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Dynamic.Runtime.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Globalization.Calendars.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Globalization.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Globalization.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.Compression.ZipFile.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.Compression.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.FileSystem.DriveInfo.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.FileSystem.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.FileSystem.Watcher.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.FileSystem.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.IsolatedStorage.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.MemoryMappedFiles.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.Pipes.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.UnmanagedMemoryStream.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.IO.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Linq.Expressions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Linq.Parallel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Linq.Queryable.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Linq.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.Http.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.NameResolution.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.NetworkInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.Ping.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.Requests.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.Security.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.Sockets.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.WebHeaderCollection.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.WebSockets.Client.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Net.WebSockets.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.ObjectModel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Reflection.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Reflection.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Reflection.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Resources.Reader.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Resources.ResourceManager.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Resources.Writer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.CompilerServices.VisualC.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.Handles.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.InteropServices.RuntimeInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.InteropServices.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.Numerics.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.Serialization.Formatters.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.Serialization.Json.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.Serialization.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.Serialization.Xml.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Runtime.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.Claims.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.Cryptography.Algorithms.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.Cryptography.Csp.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.Cryptography.Encoding.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.Cryptography.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.Cryptography.X509Certificates.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.Principal.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Security.SecureString.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Text.Encoding.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Text.Encoding.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Text.RegularExpressions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.Overlapped.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.Tasks.Parallel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.Thread.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.ThreadPool.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.Timer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Threading.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.ValueTuple.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Xml.ReaderWriter.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Xml.XDocument.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Xml.XPath.XDocument.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Xml.XPath.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Xml.XmlDocument.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/System.Xml.XmlSerializer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/lib/netstandard.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/Microsoft.Win32.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.AppContext.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Collections.Concurrent.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Collections.NonGeneric.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Collections.Specialized.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Collections.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.ComponentModel.EventBasedAsync.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.ComponentModel.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.ComponentModel.TypeConverter.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.ComponentModel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Console.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Data.Common.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Data.Common.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.Contracts.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.Debug.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.FileVersionInfo.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.Process.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.StackTrace.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.StackTrace.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.TextWriterTraceListener.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.Tools.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.TraceSource.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.Tracing.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Diagnostics.Tracing.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Drawing.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Dynamic.Runtime.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Globalization.Calendars.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Globalization.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Globalization.Extensions.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Globalization.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.Compression.ZipFile.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.Compression.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.Compression.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.FileSystem.DriveInfo.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.FileSystem.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.FileSystem.Watcher.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.FileSystem.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.IsolatedStorage.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.MemoryMappedFiles.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.Pipes.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.UnmanagedMemoryStream.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.IO.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Linq.Expressions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Linq.Parallel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Linq.Queryable.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Linq.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Http.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Http.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.NameResolution.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.NetworkInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Ping.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Requests.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Security.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Sockets.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.Sockets.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.WebHeaderCollection.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.WebSockets.Client.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Net.WebSockets.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.ObjectModel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Reflection.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Reflection.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Reflection.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Resources.Reader.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Resources.ResourceManager.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Resources.Writer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.CompilerServices.VisualC.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Handles.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.InteropServices.RuntimeInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.InteropServices.RuntimeInformation.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.InteropServices.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Numerics.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Serialization.Formatters.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Serialization.Json.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Serialization.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Serialization.Primitives.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Serialization.Xml.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.Serialization.Xml.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Runtime.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Claims.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Cryptography.Algorithms.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Cryptography.Algorithms.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Cryptography.Csp.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Cryptography.Encoding.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Cryptography.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Cryptography.X509Certificates.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.Principal.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.SecureString.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Security.SecureString.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Text.Encoding.Extensions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Text.Encoding.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Text.RegularExpressions.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.Overlapped.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.Overlapped.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.Tasks.Parallel.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.Thread.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.ThreadPool.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.Timer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Threading.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.ValueTuple.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.ValueTuple.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Xml.ReaderWriter.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Xml.XDocument.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Xml.XPath.XDocument.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Xml.XPath.XDocument.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Xml.XPath.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Xml.XmlDocument.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/System.Xml.XmlSerializer.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/netfx.force.conflicts.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net461/ref/netstandard.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net462/lib/System.Runtime.InteropServices.RuntimeInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net462/ref/System.Runtime.InteropServices.RuntimeInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net462/ref/System.Runtime.InteropServices.RuntimeInformation.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/lib/System.Runtime.InteropServices.RuntimeInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/lib/System.Security.Cryptography.Algorithms.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/lib/System.ValueTuple.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/ref/System.Runtime.InteropServices.RuntimeInformation.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/ref/System.Runtime.InteropServices.RuntimeInformation.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/ref/System.Security.Cryptography.Algorithms.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/ref/System.Security.Cryptography.Algorithms.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/ref/System.ValueTuple.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net47/ref/System.ValueTuple.xml
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/net471/_._
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/Microsoft.NET.Build.Extensions.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/System.Buffers.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/System.Collections.Immutable.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/System.Linq.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/System.Reflection.Metadata.dll
+share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/System.Threading.dll
+share/dotnet/sdk/${PKGVERSION}/Newtonsoft.Json.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Build.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.CommandLine.XPlat.deps.json
+share/dotnet/sdk/${PKGVERSION}/NuGet.CommandLine.XPlat.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.CommandLine.XPlat.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/NuGet.Commands.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Common.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Configuration.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.DependencyResolver.Core.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Frameworks.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.LibraryModel.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Packaging.Core.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Packaging.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.ProjectModel.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Protocol.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.Versioning.dll
+share/dotnet/sdk/${PKGVERSION}/NuGet.targets
+share/dotnet/sdk/${PKGVERSION}/Roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/Microsoft.CSharp.Core.targets
+share/dotnet/sdk/${PKGVERSION}/Roslyn/Microsoft.CodeAnalysis.CSharp.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/Microsoft.CodeAnalysis.VisualBasic.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/Microsoft.CodeAnalysis.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/Microsoft.VisualBasic.Core.targets
+share/dotnet/sdk/${PKGVERSION}/Roslyn/RunCsc.cmd
+share/dotnet/sdk/${PKGVERSION}/Roslyn/RunCsc.sh
+share/dotnet/sdk/${PKGVERSION}/Roslyn/RunVbc.cmd
+share/dotnet/sdk/${PKGVERSION}/Roslyn/RunVbc.sh
+share/dotnet/sdk/${PKGVERSION}/Roslyn/csc.deps.json
+share/dotnet/sdk/${PKGVERSION}/Roslyn/csc.exe
+share/dotnet/sdk/${PKGVERSION}/Roslyn/csc.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/Roslyn/runtimes/any/native/csc.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/runtimes/any/native/vbc.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll
+share/dotnet/sdk/${PKGVERSION}/Roslyn/vbc.deps.json
+share/dotnet/sdk/${PKGVERSION}/Roslyn/vbc.exe
+share/dotnet/sdk/${PKGVERSION}/Roslyn/vbc.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/Sdks/FSharp.NET.Sdk/Sdk/Sdk.OnRestore.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/FSharp.NET.Sdk/Sdk/Sdk.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/FSharp.NET.Sdk/Sdk/Sdk.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/Sdk/Sdk.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/Sdk/Sdk.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/ComputeTargets/Microsoft.NET.Sdk.Publish.ComputeFiles.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/CopyTargets/Microsoft.NET.Sdk.Publish.CopyFiles.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/DotNetCLIToolTargets/Microsoft.NET.Sdk.DotNetCLITool.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/Microsoft.NET.Sdk.Publish.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/Microsoft.NET.Sdk.Publish.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishProfiles/FileSystem.pubxml
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishProfiles/MSDeploy.pubxml
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishProfiles/MSDeployPackage.pubxml
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishTargets/Microsoft.NET.Sdk.Publish.Docker.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishTargets/Microsoft.NET.Sdk.Publish.FileSystem.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishTargets/Microsoft.NET.Sdk.Publish.Kudu.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishTargets/Microsoft.NET.Sdk.Publish.MSDeploy.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/PublishTargets/Microsoft.NET.Sdk.Publish.MSDeployPackage.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/build/netstandard1.0/TransformTargets/Microsoft.NET.Sdk.Publish.TransformFiles.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/tools/net46/Microsoft.NET.Sdk.Publish.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/tools/net46/Microsoft.Web.Delegation.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/tools/net46/Microsoft.Web.Deployment.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/tools/net46/Newtonsoft.Json.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/tools/netcoreapp1.0/Microsoft.NET.Sdk.Publish.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/tools/netcoreapp1.0/Newtonsoft.Json.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Web.ProjectSystem/Sdk/Sdk.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Web.ProjectSystem/Sdk/Sdk.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Web.ProjectSystem/build/netstandard1.0/Microsoft.NET.Sdk.Web.ProjectSystem.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Web.ProjectSystem/build/netstandard1.0/Microsoft.NET.Sdk.Web.ProjectSystem.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Web/Sdk/Sdk.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Web/Sdk/Sdk.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/Sdk/Sdk.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/GenerateDeps/GenerateDeps.proj
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.ComposeStore.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.ConflictResolution.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.CrossGen.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.DefaultAssemblyInfo.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.DefaultOutputPaths.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.DisableStandardFrameworkResolution.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.GenerateAssemblyInfo.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.NuGetOfflineCache.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.PreserveCompilationContext.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Publish.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.RuntimeIdentifierInference.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.BeforeCommon.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.BeforeCommonCrossTargeting.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.CSharp.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.CSharp.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.Common.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.DefaultItems.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.DefaultItems.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.FSharp.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.FSharp.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.VisualBasic.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.VisualBasic.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.SupportedTargetFrameworks.props
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.TargetFrameworkInference.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/build/Microsoft.PackageDependencyResolution.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/buildCrossTargeting/Microsoft.NET.Sdk.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/Microsoft.DotNet.PlatformAbstractions.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/Microsoft.Extensions.DependencyModel.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/Microsoft.NET.Build.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/Newtonsoft.Json.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.Common.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.Configuration.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.DependencyResolver.Core.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.Frameworks.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.LibraryModel.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.Packaging.Core.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.Packaging.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.ProjectModel.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.Protocol.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/NuGet.Versioning.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/Microsoft.DotNet.PlatformAbstractions.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/Microsoft.Extensions.DependencyModel.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/Microsoft.NET.Build.Tasks.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/Newtonsoft.Json.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.Common.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.Configuration.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.DependencyResolver.Core.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.Frameworks.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.LibraryModel.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.Packaging.Core.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.Packaging.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.ProjectModel.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.Protocol.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/NuGet.Versioning.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/System.Buffers.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/System.Collections.Immutable.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/System.Linq.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/System.Reflection.Metadata.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/System.Runtime.Serialization.Primitives.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/System.Threading.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/NuGet.Build.Tasks.Pack.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/NuGet.Build.Tasks.Pack.xml
+share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/NuGet.Build.Tasks.Pack.dll
+share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/NuGet.Build.Tasks.Pack.xml
+share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/build/NuGet.Build.Tasks.Pack.targets
+share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/buildCrossTargeting/NuGet.Build.Tasks.Pack.targets
+share/dotnet/sdk/${PKGVERSION}/System.Xml.XPath.XmlDocument.dll
+share/dotnet/sdk/${PKGVERSION}/Templates/microsoft.dotnet.common.itemtemplates.1.0.0-beta2-20170803-303.nupkg
+share/dotnet/sdk/${PKGVERSION}/Templates/microsoft.dotnet.common.projecttemplates.2.0.1.0.0-beta2-20170803-303.nupkg
+share/dotnet/sdk/${PKGVERSION}/Templates/microsoft.dotnet.test.projecttemplates.2.0.1.0.0-beta2-20170803-303.nupkg
+share/dotnet/sdk/${PKGVERSION}/Templates/microsoft.dotnet.web.itemtemplates.1.0.0-beta2-20170803-303.nupkg
+share/dotnet/sdk/${PKGVERSION}/Templates/microsoft.dotnet.web.projecttemplates.2.0.1.0.0-beta2-20170803-303.nupkg
+share/dotnet/sdk/${PKGVERSION}/Templates/microsoft.dotnet.web.spa.projecttemplates.1.0.417.nupkg
+share/dotnet/sdk/${PKGVERSION}/TestHost/Microsoft.TestPlatform.CommunicationUtilities.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/Microsoft.TestPlatform.CoreUtilities.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/Microsoft.TestPlatform.CrossPlatEngine.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/Microsoft.TestPlatform.PlatformAbstractions.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/Microsoft.TestPlatform.Utilities.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/Microsoft.VisualStudio.TestPlatform.Common.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/Newtonsoft.Json.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/System.Collections.Immutable.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/System.Reflection.Metadata.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/System.Runtime.InteropServices.RuntimeInformation.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/System.Xml.XmlDocument.dll
+share/dotnet/sdk/${PKGVERSION}/TestHost/TestPlatform.ObjectModel.manifest
+share/dotnet/sdk/${PKGVERSION}/TestHost/TestPlatform.ObjectModel.x86.manifest
+share/dotnet/sdk/${PKGVERSION}/TestHost/datacollector.exe
+share/dotnet/sdk/${PKGVERSION}/TestHost/datacollector.exe.config
+share/dotnet/sdk/${PKGVERSION}/TestHost/datacollector.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/TestHost/testhost.exe
+share/dotnet/sdk/${PKGVERSION}/TestHost/testhost.exe.config
+share/dotnet/sdk/${PKGVERSION}/TestHost/testhost.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/TestHost/testhost.x86.exe
+share/dotnet/sdk/${PKGVERSION}/TestHost/testhost.x86.exe.config
+share/dotnet/sdk/${PKGVERSION}/TestHost/testhost.x86.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/datacollector.deps.json
+share/dotnet/sdk/${PKGVERSION}/datacollector.dll
+share/dotnet/sdk/${PKGVERSION}/datacollector.dll.config
+share/dotnet/sdk/${PKGVERSION}/datacollector.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/dotnet.deps.json
+share/dotnet/sdk/${PKGVERSION}/dotnet.dll
+share/dotnet/sdk/${PKGVERSION}/dotnet.runtimeconfig.json
+share/dotnet/sdk/${PKGVERSION}/minimumMSBuildVersion
+share/dotnet/sdk/${PKGVERSION}/nuGetPackagesArchive.lzma
+share/dotnet/sdk/${PKGVERSION}/package.deps.json
+share/dotnet/sdk/${PKGVERSION}/runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll
+share/dotnet/sdk/${PKGVERSION}/runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll
+share/dotnet/sdk/${PKGVERSION}/runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll
+share/dotnet/sdk/${PKGVERSION}/runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll
+share/dotnet/sdk/${PKGVERSION}/vstest.console.deps.json
+share/dotnet/sdk/${PKGVERSION}/vstest.console.dll
+share/dotnet/sdk/${PKGVERSION}/vstest.console.dll.config
+share/dotnet/sdk/${PKGVERSION}/vstest.console.runtimeconfig.json
+share/dotnet/store/x64/netcoreapp2.0/libuv/1.10.0/runtimes/linux-x64/native/libuv.so
+share/dotnet/store/x64/netcoreapp2.0/microsoft.applicationinsights.aspnetcore/2.1.1/lib/netstandard1.6/Microsoft.ApplicationInsights.AspNetCore.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.applicationinsights.dependencycollector/2.4.1/lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.applicationinsights/2.4.0/lib/netstandard1.3/Microsoft.ApplicationInsights.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.antiforgery/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Antiforgery.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.applicationinsights.hostingstartup/2.0.0/lib/netcoreapp2.0/Microsoft.AspNetCore.ApplicationInsights.HostingStartup.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.cookies/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Cookies.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.core/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.facebook/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Facebook.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.google/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Google.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.jwtbearer/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.microsoftaccount/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.oauth/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OAuth.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.openidconnect/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication.twitter/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Twitter.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authentication/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authentication.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authorization.policy/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authorization.Policy.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.authorization/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.azureappservices.hostingstartup/2.0.0/lib/netcoreapp2.0/Microsoft.AspNetCore.AzureAppServices.HostingStartup.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.azureappservicesintegration/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.AzureAppServicesIntegration.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.cookiepolicy/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.CookiePolicy.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.cors/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.cryptography.internal/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.cryptography.keyderivation/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.dataprotection.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.dataprotection.azurestorage/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.AzureStorage.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.dataprotection.extensions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Extensions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.dataprotection/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.diagnostics.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.diagnostics.entityframeworkcore/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.diagnostics/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.hosting.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.hosting.server.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.hosting/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Hosting.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.html.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.http.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.http.extensions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.http.features/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.http/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Http.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.httpoverrides/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.HttpOverrides.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.identity.entityframeworkcore/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.identity/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Identity.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.jsonpatch/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.localization.routing/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Localization.Routing.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.localization/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Localization.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.middlewareanalysis/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.MiddlewareAnalysis.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.apiexplorer/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.core/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.cors/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Cors.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.dataannotations/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.formatters.json/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.formatters.xml/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.localization/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Localization.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.razor.extensions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.razor/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.razorpages/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.RazorPages.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.taghelpers/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.TagHelpers.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc.viewfeatures/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.mvc/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Mvc.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.nodeservices/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.NodeServices.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.owin/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Owin.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.razor.language/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.razor.runtime/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Razor.Runtime.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.razor/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.responsecaching.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.responsecaching/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.ResponseCaching.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.responsecompression/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.ResponseCompression.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.rewrite/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Rewrite.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.routing.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.routing/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Routing.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.server.httpsys/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Server.HttpSys.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.server.iisintegration/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Server.IISIntegration.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.server.kestrel.core/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Server.Kestrel.Core.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.server.kestrel.https/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Server.Kestrel.Https.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.server.kestrel.transport.abstractions/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.server.kestrel.transport.libuv/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.server.kestrel/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Server.Kestrel.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.session/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.Session.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.spaservices/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.SpaServices.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.staticfiles/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.StaticFiles.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.websockets/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.WebSockets.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore.webutilities/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.aspnetcore/2.0.0/lib/netstandard2.0/Microsoft.AspNetCore.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.azure.keyvault.webkey/2.0.7/lib/netstandard1.4/Microsoft.Azure.KeyVault.WebKey.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.azure.keyvault/2.3.2/lib/netstandard1.4/Microsoft.Azure.KeyVault.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.codeanalysis.common/2.3.1/lib/netstandard1.3/Microsoft.CodeAnalysis.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.codeanalysis.csharp/2.3.1/lib/netstandard1.3/Microsoft.CodeAnalysis.CSharp.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.codeanalysis.razor/2.0.0/lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/Microsoft.Data.Edm.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/Microsoft.Data.OData.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.data.sqlite.core/2.0.0/lib/netstandard2.0/Microsoft.Data.Sqlite.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.dotnet.platformabstractions/2.0.0/lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.entityframeworkcore.design/2.0.0/lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.entityframeworkcore.inmemory/2.0.0/lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.entityframeworkcore.relational/2.0.0/lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.entityframeworkcore.sqlite.core/2.0.0/lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.entityframeworkcore.sqlserver/2.0.0/lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.entityframeworkcore/2.0.0/lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.caching.abstractions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.caching.memory/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.caching.redis/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Caching.Redis.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.caching.sqlserver/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Caching.SqlServer.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.abstractions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.azurekeyvault/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.AzureKeyVault.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.binder/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.commandline/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.CommandLine.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.environmentvariables/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.fileextensions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.ini/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.Ini.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.json/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.usersecrets/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration.xml/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.Xml.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.configuration/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.dependencyinjection.abstractions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.dependencyinjection/2.0.0/lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.dependencymodel/2.0.0/lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.diagnosticadapter/2.0.0/lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.fileproviders.abstractions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.fileproviders.composite/2.0.0/lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.fileproviders.embedded/2.0.0/lib/netstandard2.0/Microsoft.Extensions.FileProviders.Embedded.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.fileproviders.physical/2.0.0/lib/netstandard2.0/Microsoft.Extensions.FileProviders.Physical.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.filesystemglobbing/2.0.0/lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.hosting.abstractions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Hosting.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.identity.core/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.identity.stores/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.localization.abstractions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.localization/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Localization.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging.abstractions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging.azureappservices/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.AzureAppServices.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging.configuration/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging.console/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.Console.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging.debug/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.Debug.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging.eventsource/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.EventSource.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging.tracesource/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.TraceSource.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.logging/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Logging.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.objectpool/2.0.0/lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.options.configurationextensions/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.options/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Options.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.platformabstractions/1.1.0/lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.primitives/2.0.0/lib/netstandard2.0/Microsoft.Extensions.Primitives.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.extensions.webencoders/2.0.0/lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.identitymodel.clients.activedirectory/3.14.1/lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.identitymodel.clients.activedirectory/3.14.1/lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.identitymodel.logging/1.1.4/lib/netstandard1.4/Microsoft.IdentityModel.Logging.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.identitymodel.protocols.openidconnect/2.1.4/lib/netstandard1.4/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.identitymodel.protocols/2.1.4/lib/netstandard1.4/Microsoft.IdentityModel.Protocols.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.identitymodel.tokens/5.1.4/lib/netstandard1.4/Microsoft.IdentityModel.Tokens.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.net.http.headers/2.0.0/lib/netstandard2.0/Microsoft.Net.Http.Headers.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.rest.clientruntime.azure/3.3.7/lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.rest.clientruntime/2.3.8/lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll
+share/dotnet/store/x64/netcoreapp2.0/microsoft.visualstudio.web.browserlink/2.0.0/lib/netstandard2.0/Microsoft.VisualStudio.Web.BrowserLink.dll
+share/dotnet/store/x64/netcoreapp2.0/newtonsoft.json.bson/1.0.1/lib/netstandard1.3/Newtonsoft.Json.Bson.dll
+share/dotnet/store/x64/netcoreapp2.0/newtonsoft.json/10.0.1/lib/netstandard1.3/Newtonsoft.Json.dll
+share/dotnet/store/x64/netcoreapp2.0/remotion.linq/2.1.1/lib/netstandard1.0/Remotion.Linq.dll
+share/dotnet/store/x64/netcoreapp2.0/sqlitepclraw.bundle_green/1.1.7/lib/netcoreapp/SQLitePCLRaw.batteries_green.dll
+share/dotnet/store/x64/netcoreapp2.0/sqlitepclraw.bundle_green/1.1.7/lib/netcoreapp/SQLitePCLRaw.batteries_v2.dll
+share/dotnet/store/x64/netcoreapp2.0/sqlitepclraw.core/1.1.7/lib/netstandard1.1/SQLitePCLRaw.core.dll
+share/dotnet/store/x64/netcoreapp2.0/sqlitepclraw.lib.e_sqlite3.linux/1.1.7/runtimes/linux-x64/native/libe_sqlite3.so
+share/dotnet/store/x64/netcoreapp2.0/sqlitepclraw.provider.e_sqlite3.netstandard11/1.1.7/lib/netstandard1.1/SQLitePCLRaw.provider.e_sqlite3.dll
+share/dotnet/store/x64/netcoreapp2.0/stackexchange.redis.strongname/1.2.4/lib/netstandard1.5/StackExchange.Redis.StrongName.dll
+share/dotnet/store/x64/netcoreapp2.0/system.data.sqlclient/4.4.0/runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll
+share/dotnet/store/x64/netcoreapp2.0/system.identitymodel.tokens.jwt/5.1.4/lib/netstandard1.4/System.IdentityModel.Tokens.Jwt.dll
+share/dotnet/store/x64/netcoreapp2.0/system.interactive.async/3.1.1/lib/netstandard1.3/System.Interactive.Async.dll
+share/dotnet/store/x64/netcoreapp2.0/system.runtime.compilerservices.unsafe/4.4.0/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll
+share/dotnet/store/x64/netcoreapp2.0/system.security.cryptography.xml/4.4.0/lib/netstandard2.0/System.Security.Cryptography.Xml.dll
+share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/System.Spatial.dll
+share/dotnet/store/x64/netcoreapp2.0/system.text.encoding.codepages/4.4.0/lib/netstandard2.0/System.Text.Encoding.CodePages.dll
+share/dotnet/store/x64/netcoreapp2.0/system.text.encodings.web/4.4.0/lib/netstandard2.0/System.Text.Encodings.Web.dll
+share/dotnet/store/x64/netcoreapp2.0/windowsazure.storage/8.1.4/lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/zh-Hant
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/zh-Hans
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/ru
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/ko
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/ja
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/it
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/fr
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/es
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/system.spatial/5.8.2/lib/netstandard1.1/de
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/zh-Hant
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/zh-Hans
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/ru
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/ko
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/ja
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/it
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/fr
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/es
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.odata/5.8.2/lib/netstandard1.1/de
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/zh-Hant
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/zh-Hans
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/ru
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/ko
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/ja
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/it
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/fr
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/es
+@pkgdir share/dotnet/store/x64/netcoreapp2.0/microsoft.data.edm/5.8.2/lib/netstandard1.1/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/en
+@pkgdir share/dotnet/sdk/${PKGVERSION}/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/TestHost/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/Desktop/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/NuGet.Build.Tasks.Pack/CoreCLR/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/netcoreapp1.0/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk/tools/net46/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Sdks/Microsoft.NET.Sdk.Publish/tools/net46/en-US
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Roslyn/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/Microsoft/Microsoft.NET.Build.Extensions/tools/netcoreapp1.0/cs
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/zh-Hant
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/zh-Hans
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/tr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/ru
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/pt-BR
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/pl
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/ko
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/ja
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/it
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/fr
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/es
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/de
+@pkgdir share/dotnet/sdk/${PKGVERSION}/FSharp/cs

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+bin/dotnet
+share/dotnet/LICENSE.txt
+share/dotnet/ThirdPartyNotices.txt
+share/dotnet/dotnet

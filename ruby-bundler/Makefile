@@ -1,7 +1,7 @@
 # $NetBSD: Makefile,v 1.21 2015/03/13 14:34:12 taca Exp $
 
-DISTNAME=	bundler-1.15.4
-#PKGREVISION=	1
+DISTNAME=	bundler-1.16.0
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

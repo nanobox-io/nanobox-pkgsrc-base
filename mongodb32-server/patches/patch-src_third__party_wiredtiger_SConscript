@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/third_party/wiredtiger/SConscript.orig	2016-04-21 20:21:39.000000000 +0000
+--- src/third_party/wiredtiger/SConscript.orig	2017-09-21 03:44:21.000000000 +0000
 +++ src/third_party/wiredtiger/SConscript
-@@ -48,11 +48,15 @@ elif env.TargetOSIs('osx'):
+@@ -53,11 +53,15 @@ elif env.TargetOSIs('osx'):
      env.Append(CPPPATH=["build_darwin"])
  elif env.TargetOSIs('solaris'):
      env.Append(CPPPATH=["build_solaris"])
@@ -18,3 +18,12 @@ $NetBSD$
  elif env.TargetOSIs('openbsd'):
      env.Append(CPPPATH=["build_openbsd"])
  elif env.TargetOSIs('linux'):
+@@ -87,7 +91,7 @@ if (VERSION_MAJOR == None or
+     VERSION_MINOR == None or
+     VERSION_PATCH == None or
+     VERSION_STRING == None):
+-    print "Failed to find version variables in " + version_file
++    print("Failed to find version variables in " + version_file)
+     Exit(1)
+ 
+ wiredtiger_includes = """

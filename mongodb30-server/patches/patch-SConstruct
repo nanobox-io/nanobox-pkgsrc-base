@@ -1,9 +1,8 @@
 $NetBSD$
 
-Add support for NetBSD/Dragonfly, fix locations.
---- SConstruct.orig	2015-04-08 20:28:08.000000000 +0000
+--- SConstruct.orig	2017-05-01 20:06:54.000000000 +0000
 +++ SConstruct
-@@ -53,7 +53,9 @@ nix = False
+@@ -55,7 +55,9 @@ nix = False
  linux = False
  darwin = False
  windows = False
@@ -13,7 +12,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  openbsd = False
  solaris = False
  
-@@ -65,8 +67,12 @@ elif platform.startswith("linux"):
+@@ -67,8 +69,12 @@ elif platform.startswith("linux"):
      platform = "linux"
  elif "sunos5" == platform:
      solaris = True
@@ -26,33 +25,90 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif platform.startswith( "openbsd" ):
      openbsd = True
  elif "win32" == platform:
-@@ -848,6 +854,12 @@ elif solaris:
+@@ -386,7 +392,7 @@ try:
+         version_data = json.load(version_fp)
+ 
+     if 'version' not in version_data:
+-        print "version.json does not contain a version string"
++        print("version.json does not contain a version string")
+         Exit(1)
+     if 'githash' not in version_data:
+         version_data['githash'] = utils.getGitVersion()
+@@ -394,7 +400,7 @@ try:
+ except IOError as e:
+     # If the file error wasn't because the file is missing, error out
+     if e.errno != errno.ENOENT:
+-        print "Error opening version.json: {0}".format(e.strerror)
++        print("Error opening version.json: {0}".format(e.strerror))
+         Exit(1)
+ 
+     version_data = {
+@@ -403,7 +409,7 @@ except IOError as e:
+     }
+ 
+ except ValueError as e:
+-    print "Error decoding version.json: {0}".format(e)
++    print("Error decoding version.json: {0}".format(e))
+     Exit(1)
+ 
+ 
+@@ -673,12 +679,12 @@ env = Environment(variables=env_vars, **
+ del envDict
+ 
+ if has_option('variables-help'):
+-    print env_vars.GenerateHelpText(env)
++    print(env_vars.GenerateHelpText(env))
+     Exit(0)
+ 
+ unknown_vars = env_vars.UnknownVariables()
+ if unknown_vars:
+-    print "Unknown variables specified: {0}".format(", ".join(unknown_vars.keys()))
++    print("Unknown variables specified: {0}".format(", ".join(unknown_vars.keys())))
+     Exit(1)
+ 
+ 
+@@ -789,12 +795,12 @@ if has_option( "cc-use-shell-environment
+ 
+ if has_option( "cxx" ):
+     if not has_option( "cc" ):
+-        print "Must specify C compiler when specifying C++ compiler"
++        print("Must specify C compiler when specifying C++ compiler")
+         exit(1)
+     env["CXX"] = get_option( "cxx" )
+ if has_option( "cc" ):
+     if not has_option( "cxx" ):
+-        print "Must specify C++ compiler when specifying C compiler"
++        print("Must specify C++ compiler when specifying C compiler")
+         exit(1)
+     env["CC"] = get_option( "cc" )
+ 
+@@ -914,6 +920,12 @@ elif solaris:
       env.Append( CPPDEFINES=[ "__sunos__" ] )
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/data/include" ] )
++    env.Append( LIBPATH=[ "/data/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
 +
  elif freebsd:
      env.Append( LIBS=[ "kvm" ] )
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
-@@ -855,6 +867,12 @@ elif freebsd:
+@@ -921,6 +933,12 @@ elif freebsd:
      env.Append( CPPDEFINES=[ "__freebsd__" ] )
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/data/include" ] )
++    env.Append( LIBPATH=[ "/data/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__netbsd__" ] )
 +
  elif openbsd:
      env.Append( EXTRACPPPATH=[ "/usr/local/include" ] )
      env.Append( EXTRALIBPATH=[ "/usr/local/lib" ] )
-@@ -1020,8 +1038,11 @@ if nix:
+@@ -1093,8 +1111,11 @@ if nix:
              env.Append( CCFLAGS=["-Werror"] )
  
      env.Append( CPPDEFINES=["_FILE_OFFSET_BITS=64"] )
@@ -64,7 +120,16 @@ Add support for NetBSD/Dragonfly, fix locations.
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -2163,7 +2184,7 @@ def doConfigure(myenv):
+@@ -1465,7 +1486,7 @@ def doConfigure(myenv):
+         # Wiredtiger only supports 64-bit architecture, and will fail to compile on 32-bit
+         # so disable WiredTiger automatically on 32-bit since wiredtiger is on by default
+         if wiredtiger == True:
+-            print "WARNING: WiredTiger is not supported on 32-bit platforms, disabling support"
++            print("WARNING: WiredTiger is not supported on 32-bit platforms, disabling support")
+             wiredtiger = False
+     conf.Finish()
+ 
+@@ -2302,7 +2323,7 @@ def doConfigure(myenv):
          Exit(1)
  
      # requires ports devel/libexecinfo to be installed
@@ -73,3 +138,28 @@ Add support for NetBSD/Dragonfly, fix locations.
          if not conf.CheckLib("execinfo"):
              print("Cannot find libexecinfo, please install devel/libexecinfo.")
              Exit(1)
+@@ -2313,13 +2334,13 @@ def doConfigure(myenv):
+         if use_system_version_of_library('tcmalloc'):
+             conf.FindSysLibDep("tcmalloc", ["tcmalloc"])
+         elif has_option("heapcheck"):
+-            print ("--heapcheck does not work with the tcmalloc embedded in the mongodb source "
++            print("--heapcheck does not work with the tcmalloc embedded in the mongodb source "
+                    "tree.  Use --use-system-tcmalloc.")
+             Exit(1)
+     elif get_option('allocator') == 'system':
+         pass
+     else:
+-        print "Invalid --allocator parameter: \"%s\"" % get_option('allocator')
++        print("Invalid --allocator parameter: \"%s\"" % get_option('allocator'))
+         Exit(1)
+ 
+     if has_option("heapcheck"):
+@@ -2580,7 +2601,7 @@ def clean_old_dist_builds(env, target, s
+     filenames = [x for x in filenames if x.startswith(prefix)]
+     to_keep = [x for x in filenames if x.endswith(".tgz") or x.endswith(".zip")][-2:]
+     for filename in [x for x in filenames if x not in to_keep]:
+-        print "removing %s" % filename
++        print("removing %s" % filename)
+         try:
+             shutil.rmtree(filename)
+         except:

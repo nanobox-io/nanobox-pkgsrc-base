@@ -13,7 +13,8 @@ COMMENT=	NOSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 
 NO_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_CWRAPPERS=	no
+USE_LANGUAGES=	c c++ c++11
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
@@ -31,7 +32,7 @@ SCONS_ARGS+=	--variant-dir=build
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if defined(MAKE_JOBS)
-MAKE_JOBS=	8
+MAKE_JOBS=	4
 .endif
 
 .if ${MACHINE_ARCH} == "x86_64"

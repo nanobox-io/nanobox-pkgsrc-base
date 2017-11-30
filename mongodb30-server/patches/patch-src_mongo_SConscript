@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- src/mongo/SConscript.orig	2017-05-01 20:06:54.000000000 +0000
++++ src/mongo/SConscript
+@@ -1443,7 +1443,7 @@ if sum(itertools.imap(lambda x: x.name =
+ module_banner_filenames = set([f.name for f in env['MODULE_BANNERS']])
+ if not len(module_banner_filenames) == len(env['MODULE_BANNERS']):
+     # TODO: Be nice and identify conflicts in error.
+-    print "ERROR: Filename conflicts exist in module banners."
++    print("ERROR: Filename conflicts exist in module banners.")
+     Exit(-1)
+ 
+ # Build a set of directories containing module banners, and use that

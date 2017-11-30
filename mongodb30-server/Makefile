@@ -13,7 +13,7 @@ COMMENT=	NOSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 
 NO_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++ c++11
 USE_CWRAPPERS=	no
 
 DEPENDS+=	mongodb30-tools>=3.0.0:../../base/mongodb30-tools

@@ -1,9 +1,8 @@
-$NetBSD: patch-SConstruct,v 1.3 2016/02/12 03:37:24 ryoon Exp $
+$NetBSD$
 
-Add support for NetBSD/Dragonfly, fix locations.
---- SConstruct.orig	2016-01-05 18:31:44.000000000 +0000
+--- SConstruct.orig	2017-09-21 03:44:21.000000000 +0000
 +++ SConstruct
-@@ -40,8 +40,12 @@ def get_running_os_name():
+@@ -42,8 +42,12 @@ def get_running_os_name():
      running_os = os.sys.platform
      if running_os.startswith('linux'):
          running_os = 'linux'
@@ -16,7 +15,7 @@ Add support for NetBSD/Dragonfly, fix locations.
      elif running_os.startswith('openbsd'):
          running_os = 'openbsd'
      elif running_os == 'sunos5':
-@@ -59,7 +63,7 @@ def env_get_os_name_wrapper(self):
+@@ -61,7 +65,7 @@ def env_get_os_name_wrapper(self):
  
  def is_os_raw(target_os, os_list_to_check):
      okay = False
@@ -25,16 +24,43 @@ Add support for NetBSD/Dragonfly, fix locations.
  
      for p in os_list_to_check:
          if p == 'posix' and target_os in posix_os_list:
-@@ -754,7 +758,7 @@ def printLocalInfo():
+@@ -481,7 +485,7 @@ try:
+         version_data = json.load(version_fp)
  
- printLocalInfo()
+     if 'version' not in version_data:
+-        print "version.json does not contain a version string"
++        print("version.json does not contain a version string")
+         Exit(1)
+     if 'githash' not in version_data:
+         version_data['githash'] = utils.getGitVersion()
+@@ -489,7 +493,7 @@ try:
+ except IOError as e:
+     # If the file error wasn't because the file is missing, error out
+     if e.errno != errno.ENOENT:
+-        print "Error opening version.json: {0}".format(e.strerror)
++        print("Error opening version.json: {0}".format(e.strerror))
+         Exit(1)
  
--boostLibs = [ "thread" , "filesystem" , "program_options", "system", "regex", "chrono" ]
-+boostLibs = [ "thread" , "filesystem" , "program_options", "system", "regex", "chrono" ]
+     version_data = {
+@@ -498,7 +502,7 @@ except IOError as e:
+     }
  
- onlyServer = len( COMMAND_LINE_TARGETS ) == 0 or ( len( COMMAND_LINE_TARGETS ) == 1 and str( COMMAND_LINE_TARGETS[0] ) in [ "mongod" , "mongos" , "test" ] )
+ except ValueError as e:
+-    print "Error decoding version.json: {0}".format(e)
++    print("Error decoding version.json: {0}".format(e))
+     Exit(1)
  
-@@ -815,6 +819,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+ # Setup the command-line variables
+@@ -568,7 +572,7 @@ def variable_distsrc_converter(val):
+ 
+ variables_files = variable_shlex_converter(get_option('variables-files'))
+ for file in variables_files:
+-    print "Using variable customization file %s" % file
++    print("Using variable customization file %s" % file)
+ 
+ env_vars = Variables(
+     files=variables_files,
+@@ -839,6 +843,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 INSTALL_DIR=installDir,
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
@@ -42,7 +68,32 @@ Add support for NetBSD/Dragonfly, fix locations.
                 )
  
  env = Environment(variables=env_vars, **envDict)
-@@ -925,7 +930,9 @@ def CheckForProcessor(context, which_arc
+@@ -848,12 +853,12 @@ env.AddMethod(env_os_is_wrapper, 'Target
+ env.AddMethod(env_get_os_name_wrapper, 'GetTargetOSName')
+ 
+ def fatal_error(env, msg, *args):
+-    print msg.format(*args)
++    print(msg.format(*args))
+     Exit(1)
+ 
+ def conf_error(env, msg, *args):
+-    print msg.format(*args)
+-    print "See {0} for details".format(env['CONFIGURELOG'].abspath)
++    print(msg.format(*args))
++    print("See {0} for details".format(env['CONFIGURELOG'].abspath))
+ 
+     Exit(1)
+ 
+@@ -873,7 +878,7 @@ else:
+ env.AddMethod(lambda env: env['VERBOSE'], 'Verbose')
+ 
+ if has_option('variables-help'):
+-    print env_vars.GenerateHelpText(env)
++    print(env_vars.GenerateHelpText(env))
+     Exit(0)
+ 
+ unknown_vars = env_vars.UnknownVariables()
+@@ -976,7 +981,9 @@ def CheckForProcessor(context, which_arc
  os_macros = {
      "windows": "_WIN32",
      "solaris": "__sun",
@@ -52,7 +103,16 @@ Add support for NetBSD/Dragonfly, fix locations.
      "openbsd": "__OpenBSD__",
      "osx": "__APPLE__",
      "linux": "__linux__",
-@@ -1184,7 +1191,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_OBJS':
+@@ -1045,7 +1052,7 @@ else:
+     env['TARGET_ARCH'] = detected_processor
+ 
+ if env['TARGET_OS'] not in os_macros:
+-    print "No special config for [{0}] which probably means it won't work".format(env['TARGET_OS'])
++    print("No special config for [{0}] which probably means it won't work".format(env['TARGET_OS']))
+ elif not detectConf.CheckForOS(env['TARGET_OS']):
+     env.FatalError("TARGET_OS ({0}) is not supported by compiler", env['TARGET_OS'])
+ 
+@@ -1262,7 +1269,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_OBJS':
  
  libdeps.setup_environment(env, emitting_shared=(link_model.startswith("dynamic")))
  
@@ -61,7 +121,7 @@ Add support for NetBSD/Dragonfly, fix locations.
      env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
      env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
      env['LINK_WHOLE_ARCHIVE_START'] = '-Wl,--whole-archive'
-@@ -1212,10 +1219,24 @@ if env.TargetOSIs('linux'):
+@@ -1290,10 +1297,24 @@ if env.TargetOSIs('linux'):
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
@@ -86,7 +146,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif env.TargetOSIs('openbsd'):
      env.Append( LIBS=[ "kvm" ] )
  
-@@ -1382,8 +1403,11 @@ if env.TargetOSIs('posix'):
+@@ -1462,8 +1483,11 @@ if env.TargetOSIs('posix'):
          if not has_option("disable-warnings-as-errors"):
              env.Append( CCFLAGS=["-Werror"] )
  
@@ -98,7 +158,16 @@ Add support for NetBSD/Dragonfly, fix locations.
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -2245,6 +2269,7 @@ def doConfigure(myenv):
+@@ -2226,7 +2250,7 @@ def doConfigure(myenv):
+             myenv.SetConfigHeaderDefine(macro_name)
+     conf.Finish()
+     if not haveTriviallyConstructibleThreadLocals:
+-        print "Compiler must support a thread local storage class for trivially constructible types"
++        print("Compiler must support a thread local storage class for trivially constructible types")
+         Exit(1)
+ 
+     # not all C++11-enabled gcc versions have type properties
+@@ -2495,6 +2519,7 @@ def doConfigure(myenv):
              # permit more than four parameters.
              "BOOST_THREAD_DONT_PROVIDE_VARIADIC_THREAD",
              "BOOST_SYSTEM_NO_DEPRECATED",
@@ -106,7 +175,7 @@ Add support for NetBSD/Dragonfly, fix locations.
          ]
      )
  
-@@ -2311,7 +2336,7 @@ def doConfigure(myenv):
+@@ -2561,7 +2586,7 @@ def doConfigure(myenv):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed

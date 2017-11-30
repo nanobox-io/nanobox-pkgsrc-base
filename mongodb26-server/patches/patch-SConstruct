@@ -25,12 +25,21 @@ $NetBSD$
  elif platform.startswith( "openbsd" ):
      openbsd = True
  elif "win32" == platform:
+@@ -485,7 +491,7 @@ env = Environment( variables=env_vars,
+ # Report any unknown variables as an error.
+ unknown_vars = env_vars.UnknownVariables()
+ if unknown_vars:
+-    print "Unknown variables specified: {0}".format(", ".join(unknown_vars.keys()))
++    print("Unknown variables specified: {0}".format(", ".join(unknown_vars.keys())))
+     Exit(1)
+ 
+ if has_option("cache"):
 @@ -676,6 +682,8 @@ if darwin:
  elif linux:
  
      env.Append( LIBS=['m'] )
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/data/include" ] )
++    env.Append( LIBPATH=[ "/data/lib" ] )
  
      if os.uname()[4] == "x86_64" and not force32:
          linux64 = True
@@ -39,8 +48,8 @@ $NetBSD$
       env.Append( LIBS=["socket","resolv"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/data/include" ] )
++    env.Append( LIBPATH=[ "/data/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
 +
@@ -52,8 +61,8 @@ $NetBSD$
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
-+    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
-+    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
++    env.Append( CPPPATH=[ "/data/include" ] )
++    env.Append( LIBPATH=[ "/data/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( CPPDEFINES=[ "__netbsd__" ] )
 +
@@ -94,3 +103,30 @@ $NetBSD$
          if not conf.CheckLib("execinfo"):
              Exit(1)
  
+@@ -1435,7 +1458,7 @@ def doConfigure(myenv):
+     elif get_option('allocator') == 'system':
+         pass
+     else:
+-        print "Invalid --allocator parameter: \"%s\"" % get_option('allocator')
++        print("Invalid --allocator parameter: \"%s\"" % get_option('allocator'))
+         Exit(1)
+ 
+     if has_option("heapcheck"):
+@@ -1477,7 +1500,7 @@ def doConfigure(myenv):
+ 
+     if has_option("ssl"):
+         if not conf.CheckLinkSSL():
+-            print "SSL is enabled, but is unavailable"
++            print ("SSL is enabled, but is unavailable")
+             Exit(1)
+ 
+         if conf.CheckDeclaration(
+@@ -1735,7 +1758,7 @@ def clean_old_dist_builds(env, target, s
+     filenames = [x for x in filenames if x.startswith(prefix)]
+     to_keep = [x for x in filenames if x.endswith(".tgz") or x.endswith(".zip")][-2:]
+     for filename in [x for x in filenames if x not in to_keep]:
+-        print "removing %s" % filename
++        print ("removing %s" % filename)
+         try:
+             shutil.rmtree(filename)
+         except:

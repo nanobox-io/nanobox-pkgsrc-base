@@ -70,7 +70,8 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
 #
-_PKG_JVMS.8=		openjdk8 oracle-jdk8
+_PKG_JVMS.9=		openjdk9 oracle-jdk9
+_PKG_JVMS.8=		${_PKG_JVMS.9} openjdk8 oracle-jdk8
 _PKG_JVMS.7=		${_PKG_JVMS.8} openjdk7 sun-jdk7
 _PKG_JVMS.6=		${_PKG_JVMS.7} sun-jdk6 jdk16
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} jdk15
@@ -191,17 +192,21 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 _JAVA_PKGBASE.kaffe=		kaffe
 _JAVA_PKGBASE.openjdk7=		openjdk7
 _JAVA_PKGBASE.openjdk8=		openjdk8
+_JAVA_PKGBASE.openjdk9=		openjdk9
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
 _JAVA_PKGBASE.sun-jdk7=		sun-jre7
 _JAVA_PKGBASE.oracle-jdk8=		oracle-jre8
+_JAVA_PKGBASE.oracle-jdk9=		oracle-jre9
 
 # The following is copied from the respective JVM Makefiles.
 _JAVA_NAME.kaffe=			kaffe
 _JAVA_NAME.openjdk7=		openjdk7
 _JAVA_NAME.openjdk8=		openjdk8
+_JAVA_NAME.openjdk9=		openjdk9
 _JAVA_NAME.sun-jdk6=		sun6
 _JAVA_NAME.sun-jdk7=		sun7
 _JAVA_NAME.oracle-jdk8=		oracle8
+_JAVA_NAME.oracle-jdk9=		oracle9
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -252,17 +257,24 @@ _PKG_JVM=		"none"
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
 BUILDLINK_API_DEPENDS.openjdk7?=	openjdk7-[0-9]*
 BUILDLINK_API_DEPENDS.openjdk8?=	openjdk8-[0-9]*
+BUILDLINK_API_DEPENDS.openjdk9?=	openjdk9-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk6?=	sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=	sun-jre6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk7?=	sun-jdk7-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre7?=	sun-jre7-[0-9]*
+BUILDLINK_API_DEPENDS.oracle-jdk8?=	oracle-jdk8-[0-9]*
+BUILDLINK_API_DEPENDS.oracle-jre8?=	oracle-jre8-[0-9]*
+BUILDLINK_API_DEPENDS.oracle-jdk9?=	oracle-jdk9-[0-9]*
+BUILDLINK_API_DEPENDS.oracle-jre9?=	oracle-jre9-[0-9]*
 
 _JRE.kaffe=			kaffe
 _JRE.openjdk7=		openjdk7
 _JRE.openjdk8=		openjdk8
+_JRE.openjdk9=		openjdk9
 _JRE.sun-jdk6=		sun-jdk6
 _JRE.sun-jdk7=		sun-jdk7
 _JRE.oracle-jdk8=		oracle-jdk8
+_JRE.oracle-jdk9=		oracle-jdk9
 
 _JAVA_BASE_CLASSES=	classes.zip
 
@@ -278,6 +290,10 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk7
 _JDK_PKGSRCDIR=		../../base/openjdk8
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk8
+.elif ${_PKG_JVM} == "openjdk9"
+_JDK_PKGSRCDIR=         ../../base/openjdk9
+_JRE_PKGSRCDIR=         ${_JDK_PKGSRCDIR}
+_JAVA_HOME_DEFAULT=     ${LOCALBASE}/java/openjdk9
 .elif ${_PKG_JVM} == "sun-jdk6"
 _JDK_PKGSRCDIR=		../../base/sun-jdk6
 _JRE_PKGSRCDIR=		../../base/sun-jdk6
@@ -293,6 +309,11 @@ _JDK_PKGSRCDIR=		../../base/oracle-jdk8
 _JRE_PKGSRCDIR=		../../base/oracle-jdk8
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/oracle-8
 UNLIMIT_RESOURCES+=	datasize
+.elif ${_PKG_JVM} == "oracle-jdk9"
+_JDK_PKGSRCDIR=         ../../base/oracle-jdk9
+_JRE_PKGSRCDIR=         ../../base/oracle-jdk9
+_JAVA_HOME_DEFAULT=     ${LOCALBASE}/java/oracle-9
+UNLIMIT_RESOURCES+=     datasize
 .endif
 
 .if defined(_JAVA_HOME_DEFAULT)

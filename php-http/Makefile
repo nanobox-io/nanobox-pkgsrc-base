@@ -15,15 +15,16 @@ LICENSE=		php
 CONFLICTS=		php-http-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
-CONFIGURE_ARGS+=	--with-http-zlib-dir=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ARGS+=	--with-http-curl-dir=${BUILDLINK_PREFIX.curl}
-CONFIGURE_ARGS+=	--with-http-libevent-dir=${BUILDLINK_PREFIX.libevent}
-CONFIGURE_ARGS+=	--with-http-libidn-dir=${BUILDLINK_PREFIX.libidn}
 
 WRKSRC=			${WRKDIR}/pecl_http-${PECL_VERSION}
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
+
+CONFIGURE_ARGS+=        --with-http-zlib-dir=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=        --with-http-curl-dir=${BUILDLINK_PREFIX.curl}
+CONFIGURE_ARGS+=        --with-http-libevent-dir=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=        --with-http-libidn-dir=${BUILDLINK_PREFIX.libidn}
 
 pre-configure:
 	sudo bash -c "echo extension=raphf.so >> ${PREFIX}/etc/php/php.ini"
@@ -31,7 +32,9 @@ pre-configure:
 
 .include "../../base/php/extension_versions.mk"
 
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
+USE_TOOLS+=		pkg-config
+
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
 PATCHDIR=		${.CURDIR}/patches70
 .include "../../textproc/icu/buildlink3.mk"

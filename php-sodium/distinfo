@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
 
-SHA1 (php-sodium/libsodium-2.0.8.tgz) = 0a109d8cff5ee930ec65b972da4aa742f8c46c5e
-RMD160 (php-sodium/libsodium-2.0.8.tgz) = dbe8b01d58fd18e2e28e0ed8624a93a9e2cf644c
-SHA512 (php-sodium/libsodium-2.0.8.tgz) = 3f63d7ac852355dd1a877e6292c04d30b6f7bbd8137ce875f2b3db3f4788534309bba40f5916a59051a70404f5517935bea5338856982c2dba8c604e964512f9
-Size (php-sodium/libsodium-2.0.8.tgz) = 177268 bytes
+SHA1 (php-sodium/libsodium-2.0.10.tgz) = 8811a6aee37d7c1436a706746fb40c4a4c1fadbf
+RMD160 (php-sodium/libsodium-2.0.10.tgz) = 128d6af08bb6c7b35e24a3562d66da39e146f1df
+SHA512 (php-sodium/libsodium-2.0.10.tgz) = 1d24a107f1527ccd1a59924e9af9ce600b9acd124af3e28cb59edd9b40d74dee0519e28b6bc4a71c695ba0ddea9175259da049e5854a09be5d50c7e1ee7268a4
+Size (php-sodium/libsodium-2.0.10.tgz) = 218901 bytes

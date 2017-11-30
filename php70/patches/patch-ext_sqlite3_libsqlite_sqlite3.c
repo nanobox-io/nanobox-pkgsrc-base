@@ -1,10 +1,8 @@
-$NetBSD: patch-ext_sqlite3_libsqlite_sqlite3.c,v 1.2 2014/05/01 15:52:33 taca Exp $
+$NetBSD: patch-ext_sqlite3_libsqlite_sqlite3.c,v 1.1 2015/12/06 15:17:31 taca Exp $
 
-Don't redefine _XOPEN_SOURCE, it is already set from php.
-
---- ext/sqlite3/libsqlite/sqlite3.c.orig	2014-04-29 08:04:30.000000000 +0000
+--- ext/sqlite3/libsqlite/sqlite3.c.orig	2015-06-23 17:33:33.000000000 +0000
 +++ ext/sqlite3/libsqlite/sqlite3.c
-@@ -7867,7 +7867,7 @@ struct sqlite3_rtree_geometry {
+@@ -8408,7 +8408,7 @@ struct sqlite3_rtree_query_info {
  ** But _XOPEN_SOURCE define causes problems for Mac OS X, so omit
  ** it.
  */

@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (php-memcached/memcached-3.0.3.tgz) = 4b9fd0b712aff3bdd7e76377be36f557679441fc
-RMD160 (php-memcached/memcached-3.0.3.tgz) = ed55d2da86bf86d4d868409d7e5c7f0ba565775e
-SHA512 (php-memcached/memcached-3.0.3.tgz) = cb24d76f82ce8c1fdd8877bbb46131545bba5011cfff965e3c190b7c0f71f754b47ded6289d3125724d9de781b916971aaadfa0b247c6fe2f51aab77dce61b61
-Size (php-memcached/memcached-3.0.3.tgz) = 77310 bytes
+SHA1 (php-memcached/memcached-3.0.4.tgz) = 0080eb5db45c2243a21a78c866aca984524e9f3f
+RMD160 (php-memcached/memcached-3.0.4.tgz) = c5c7ffcf482094690cf805319d842911a075c7ad
+SHA512 (php-memcached/memcached-3.0.4.tgz) = d0a0f9e99cbcc6829528554551dfacf0d943d54d4be60c9da708de82913a2a0bed7c51d594ae3ecf0c13b56064739f074ce6ada5d7433bdc7e26e8caf9cf5ca2
+Size (php-memcached/memcached-3.0.4.tgz) = 78776 bytes

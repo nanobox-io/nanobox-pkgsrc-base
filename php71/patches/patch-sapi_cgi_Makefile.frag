@@ -1,6 +1,6 @@
-$NetBSD: patch-sapi_cgi_Makefile.frag,v 1.2 2013/08/17 13:15:21 taca Exp $
+$NetBSD: patch-sapi_cgi_Makefile.frag,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
 
---- sapi/cgi/Makefile.frag.orig	2013-08-15 20:42:04.000000000 +0000
+--- sapi/cgi/Makefile.frag.orig	2015-06-23 17:33:33.000000000 +0000
 +++ sapi/cgi/Makefile.frag
 @@ -4,9 +4,9 @@ $(SAPI_CGI_PATH): $(PHP_GLOBAL_OBJS) $(P
  	$(BUILD_CGI)

@@ -17,12 +17,13 @@ WRKSRC=			${WRKDIR}/apcu-${PECL_VERSION}
 
 .include "../../base/php/phpversion.mk"
 
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
 PKGREVISION=		1
 .endif
 
 PLIST_SUBST+=		PKGBASE=${PKGBASE:Q}
+PLIST_SUBST+=		PHP_VERSION=${_PHP_VERSION}
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 

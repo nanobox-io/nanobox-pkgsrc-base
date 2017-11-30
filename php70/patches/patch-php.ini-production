@@ -1,8 +1,8 @@
-$NetBSD: patch-php.ini-production,v 1.4 2014/04/04 03:05:00 taca Exp $
+$NetBSD: patch-php.ini-production,v 1.1 2015/12/06 15:17:31 taca Exp $
 
---- php.ini-production.orig	2014-04-01 12:32:03.000000000 +0000
+--- php.ini-production.orig	2015-06-23 17:33:33.000000000 +0000
 +++ php.ini-production
-@@ -693,7 +693,7 @@ default_mimetype = "text/html"
+@@ -697,7 +697,7 @@ default_charset = "UTF-8"
  ;;;;;;;;;;;;;;;;;;;;;;;;;
  
  ; UNIX: "/path1:/path2"
@@ -11,7 +11,7 @@ $NetBSD: patch-php.ini-production,v 1.4 2014/04/04 03:05:00 taca Exp $
  ;
  ; Windows: "\path1;\path2"
  ;include_path = ".;c:\php\includes"
-@@ -714,8 +714,8 @@ doc_root =
+@@ -718,8 +718,8 @@ doc_root =
  ; http://php.net/user-dir
  user_dir =
  
@@ -22,7 +22,7 @@ $NetBSD: patch-php.ini-production,v 1.4 2014/04/04 03:05:00 taca Exp $
  ; extension_dir = "./"
  ; On windows:
  ; extension_dir = "ext"
-@@ -788,7 +788,7 @@ file_uploads = On
+@@ -792,7 +792,7 @@ file_uploads = On
  ; Temporary directory for HTTP uploaded files (will use system default if not
  ; specified).
  ; http://php.net/upload-tmp-dir

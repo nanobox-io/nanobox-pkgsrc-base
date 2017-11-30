@@ -8,7 +8,7 @@ PHP_EXTENSION_VERSIONS_MK=	#defined
 
 PHP_EXTENSION_VERSION.amqp=		1.9.3			# https://pecl.php.net/package/amqp
 PHP_EXTENSION_VERSION.apc=		3.1.13			# https://pecl.php.net/package/APC
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.apcu=		5.1.8			# https://pecl.php.net/package/APCu
 .else
 PHP_EXTENSION_VERSION.apcu=		4.0.11			# https://pecl.php.net/package/APCu
@@ -42,7 +42,7 @@ PHP_EXTENSION_VERSION.gmp=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gnupg=		1.4.0			# https://pecl.php.net/package/gnupg
 PHP_EXTENSION_VERSION.hash=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.htscanner=	1.0.1			# https://pecl.php.net/package/htscanner
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.http=		3.1.0			# https://pecl.php.net/package/pecl_http
 .else
 PHP_EXTENSION_VERSION.http=		2.6.0			# https://pecl.php.net/package/pecl_http
@@ -56,7 +56,7 @@ PHP_EXTENSION_VERSION.ioncube_loader=	10.0.4			# http://www.ioncube.com/loaders.
 PHP_EXTENSION_VERSION.json=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.json_post=	1.0.1			# https://pecl.php.net/package/json_post
 PHP_EXTENSION_VERSION.ldap=		${PHP_BASE_VERS}
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.sodium=		2.0.10			# https://pecl.php.net/package/libsodium
 .else
 PHP_EXTENSION_VERSION.libsodium=	1.0.7			# https://pecl.php.net/package/libsodium
@@ -66,19 +66,19 @@ PHP_EXTENSION_VERSION.magickwand=	1.0.9			# http://www.magickwand.org/download/p
 PHP_EXTENSION_VERSION.mbstring=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mcrypt=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.memcache=		3.0.8			# https://pecl.php.net/package/memcache
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
-PHP_EXTENSION_VERSION.memcached=	3.0.3			# https://pecl.php.net/package/memcached
+.if ${PKG_PHP_MAJOR_VERS} == "7"
+PHP_EXTENSION_VERSION.memcached=	3.0.4			# https://pecl.php.net/package/memcached
 .else
 PHP_EXTENSION_VERSION.memcached=	2.2.0			# https://pecl.php.net/package/memcached
 .endif
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.mogilefs=		0.9.3.1			# https://pecl.php.net/package/mogilefs
 .else
 PHP_EXTENSION_VERSION.mogilefs=		0.9.2			# https://pecl.php.net/package/mogilefs
 .endif
 PHP_EXTENSION_VERSION.mongo=		1.6.16			# https://pecl.php.net/package/mongo
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
-PHP_EXTENSION_VERSION.mongodb=		1.3.2			# https://pecl.php.net/package/mongodb
+.if ${PKG_PHP_MAJOR_VERS} == "7"
+PHP_EXTENSION_VERSION.mongodb=		1.3.3			# https://pecl.php.net/package/mongodb
 .elif ${_PHP_VERSION} == "53"
 PHP_EXTENSION_VERSION.mongodb=          1.1.0                   # https://pecl.php.net/package/mongodb
 .else
@@ -90,7 +90,7 @@ PHP_EXTENSION_VERSION.mysqli=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.ncurses=		1.0.2			# https://pecl.php.net/package/ncurses
 PHP_EXTENSION_VERSION.newrelic=		${NEWRELIC_VERSION}	# https://download.newrelic.com/php_agent/release/
 PHP_EXTENSION_VERSION.newt=		1.2.9			# https://pecl.php.net/package/newt
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.oauth=		2.0.2			# https://pecl.php.net/package/oauth
 .else
 PHP_EXTENSION_VERSION.oauth=		1.2.3			# https://pecl.php.net/package/oauth
@@ -119,14 +119,14 @@ PHP_EXTENSION_VERSION.phalcon=		3.2.4			# https://github.com/phalcon/cphalcon
 PHP_EXTENSION_VERSION.phar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.phpwkhtmltox=	0.10			# https://github.com/mreiferson/php-wkhtmltox
 PHP_EXTENSION_VERSION.posix=		${PHP_BASE_VERS}
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.propro=		2.0.1			# https://pecl.php.net/package/propro
 .else
 PHP_EXTENSION_VERSION.propro=		1.0.2			# https://pecl.php.net/package/propro
 .endif
 PHP_EXTENSION_VERSION.pspell=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.radius=		1.3.0			# https://pecl.php.net/package/radius
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.raphf=		2.0.0			# https://pecl.php.net/package/raphf
 .else
 PHP_EXTENSION_VERSION.raphf=		1.1.2			# https://pecl.php.net/package/raphf
@@ -134,7 +134,7 @@ PHP_EXTENSION_VERSION.raphf=		1.1.2			# https://pecl.php.net/package/raphf
 PHP_EXTENSION_VERSION.rar=		4.0.0			# https://pecl.php.net/package/rar
 PHP_EXTENSION_VERSION.readline=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.recode=		${PHP_BASE_VERS}
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.redis=		3.1.4			# https://pecl.php.net/package/redis
 .else
 PHP_EXTENSION_VERSION.redis=		2.2.8			# https://pecl.php.net/package/redis
@@ -148,17 +148,17 @@ PHP_EXTENSION_VERSION.sockets=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sphinx=		1.3.3			# https://pecl.php.net/package/sphinx
 PHP_EXTENSION_VERSION.sqlite=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.sqlite3=		${PHP_BASE_VERS}
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.ssh2=		1.1.2			# https://pecl.php.net/package/ssh2
 .else
 PHP_EXTENSION_VERSION.ssh2=		0.13			# https://pecl.php.net/package/ssh2
 .endif
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.stats=		2.0.3			# https://pecl.php.net/package/stats
 .else
 PHP_EXTENSION_VERSION.stats=		1.0.5			# https://pecl.php.net/package/stats
 .endif
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.stomp=		2.0.1			# https://pecl.php.net/package/stomp
 .else
 PHP_EXTENSION_VERSION.stomp=		1.0.9			# https://pecl.php.net/package/stomp
@@ -189,11 +189,12 @@ PHP_EXTENSION_VERSION.xmlreader=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.xmlrpc=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.xmlwriter=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.xsl=		${PHP_BASE_VERS}
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.yaml=             2.0.2                   # https://pecl.php.net/package/yaml
 .else
 PHP_EXTENSION_VERSION.yaml=		1.3.1			# https://pecl.php.net/package/yaml
 .endif
+PHP_EXTENSION_VERSION.zephir_parser=	1.1.1			# https://github.com/phalcon/php-zephir-parser/releases
 PHP_EXTENSION_VERSION.zip=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.zlib=		${PHP_BASE_VERS}
 

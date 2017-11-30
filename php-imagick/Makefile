@@ -12,7 +12,7 @@ COMMENT=		Provides a wrapper to the ImageMagick library.
 LICENSE=		php
 
 .include "../../base/php/phpversion.mk"
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71" || ${_PHP_VERSION} == "72"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php70
 .endif
 

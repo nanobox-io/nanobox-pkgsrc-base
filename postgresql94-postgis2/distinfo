@@ -4,3 +4,7 @@ SHA1 (postgis-2.4.1.tar.gz) = a384605bae2890cd044cdd3d0e781ac69c1cf9bf
 RMD160 (postgis-2.4.1.tar.gz) = 17f2463e81d688870be672c81b6d3c5462012069
 SHA512 (postgis-2.4.1.tar.gz) = a0baff97f15a02dfd466c38923a8fad81375fa06423c51ccaf6fb97a824a4010b12f152afd3f82ce9089983816b918d67c25de8fdabca27da71fb64309d01fc8
 Size (postgis-2.4.1.tar.gz) = 12473439 bytes
+SHA1 (patch-liblwgeom_Makefile.in) = ae62448318a5a1fc7904f65cd20fe613720f22f4
+SHA1 (patch-loader_Makefile.in) = 4714860bdc0e7c75dae4e5ee9dbf40707cb521bc
+SHA1 (patch-raster_loader_Makefile.in) = 772ce1d866e903d75e52dc2d5365bd2b76c7a19f
+SHA1 (patch-utils_Makefile.in) = 2a4a70062986ee46dd806b2b632395012495d482

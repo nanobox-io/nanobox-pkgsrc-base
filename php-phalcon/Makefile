@@ -11,6 +11,7 @@ HOMEPAGE=		http://phalconphp.com/
 COMMENT=		Phalcon is a web framework implemented as a C extension offering high performance and lower resource consumption
 LICENSE=		php
 
+DOCDIR=			${PREFIX}/share/doc
 INSTALLATION_DIRS=	${DOCDIR}
 
 .include "../../base/php/extension_versions.mk"
@@ -30,8 +31,8 @@ USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake
 CFLAGS+=		-O2 -Wall -fvisibility=hidden -flto -DZEPHIR_RELEASE=1
 
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71" 
-EXTENSIONS=		phar json filter hash gmp ctype pdo pdo_sqlite simplexml tokenizer xmlwriter dom zip mbstring xml
+.if ${PKG_PHP_MAJOR_VERS} == "7"
+EXTENSIONS=		phar json filter hash gmp ctype pdo pdo_sqlite simplexml tokenizer xmlwriter dom zip mbstring xml zephir_parser
 
 .for extension in ${EXTENSIONS}
 
@@ -51,7 +52,6 @@ PHALCONDIR= ${WRKDIR}/phalcon
 pre-configure:
 	if [ ! -f ${PREFIX}/etc/php.ini ]; then sudo cp ${PREFIX}/etc/php/php.ini ${PREFIX}/etc/php.ini; fi
 	sudo cp ${PREFIX}/etc/php.ini ${PREFIX}/etc/php/php.ini
-	sudo chown vagrant ${PREFIX}/etc/php/php.ini
 	for i in ${EXTENSIONS}; do echo "extension=$${i}.so" >> ${PREFIX}/etc/php/php.ini; done
 	cd ${PHALCONDIR}; composer install
 	cd ${PHALCONDIR}; composer require "phalcon/zephir:dev-master"

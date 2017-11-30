@@ -1,6 +1,6 @@
-$NetBSD: patch-makedist,v 1.2 2014/02/07 15:35:05 taca Exp $
+$NetBSD: patch-makedist,v 1.1 2015/12/06 15:17:31 taca Exp $
 
---- makedist.orig	2014-02-05 10:00:36.000000000 +0000
+--- makedist.orig	2015-06-23 17:33:33.000000000 +0000
 +++ makedist
 @@ -35,7 +35,7 @@ if test "${1}" = "1" -a "${2}" -lt "28";
  fi

@@ -26,7 +26,7 @@ INSTALLATION_DIRS+=	include/php/ext/igbinary
 
 .include "../../base/php/extension_versions.mk"
 
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 # GIT_REPOSITORIES=	igbinary-${PECL_VERSION}
 # GIT_REPO.igbinary-${PECL_VERSION}=	git://github.com/igbinary/igbinary.git
 # GIT_BRANCH.igbinary-${PECL_VERSION}=		php7-dev-playground2

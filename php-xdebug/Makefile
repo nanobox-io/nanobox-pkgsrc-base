@@ -14,6 +14,8 @@ LICENSE=		php
 
 .if ${_PHP_VERSION} == "53"
 DISTINFO_FILE=		${.CURDIR}/distinfo-php53
+.elif ${_PHP_VERSION} == "54"
+DISTINFO_FILE=          ${.CURDIR}/distinfo-php54
 .endif
 
 CONFLICTS=		php-xdebug-[0-9]*

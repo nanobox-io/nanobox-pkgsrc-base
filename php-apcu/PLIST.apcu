@@ -1,2 +1,2 @@
 @comment $NetBSD$
-share/doc/php56-apcu/INSTALL
+share/doc/php${PHP_VERSION}-apcu/INSTALL

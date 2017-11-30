@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- loader/Makefile.in.orig	2017-09-11 14:34:44.000000000 +0000
++++ loader/Makefile.in
+@@ -25,7 +25,7 @@ CC=@CC@
+ CFLAGS=-I ../liblwgeom @CFLAGS@ @PICFLAGS@ @WARNFLAGS@ @PROJ_CPPFLAGS@
+ top_builddir = @top_builddir@
+ SHELL = @SHELL@
+-INSTALL = $(SHELL) ../install-sh
++INSTALL = ../install-sh
+ LIBTOOL = @LIBTOOL@
+ 
+ # Filenames with extension as determined by the OS

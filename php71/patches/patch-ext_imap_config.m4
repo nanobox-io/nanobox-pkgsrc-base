@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_imap_config.m4,v 1.1 2013/07/29 16:41:02 taca Exp $
+$NetBSD: patch-ext_imap_config.m4,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
 
---- ext/imap/config.m4.orig	2012-05-03 17:10:43.000000000 +0000
+--- ext/imap/config.m4.orig	2015-06-23 17:33:33.000000000 +0000
 +++ ext/imap/config.m4
 @@ -48,6 +48,14 @@ AC_DEFUN([PHP_IMAP_TEST_BUILD], [
    ])

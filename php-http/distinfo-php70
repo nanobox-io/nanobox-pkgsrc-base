@@ -4,4 +4,4 @@ SHA1 (php-http/pecl_http-3.1.0.tgz) = 49af1a8d5fb89d66aa6eeb24cbfb73f96671fb26
 RMD160 (php-http/pecl_http-3.1.0.tgz) = f6542a3840a66cb14e9c8b1d77a50898ae5ffb22
 SHA512 (php-http/pecl_http-3.1.0.tgz) = 1c272aa476106bb61848f175f0ba6715b3d8928f70cdac1a673cc87c2dc780dff5434a3bc595d5e8a1ef7b847a1d2e214f9e9ae80b8b5d1f80a299febc85b0ea
 Size (php-http/pecl_http-3.1.0.tgz) = 214166 bytes
-SHA1 (patch-config9.m4) = 6244b755edd22443334935c422fb13ee449dd414
+SHA1 (patch-config9.m4) = e18aa2c505a70419646f96d932e9982c366907ac

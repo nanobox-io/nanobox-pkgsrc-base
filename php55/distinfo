@@ -18,6 +18,7 @@ SHA1 (patch-ext_phar_Makefile.frag) = f465bb5acd4bb87bb403baa98b61ac707800fd30
 SHA1 (patch-ext_phar_phar_phar.php) = 011f2d68048dbc63f5efcab4e23062daa9e8e08c
 SHA1 (patch-ext_sqlite3_libsqlite_sqlite3.c) = b384b9daa466f2a8a3e6cfd4ea6cff81f9342941
 SHA1 (patch-ext_standard_basic__functions.c) = f2a44998145306c2cb2d2f3822c0e7cc70c778b4
+SHA1 (patch-ext_tidy_tidy.c) = 79f2627f3d981eaa89dbb11520a71e50ce9ed0dc
 SHA1 (patch-makedist) = 3f6b0621d30264824f2cb4c2903d15ba95be3937
 SHA1 (patch-php.ini-development) = 4fc40f0af5f6e58b614794e066a5738694dc8ef8
 SHA1 (patch-php.ini-production) = 47c1b14ee78fbcaa084a58d2c0c3e843104072be

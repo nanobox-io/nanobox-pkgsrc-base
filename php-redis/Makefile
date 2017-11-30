@@ -24,6 +24,9 @@ LICENSE=		php
 #.else
 #GIT_TAG.php-redis=	${PECL_VERSION}
 #.endif
+.if ${PKG_PHP_MAJOR_VERS} == "7"
+DISTINFO_FILE=          ${.CURDIR}/distinfo-php70
+.endif
 
 WRKSRC=			${WRKDIR}/${MODNAME}-${PECL_VERSION}
 

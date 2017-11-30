@@ -2,6 +2,7 @@
 
 PKGNAME=	${DISTNAME:C/-/94-server-/}
 COMMENT=	PostgreSQL database server programs
+PKGREVISION=	1
 
 # mips has no TAS implementation
 BROKEN_ON_PLATFORM=	*-*-mips

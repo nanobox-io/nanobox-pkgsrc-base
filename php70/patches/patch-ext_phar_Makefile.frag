@@ -1,6 +1,6 @@
-$NetBSD$
+$NetBSD: patch-ext_phar_Makefile.frag,v 1.1 2015/12/06 15:17:31 taca Exp $
 
---- ext/phar/Makefile.frag.orig	2015-06-10 07:42:27.000000000 +0000
+--- ext/phar/Makefile.frag.orig	2015-06-23 17:33:33.000000000 +0000
 +++ ext/phar/Makefile.frag
 @@ -18,7 +18,7 @@ PHP_PHARCMD_EXECUTABLE = ` \
  	else \

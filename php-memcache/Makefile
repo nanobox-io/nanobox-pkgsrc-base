@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}/${MODNAME}-${PECL_VERSION}
 
 .include "../../base/php/extension_versions.mk"
 
-.if ${_PHP_VERSION} == "70" || ${_PHP_VERSION} == "71"
+.if ${PKG_PHP_MAJOR_VERS} == "7"
 PATCHDIR=              ${.CURDIR}/../../base/php-memcache/patches7
 .endif
 

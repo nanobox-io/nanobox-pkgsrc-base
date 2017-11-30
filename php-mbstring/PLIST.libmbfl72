@@ -123,4 +123,3 @@ include/php/ext/mbstring/libmbfl/nls/nls_tr.h
 include/php/ext/mbstring/libmbfl/nls/nls_ua.h
 include/php/ext/mbstring/libmbfl/nls/nls_uni.h
 include/php/ext/mbstring/libmbfl/nls/nls_zh.h
-lib/php/20160731/mbstring.so

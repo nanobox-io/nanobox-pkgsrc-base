@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_pdo_config.m4,v 1.1 2013/07/29 16:41:02 taca Exp $
+$NetBSD: patch-ext_pdo_config.m4,v 1.1 2015/12/06 15:17:31 taca Exp $
 
---- ext/pdo/config.m4.orig	2012-05-03 17:10:43.000000000 +0000
+--- ext/pdo/config.m4.orig	2015-06-23 17:33:33.000000000 +0000
 +++ ext/pdo/config.m4
 @@ -37,20 +37,6 @@ if test "$PHP_PDO" != "no"; then
  

@@ -1,8 +1,6 @@
-$NetBSD: patch-modules_videoio_src_cap__v4l.cpp,v 1.3 2017/09/04 15:23:49 fhajny Exp $
+$NetBSD$
 
-Conditionalize settings not available in NetBSD's v4l2 emulation.
-
---- modules/videoio/src/cap_v4l.cpp.orig	2017-08-03 23:58:23.000000000 +0000
+--- modules/videoio/src/cap_v4l.cpp.orig	2017-10-23 15:41:12.000000000 +0000
 +++ modules/videoio/src/cap_v4l.cpp
 @@ -216,6 +216,7 @@ make & enjoy!
  #include <fcntl.h>
@@ -12,19 +10,23 @@ Conditionalize settings not available in NetBSD's v4l2 emulation.
  #include <sys/types.h>
  #include <sys/mman.h>
  
-@@ -470,9 +471,13 @@ static int autosetup_capture_mode_v4l2(C
+@@ -466,13 +467,17 @@ static int autosetup_capture_mode_v4l2(C
+             V4L2_PIX_FMT_YUYV,
              V4L2_PIX_FMT_UYVY,
-             V4L2_PIX_FMT_SN9C10X,
              V4L2_PIX_FMT_SBGGR8,
 +#ifdef V4L2_PIX_FMT_SGBRG8
              V4L2_PIX_FMT_SGBRG8,
--            V4L2_PIX_FMT_RGB24,
--            V4L2_PIX_FMT_Y16
 +#endif
-+            V4L2_PIX_FMT_RGB24
+             V4L2_PIX_FMT_SN9C10X,
+ #ifdef HAVE_JPEG
+             V4L2_PIX_FMT_MJPEG,
+-            V4L2_PIX_FMT_JPEG,
++            V4L2_PIX_FMT_JPEG
++#endif
 +#ifdef V4L2_PIX_FMT_Y16
 +            ,V4L2_PIX_FMT_Y16
-+#endif
+ #endif
+-            V4L2_PIX_FMT_Y16
      };
  
      for (size_t i = 0; i < sizeof(try_order) / sizeof(__u32); i++) {

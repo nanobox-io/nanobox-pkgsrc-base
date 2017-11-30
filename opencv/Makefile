@@ -1,9 +1,10 @@
 # $NetBSD: Makefile,v 1.72 2017/09/04 15:23:49 fhajny Exp $
 
-DISTNAME=	opencv-3.3.0
+DISTNAME=	opencv-3.3.1
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
 EXTRACT_SUFX=	.zip
+PKGREVISION=	1
 
 MAINTAINER=	anthony.mallet@laas.fr
 HOMEPAGE=	http://opencv.org/
@@ -15,7 +16,9 @@ USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
-
+USE_JAVA=		build
+USE_JAVA2=		yes
+PKG_JVM_DEFAULT=	oracle-jdk8
 
 INSTALLATION_DIRS+=	share/doc/opencv/papers
 INSTALLATION_DIRS+=	share/doc/opencv/ref/pics

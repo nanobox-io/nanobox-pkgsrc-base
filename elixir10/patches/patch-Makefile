@@ -1,11 +1,13 @@
 $NetBSD$
 
---- Makefile.orig	2017-07-31 15:20:39.297610628 +0000
+--- Makefile.orig	2017-11-23 18:53:33.581910194 +0000
 +++ Makefile
-@@ -1,5 +1,5 @@
- REBAR ?= "$(CURDIR)/rebar"
--PREFIX ?= /usr/local
-+PREFIX ?= @PREFIX@
- SHARE_PREFIX ?= $(PREFIX)/share
- CANONICAL := v1.5/
- ELIXIRC := bin/elixirc --verbose --ignore-module-conflict
+@@ -5,7 +5,7 @@ ERLC := erlc -I lib/elixir/include
+ ERL := erl -I lib/elixir/include -noshell -pa lib/elixir/ebin
+ VERSION := $(strip $(shell cat VERSION))
+ Q := @
+-PREFIX := /usr/local
++PREFIX := @PREFIX@
+ LIBDIR := lib
+ INSTALL = install
+ INSTALL_DIR = $(INSTALL) -m755 -d

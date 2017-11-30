@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (basho/OTP_R16B02_basho10.tar.gz) = 3b0e962dc84c095cf2d365d6d6f9762236929ba3
-RMD160 (basho/OTP_R16B02_basho10.tar.gz) = 46b7afc0e737eddcee91dc725ecebc13e0da783f
-SHA512 (basho/OTP_R16B02_basho10.tar.gz) = dac6339a8b8424a20a648dd760686723d120d719d3aa9dda91d9f7906c440d868dedc5fbf4cf98b7cf5a9f76e5edfb3e16b8f9a9561eb9e998bdbc79fde62434
-Size (basho/OTP_R16B02_basho10.tar.gz) = 32700765 bytes
+SHA1 (basho/OTP_R16B02_basho10.tar.gz) = 5b9f3a2ebd8c89765ab85a985304a479fb9cc2af
+RMD160 (basho/OTP_R16B02_basho10.tar.gz) = fa0840e3cba743a1f6605dac7c781348cd7d0583
+SHA512 (basho/OTP_R16B02_basho10.tar.gz) = 4cbe7cf1bd41a4b801f66e4b3c887c10f2127f179e0d97ef008509ad9cb1fbb895bb678077915251267f2254a444b38839615369627c2e03c6915aa1a9f29037
+Size (basho/OTP_R16B02_basho10.tar.gz) = 32700701 bytes
 SHA1 (patch-ab) = 5f1602f3a49c05fd4c45884a7cd6be8d3f287ac3
 SHA1 (patch-ai) = 203d1208b3a8a6aa248cfe0e16c9c19ae25fe0ad
 SHA1 (patch-am) = 11ff769b6954f950d6447e69b033cdc0bfa767e9

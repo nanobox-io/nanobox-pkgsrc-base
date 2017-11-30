@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		erlang-${VERSION}
-VERSION=		20.1
+VERSION=		20.1.7
 PKGNAME=		erlang-${VERSION}
 # PKGREVISION=		1
 CATEGORIES=		base

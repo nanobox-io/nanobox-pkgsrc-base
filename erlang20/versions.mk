@@ -2,14 +2,14 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-ERLANG_VERSION=			20.1
+ERLANG_VERSION=			20.1.7
 DIST_VERSION_MAJOR=		20
 #DIST_VERSION_MINOR=		1
 
 _VERSIONS=				\
 	asn1			5.0.3	\
 	common_test		1.15.2	\
-	compiler		7.1.2	\
+	compiler		7.1.3	\
 	cosEvent		2.2.1	\
 	cosEventDomain		1.2.1	\
 	cosFileTransfer		1.2.1	\
@@ -20,18 +20,18 @@ _VERSIONS=				\
 	crypto			4.1	\
 	debugger		4.2.3	\
 	dialyzer		3.2.2	\
-	diameter		2.1	\
+	diameter		2.1.2	\
 	edoc			0.9.1	\
 	eldap			1.2.2	\
 	erl_docgen		0.7.1	\
 	erl_interface		3.10	\
-	erts			9.1	\
+	erts			9.1.5	\
 	et			1.6.1	\
 	eunit			2.3.4	\
 	gs			1.6.2	\
 	hipe			3.16.1	\
 	ic			4.4.2	\
-	inets			6.4.2	\
+	inets			6.4.4	\
 	jinterface		1.8	\
 	kernel			5.4	\
 	megaco			3.18.2	\
@@ -43,13 +43,13 @@ _VERSIONS=				\
 	otp_mibs		1.1.1	\
 	parsetools		2.1.5	\
 	percept			0.9	\
-	public_key		1.5	\
+	public_key		1.5.1	\
 	reltool			0.7.5	\
 	runtime_tools		1.12.2	\
 	sasl			3.1	\
-	snmp			5.2.7	\
-	ssh			4.6	\
-	ssl			8.2.1	\
+	snmp			5.2.8	\
+	ssh			4.6.2	\
+	ssl			8.2.2	\
 	stdlib			3.4.2	\
 	syntax_tools		2.1.3	\
 	tools			2.11	\

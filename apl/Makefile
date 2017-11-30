@@ -14,6 +14,7 @@ COMMENT=		GNU APL is a free interpreter for the programming language APL.
 LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 
 CONFIG_SHELL=		/bin/bash
 GNU_CONFIGURE=		yes

@@ -14,8 +14,10 @@ lib/apl/lib_template_OP1.la
 lib/apl/lib_template_OP2.la
 lib/apl/libemacs.la
 lib/apl/workspaces/APL_CGI.apl
+lib/apl/workspaces/RUBIK.apl
 lib/apl/workspaces/SCRIPT.apl
 lib/apl/workspaces/ScalarBenchmark.apl
+lib/apl/workspaces/gnuplot.apl
 lib/apl/wslib3/meta.apl
 lib/apl/wslib4/dummy.apl
 lib/apl/wslib5/APLComponentFiles/AUTHORS

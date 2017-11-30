@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-VERSION=		2.7.1
+VERSION=		2.8.1
 DISTNAME=		leiningen-${VERSION}
 # PKGREVISION=		
 CATEGORIES=		pagoda

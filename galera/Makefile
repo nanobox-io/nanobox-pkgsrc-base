@@ -19,6 +19,7 @@ COMMENT=	Galera Cluster for MySQL
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 USE_LANGUAGES=	c c++
+USE_CWRAPPERS=	no
 
 INSTALLATION_DIRS+=		lib/mysql/plugin bin
 

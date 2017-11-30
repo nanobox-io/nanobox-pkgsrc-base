@@ -1,0 +1,19 @@
+$NetBSD$
+
+--- gcs/src/SConscript.orig	2017-01-25 07:55:06.000000000 +0000
++++ gcs/src/SConscript
+@@ -23,10 +23,10 @@ libgcs_env.Replace(CCFLAGS = libgcs_env[
+ libgcs_env.Append(CPPFLAGS = ' -Wno-missing-field-initializers')
+ libgcs_env.Append(CPPFLAGS = ' -Wno-effc++')
+ 
+-print libgcs_env['CFLAGS']
+-print libgcs_env['CCFLAGS']
+-print libgcs_env['CPPFLAGS']
+-print libgcs_env['CXXFLAGS']
++print(libgcs_env['CFLAGS'])
++print(libgcs_env['CCFLAGS'])
++print(libgcs_env['CPPFLAGS'])
++print(libgcs_env['CXXFLAGS'])
+ 
+ gcs4garb_env = libgcs_env.Clone()
+ 

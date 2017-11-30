@@ -4,4 +4,5 @@ SHA1 (release_25.3.20.tar.gz) = 510e1d47096e72241830a388741d37392a7e31d1
 RMD160 (release_25.3.20.tar.gz) = 90830c48a2e48cd1738834f3043c5b085b9c222d
 SHA512 (release_25.3.20.tar.gz) = 25c2cf047c650bb06014c0e7ff7144b63f06636e337bc02bef731b26df1963f225d7ddbe64de8fa18619e3759ac747913ebab2fdee5bc95d614574d9e93c4e22
 Size (release_25.3.20.tar.gz) = 3271813 bytes
-SHA1 (patch-SConstruct) = 0c37d27be0b6c16a87f59df4b235fa0c5cf96cda
+SHA1 (patch-SConstruct) = 01669e98b436f8144a52fed0b858a375401a97b0
+SHA1 (patch-gcs_src_SConscript) = cfad3a7c45f7af4fa507a69106ccdba7e89603c6

@@ -32,6 +32,7 @@ LIBS+=		-pthread
 
 pre-configure:
 	echo ${CONFIGURE_ARGS}
+	ln -s ${PREFIX}/bin/gm4 ${WRAPPER_DIR}/bin/m4
 
 DEPENDS+=	python>=2.7<=28:../../lang/python27
 DEPENDS+=	nodejs>=0.10:../../base/nodejs010

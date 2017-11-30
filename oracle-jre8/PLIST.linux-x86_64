@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.4 2016/01/22 14:18:42 ryoon Exp $
+@comment $NetBSD$
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -30,17 +30,20 @@ java/oracle-8/bin/rmiregistry
 java/oracle-8/bin/servertool
 java/oracle-8/bin/tnameserv
 java/oracle-8/bin/unpack200
-${PLIST.native}java/oracle-8/lib/amd64/jli/libX11.so.6
+java/oracle-8/lib/amd64/jli/libX11.so.6
 java/oracle-8/lib/amd64/jli/libjli.so
 java/oracle-8/lib/amd64/jvm.cfg.default
-${PLIST.native}java/oracle-8/lib/amd64/libX11.so.6
-${PLIST.native}java/oracle-8/lib/amd64/libXext.so.6
-${PLIST.native}java/oracle-8/lib/amd64/libXi.so.6
-${PLIST.native}java/oracle-8/lib/amd64/libXt.so.6
-${PLIST.native}java/oracle-8/lib/amd64/libXtst.so.6
-${PLIST.native}java/oracle-8/lib/amd64/libasound.so.2
+java/oracle-8/lib/amd64/libX11.so.6
+java/oracle-8/lib/amd64/libXext.so.6
+java/oracle-8/lib/amd64/libXi.so.6
+java/oracle-8/lib/amd64/libXt.so.6
+java/oracle-8/lib/amd64/libXtst.so.6
+java/oracle-8/lib/amd64/libasound.so.2
 java/oracle-8/lib/amd64/libavplugin-53.so
 java/oracle-8/lib/amd64/libavplugin-54.so
+java/oracle-8/lib/amd64/libavplugin-55.so
+java/oracle-8/lib/amd64/libavplugin-56.so
+java/oracle-8/lib/amd64/libavplugin-ffmpeg-56.so
 java/oracle-8/lib/amd64/libawt.so
 java/oracle-8/lib/amd64/libawt_headless.so
 java/oracle-8/lib/amd64/libawt_xawt.so
@@ -84,8 +87,8 @@ java/oracle-8/lib/amd64/libnet.so
 java/oracle-8/lib/amd64/libnio.so
 java/oracle-8/lib/amd64/libnpjp2.so
 java/oracle-8/lib/amd64/libnpt.so
-${PLIST.native}java/oracle-8/lib/amd64/libodbc.so
-${PLIST.native}java/oracle-8/lib/amd64/libodbcinst.so
+java/oracle-8/lib/amd64/libodbc.so
+java/oracle-8/lib/amd64/libodbcinst.so
 java/oracle-8/lib/amd64/libprism_common.so
 java/oracle-8/lib/amd64/libprism_es2.so
 java/oracle-8/lib/amd64/libprism_sw.so
@@ -129,10 +132,10 @@ java/oracle-8/lib/deploy/messages_zh_CN.properties.default
 java/oracle-8/lib/deploy/messages_zh_HK.properties.default
 java/oracle-8/lib/deploy/messages_zh_TW.properties.default
 java/oracle-8/lib/deploy/mixcode_s.png
-java/oracle-8/lib/deploy/splash_11-lic.gif
-java/oracle-8/lib/deploy/splash_11@2x-lic.gif
 java/oracle-8/lib/deploy/splash.gif
 java/oracle-8/lib/deploy/splash@2x.gif
+java/oracle-8/lib/deploy/splash_11-lic.gif
+java/oracle-8/lib/deploy/splash_11@2x-lic.gif
 java/oracle-8/lib/desktop/applications/sun-java.desktop
 java/oracle-8/lib/desktop/applications/sun-javaws.desktop
 java/oracle-8/lib/desktop/applications/sun_java.desktop
@@ -274,14 +277,16 @@ java/oracle-8/lib/psfont.properties.ja.default
 java/oracle-8/lib/psfontj2d.properties.default
 java/oracle-8/lib/resources.jar
 java/oracle-8/lib/rt.jar
-java/oracle-8/lib/security/US_export_policy.jar
 java/oracle-8/lib/security/blacklist
 java/oracle-8/lib/security/blacklisted.certs
 java/oracle-8/lib/security/cacerts
 java/oracle-8/lib/security/java.policy
 java/oracle-8/lib/security/java.security.default
 java/oracle-8/lib/security/javaws.policy
-java/oracle-8/lib/security/local_policy.jar
+java/oracle-8/lib/security/policy/limited/US_export_policy.jar
+java/oracle-8/lib/security/policy/limited/local_policy.jar
+java/oracle-8/lib/security/policy/unlimited/US_export_policy.jar
+java/oracle-8/lib/security/policy/unlimited/local_policy.jar
 java/oracle-8/lib/security/trusted.libraries
 java/oracle-8/lib/sound.properties.default
 java/oracle-8/lib/tzdb.dat
@@ -313,3 +318,4 @@ java/oracle-8/man/man1/unpack200.1
 java/oracle-8/plugin/desktop/sun_java.desktop
 java/oracle-8/plugin/desktop/sun_java.png
 java/oracle-8/release
+@pkgdir java/oracle-8/lib/applet

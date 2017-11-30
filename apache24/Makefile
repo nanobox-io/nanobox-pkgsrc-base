@@ -6,7 +6,7 @@
 # in NetBSD GNATS.
 
 DISTNAME=	httpd-2.4.29
-#PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/httpd/apache/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
@@ -162,6 +162,8 @@ post-install:
 	${LN} -sf ${SBINDIR}/envvars-std ${DESTDIR}${SBINDIR}/envvars
 
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${DESTDIR}${PREFIX}/bin
+	${SED} "s,LoadModule mpm_event_module lib/httpd/mod_mpm_event.so,#LoadModule mpm_event_module lib/httpd/mod_mpm_event.so,g" < ${DESTDIR}${PREFIX}/share/examples/httpd/httpd.conf > ${DESTDIR}${PREFIX}/share/examples/httpd/httpd.conf
+	${SED} "s,#LoadModule mpm_prefork_module lib/httpd/mod_mpm_prefork.so,LoadModule mpm_prefork_module lib/httpd/mod_mpm_prefork.so,g" < ${DESTDIR}${PREFIX}/share/examples/httpd/httpd.conf > ${DESTDIR}${PREFIX}/share/examples/httpd/httpd.conf
 
 .for file in ${FIX_PERMS_SBIN}
 	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/sbin/${file}

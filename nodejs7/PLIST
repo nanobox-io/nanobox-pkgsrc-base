@@ -2235,13 +2235,14 @@ lib/node_modules/npm/scripts/release.sh
 lib/node_modules/npm/scripts/relocate.sh
 lib/node_modules/npm/scripts/update-authors.sh
 lib/node_modules/yarn/LICENSE
+lib/node_modules/yarn/README.md
 lib/node_modules/yarn/bin/yarn
 lib/node_modules/yarn/bin/yarn.cmd
 lib/node_modules/yarn/bin/yarn.js
 lib/node_modules/yarn/bin/yarnpkg
 lib/node_modules/yarn/bin/yarnpkg.cmd
+lib/node_modules/yarn/lib/cli.js
 lib/node_modules/yarn/lib/v8-compile-cache.js
-lib/node_modules/yarn/lib/yarn-cli.js
 lib/node_modules/yarn/package.json
 man/man1/node.1
 share/doc/node/gdbinit

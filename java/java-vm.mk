@@ -174,6 +174,16 @@ _ONLY_FOR_PLATFORMS.oracle-jdk8= \
 	NetBSD-[6-9]*-i386 NetBSD-[6-9]*-x86_64 \
 	SunOS-5.11-i386 \
 	SunOS-5.11-x86_64
+_ONLY_FOR_PLATFORMS.oracle-jdk9= \
+        Darwin-9.*-i386 Darwin-9.*-x86_64 \
+        Darwin-[1-9][0-9].*-i386 Darwin-[1-9][0-9].*-x86_64 \
+        DragonFly-*-i386 \
+        FreeBSD-6.*-i386 \
+        Linux-*-i[3-6]86 \
+        Linux-*-x86_64 \
+        NetBSD-[6-9]*-i386 NetBSD-[6-9]*-x86_64 \
+        SunOS-5.11-i386 \
+        SunOS-5.11-x86_64
 
 # Set ONLY_FOR_PLATFORM based on accepted JVMs
 .for _jvm_ in ${PKG_JVMS_ACCEPTED}

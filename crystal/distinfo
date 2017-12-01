@@ -1,4 +1,5 @@
 $NetBSD$
 
-SHA1 (patch-Makefile) = f092da657d901918af733d770a6c2d8fc2e38c02
-SHA1 (patch-src_compiler_crystal_codegen_link.cr) = 29f6f724343088cf5104ffdac2135556e3337c5d
+SHA1 (patch-Makefile) = b5516adfaa6147512facaac89539937c9db67a12
+SHA1 (patch-bin_crystal) = 6aab7558f740273b1e483435004ed2689fdcce09
+SHA1 (patch-src_compiler_crystal_codegen_link.cr) = 55cade4f21cb43cd3950c0864341c82b9c620334

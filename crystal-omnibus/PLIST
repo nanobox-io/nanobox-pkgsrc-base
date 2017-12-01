@@ -416,9 +416,6 @@ crystal-omnibus/src/big/big_rational.cr
 crystal-omnibus/src/big/json.cr
 crystal-omnibus/src/big/lib_gmp.cr
 crystal-omnibus/src/big/yaml.cr
-crystal-omnibus/src/big_float.cr
-crystal-omnibus/src/big_int.cr
-crystal-omnibus/src/big_rational.cr
 crystal-omnibus/src/bit_array.cr
 crystal-omnibus/src/bool.cr
 crystal-omnibus/src/box.cr
@@ -605,6 +602,8 @@ crystal-omnibus/src/crypto/bcrypt/blowfish.cr
 crystal-omnibus/src/crypto/bcrypt/password.cr
 crystal-omnibus/src/crypto/blowfish.cr
 crystal-omnibus/src/crypto/subtle.cr
+crystal-omnibus/src/crystal/hasher.cr
+crystal-omnibus/src/crystal/main.cr
 crystal-omnibus/src/crystal/system.cr
 crystal-omnibus/src/crystal/system/random.cr
 crystal-omnibus/src/crystal/system/time.cr
@@ -682,6 +681,7 @@ crystal-omnibus/src/gzip/reader.cr
 crystal-omnibus/src/gzip/writer.cr
 crystal-omnibus/src/hash.cr
 crystal-omnibus/src/html.cr
+crystal-omnibus/src/html/entities.cr
 crystal-omnibus/src/http.cr
 crystal-omnibus/src/http/client.cr
 crystal-omnibus/src/http/client/response.cr
@@ -729,6 +729,7 @@ crystal-omnibus/src/io/hexdump.cr
 crystal-omnibus/src/io/memory.cr
 crystal-omnibus/src/io/multi_writer.cr
 crystal-omnibus/src/io/sized.cr
+crystal-omnibus/src/io/syscall.cr
 crystal-omnibus/src/iterable.cr
 crystal-omnibus/src/iterator.cr
 crystal-omnibus/src/json.cr
@@ -955,6 +956,7 @@ crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/dlfcn.cr
 crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/errno.cr
 crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/fcntl.cr
 crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/iconv.cr
+crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/mach/mach_time.cr
 crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/netdb.cr
 crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/netinet/in.cr
 crystal-omnibus/src/lib_c/x86_64-macosx-darwin/c/netinet/tcp.cr
@@ -1006,6 +1008,8 @@ crystal-omnibus/src/lib_c/x86_64-portbld-freebsd/c/sysctl.cr
 crystal-omnibus/src/lib_c/x86_64-portbld-freebsd/c/termios.cr
 crystal-omnibus/src/lib_c/x86_64-portbld-freebsd/c/time.cr
 crystal-omnibus/src/lib_c/x86_64-portbld-freebsd/c/unistd.cr
+crystal-omnibus/src/lib_c/x86_64-windows-msvc/c/errno.cr
+crystal-omnibus/src/lib_c/x86_64-windows-msvc/c/winapi.cr
 crystal-omnibus/src/lib_z/lib_z.cr
 crystal-omnibus/src/llvm.cr
 crystal-omnibus/src/llvm/abi.cr
@@ -1046,7 +1050,6 @@ crystal-omnibus/src/llvm/value.cr
 crystal-omnibus/src/llvm/value_methods.cr
 crystal-omnibus/src/logger.cr
 crystal-omnibus/src/macros.cr
-crystal-omnibus/src/main.cr
 crystal-omnibus/src/markdown.cr
 crystal-omnibus/src/markdown/html_renderer.cr
 crystal-omnibus/src/markdown/parser.cr
@@ -1107,9 +1110,8 @@ crystal-omnibus/src/process/status.cr
 crystal-omnibus/src/raise.cr
 crystal-omnibus/src/random.cr
 crystal-omnibus/src/random/isaac.cr
-crystal-omnibus/src/random/mt19937.cr
 crystal-omnibus/src/random/pcg32.cr
-crystal-omnibus/src/random/system.cr
+crystal-omnibus/src/random/secure.cr
 crystal-omnibus/src/range.cr
 crystal-omnibus/src/range/bsearch.cr
 crystal-omnibus/src/readline.cr
@@ -1118,7 +1120,6 @@ crystal-omnibus/src/reflect.cr
 crystal-omnibus/src/regex.cr
 crystal-omnibus/src/regex/lib_pcre.cr
 crystal-omnibus/src/regex/match_data.cr
-crystal-omnibus/src/secure_random.cr
 crystal-omnibus/src/semantic_version.cr
 crystal-omnibus/src/set.cr
 crystal-omnibus/src/signal.cr
@@ -1156,7 +1157,6 @@ crystal-omnibus/src/thread.cr
 crystal-omnibus/src/thread/condition_variable.cr
 crystal-omnibus/src/thread/mutex.cr
 crystal-omnibus/src/time.cr
-crystal-omnibus/src/time/day_of_week.cr
 crystal-omnibus/src/time/format.cr
 crystal-omnibus/src/time/format/formatter.cr
 crystal-omnibus/src/time/format/parser.cr
@@ -1170,6 +1170,7 @@ crystal-omnibus/src/uri.cr
 crystal-omnibus/src/uri/uri_parser.cr
 crystal-omnibus/src/value.cr
 crystal-omnibus/src/weak_ref.cr
+crystal-omnibus/src/winerror.cr
 crystal-omnibus/src/xml.cr
 crystal-omnibus/src/xml/attribute_type.cr
 crystal-omnibus/src/xml/attributes.cr
@@ -1188,11 +1189,21 @@ crystal-omnibus/src/xml/xpath_context.cr
 crystal-omnibus/src/yaml.cr
 crystal-omnibus/src/yaml/any.cr
 crystal-omnibus/src/yaml/builder.cr
+crystal-omnibus/src/yaml/enums.cr
 crystal-omnibus/src/yaml/from_yaml.cr
 crystal-omnibus/src/yaml/lib_yaml.cr
 crystal-omnibus/src/yaml/mapping.cr
+crystal-omnibus/src/yaml/nodes.cr
+crystal-omnibus/src/yaml/nodes/builder.cr
+crystal-omnibus/src/yaml/nodes/nodes.cr
+crystal-omnibus/src/yaml/nodes/parser.cr
+crystal-omnibus/src/yaml/parse_context.cr
 crystal-omnibus/src/yaml/parser.cr
 crystal-omnibus/src/yaml/pull_parser.cr
+crystal-omnibus/src/yaml/schema/core.cr
+crystal-omnibus/src/yaml/schema/core/parser.cr
+crystal-omnibus/src/yaml/schema/core/time_parser.cr
+crystal-omnibus/src/yaml/schema/fail_safe.cr
 crystal-omnibus/src/yaml/to_yaml.cr
 crystal-omnibus/src/zip/checksum_reader.cr
 crystal-omnibus/src/zip/checksum_writer.cr

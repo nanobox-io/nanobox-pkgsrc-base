@@ -3,14 +3,13 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=               ${VERSION}
-EXTRA_NUMBER=		3
+EXTRA_NUMBER=		2
 PKGNAME=		crystal-omnibus-${VERSION}
 # PKGREVISION=          1
 CATEGORIES=             lang
 DIST_SUBDIR=		crystal
 DISTFILES=		crystal-${VERSION}-${EXTRA_NUMBER}-linux-x86_64.tar.gz
-
-SITES.crystal-${VERSION}-${EXTRA_NUMBER}-linux-x86_64.tar.gz= https://github.com/crystal-lang/crystal/releases/download/${VERSION}/
+MASTER_SITES=		https://github.com/crystal-lang/crystal/releases/download/${VERSION}/
 
 MAINTAINER=             pkgsrc-users@NetBSD.org
 HOMEPAGE=               https://github.com/crystal-lang/crystal

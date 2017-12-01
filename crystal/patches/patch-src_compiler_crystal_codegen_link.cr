@@ -16,7 +16,7 @@ $NetBSD$
          # about them (eg: FreeBSD won't search /usr/local/lib by default):
          library_path.each do |path|
 -          flags << " -L#{path}"
-+          flags << " -L#{path} -Wl,-rpath #{path}"
++          flags << " -L#{path} -Wl,-rpath,#{path}"
          end
        end
      end

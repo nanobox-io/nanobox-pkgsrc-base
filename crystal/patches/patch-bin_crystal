@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- bin/crystal.orig	2017-11-15 16:00:19.000000000 +0000
++++ bin/crystal
+@@ -137,14 +137,13 @@ __warning_msg() {
+ SCRIPT_PATH="$(realpath "$0")"
+ SCRIPT_ROOT="$(dirname "$SCRIPT_PATH")"
+ CRYSTAL_ROOT="$(dirname "$SCRIPT_ROOT")"
+-CRYSTAL_DIR="$CRYSTAL_ROOT/.build"
++CRYSTAL_DIR="$CRYSTAL_ROOT/embedded/bin"
+ 
+ export CRYSTAL_PATH=$CRYSTAL_ROOT/src:lib
+ export CRYSTAL_HAS_WRAPPER=true
+ 
+ if [ -x "$CRYSTAL_DIR/crystal" ]
+ then
+-  __warning_msg "Using compiled compiler at \`.build/crystal'"
+   exec "$CRYSTAL_DIR/crystal" "$@"
+ elif ! command -v crystal > /dev/null
+ then

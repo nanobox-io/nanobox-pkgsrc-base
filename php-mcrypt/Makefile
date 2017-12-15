@@ -10,6 +10,15 @@ CONFLICTS=		php-mcrypt-[0-9]*
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.libmcrypt}
 
+.include "../../base/php/extension_versions.mk"
+.if ${_PHP_VERSION} == "72"
+DISTINFO_FILE=		${.CURDIR}/distinfo-php72
+PECL_VERSION=           ${PHP_EXTENSION_VERSION.${MODNAME}}
+.endif
+
+
 .include "../../base/php/ext.mk"
+
+
 .include "../../security/libmcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-mosquitto/Mosquitto-0.4.0.tgz) = ab691ed7b8b62f78a187232f96782bd1cdbcf0c7
+RMD160 (php-mosquitto/Mosquitto-0.4.0.tgz) = 98e8e9d428f5e27d4296ce01b9746327fc0e8104
+SHA512 (php-mosquitto/Mosquitto-0.4.0.tgz) = d1981bdd6b4e3c6d16d17044b2fea7a8457593a94a5c9dd4c75eb6edb669b2b5110839fee97f0e7ad3e1a47b2d469ab63d0ad99a3e343067a5e6576e946e68d1
+Size (php-mosquitto/Mosquitto-0.4.0.tgz) = 23804 bytes

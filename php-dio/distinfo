@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-dio/dio-0.1.0.tgz) = 30c6374de6c88178932f345190c2fbdea91a6ad0
+RMD160 (php-dio/dio-0.1.0.tgz) = a2bf3e6f009892900626c2be948235aa9ceee44f
+SHA512 (php-dio/dio-0.1.0.tgz) = 6fca1c3f2d6247f5e0c52a27b49d80a6d13f9630772956ff7aa73ad45e445686502edd956346c43955cb2f858c0c0259af86c3f92b6f93309a2b90583ad8ea05
+Size (php-dio/dio-0.1.0.tgz) = 36960 bytes

@@ -27,6 +27,7 @@ PHP_EXTENSION_VERSION.calendar=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.ctype=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.curl=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.dba=		${PHP_BASE_VERS}
+PHP_EXTENSION_VERSION.dio=		0.1.0			# https://pecl.php.net/package/dio
 PHP_EXTENSION_VERSION.dom=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.eaccelerator=	${PHP_BASE_VERS}.0.9.6.1	# https://github.com/eaccelerator/eaccelerator/tree/master
 PHP_EXTENSION_VERSION.enchant=		${PHP_BASE_VERS}
@@ -38,6 +39,11 @@ PHP_EXTENSION_VERSION.gd=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gender=		1.1.0			# https://pecl.php.net/package/gender
 PHP_EXTENSION_VERSION.geoip=		1.1.1			# https://pecl.php.net/package/geoip
 PHP_EXTENSION_VERSION.gettext=		${PHP_BASE_VERS}
+.if ${PKG_PHP_MAJOR_VERS} == "7"
+PHP_EXTENSION_VERSION.gmagick=		2.0.4			# https://pecl.php.net/package/gmagick
+.else
+PHP_EXTENSION_VERSION.gmagick=		1.1.7			# https://pecl.php.net/package/gmagick
+.endif
 PHP_EXTENSION_VERSION.gmp=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.gnupg=		1.4.0			# https://pecl.php.net/package/gnupg
 PHP_EXTENSION_VERSION.hash=		${PHP_BASE_VERS}
@@ -64,7 +70,11 @@ PHP_EXTENSION_VERSION.libsodium=	1.0.7			# https://pecl.php.net/package/libsodiu
 PHP_EXTENSION_VERSION.lzf=		1.6.6			# https://pecl.php.net/package/lzf
 PHP_EXTENSION_VERSION.magickwand=	1.0.9			# http://www.magickwand.org/download/php/
 PHP_EXTENSION_VERSION.mbstring=		${PHP_BASE_VERS}
+.if ${_PHP_VERSION} == "72"
+PHP_EXTENSION_VERSION.mcrypt=		1.0.1			# https://pecl.php.net/package/mcrypt
+.else
 PHP_EXTENSION_VERSION.mcrypt=		${PHP_BASE_VERS}
+.endif
 PHP_EXTENSION_VERSION.memcache=		3.0.8			# https://pecl.php.net/package/memcache
 .if ${PKG_PHP_MAJOR_VERS} == "7"
 PHP_EXTENSION_VERSION.memcached=	3.0.4			# https://pecl.php.net/package/memcached
@@ -84,6 +94,7 @@ PHP_EXTENSION_VERSION.mongodb=          1.1.0                   # https://pecl.p
 .else
 PHP_EXTENSION_VERSION.mongodb=		1.3.2			# https://pecl.php.net/package/mongodb
 .endif
+PHP_EXTENSION_VERSION.mosquitto=	0.4.0			# https://pecl.php.net/package/Mosquitto
 PHP_EXTENSION_VERSION.mssql=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mysql=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.mysqli=		${PHP_BASE_VERS}
@@ -173,6 +184,7 @@ PHP_EXTENSION_VERSION.tokenizer=	${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.trader=		0.4.0			# https://pecl.php.net/package/trader
 PHP_EXTENSION_VERSION.txforward=	1.0.7			# https://pecl.php.net/package/txforward
 PHP_EXTENSION_VERSION.uploadprogress=	1.0.3.1			# https://pecl.php.net/package/uploadprogress
+PHP_EXTENSION_VERSION.v8js=		2.0.0			# https://pecl.php.net/package/v8js
 PHP_EXTENSION_VERSION.wddx=		${PHP_BASE_VERS}
 PHP_EXTENSION_VERSION.wsf=		2.1.0			# https://github.com/notxarb/wsf-php
 PHP_EXTENSION_VERSION.xcache=		3.2.0			# http://xcache.lighttpd.net/

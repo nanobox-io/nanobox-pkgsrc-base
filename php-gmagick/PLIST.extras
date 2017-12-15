@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/php/ext/gmagick/php_gmagick.h
+include/php/ext/gmagick/php_gmagick_helpers.h
+include/php/ext/gmagick/php_gmagick_macros.h

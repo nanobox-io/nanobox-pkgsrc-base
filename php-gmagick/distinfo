@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.16 2013/03/17 10:46:45 taca Exp $
+
+SHA1 (php-gmagick/gmagick-1.1.7RC3.tgz) = 05c7d372d962f03d09faaf79618ac7567ce816ee
+RMD160 (php-gmagick/gmagick-1.1.7RC3.tgz) = 75dc13b0c4822a0e18faa30bdeb7140daa14b494
+SHA512 (php-gmagick/gmagick-1.1.7RC3.tgz) = a51f148dc16322bcd5586b4af059389159edab1de4ada5743a5ef6dd8d4f001a21f955dc8fd2dac2969a5048db89e3b8031da3a2f519d59fcb1f8e6afa4d8dd9
+Size (php-gmagick/gmagick-1.1.7RC3.tgz) = 97860 bytes

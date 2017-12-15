@@ -259,6 +259,6 @@ share/examples/php/php.ini-production
 share/php/php.gif
 @pkgdir var/run
 @pkgdir var/log
-@pkgdir lib/php/20160731
+@pkgdir lib/php/20170718
 @pkgdir include/php/include
 @pkgdir etc/php

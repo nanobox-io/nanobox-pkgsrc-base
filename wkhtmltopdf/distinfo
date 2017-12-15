@@ -1,8 +1,10 @@
 $NetBSD$
 
-SHA1 (wkhtmltox-0.12.2.1.tar.bz2) = bd022c22eafb3f1015b2726de3fafabbcdc42dc0
-RMD160 (wkhtmltox-0.12.2.1.tar.bz2) = b5081626d9f4617ee1b4555d1f0ed7514dbb5771
-Size (wkhtmltox-0.12.2.1.tar.bz2) = 36248626 bytes
+SHA1 (wkhtmltox-0.12.4.tar.bz2) = 6a0ca9b01d5e37af3fb451bbd934afff43cf26ae
+RMD160 (wkhtmltox-0.12.4.tar.bz2) = 665abd76618cdfac27585e62caa52b33d09990fa
+SHA512 (wkhtmltox-0.12.4.tar.bz2) = 1526c6138d6276d0f6188737a67848b8ae9c16016c119eb00bbdaf7159464f8799c53ca9a997ea40eea4c2d1cadc35a10607564949fd39a3b7b7e6745a3dbdcb
+Size (wkhtmltox-0.12.4.tar.bz2) = 36355721 bytes
+SHA1 (patch-qt_mkspecs_common_linux.conf) = f0c2c25c7e8d8f42581dfc3d6c8c00f95662addb
 SHA1 (patch-qt_mkspecs_solaris-g++-64_qmake.conf) = d61da21fe0ae9ed29a8f9fefb8e46a8dc7fd6fe3
 SHA1 (patch-qt_src_3rdparty_sqlite_sqlite3.c) = 6c32831ef77792b532c701d8cd049b4743d689a4
 SHA1 (patch-qt_src_3rdparty_webkit_Source_JavaScriptCore_heap_MachineStackMarker.cpp) = 11f8fc8e810c368487be1a4602793efa980bab09

@@ -1,11 +1,11 @@
 # $NetBSD$
 
 DISTNAME=	wkhtmltox-${VERSION}
-VERSION=	0.12.2.1
+VERSION=	0.12.4
 PKGNAME=	${DISTNAME:S/tox/topdf/}
 # PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	http://download.gna.org/wkhtmltopdf/0.12/${VERSION}/
+MASTER_SITES=	https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	zecrazytux@zecrazytux.net

@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.2 2015/07/07 17:16:35 leot1990 Exp $
+
+SHA1 (zbar-0.10.tar.bz2) = 273b47c26788faba4325baecc34063e27a012963
+RMD160 (zbar-0.10.tar.bz2) = a68db3e81d596a506e50e797c3540a05b8b84a9f
+Size (zbar-0.10.tar.bz2) = 592602 bytes
+SHA1 (patch-include_zbar_Exception.h) = 9addd50c1d7a6041e76b301620329d910a51d10f
+SHA1 (patch-zbar_debug.h) = f0060dc081085c428f706cbc14ae5cabc43e7c1a
+SHA1 (patch-zbar_decoder.c) = cad0a887de3de98f8649281eb28e3918476de0f8
+SHA1 (patch-zbar_decoder_code128.c) = e3a5fd8c4955be8aa83a91d2d6dde51b3361f9b2
+SHA1 (patch-zbar_decoder_code39.c) = 5c93be0d6b098dbd4c881a9f9072b4b1b666253d
+SHA1 (patch-zbar_decoder_ean.c) = 1d684c795f0b26c7b41c0cfccde831a7e19bc7fa
+SHA1 (patch-zbar_decoder_i25.c) = 5384212fba54132361e2d79688bc81f492096323
+SHA1 (patch-zbar_decoder_pdf417.c) = 3d956426a808b897ad9753f45cd697dc2ec3d5be
+SHA1 (patch-zbar_decoder_qr__finder.c) = d3a7b0b5c40c9bdc8825458310af894cdd10edec
+SHA1 (patch-zbar_scanner.c) = bcb05bd928b18aaba162eb3e07bc8432027569a9
+SHA1 (patch-zbarimg_zbarimg.c) = 52011ebc05ab10ac98b39c296c2bed679160a693

@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-DISTNAME=	mongodb-src-r3.2.18
+DISTNAME=	mongodb-src-r3.4.6
 PKGNAME=	${DISTNAME:S/src-r/server-/:S/-rc/rc/}
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
@@ -16,7 +16,7 @@ NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_CWRAPPERS=	no
 
-DEPENDS+=	mongodb32-tools>=3.2.0:../../base/mongodb32-tools
+DEPENDS+=	mongodb34-tools>=3.4.0:../../base/mongodb34-tools
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 BUILDLINK_TREE+=	valgrind
@@ -120,10 +120,10 @@ REAL_CC=${WRAPPER_BINDIR}/${CC:Q}
 
 post-extract:
 	chmod -R g-w ${WRKSRC}
-	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/freebsd \
-		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/dragonfly
-	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/openbsd \
-		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/netbsd
+	cp -r ${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/freebsd \
+		${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/dragonfly
+	cp -r ${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/openbsd \
+		${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/netbsd
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV:S/${CC}/${REAL_CC}/:S/${CXX}/${REAL_CXX}/} ${SCONS_BIN} ${SCONS_ARGS} all CXX=${REAL_CXX} CC=${REAL_CC}
@@ -133,7 +133,7 @@ do-install:
 		--prefix=${DESTDIR}${PREFIX} install CXX=${REAL_CXX} CC=${REAL_CC}
 
 do-test:
-	cd ${WRKSRC} && ./test
+	cd ${WRKSRC} && ./dbtest
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mongodb
@@ -146,6 +146,9 @@ post-install:
 	for i in ${DESTDIR}${PREFIX}/bin/*; do \
 		strip $$i; \
 	done
+
+post-wrapper:
+	${RM} ${WRAPPER_BINDIR}/ld
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

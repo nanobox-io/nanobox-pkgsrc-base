@@ -1,73 +1,56 @@
-# $NetBSD$
-# -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
-# vim: ts=8 sw=8 ft=make noet
+# $NetBSD: Makefile,v 1.22 2017/05/29 14:44:46 ryoon Exp $
 
-DISTNAME=	mongodb-src-r3.2.18
+DISTNAME=	mongodb-src-r3.6.2
 PKGNAME=	${DISTNAME:S/src-r/server-/:S/-rc/rc/}
 CATEGORIES=	databases
-MASTER_SITES=	http://downloads.mongodb.org/src/
+MASTER_SITES=	http://fastdl.mongodb.org/src/
+#PKGREVISION=	1
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://mongodb.org/
-COMMENT=	NOSQL distributed document-oriented database
+COMMENT=	NoSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
+
+EXTRACT_USING=	bsdtar
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_CWRAPPERS=	no
 
-DEPENDS+=	mongodb32-tools>=3.2.0:../../base/mongodb32-tools
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
-
-BUILDLINK_TREE+=	valgrind
-
-.if !defined(VALGRIND_BUILDLINK3_MK)
-VALGRIND_BUILDLINK3_MK:=
-
-BUILDLINK_API_DEPENDS.valgrind+=	valgrind>=3.10.1
-BUILDLINK_PKGSRCDIR.valgrind?=	../../devel/valgrind
-.endif # VALGRIND_BUILDLINK3_MK
-
-BUILDLINK_TREE+=	-valgrind
+BUILD_DEPENDS+=	${PYPKGPREFIX}-typing-3.*:../../devel/py-typing
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cheetah-2.*:../../devel/py-cheetah
+BUILD_DEPENDS+=	${PYPKGPREFIX}-regex-2017.*:../../textproc/py-regex
+BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-3*:../../textproc/py-yaml
 
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
-# SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC:Q}
-# SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX:Q}
-# CXX=${WRAPPER_BINDIR}/g++
-# CC=${WRAPPER_BINDIR}/gcc
 SCONS_ARGS+=	--use-system-boost
 SCONS_ARGS+=	--use-system-pcre
 SCONS_ARGS+=	--use-system-snappy
 SCONS_ARGS+=	--use-system-tcmalloc
 SCONS_ARGS+=	--use-system-yaml
 SCONS_ARGS+=	--use-system-zlib
+SCONS_ARGS+=	--js-engine=mozjs
 SCONS_ARGS+=	--release
 
-.include "../../mk/bsd.fast.prefs.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet supported as of 3.0.4
 
-.if defined(MAKE_JOBS)
-MAKE_JOBS=	8
-.endif
+.include "../../mk/bsd.prefs.mk"
+
+GCC_REQD+=	5.3.0
 
 CPPFLAGS+=	-fno-jump-tables
 
-CXXFLAGS+=	-Wno-maybe-uninitialized
-CXXFLAGS+=	-Wno-unused-variable
-CXXFLAGS+=	-Wno-error=maybe-uninitialized
-CFLAGS+=	-Wno-unused-variable
-CFLAGS+=	-Wno-error=maybe-uninitialized
-
 .include "options.mk"
 
-SMF_METHODS+=		mongodb
+#SMF_METHODS+=		mongodb
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		MONGODB_USER MONGODB_GROUP MONGODB_DBPATH
 BUILD_DEFS+=		MONGODB_LOGPATH
 
-MONGODB_USER?=		mongodb
-MONGODB_GROUP?=		mongodb
+#MONGODB_USER?=		mongodb
+#MONGODB_GROUP?=		mongodb
 MONGODB_DBPATH?=	${VARBASE}/mongodb
 MONGODB_LOGPATH?=	${VARBASE}/log/mongodb
 
@@ -85,8 +68,8 @@ MONGODB_LOGPATH?=	${VARBASE}/log/mongodb
 #OWN_DIRS_PERMS+=	${MONGODB_DBPATH}/journal ${MONGODB_USER} ${MONGODB_GROUP} 0755
 #OWN_DIRS_PERMS+=	${MONGODB_LOGPATH} ${MONGODB_USER} ${MONGODB_GROUP} 0755
 
-FILES_SUBST+=		MONGODB_USER=${MONGODB_USER}
-FILES_SUBST+=		MONGODB_GROUP=${MONGODB_GROUP}
+#FILES_SUBST+=		MONGODB_USER=${MONGODB_USER}
+#FILES_SUBST+=		MONGODB_GROUP=${MONGODB_GROUP}
 FILES_SUBST+=		MONGODB_DBPATH=${MONGODB_DBPATH}
 FILES_SUBST+=		MONGODB_LOGPATH=${MONGODB_LOGPATH}
 
@@ -104,33 +87,36 @@ SUBST_SED.path=		-e 's|/data/db|${MONGODB_DBPATH}|g'
 SUBST_SED.path+=	-e 's|/etc|${PKG_SYSCONFDIR}|'
 SUBST_VARS.path=	MONGODB_DBPATH MONGODB_LOGPATH
 
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.boost-libs}/lib
+
 MONGODB_MAN_FILES=	bsondump.1 mongo.1 mongod.1 mongodump.1 mongoexport.1	\
-			mongofiles.1 mongoimport.1 mongooplog.1 mongoperf.1	\
-			mongorestore.1 mongos.1 mongosniff.1 mongostat.1 mongotop.1
+			mongofiles.1 mongoimport.1 mongoperf.1	\
+			mongorestore.1 mongos.1 mongostat.1 mongotop.1
+
+NOT_PAX_MPROTECT_SAFE+=	bin/mongo
 
 #RCD_SCRIPTS=		mongodb
 
-INSTALLATION_DIRS=	share/doc/mongodb share/examples/mongodb ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	share/doc/mongodb share/examples/mongodb ${PKGMANDIR}/man1
 
 CONF_FILES+=		share/examples/mongodb/mongod.conf \
 			${PKG_SYSCONFDIR}/mongod.conf
 
-REAL_CXX=${WRAPPER_BINDIR}/${CXX:Q}
-REAL_CC=${WRAPPER_BINDIR}/${CC:Q}
-
 post-extract:
 	chmod -R g-w ${WRKSRC}
-	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/freebsd \
-		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/dragonfly
-	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/openbsd \
-		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/netbsd
+	cp -r ${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/freebsd \
+		${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/dragonfly
+	cp -r ${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/openbsd \
+		${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/netbsd
+	cp ${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_openbsd.cpp \
+		${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_netbsd.cpp
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV:S/${CC}/${REAL_CC}/:S/${CXX}/${REAL_CXX}/} ${SCONS_BIN} ${SCONS_ARGS} all CXX=${REAL_CXX} CC=${REAL_CC}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} core
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV:S/${CC}/${REAL_CC}/:S/${CXX}/${REAL_CXX}/} ${SCONS_BIN} ${SCONS_ARGS} \
-		--prefix=${DESTDIR}${PREFIX} install CXX=${REAL_CXX} CC=${REAL_CC}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} \
+		--prefix=${DESTDIR}${PREFIX} install
 
 do-test:
 	cd ${WRKSRC} && ./test
@@ -150,13 +136,11 @@ post-install:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/py-boost/buildlink3.mk"
-.if exists(../../devel/libexecinfo/buildlink3.mk)
 .include "../../devel/libexecinfo/buildlink3.mk"
-.endif
 .include "../../base/gperftools/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../textproc/yaml-cpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

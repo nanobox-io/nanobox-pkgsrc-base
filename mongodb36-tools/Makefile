@@ -3,8 +3,8 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		r${VERSION}
-VERSION?=		3.4.10
-PKGNAME=		mongodb34-tools-${VERSION}
+VERSION?=		3.6.2
+PKGNAME=		mongodb36-tools-${VERSION}
 # PKGREVISION?=		1
 CATEGORIES=		databases
 MASTER_SITES=		https://github.com/mongodb/mongo-tools/archive/

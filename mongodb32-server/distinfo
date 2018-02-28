@@ -1,13 +1,13 @@
 $NetBSD$
 
-SHA1 (mongodb-src-r3.2.17.tar.gz) = 7694e52c738546311776192ba45e8f2449127aed
-RMD160 (mongodb-src-r3.2.17.tar.gz) = 8b62f61c95fe14b2cae166824efc141757e10b55
-SHA512 (mongodb-src-r3.2.17.tar.gz) = 0d6a01278bc61805afd164e4a29abe150a5a96d551ed2c7c5d385b269924a7c5f065315e4f19c0ab070aa275ac03447959af45f33826457e5db0c5f98e623512
-Size (mongodb-src-r3.2.17.tar.gz) = 29295394 bytes
+SHA1 (mongodb-src-r3.2.18.tar.gz) = 4f7b8761687f45429688abda7f6c53aa88d2f5f8
+RMD160 (mongodb-src-r3.2.18.tar.gz) = 5fa41b021238ee1ab410142e476aada186c6e27b
+SHA512 (mongodb-src-r3.2.18.tar.gz) = 5a0541812a67bae3a1e108f4d0519f1a460d27f5721c7a759cd5f48b575558db72a77f9367944c06aaec13a16d5751eb9b0001df84ea2abb7ab655a8cfbf3ebf
+Size (mongodb-src-r3.2.18.tar.gz) = 29303075 bytes
 SHA1 (patch-SConstruct) = edf4c7008f38d94e8af7cb11ba534f5536eacf7c
 SHA1 (patch-debian_mongod.conf) = d4146b3d62b4472d55609c7f6aaa596f8f893d1f
 SHA1 (patch-src_mongo_base_initializer.h) = add32c5940c922a98122d0e6883eb3ad52dc25c5
-SHA1 (patch-src_mongo_db_dbwebserver.cpp) = 0e1f01bd2500335ee62f50ddfb1514abf925465f
+SHA1 (patch-src_mongo_db_dbwebserver.cpp) = 8ace4d3c9784c9c3e297ef3713e072ab60cfb63e
 SHA1 (patch-src_mongo_db_fts_unicode_string.cpp) = 235e381bfdb3695fb410efa0531555ec02279f16
 SHA1 (patch-src_mongo_db_matcher_expression_leaf.cpp) = 2fd56a311f6afdedc60ab04ab5b5823c8e56fc09
 SHA1 (patch-src_mongo_db_repl_isself.c) = 8cb386b7b0a8925908f20ac9b9b18cac796367ba
@@ -19,7 +19,7 @@ SHA1 (patch-src_mongo_platform_stack__locator__netbsd.cpp) = 3b09e86b2401555b6ab
 SHA1 (patch-src_mongo_shell_bench.cpp) = a3e187dd6a07a241d190e0373dfa23fec392c3db
 SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = f975925f56125d48b5124894fa1adf1382a634d2
 SHA1 (patch-src_mongo_util_intrusive__counter.h) = 9f1af59e1bc86e33bf183a6dda1737007afc7a18
-SHA1 (patch-src_mongo_util_net_miniwebserver.cpp) = af217084ef3d23cf1b1dced7618efd29afb9e50f
+SHA1 (patch-src_mongo_util_net_miniwebserver.cpp) = 3a7e08da8cba9ba0098869b23116cb5d6ff79d86
 SHA1 (patch-src_mongo_util_processinfo__dragonfly.cpp) = 62c236ce820dfe81f45625b15e022cca0f2c10ee
 SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 4c746c4c3a79df849994c00a4639662d8a2c799d
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = 81107c2d368884dc0d2fddc03862fe58f2035206

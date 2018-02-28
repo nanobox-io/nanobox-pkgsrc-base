@@ -1,6 +1,6 @@
-$NetBSD: patch-src_mongo_util_net_miniwebserver.cpp,v 1.1 2017/07/11 19:35:51 joerg Exp $
+$NetBSD$
 
---- src/mongo/util/net/miniwebserver.cpp.orig	2017-07-11 17:42:54.304511569 +0000
+--- src/mongo/util/net/miniwebserver.cpp.orig	2017-10-18 16:01:51.000000000 +0000
 +++ src/mongo/util/net/miniwebserver.cpp
 @@ -33,6 +33,7 @@
  
@@ -10,11 +10,3 @@ $NetBSD: patch-src_mongo_util_net_miniwebserver.cpp,v 1.1 2017/07/11 19:35:51 jo
  #include <pcrecpp.h>
  
  #include "mongo/config.h"
-@@ -45,6 +46,7 @@
- namespace mongo {
- 
- using std::shared_ptr;
-+using std::string;
- using std::stringstream;
- using std::vector;
- 

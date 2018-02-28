@@ -3,7 +3,7 @@
 # vim: ts=8 sw=8 ft=make noet
 
 DISTNAME=		r${VERSION}
-VERSION?=		3.2.17
+VERSION?=		3.2.18
 PKGNAME=		mongodb32-tools-${VERSION}
 # PKGREVISION?=		1
 CATEGORIES=		databases

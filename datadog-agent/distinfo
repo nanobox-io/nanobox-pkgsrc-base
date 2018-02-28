@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (datadog-5.21.0/setup_agent.sh) = 614c69df249fd3c4f2cad051f36fda77e3fc0651
+RMD160 (datadog-5.21.0/setup_agent.sh) = 86dda689027947bc47e290aac5a2905bec534132
+SHA512 (datadog-5.21.0/setup_agent.sh) = 2210267a3f3a97709e5d4013a1f9e0c805694e79c814da9dd0625da3830357af1d49a084ddad68d91c62ea49daff0a5eb4122e65383a124de3ebce11839aea2a
+Size (datadog-5.21.0/setup_agent.sh) = 22596 bytes

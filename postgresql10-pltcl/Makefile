@@ -1,0 +1,21 @@
+# $NetBSD: Makefile,v 1.1 2017/10/23 20:33:50 adam Exp $
+
+PKGNAME=	${DISTNAME:C/-/10-pltcl-/}
+COMMENT=	PL/Tcl procedural language for the PostgreSQL backend
+PKGREVISION=	1
+
+DEPENDS+=	postgresql10-server>=${PKGVERSION_NOREV}:../../base/postgresql10-server
+
+.include "../../base/postgresql10/Makefile.common"
+
+CONFIGURE_ARGS+=	--with-tcl
+CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_PREFIX.tcl}/lib"
+CONFIGURE_ENV+=		TCLSH="${TCLSH}"
+TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
+BUILD_MAKE_FLAGS=	PGXS=1
+
+BUILD_DIRS=		src/pl/tcl
+
+.include "../../base/postgresql10-client/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

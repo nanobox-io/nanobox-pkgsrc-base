@@ -1,9 +1,9 @@
 $NetBSD$
 
---- common.gypi.orig	2017-11-14 20:57:59.000000000 +0000
+--- common.gypi.orig	2018-02-21 23:34:11.000000000 +0000
 +++ common.gypi
 @@ -291,7 +291,7 @@
-         'cflags': [ '-pthread', ],
+         'cflags': [ '-pthread' ],
          'ldflags': [ '-pthread' ],
        }],
 -      [ 'OS in "linux freebsd openbsd solaris android aix cloudabi"', {

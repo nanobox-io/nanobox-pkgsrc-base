@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.47 2015/11/09 20:19:35 fhajny Exp $
 
-SHA1 (node-v8.9.3.tar.gz) = 58f57ee6da3920c55a939568d60e532a13d039ce
-RMD160 (node-v8.9.3.tar.gz) = c85539f23f145de7a78528c568c0acb2b3012f2d
-SHA512 (node-v8.9.3.tar.gz) = f5c605716749e4df5886523800470bd017bc03508d11f0f59480cac5858646faacd32a047aa0acbbb814cfc2b8fba5793be7e9567fbc300eb27366cb343a04d7
-Size (node-v8.9.3.tar.gz) = 31121503 bytes
+SHA1 (node-v8.9.4.tar.gz) = 919434a79ea64c9bfaa9db6747c5f7d4065dc90c
+RMD160 (node-v8.9.4.tar.gz) = 3e3fc882112588a45b2da387e4c5810ce36feec3
+SHA512 (node-v8.9.4.tar.gz) = 4c85bac2569360f35fc25680321b57a68d205bb7cc5dcb9a661d2a40d473ca0218ac9274d4b566c802b2bd0895b4d3d8bbfb7a8ccc9808912c34d71da3c04a1a
+Size (node-v8.9.4.tar.gz) = 31274938 bytes
 SHA1 (yarn-v1.3.2.tar.gz) = 5939762581b5b4ddcd3418c0f6be42df3aee195f
 RMD160 (yarn-v1.3.2.tar.gz) = b2e2cb3ad6979ab1e3fa9713f4269f7dfe9ce10f
 SHA512 (yarn-v1.3.2.tar.gz) = d488ae56b60884bb42e5e2ac8a0359c6947e234ed8b5bba12a93f24abb4419b4a6fef708c35df8caa9e68edca3fe570d1dcda9295d29438e45a32ef5d029aedf

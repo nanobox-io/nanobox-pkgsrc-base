@@ -2,7 +2,7 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-VERSION=		1.5.2
+VERSION=		1.6.3
 DISTNAME=		composer-${VERSION}
 PKGNAME=		composer-${VERSION:S/-//}
 CATEGORIES=		pagoda

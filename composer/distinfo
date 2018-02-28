@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (composer-1.5.2.phar) = 6dc307027b69892191dca036dcc64bb02dd74ab2
-RMD160 (composer-1.5.2.phar) = 23b5f9ea3d5bb31db949c2a56d325f1b1cda0846
-SHA512 (composer-1.5.2.phar) = 61dfd2f9262a0a2469e0c1864ab1cce6d3e63f9053faf883cd08307413d92119010638bfbee7c90c9b6977e284814bcb7bfdc01dd9cb9125ac947a2968c791bc
-Size (composer-1.5.2.phar) = 1852323 bytes
+SHA1 (composer-1.6.3.phar) = 640d934f603ce0767ceb424b023f1cd4a5ee2fb3
+RMD160 (composer-1.6.3.phar) = 20e511f10f9945083f719c2e10f23cbec01b7d9e
+SHA512 (composer-1.6.3.phar) = ec6ed7f897709a79f39c73d6a373d82516fbd32930070ab073f831c81c813a0cc155a08a0b56257938563f453e567ba4738051ae9956f856e43528b5262c2b3c
+Size (composer-1.6.3.phar) = 1861877 bytes

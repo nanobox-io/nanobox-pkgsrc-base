@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/pl/plperl/plperl.h.orig	2017-08-07 21:10:58.000000000 +0000
+--- src/pl/plperl/plperl.h.orig	2018-02-05 21:03:36.000000000 +0000
 +++ src/pl/plperl/plperl.h
-@@ -42,6 +42,10 @@
+@@ -42,6 +42,11 @@
  #undef vsnprintf
  #endif
  
@@ -10,10 +10,11 @@ $NetBSD$
 +#define list_head sun_list_head
 +#define list_tail sun_list_tail
 +#endif
- 
++
  /*
-  * Get the basic Perl API.  We use PERL_NO_GET_CONTEXT mode so that our code
-@@ -60,6 +64,11 @@
+  * ActivePerl 5.18 and later are MinGW-built, and their headers use GCC's
+  * __inline__.  Translate to something MSVC recognizes.
+@@ -68,6 +73,11 @@
  #include "XSUB.h"
  #endif
  

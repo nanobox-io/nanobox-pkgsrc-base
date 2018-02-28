@@ -1,12 +1,12 @@
 $NetBSD: distinfo,v 1.14 2017/02/11 10:18:52 adam Exp $
 
-SHA1 (postgresql-9.4.14.tar.bz2) = 6b0b4eff681d1b93be903b96c2c16a6ca9e0d848
-RMD160 (postgresql-9.4.14.tar.bz2) = 63f096fdfa5afa74c173e6fb0ce99977552db138
-SHA512 (postgresql-9.4.14.tar.bz2) = 5952479b7c911cc381744e72d44c7c2269f98f4dda677e8c20a8ac7f4281e143017d287634b707ed96859e5438e82e96668bc4c68bb0c2ce9f3853c5a38fd0b2
-Size (postgresql-9.4.14.tar.bz2) = 17873740 bytes
+SHA1 (postgresql-9.4.16.tar.bz2) = a5a1b327ae8a6a8ef598addf59bf697496cd5f29
+RMD160 (postgresql-9.4.16.tar.bz2) = ac5621449c04f2328c099967133c30a6a93746d7
+SHA512 (postgresql-9.4.16.tar.bz2) = 2e2bf14e2e63dec7254813e3c3a902a39cbd0aae89d8b3da5f75c6dead5d413a4f260fda6e87c9f84e4378df350c6531e67d972201f731a848b60bacef5b2bc8
+Size (postgresql-9.4.16.tar.bz2) = 17778763 bytes
 SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
-SHA1 (patch-config_perl.m4) = e035132b1c281a75752d570ac5e29a11176c25c5
-SHA1 (patch-configure) = 59fe9a768caf8a5d308acac60c28bc6bb2c40632
+SHA1 (patch-config_perl.m4) = 14c9564577d0df6f82ae0027aeada2f3a6a8f07c
+SHA1 (patch-configure) = e07047d95758d284ba6ffab9cddab311297d99ce
 SHA1 (patch-contrib_dblink_dblink.c) = a6f87ab9f2c28a72608d70267b71bd77437b0921
 SHA1 (patch-contrib_uuid-ossp_uuid-ossp.c) = b18da04850bc7c14f8fc80e0c86429ed1cc075c8
 SHA1 (patch-src_Makefile.global.in) = 2ab3affedc77b202f6749964287438d6179ca23a
@@ -17,6 +17,6 @@ SHA1 (patch-src_interfaces_ecpg_pgtypeslib_interval.c) = af0971de415b6b44ae3520c
 SHA1 (patch-src_interfaces_libpq_Makefile) = 0066301bc8b31b9e26c79153427537bc3865ef4d
 SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
 SHA1 (patch-src_pl_plperl_GNUmakefile) = 6ee3e431f46ce5c2a94df499504b2b8bd458bbef
-SHA1 (patch-src_pl_plperl_plperl.h) = 6ab719a2949db18f43cc9f2655a57ffc7ec32c6c
+SHA1 (patch-src_pl_plperl_plperl.h) = 3e61c9e734f03275aef36230876679690c1cf181
 SHA1 (patch-src_timezone_localtime.c) = 9b5748ef94b11b8798121ac85d2bb18cb99b3812
-SHA1 (patch-src_timezone_strftime.c) = f1f37e424dd70c0b2ad905ef491f9d9574bd3266
+SHA1 (patch-src_timezone_strftime.c) = 2ba192616bf97ef4b783819c48b7bab0c2e586d3

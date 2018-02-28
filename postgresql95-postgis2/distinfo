@@ -1,10 +1,6 @@
 $NetBSD: distinfo,v 1.12 2017/10/07 18:39:47 gdt Exp $
 
-SHA1 (postgis-2.4.1.tar.gz) = a384605bae2890cd044cdd3d0e781ac69c1cf9bf
-RMD160 (postgis-2.4.1.tar.gz) = 17f2463e81d688870be672c81b6d3c5462012069
-SHA512 (postgis-2.4.1.tar.gz) = a0baff97f15a02dfd466c38923a8fad81375fa06423c51ccaf6fb97a824a4010b12f152afd3f82ce9089983816b918d67c25de8fdabca27da71fb64309d01fc8
-Size (postgis-2.4.1.tar.gz) = 12473439 bytes
-SHA1 (patch-liblwgeom_Makefile.in) = ae62448318a5a1fc7904f65cd20fe613720f22f4
-SHA1 (patch-loader_Makefile.in) = 4714860bdc0e7c75dae4e5ee9dbf40707cb521bc
-SHA1 (patch-raster_loader_Makefile.in) = 772ce1d866e903d75e52dc2d5365bd2b76c7a19f
-SHA1 (patch-utils_Makefile.in) = 2a4a70062986ee46dd806b2b632395012495d482
+SHA1 (postgis-2.4.3.tar.gz) = 3953aee7cdd9c0a6ece578c27d0f7a0dad2500b3
+RMD160 (postgis-2.4.3.tar.gz) = 0c0d4ca47a9a0cddfdc3127558d19a5a193d8c68
+SHA512 (postgis-2.4.3.tar.gz) = 95b2c925cb10943e7136aa3b7b08a9ad3d6ff59a3994c653bba52e4c65193d519daa49684b924f68945dd596187aa17e0c713bf0b9e29f8c5973346b279dba1b
+Size (postgis-2.4.3.tar.gz) = 12601055 bytes

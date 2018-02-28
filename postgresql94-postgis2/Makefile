@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.31 2017/10/07 18:39:47 gdt Exp $
 
-DISTNAME=	postgis-2.4.1
+DISTNAME=	postgis-2.4.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
 CATEGORIES=	databases geography
 MASTER_SITES=	http://download.osgeo.org/postgis/source/
@@ -11,7 +11,7 @@ COMMENT=	Spatial database capabilities for PostgreSQL
 
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
+DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../base/postgresql${PGSQL_VERSION}-server
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 CONFLICTS=		postgis-[0-9]*

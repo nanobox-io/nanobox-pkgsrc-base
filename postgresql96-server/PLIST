@@ -444,7 +444,6 @@ share/postgresql/timezone/CET
 share/postgresql/timezone/CST6CDT
 share/postgresql/timezone/Canada/Atlantic
 share/postgresql/timezone/Canada/Central
-share/postgresql/timezone/Canada/East-Saskatchewan
 share/postgresql/timezone/Canada/Eastern
 share/postgresql/timezone/Canada/Mountain
 share/postgresql/timezone/Canada/Newfoundland
@@ -657,7 +656,6 @@ share/postgresql/timezone/US/Indiana-Starke
 share/postgresql/timezone/US/Michigan
 share/postgresql/timezone/US/Mountain
 share/postgresql/timezone/US/Pacific
-share/postgresql/timezone/US/Pacific-New
 share/postgresql/timezone/US/Samoa
 share/postgresql/timezone/UTC
 share/postgresql/timezone/Universal

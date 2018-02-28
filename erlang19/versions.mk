@@ -2,8 +2,8 @@
 # -*- mode: makefile; tab-width: 8; indent-tabs-mode: 1 -*-
 # vim: ts=8 sw=8 ft=make noet
 
-ERLANG_VERSION=			19.3.6.4
-DIST_VERSION_MAJOR=		19.3.6.4
+ERLANG_VERSION=			19.3.6.5
+DIST_VERSION_MAJOR=		19.3.6.5
 #DIST_VERSION_MINOR=		1
 
 _VERSIONS=				\
@@ -25,7 +25,7 @@ _VERSIONS=				\
 	eldap			1.2.2	\
 	erl_docgen		0.6.1	\
 	erl_interface		3.9.3	\
-	erts			8.3.5.3	\
+	erts			8.3.5.4	\
 	et			1.6	\
 	eunit			2.3.2	\
 	gs			1.6.2	\
@@ -35,7 +35,7 @@ _VERSIONS=				\
 	jinterface		1.7.1	\
 	kernel			5.2	\
 	megaco			3.18.1	\
-	mnesia			4.14.3	\
+	mnesia			4.14.3.1	\
 	observer		2.3.1	\
 	odbc			2.12	\
 	orber			3.8.2	\
@@ -48,7 +48,7 @@ _VERSIONS=				\
 	runtime_tools		1.11.1	\
 	sasl			3.0.3	\
 	snmp			5.2.5	\
-	ssh			4.4.2	\
+	ssh			4.4.2.1	\
 	ssl			8.1.3.1	\
 	stdlib			3.3	\
 	syntax_tools		2.1.1	\

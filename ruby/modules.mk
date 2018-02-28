@@ -15,7 +15,7 @@ USE_TOOLS+=		expr
 PKGNAME?=	${RUBY_PKGPREFIX}-${DISTNAME}
 
 .if defined(NO_BUILD) && empty(NO_BUILD:M[Nn][Oo])
-DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
+DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION}<${RUBY_VERSION_NEXT}:${RUBY_SRCDIR}
 .else
 .include "../../base/ruby/buildlink3.mk"
 .endif

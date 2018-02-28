@@ -664,6 +664,7 @@ ${RUBY_LIB}/rubygems/resolver/specification.rb
 ${RUBY_LIB}/rubygems/resolver/stats.rb
 ${RUBY_LIB}/rubygems/resolver/vendor_set.rb
 ${RUBY_LIB}/rubygems/resolver/vendor_specification.rb
+${RUBY_LIB}/rubygems/safe_yaml.rb
 ${RUBY_LIB}/rubygems/security.rb
 ${RUBY_LIB}/rubygems/security/policies.rb
 ${RUBY_LIB}/rubygems/security/policy.rb

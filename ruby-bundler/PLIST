@@ -5,6 +5,7 @@ ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bundler.gemspec
 ${GEM_LIBDIR}/exe/bundle
 ${GEM_LIBDIR}/exe/bundle_ruby
 ${GEM_LIBDIR}/exe/bundler
@@ -125,12 +126,12 @@ ${GEM_LIBDIR}/lib/bundler/ssl_certs/index.rubygems.org/GlobalSignRootCA.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/rubygems.global.ssl.fastly.net/DigiCertHighAssuranceEVRootCA.pem
 ${GEM_LIBDIR}/lib/bundler/ssl_certs/rubygems.org/AddTrustExternalCARoot.pem
 ${GEM_LIBDIR}/lib/bundler/stub_specification.rb
+${GEM_LIBDIR}/lib/bundler/templates/.document
 ${GEM_LIBDIR}/lib/bundler/templates/Executable
 ${GEM_LIBDIR}/lib/bundler/templates/Executable.bundler
 ${GEM_LIBDIR}/lib/bundler/templates/Executable.standalone
 ${GEM_LIBDIR}/lib/bundler/templates/Gemfile
 ${GEM_LIBDIR}/lib/bundler/templates/gems.rb
-${GEM_LIBDIR}/lib/bundler/templates/newgem/.travis.yml.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/CODE_OF_CONDUCT.md.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/Gemfile.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/LICENSE.txt.tt
@@ -151,6 +152,7 @@ ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/newgem_spec.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/spec/spec_helper.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/newgem_test.rb.tt
 ${GEM_LIBDIR}/lib/bundler/templates/newgem/test/test_helper.rb.tt
+${GEM_LIBDIR}/lib/bundler/templates/newgem/travis.yml.tt
 ${GEM_LIBDIR}/lib/bundler/ui.rb
 ${GEM_LIBDIR}/lib/bundler/ui/rg_proxy.rb
 ${GEM_LIBDIR}/lib/bundler/ui/shell.rb
@@ -293,6 +295,6 @@ ${GEM_LIBDIR}/man/gemfile.5.ronn
 ${GEM_LIBDIR}/man/gemfile.5.txt
 ${GEM_LIBDIR}/man/index.txt
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/${RUBY_NAME}/gems/2.4.0/extensions
-@pkgdir lib/${RUBY_NAME}/gems/2.4.0/doc
-@pkgdir lib/${RUBY_NAME}/gems/2.4.0/build_info
+@pkgdir lib/${RUBY_NAME}/gems/2.5.0/extensions
+@pkgdir lib/${RUBY_NAME}/gems/2.5.0/doc
+@pkgdir lib/${RUBY_NAME}/gems/2.5.0/build_info

@@ -15,6 +15,7 @@ DISTINFO_FILE=		${.CURDIR}/distinfo-${PHP_PKG_PREFIX}
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
+NO_CHECKSUM=            yes
 
 MODULESDIR=		${WRKDIR}
 

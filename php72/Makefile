@@ -7,8 +7,8 @@
 #
 VERSION=		${PHP_BASE_VERS}
 CATEGORIES=		lang
-PKGREVISION=		1
-PKGNAME=		php-7.2.0
+#PKGREVISION=		1
+#PKGNAME=		php-7.2.0
 
 HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP Hypertext Preprocessor version 7

@@ -12,6 +12,7 @@ include/varnish/cache/cache_director.h
 include/varnish/cache/cache_filter.h
 include/varnish/common/com_params.h
 include/varnish/common/common.h
+include/varnish/common/common_vsm.h
 include/varnish/miniobj.h
 include/varnish/tbl/acct_fields_bereq.h
 include/varnish/tbl/acct_fields_req.h
@@ -48,11 +49,7 @@ include/varnish/tbl/vhd_return.h
 include/varnish/tbl/vhp_huffman.h
 include/varnish/tbl/vhp_static.h
 include/varnish/tbl/vrt_stv_var.h
-include/varnish/tbl/vsc_all.h
-include/varnish/tbl/vsc_f_main.h
-include/varnish/tbl/vsc_fields.h
 include/varnish/tbl/vsc_levels.h
-include/varnish/tbl/vsc_types.h
 include/varnish/tbl/vsl_tags.h
 include/varnish/tbl/vsl_tags_http.h
 include/varnish/tbl/waiters.h
@@ -63,7 +60,6 @@ include/varnish/vapi/vsc_int.h
 include/varnish/vapi/vsl.h
 include/varnish/vapi/vsl_int.h
 include/varnish/vapi/vsm.h
-include/varnish/vapi/vsm_int.h
 include/varnish/vas.h
 include/varnish/vav.h
 include/varnish/vbm.h
@@ -82,11 +78,16 @@ include/varnish/vsb.h
 include/varnish/vsha256.h
 include/varnish/vtcp.h
 include/varnish/vtim.h
+include/varnish/vut.h
+include/varnish/vut_options.h
 include/varnish/waiter/waiter.h
 lib/libvarnishapi.la
 lib/pkgconfig/varnishapi.pc
+lib/varnish/vmods/libvmod_blob.la
 lib/varnish/vmods/libvmod_directors.la
+lib/varnish/vmods/libvmod_purge.la
 lib/varnish/vmods/libvmod_std.la
+lib/varnish/vmods/libvmod_vtc.la
 man/man1/varnishadm.1
 man/man1/varnishd.1
 man/man1/varnishhist.1
@@ -95,8 +96,11 @@ man/man1/varnishncsa.1
 man/man1/varnishstat.1
 man/man1/varnishtest.1
 man/man1/varnishtop.1
+man/man3/vmod_blob.3
 man/man3/vmod_directors.3
+man/man3/vmod_purge.3
 man/man3/vmod_std.3
+man/man3/vmod_vtc.3
 man/man7/varnish-cli.7
 man/man7/varnish-counters.7
 man/man7/vcl.7
@@ -110,4 +114,5 @@ share/doc/varnish/builtin.vcl
 share/doc/varnish/example.vcl
 share/examples/varnish/devicedetect.vcl
 share/varnish/vmodtool.py
+share/varnish/vsctool.py
 @pkgdir var/db/varnish

@@ -1,7 +1,7 @@
 $NetBSD: distinfo,v 1.14 2015/11/04 02:47:41 agc Exp $
 
-SHA1 (varnish-5.1.2.tar.gz) = 602f5d4852385402f16e130049fb19c027da0b1c
-RMD160 (varnish-5.1.2.tar.gz) = 99adb4b130cd3446c109f8d9f6fc1d886bc66803
-SHA512 (varnish-5.1.2.tar.gz) = 6ee71c2678a34f7e3963547d8e79bd83e3b326ffe703ad60f0d6f8f218a3801849c870aa00e407008ef22cd2b2baf4cbe02625ce77018279afdb8208d43a743b
-Size (varnish-5.1.2.tar.gz) = 2597817 bytes
+SHA1 (varnish-5.2.1.tgz) = d4ca40d4faf984ec708b77ef3d01a63c23e41802
+RMD160 (varnish-5.2.1.tgz) = 2e84d46233af5d35597f1f984fbe6be9bf654b74
+SHA512 (varnish-5.2.1.tgz) = 2e979983c7f2325e289768752cc474dc3032c3420de65ccfd5871098c076aecf18e962b04308ecb1860f542fd6f6418dc79220fdd6cf4a75f7476a733faa589c
+Size (varnish-5.2.1.tgz) = 2827676 bytes
 SHA1 (patch-etc__Makefile.in) = fb7bac8dda8900f2f74694af163c62cf71307192

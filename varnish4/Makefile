@@ -1,10 +1,11 @@
 # $NetBSD: Makefile,v 1.26 2015/08/18 07:31:20 wiz Exp $
 #
 
-DISTNAME=	varnish-4.1.7
+DISTNAME=	varnish-4.1.9
 #PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://repo.varnish-cache.org/source/
+MASTER_SITES=	https://varnish-cache.org/_downloads/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://varnish-cache.org/

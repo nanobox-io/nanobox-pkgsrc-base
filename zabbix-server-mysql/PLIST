@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/05/21 17:30:03 adam Exp $
+man/man8/zabbix_server.8
+sbin/zabbix_server
+share/examples/zabbix/zabbix_server.conf
+share/zabbix/data.sql
+share/zabbix/images.sql
+share/zabbix/schema.sql

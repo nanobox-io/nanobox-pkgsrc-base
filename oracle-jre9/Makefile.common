@@ -21,7 +21,7 @@ EMUL_PLATFORMS=		darwin-x86_64 linux-i386 linux-x86_64 solaris-i386 solaris-x86_
 USE_TOOLS+=	pax
 
 # JDK9 Update number
-UPDATE_NUMBER=	1
+UPDATE_NUMBER=	4
 
 .include "../../mk/bsd.prefs.mk"
 

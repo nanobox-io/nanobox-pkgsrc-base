@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.3 2013/06/11 19:51:27 asau Exp $
 
-VERSION=	1.8.0
+VERSION=	1.9.0
 DISTNAME=	clojure-${VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	http://repo1.maven.org/maven2/org/clojure/clojure/$(PKGVERSION_NOREV)/

@@ -65,7 +65,7 @@ _SYS_VARS.java=		PKG_JVM PKG_JAVA_HOME JAVA_BINPREFIX
 USE_JAVA?=	yes
 USE_JAVA2?=	no
 
-PKG_JVM_DEFAULT?=	# empty
+PKG_JVM_DEFAULT?=	oracle-jdk8# empty
 PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JDKs that may be used.
@@ -97,10 +97,10 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 .if !defined(_PKG_JVM_DEFAULT)
 .  if   !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-i386) || \
         !empty(MACHINE_PLATFORM:MNetBSD-[56789].*-x86_64)
-_PKG_JVM_DEFAULT?=	openjdk7
+_PKG_JVM_DEFAULT?=	oracle-jdk7
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-earmv[67]hf)
-_PKG_JVM_DEFAULT?=	openjdk8
+_PKG_JVM_DEFAULT?=	oracle-jdk8
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 _PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)

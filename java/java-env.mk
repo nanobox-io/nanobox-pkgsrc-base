@@ -64,7 +64,7 @@ post-install:		install-java-wrapper-${w}
 .    if !target(${WRKDIR}/${w})
 ${WRKDIR}/${w}:
 	@${ECHO} 'Generating ${w} wrapper...'
-	@${ECHO} '#! ${SH}' >${WRKDIR}/${w}
+	@${ECHO} '#!/bin/bash' >${WRKDIR}/${w}
 	@${ECHO} 'PATH=${JAVA_HOME}/bin:$${PATH}; export PATH' >>${WRKDIR}/${w}
 	@${ECHO} 'JAVA_HOME=${JAVA_HOME}; export JAVA_HOME' >>${WRKDIR}/${w}
 	@${ECHO} 'JVM_HOME=${JAVA_HOME}; export JVM_HOME' >>${WRKDIR}/${w}

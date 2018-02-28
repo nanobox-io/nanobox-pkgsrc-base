@@ -66,7 +66,7 @@ pre-install:
 	${RM} -f ${WRKSRC}/register.html
 	${RM} -f ${WRKSRC}/register_ja.html
 	${RM} -f ${WRKSRC}/register_zh_CN.html
-	${CHMOD} -x \
+	-${CHMOD} -x \
 		${WRKSRC}/db/bin/NetworkServerControl.bat \
 		${WRKSRC}/db/bin/dblook.bat \
 		${WRKSRC}/db/bin/derby_common.bat \

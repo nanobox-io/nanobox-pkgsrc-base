@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.5 2016/01/22 14:18:42 ryoon Exp $
 
-SHA1 (jdk-9.0.1_linux-x64_bin.tar.gz) = 6e9f9512d495050b80f194ce8f6ed6b949165f0f
-RMD160 (jdk-9.0.1_linux-x64_bin.tar.gz) = 312c812e1e4225722d21366b29cfab48e65f13d9
-SHA512 (jdk-9.0.1_linux-x64_bin.tar.gz) = c62ae164553830ef2ab8fbeb6d8674ac0db3e845cabe969f33acf79beb66a16ca5096f4c3d5712d87a55b1a791ac0908b4909e8276661ee24900ad8e0a983a55
-Size (jdk-9.0.1_linux-x64_bin.tar.gz) = 354531775 bytes
+SHA1 (jdk-9.0.4_linux-x64_bin.tar.gz) = 3e0a31a77760f87e7b73242f3faa0f95ee867983
+RMD160 (jdk-9.0.4_linux-x64_bin.tar.gz) = 320657041f62b7136adfb234fbe4ecb6cf76176f
+SHA512 (jdk-9.0.4_linux-x64_bin.tar.gz) = 787addfcf3d4736507ad8fa54b22894a33d39bde01d9d187d5c9f3433b43c9e8b14404a8366d0bc8510faa8936274bbfa304109d3927aa323b3f8a285efaffd6
+Size (jdk-9.0.4_linux-x64_bin.tar.gz) = 354635831 bytes

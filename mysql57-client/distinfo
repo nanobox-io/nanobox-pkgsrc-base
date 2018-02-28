@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.13.2.1 2014/04/14 17:14:13 tron Exp $
 
-SHA1 (wsrep_5.7.18-25.12.tar.gz) = 1add84c3c9bf6d71a7b8bf346e4e165bb768d95a
-RMD160 (wsrep_5.7.18-25.12.tar.gz) = 47c11e04111bde99b1f349c945b157d0715138fc
-SHA512 (wsrep_5.7.18-25.12.tar.gz) = 3f21335ffc2544861b22d08751819de736e38870e537c479d3798f2ac2ac0ad92064ad98338c57fee87c34219c19e278c216e5393e867fbc010f844230a61b4d
-Size (wsrep_5.7.18-25.12.tar.gz) = 51677122 bytes
+SHA1 (wsrep_5.7.21-25.14.tar.gz) = a654557cd205c2b471e71f263fea50492168bcd2
+RMD160 (wsrep_5.7.21-25.14.tar.gz) = 3ea8ff9fac4ccc146b5fd1c9d3392ba48a6e1adf
+SHA512 (wsrep_5.7.21-25.14.tar.gz) = 633bf4b100e1785c0de147f30c8cff5f21993107a30f061eecf249ebbb889cf3872a11ac53ec4570045c6f580c11aefe2212ecbe68b363f16b20689ee7e4d1da
+Size (wsrep_5.7.21-25.14.tar.gz) = 52003425 bytes
 SHA1 (patch-CMakeLists.txt) = 1a39a911927ecd20cb03439aa698a26f439d275f
 SHA1 (patch-client_CMakeLists.txt) = 304023577ab9c2152ca21fa9ff4895a22a321adf
 SHA1 (patch-client_completion_hash.cc) = b86ec80beac624b2aa21c7587e351ff126400ecb

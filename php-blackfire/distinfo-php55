@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (php-blackfire-1.18.0/blackfire-php-linux_amd64-php-55.so) = b3a759e118ac732d85e3faacb017dfeb090cc8e0
-RMD160 (php-blackfire-1.18.0/blackfire-php-linux_amd64-php-55.so) = 1c00c893cc762153320b747a87839ce0a58223e9
-SHA512 (php-blackfire-1.18.0/blackfire-php-linux_amd64-php-55.so) = ef64235fb80b8ab632c357ccce62f54fe0d3e01029a745e9f87f1efb577c7ba117b7c3c7aea28a9af77b105109854e38b0c90304449a92703b8fcd46fcbb0e00
-Size (php-blackfire-1.18.0/blackfire-php-linux_amd64-php-55.so) = 397296 bytes
+SHA1 (php-blackfire-1.18.2/blackfire-php-linux_amd64-php-55.so) = 1b9e0f1a97ca281c1fb6631b4c66a8df3edfdef4
+RMD160 (php-blackfire-1.18.2/blackfire-php-linux_amd64-php-55.so) = cd5fba829439efa23552391dee5e2a37d018717a
+SHA512 (php-blackfire-1.18.2/blackfire-php-linux_amd64-php-55.so) = 3d0d2775b8d107c0edfca9492e2d0d8913859c57eb8034953e3149df9a8c62ca33c38b9c2b65c6f7ba8620eea60720d08198b903a1de98859f3a8306da5c1883
+Size (php-blackfire-1.18.2/blackfire-php-linux_amd64-php-55.so) = 397296 bytes

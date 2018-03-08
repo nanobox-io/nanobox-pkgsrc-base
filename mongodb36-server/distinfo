@@ -1,15 +1,15 @@
 $NetBSD$
 
-SHA1 (mongodb-src-r3.6.2.tar.gz) = 2b394e615d5c80d059e1cd365927d9b2cb366bf0
-RMD160 (mongodb-src-r3.6.2.tar.gz) = 0f45e7574903e7fcf2e44706cfb1e17fd41ff994
-SHA512 (mongodb-src-r3.6.2.tar.gz) = 7acfbcc68c1bd4e6e63eee09be1dfbb064be6f8b0144418105100a065f8162cafc9b776fe0429fd64c79b958561aa42d0bdef56588dda65acee27ccc98631f39
-Size (mongodb-src-r3.6.2.tar.gz) = 39999539 bytes
+SHA1 (mongodb-src-r3.6.3.tar.gz) = 7874ffc361330e92fe74422826213fc9a3055f4d
+RMD160 (mongodb-src-r3.6.3.tar.gz) = 39a46564905c44d46554fddab386b0e4baf744c9
+SHA512 (mongodb-src-r3.6.3.tar.gz) = 94aa9955f99d5f6bbbe65dc3755583952525398308ca7cb9224b91d1fa403de5bb3abb63a651583815cbecaff58966b5cfe7334a36ef6583f73d8c213410ddbc
+Size (mongodb-src-r3.6.3.tar.gz) = 40093607 bytes
 SHA1 (patch-SConstruct) = a220360ef2669193090976b52e2a370752e1632c
 SHA1 (patch-debian_mongod.conf) = e5074b5f7ad50560b99d652feab58da764ba542c
 SHA1 (patch-site__scons_mongo_____init____.py) = fbed4396b58c42f5473ed06a8763428d4c822fff
 SHA1 (patch-site__scons_mongo_platform.py) = 0c506762d4cf553105d702b908bbd172be7937a1
 SHA1 (patch-src_mongo_base_initializer.h) = add32c5940c922a98122d0e6883eb3ad52dc25c5
-SHA1 (patch-src_mongo_db_matcher_expression__leaf.cpp) = 5ae2fb028f80f55a29af9a3410b5a6fdad8e8fed
+SHA1 (patch-src_mongo_db_matcher_expression__leaf.cpp) = faca129b5be1d322b505cd516f93d88e8308e5d0
 SHA1 (patch-src_mongo_db_repl_isself.c) = 82321c918b91ce1a68ce79c14589126aca6baf96
 SHA1 (patch-src_mongo_db_repl_master__slave.cpp) = 2f37f0819a2b2743df01f6b6ab0b3013b3b7d726
 SHA1 (patch-src_mongo_platform_random.cpp) = 6d935e6cd0a40026f2ea570f295ff5c4bbdb071b

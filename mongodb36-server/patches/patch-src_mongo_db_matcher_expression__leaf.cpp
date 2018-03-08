@@ -1,6 +1,6 @@
 $NetBSD$
 
---- src/mongo/db/matcher/expression_leaf.cpp.orig	2018-01-04 23:28:55.000000000 +0000
+--- src/mongo/db/matcher/expression_leaf.cpp.orig	2018-02-16 21:50:58.000000000 +0000
 +++ src/mongo/db/matcher/expression_leaf.cpp
 @@ -31,6 +31,7 @@
  #include "mongo/db/matcher/expression_leaf.h"
@@ -16,5 +16,5 @@ $NetBSD$
  namespace mongo {
 +using std::string;
  
- bool ComparisonMatchExpression::equivalent(const MatchExpression* other) const {
+ bool ComparisonMatchExpressionBase::equivalent(const MatchExpression* other) const {
      if (other->matchType() != matchType())

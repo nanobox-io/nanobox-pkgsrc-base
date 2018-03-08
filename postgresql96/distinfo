@@ -1,19 +1,19 @@
 $NetBSD: distinfo,v 1.2 2016/11/23 15:22:48 fhajny Exp $
 
-SHA1 (postgresql-9.6.7.tar.bz2) = cac19c1c688aeaae0eacad7879a301fda4c72fb3
-RMD160 (postgresql-9.6.7.tar.bz2) = 219a2be7fc1b6a370949d015f9396479e46312e9
-SHA512 (postgresql-9.6.7.tar.bz2) = 6a66cdd5b74ea6dc95628b89bb7663555370be56b3e938f635950628ad5d77443ac8f40c747be1fc1cfc19ca8b0a27f41e52fe4db83a43c7a7bab9bb076c7844
-Size (postgresql-9.6.7.tar.bz2) = 19504886 bytes
+SHA1 (postgresql-9.6.8.tar.bz2) = 8e610dd8dbaab69982d12324971b0c6b5225142f
+RMD160 (postgresql-9.6.8.tar.bz2) = b433ed8ee784610c7991f87ba74ca4a22cfb99f6
+SHA512 (postgresql-9.6.8.tar.bz2) = 6b7595c0046308c725d77360b156e979d6bc469b78ac6500f631112f19b2607ca2d816781f8c5fd3bd835c48e079e79ada7af687fbd306a8fec5e160f20dd211
+Size (postgresql-9.6.8.tar.bz2) = 19528927 bytes
 SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
-SHA1 (patch-config_perl.m4) = 65687c891fd4546ab3adb990622a3dc82f48fc49
-SHA1 (patch-configure) = a45efbc402ccc61df6a223f8d801442c39f392a3
+SHA1 (patch-config_perl.m4) = 14c9564577d0df6f82ae0027aeada2f3a6a8f07c
+SHA1 (patch-configure) = db34614cef013a91dc229be319e5f09c657c3f24
 SHA1 (patch-contrib_dblink_dblink.c) = a6f87ab9f2c28a72608d70267b71bd77437b0921
 SHA1 (patch-src_Makefile.global.in) = 2ab3affedc77b202f6749964287438d6179ca23a
-SHA1 (patch-src_Makefile.shlib) = 46b3a8591678f92892d3837cd31fa44e8a7e21b3
+SHA1 (patch-src_Makefile.shlib) = c2b7008ebcee1b7bfec46b9b35e91be2eef287ae
 SHA1 (patch-src_backend_Makefile) = b70b38ea23af6cdde9d2349f2441a429078cfaca
 SHA1 (patch-src_backend_utils_adt_datetime.c) = d1ea70986634d3bfb663eff789425252656e1289
 SHA1 (patch-src_interfaces_ecpg_pgtypeslib_interval.c) = a15012ae34d4ecd1eb2bc29e4d2c40098ea236fd
 SHA1 (patch-src_interfaces_libpq_Makefile) = 61bcf84eb69b6ec9faabab0b61913766f4b20f8c
 SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
 SHA1 (patch-src_pl_plperl_GNUmakefile) = 6ee3e431f46ce5c2a94df499504b2b8bd458bbef
-SHA1 (patch-src_pl_plperl_plperl.h) = 0dc2ef20748ad5e31465c1143ab98d19cf7bcac5
+SHA1 (patch-src_pl_plperl_plperl.h) = 4c9c313bbc872802c57f3efd885a2ce6335d5d79

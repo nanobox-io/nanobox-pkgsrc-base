@@ -51,6 +51,7 @@ share/locale/ru/LC_MESSAGES/plpgsql-10.mo
 share/locale/ru/LC_MESSAGES/postgres-10.mo
 share/locale/sv/LC_MESSAGES/plpgsql-10.mo
 share/locale/sv/LC_MESSAGES/postgres-10.mo
+share/locale/tr/LC_MESSAGES/plpgsql-10.mo
 share/locale/tr/LC_MESSAGES/postgres-10.mo
 share/locale/zh_CN/LC_MESSAGES/plpgsql-10.mo
 share/locale/zh_CN/LC_MESSAGES/postgres-10.mo

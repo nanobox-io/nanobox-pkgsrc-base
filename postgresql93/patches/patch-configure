@@ -1,4 +1,6 @@
-$NetBSD$
+$NetBSD: patch-configure,v 1.3 2018/02/08 20:53:56 adam Exp $
+
+Finally, native solaris uses -lgss for gssapi on mit-krb5.
 
 --- configure.orig	2018-02-05 21:08:57.000000000 +0000
 +++ configure

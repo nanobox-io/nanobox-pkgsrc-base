@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-config_perl.m4,v 1.2 2018/02/08 20:53:56 adam Exp $
 
 --- config/perl.m4.orig	2018-02-05 21:08:57.000000000 +0000
 +++ config/perl.m4

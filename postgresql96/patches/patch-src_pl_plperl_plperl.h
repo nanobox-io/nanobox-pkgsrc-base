@@ -1,20 +1,19 @@
-$NetBSD$
+$NetBSD: patch-src_pl_plperl_plperl.h,v 1.3 2018/02/08 20:53:58 adam Exp $
 
 --- src/pl/plperl/plperl.h.orig	2018-02-05 21:03:36.000000000 +0000
 +++ src/pl/plperl/plperl.h
-@@ -42,6 +42,11 @@
- #undef vsnprintf
+@@ -50,6 +50,10 @@
+ #define __inline__ inline
  #endif
  
 +#ifdef __sun
 +#define list_head sun_list_head
 +#define list_tail sun_list_tail
 +#endif
-+
+ 
  /*
-  * ActivePerl 5.18 and later are MinGW-built, and their headers use GCC's
-  * __inline__.  Translate to something MSVC recognizes.
-@@ -68,6 +73,11 @@
+  * Get the basic Perl API.  We use PERL_NO_GET_CONTEXT mode so that our code
+@@ -68,6 +72,11 @@
  #include "XSUB.h"
  #endif
  

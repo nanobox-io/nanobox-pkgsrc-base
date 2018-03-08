@@ -49,7 +49,7 @@ _VERSIONS=				\
 	runtime_tools		1.9.3	\
 	sasl			2.7	\
 	snmp			5.2.2	\
-	ssh			4.2.2.4	\
+	ssh			4.2.2.5	\
 	ssl			7.3.3.2	\
 	stdlib			2.8	\
 	syntax_tools		1.7	\

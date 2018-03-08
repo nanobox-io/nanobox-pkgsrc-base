@@ -48,8 +48,8 @@ _VERSIONS=				\
 	runtime_tools		1.11.1	\
 	sasl			3.0.3	\
 	snmp			5.2.5	\
-	ssh			4.4.2.1	\
-	ssl			8.1.3.1	\
+	ssh			4.4.2.2	\
+	ssl			8.1.3.1.1	\
 	stdlib			3.3	\
 	syntax_tools		2.1.1	\
 	tools			2.9.1	\

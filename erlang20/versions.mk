@@ -25,7 +25,7 @@ _VERSIONS=				\
 	eldap			1.2.3	\
 	erl_docgen		0.7.2	\
 	erl_interface		3.10.1	\
-	erts			9.2	\
+	erts			9.2.1	\
 	et			1.6.1	\
 	eunit			2.3.5	\
 	gs			1.6.2	\
@@ -33,7 +33,7 @@ _VERSIONS=				\
 	ic			4.4.3	\
 	inets			6.4.5	\
 	jinterface		1.8.1	\
-	kernel			5.4.1	\
+	kernel			5.4.2	\
 	megaco			3.18.3	\
 	mnesia			4.15.3	\
 	observer		2.6	\
@@ -45,10 +45,10 @@ _VERSIONS=				\
 	percept			0.9	\
 	public_key		1.5.2	\
 	reltool			0.7.5	\
-	runtime_tools		1.12.3	\
+	runtime_tools		1.12.4	\
 	sasl			3.1.1	\
 	snmp			5.2.9	\
-	ssh			4.6.4	\
+	ssh			4.6.5	\
 	ssl			8.2.3	\
 	stdlib			3.4.3	\
 	syntax_tools		2.1.4	\

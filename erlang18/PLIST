@@ -1388,6 +1388,7 @@ lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_wiki.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/otpsgml_layout.erl
 lib/erlang/lib/eldap-${VERSION.eldap}/asn1/ELDAPv3.asn1
 lib/erlang/lib/eldap-${VERSION.eldap}/ebin/ELDAPv3.beam
+lib/erlang/lib/eldap-${VERSION.eldap}/ebin/ELDAPv3.hrl
 lib/erlang/lib/eldap-${VERSION.eldap}/ebin/eldap.app
 lib/erlang/lib/eldap-${VERSION.eldap}/ebin/eldap.appup
 lib/erlang/lib/eldap-${VERSION.eldap}/ebin/eldap.beam
